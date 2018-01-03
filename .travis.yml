@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+
+language: node_js
+node_js:
+  - 8
+
+install:
+  - npm install
+
+script:
+  - npm run refresh:ci
+  - npm run build
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ] ; then npm run ci-publish || true fi
+  
