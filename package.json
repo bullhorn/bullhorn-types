@@ -12,7 +12,6 @@
     "scripts": {
         "bh": "bullhorn",
         "refresh": "bh generate all",
-        "refresh:ci": "bh generate all -u ${bhusername} -p {bhpassword} -d ./src",
         "build": "tsc",
         "ci-publish": "ci-publish",
         "test": "echo \"Error: no test specified\" && exit 1"

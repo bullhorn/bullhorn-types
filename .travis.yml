@@ -7,9 +7,10 @@ node_js:
 
 install:
   - npm install
+  - npm install -g @bullhorn/bullhorn-cli
 
 script:
-  - npm run refresh:ci
+  - bh generate all -u ${bhusername} -p {bhpassword} -d ./src
   - npm run build
 
 after_success:
