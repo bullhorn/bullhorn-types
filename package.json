@@ -1,0 +1,24 @@
+{
+    "name": "@bullhorn/bullhorn-types",
+    "version": "0.0.1",
+    "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
+    "author": "Brian Kimball <bvkimball@gmail.com>",
+    "license": "MIT",
+    "files": [
+        "lib/"
+    ],
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "bh": "bullhorn",
+        "prebuild": "bh generate all",
+        "ci-publish": "ci-publish",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "@bullhorn/bullhorn-cli": "*",
+        "ci-publish": "^1.3.0",
+        "typescript": "~2.4.2"
+    }
+}
