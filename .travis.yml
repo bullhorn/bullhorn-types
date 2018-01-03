@@ -1,16 +1,25 @@
 sudo: required
 dist: trusty
 language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
 node_js:
-- 8
+  - 8
 before_install:
-- sudo apt-get install expect
-- sudo apt-get install libnotify-bin
+  - sudo apt-get install expect
+  - sudo apt-get install libnotify-bin
 install:
-- npm install
-- npm install -g @bullhorn/bullhorn-cli
+  - npm install
+  - npm install -g @bullhorn/bullhorn-cli
+  - npm install -g travis-deploy-once@4
 script:
-- bh generate all -u ${bhusername} -p ${bhpassword} -d ./src
-- npm run build
+  - bh generate all -u ${bhusername} -p ${bhpassword} -d ./src
+  - npm run build
 after_success:
-- npm run ci-publish || true fi
+  - travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

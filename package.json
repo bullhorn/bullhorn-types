@@ -1,35 +1,37 @@
 {
-    "name": "@bullhorn/bullhorn-types",
-    "version": "0.0.2",
-    "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
-    "author": "Brian Kimball <bvkimball@gmail.com>",
-    "license": "MIT",
-    "files": [
-        "lib/"
-    ],
-    "main": "lib/index.js",
-    "typings": "lib/index.d.ts",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/bullhorn/bullhorn-types.git"
-    },
-    "bugs": {
-        "url": "https://github.com/bullhorn/bullhorn-types/issues"
-    },
-    "homepage": "https://github.com/bullhorn/bullhorn-types#readme",
-    "publishConfig": {
-        "access": "public"
-    },
-    "scripts": {
-        "bh": "bullhorn",
-        "refresh": "bh generate all",
-        "build": "tsc",
-        "ci-publish": "ci-publish",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "devDependencies": {
-        "@bullhorn/bullhorn-cli": "*",
-        "ci-publish": "^1.3.0",
-        "typescript": "~2.4.2"
-    }
+  "name": "@bullhorn/bullhorn-types",
+  "version": "0.0.0-development",
+  "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
+  "author": "Brian Kimball <bvkimball@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bullhorn/bullhorn-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bullhorn/bullhorn-types/issues"
+  },
+  "homepage": "https://github.com/bullhorn/bullhorn-types#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "bh": "bullhorn",
+    "refresh": "bh generate all",
+    "build": "tsc",
+    "ci-publish": "ci-publish",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@bullhorn/bullhorn-cli": "*",
+    "ci-publish": "^1.3.0",
+    "typescript": "~2.4.2",
+    "semantic-release": "^11.0.2"
+  }
 }
