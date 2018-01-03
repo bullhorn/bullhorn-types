@@ -3,6 +3,8 @@ dist: trusty
 language: node_js
 node_js:
 - 8
+before-install:
+- sudo apt-get install notify-osd
 install:
 - npm install
 - npm install -g @bullhorn/bullhorn-cli
