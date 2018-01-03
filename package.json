@@ -9,6 +9,15 @@
     ],
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bullhorn/bullhorn-types.git"
+    },
+    "bugs": {
+        "url": "https://github.com/bullhorn/bullhorn-types/issues"
+    },
+    "homepage": "https://github.com/bullhorn/bullhorn-types#readme",
+    "private": false,
     "scripts": {
         "bh": "bullhorn",
         "refresh": "bh generate all",
