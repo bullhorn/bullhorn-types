@@ -1,6 +1,6 @@
 {
     "name": "@bullhorn/bullhorn-types",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
     "author": "Brian Kimball <bvkimball@gmail.com>",
     "license": "MIT",
@@ -17,7 +17,9 @@
         "url": "https://github.com/bullhorn/bullhorn-types/issues"
     },
     "homepage": "https://github.com/bullhorn/bullhorn-types#readme",
-    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "bh": "bullhorn",
         "refresh": "bh generate all",

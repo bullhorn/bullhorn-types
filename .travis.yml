@@ -13,5 +13,4 @@ script:
 - bh generate all -u ${bhusername} -p ${bhpassword} -d ./src
 - npm run build
 after_success:
-- if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ] ; then
-  npm run ci-publish || true fi
+- npm run ci-publish || true fi
