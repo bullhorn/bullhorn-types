@@ -14,6 +14,7 @@ export class EntityTypes {
     static AutoAddBlacklistDomain: string = 'AutoAddBlacklistDomain';
     static Bot: string = 'Bot';
     static BotCondition: string = 'BotCondition';
+    static BotExecutionHistory: string = 'BotExecutionHistory';
     static BotOutcome: string = 'BotOutcome';
     static Branch: string = 'Branch';
     static BusinessSector: string = 'BusinessSector';
@@ -53,6 +54,7 @@ export class EntityTypes {
     static ClientCorporation4: string = 'ClientCorporation4';
     static ClientCorporation5: string = 'ClientCorporation5';
     static ClientCorporationAppointment: string = 'ClientCorporationAppointment';
+    static ClientCorporationCertification: string = 'ClientCorporationCertification';
     static ClientCorporationCustomObject: string = 'ClientCorporationCustomObject';
     static ClientCorporationCustomObject10EditHistory: string = 'ClientCorporationCustomObject10EditHistory';
     static ClientCorporationCustomObject1EditHistory: string = 'ClientCorporationCustomObject1EditHistory';
@@ -89,12 +91,16 @@ export class EntityTypes {
     static CorporateUser: string = 'CorporateUser';
     static Corporation: string = 'Corporation';
     static CorporationDepartment: string = 'CorporationDepartment';
+    static CorporationGDPRCompliance: string = 'CorporationGDPRCompliance';
     static Country: string = 'Country';
     static CustomAction: string = 'CustomAction';
     static CustomListButton: string = 'CustomListButton';
     static Dashboard: string = 'Dashboard';
     static Department: string = 'Department';
     static DistributionList: string = 'DistributionList';
+    static EarnCode: string = 'EarnCode';
+    static EarnCodeEditHistory: string = 'EarnCodeEditHistory';
+    static EarnCodeEditHistoryFieldChange: string = 'EarnCodeEditHistoryFieldChange';
     static EmailHitWordMatch: string = 'EmailHitWordMatch';
     static EmailHitWordMatchDetail: string = 'EmailHitWordMatchDetail';
     static EmailTemplate: string = 'EmailTemplate';
@@ -107,6 +113,7 @@ export class EntityTypes {
     static FormTriggerFull: string = 'FormTriggerFull';
     static FormTriggerInstance: string = 'FormTriggerInstance';
     static FormTriggerMessage: string = 'FormTriggerMessage';
+    static GDPRDeletionRequest: string = 'GDPRDeletionRequest';
     static GoalTarget: string = 'GoalTarget';
     static HitWord: string = 'HitWord';
     static HousingComplex: string = 'HousingComplex';
@@ -115,6 +122,9 @@ export class EntityTypes {
     static JobBoardHistory: string = 'JobBoardHistory';
     static JobBoardJobOrder: string = 'JobBoardJobOrder';
     static JobBoardPost: string = 'JobBoardPost';
+    static JobCode: string = 'JobCode';
+    static JobCodeEditHistory: string = 'JobCodeEditHistory';
+    static JobCodeEditHistoryFieldChange: string = 'JobCodeEditHistoryFieldChange';
     static JobOrder: string = 'JobOrder';
     static JobOrder1: string = 'JobOrder1';
     static JobOrder2: string = 'JobOrder2';
@@ -198,6 +208,7 @@ export class EntityTypes {
     static OpportunityEditHistoryFieldChange: string = 'OpportunityEditHistoryFieldChange';
     static OpportunityFileAttachment: string = 'OpportunityFileAttachment';
     static OpportunityHistory: string = 'OpportunityHistory';
+    static PageInteraction: string = 'PageInteraction';
     static Person: string = 'Person';
     static PersonCustomObject10EditHistory: string = 'PersonCustomObject10EditHistory';
     static PersonCustomObject1EditHistory: string = 'PersonCustomObject1EditHistory';
@@ -294,7 +305,6 @@ export class EntityTypes {
     static UserCustomObjectDepartment: string = 'UserCustomObjectDepartment';
     static UserEditHistory: string = 'UserEditHistory';
     static UserEditHistoryFieldChange: string = 'UserEditHistoryFieldChange';
-    static UserHeadshotFile: string = 'UserHeadshotFile';
     static UserIntegration: string = 'UserIntegration';
     static UserMessage: string = 'UserMessage';
     static UserMessageFile: string = 'UserMessageFile';
@@ -313,7 +323,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexUnit', 'JobBoardPost', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'Task', 'Tearsheet', 'UserHeadshotFile', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexUnit', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'Task', 'Tearsheet', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -472,14 +482,28 @@ export interface BotCondition {
     bot?: Bot;
     entity?: Strings;
     field?: Strings;
+    isDeleted?: boolean;
     matchOperator?: Strings;
     value?: Strings;
+}
+export interface BotExecutionHistory {
+    id?: number;
+    botOutcome?: BotOutcome;
+    dateAdded?: Date;
+    errorMessage?: Strings;
+    isSuccess?: boolean;
+    outcomeEntityId?: number;
+    triggerEditHistoryId?: number;
+    triggerEntity?: Strings;
+    triggerEntityEventType?: Strings;
+    triggerEntityId?: number;
 }
 export interface BotOutcome {
     id?: number;
     bot?: Bot;
     data?: Strings;
     entity?: Strings;
+    isDeleted?: boolean;
     outcomeType?: Strings;
 }
 export interface Branch {
@@ -568,7 +592,6 @@ export interface Candidate {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject5s?: PersonCustomObjectInstance5[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -632,6 +655,7 @@ export interface Candidate {
     hourlyRateLow?: number;
     i9OnFile?: number;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
     isDeleted?: boolean;
     isEditable?: boolean;
@@ -677,7 +701,6 @@ export interface Candidate {
     referredByPerson?: Person;
     salary?: number;
     salaryLow?: number;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     secondarySkills?: Skill[];
     sendouts?: Sendout[];
@@ -710,6 +733,16 @@ export interface Candidate {
     workAuthorized?: boolean;
     workHistories?: CandidateWorkHistory[];
     workPhone?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface CandidateCertification {
     id?: number;
@@ -837,15 +870,18 @@ export interface CandidateFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isOpen?: boolean;
     isPrivate?: boolean;
@@ -1115,6 +1151,7 @@ export interface ClientContact {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1129,7 +1166,9 @@ export interface ClientContact {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1164,7 +1203,6 @@ export interface ClientContact {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1183,6 +1221,16 @@ export interface ClientContact {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact1 {
     id?: number;
@@ -1238,6 +1286,7 @@ export interface ClientContact1 {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1252,7 +1301,9 @@ export interface ClientContact1 {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1287,7 +1338,6 @@ export interface ClientContact1 {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1306,6 +1356,16 @@ export interface ClientContact1 {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact2 {
     id?: number;
@@ -1361,6 +1421,7 @@ export interface ClientContact2 {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1375,7 +1436,9 @@ export interface ClientContact2 {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1410,7 +1473,6 @@ export interface ClientContact2 {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1429,6 +1491,16 @@ export interface ClientContact2 {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact3 {
     id?: number;
@@ -1484,6 +1556,7 @@ export interface ClientContact3 {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1498,7 +1571,9 @@ export interface ClientContact3 {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1533,7 +1608,6 @@ export interface ClientContact3 {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1552,6 +1626,16 @@ export interface ClientContact3 {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact4 {
     id?: number;
@@ -1607,6 +1691,7 @@ export interface ClientContact4 {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1621,7 +1706,9 @@ export interface ClientContact4 {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1656,7 +1743,6 @@ export interface ClientContact4 {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1675,6 +1761,16 @@ export interface ClientContact4 {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact5 {
     id?: number;
@@ -1730,6 +1826,7 @@ export interface ClientContact5 {
     deleteMe?: Strings;
     description?: Strings;
     desiredCategories?: Strings;
+    desiredLocations?: Strings;
     desiredSkills?: Strings;
     desiredSpecialties?: Strings;
     distributionLists?: DistributionList[];
@@ -1744,7 +1841,9 @@ export interface ClientContact5 {
     fileAttachments?: ClientContactFileAttachment[];
     firstName?: Strings;
     interviews?: Appointment[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
+    isDefaultContact?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
     jobOrders?: JobOrder[];
@@ -1779,7 +1878,6 @@ export interface ClientContact5 {
     privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
-    secondaryAddress?: Address;
     secondaryOwners?: CorporateUser[];
     sendouts?: Sendout[];
     skillSet?: Strings;
@@ -1798,6 +1896,16 @@ export interface ClientContact5 {
     userIntegrations?: UserIntegration[];
     userType?: UserType;
     username?: Strings;
+    customObject1s?: PersonCustomObjectInstance1[];
+    customObject2s?: PersonCustomObjectInstance2[];
+    customObject3s?: PersonCustomObjectInstance3[];
+    customObject4s?: PersonCustomObjectInstance4[];
+    customObject5s?: PersonCustomObjectInstance5[];
+    customObject6s?: PersonCustomObjectInstance6[];
+    customObject7s?: PersonCustomObjectInstance7[];
+    customObject8s?: PersonCustomObjectInstance8[];
+    customObject9s?: PersonCustomObjectInstance9[];
+    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContactFileAttachment {
     id?: number;
@@ -1805,15 +1913,18 @@ export interface ClientContactFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isOpen?: boolean;
     isPrivate?: boolean;
@@ -1847,13 +1958,13 @@ export interface ClientCorporation {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -1871,9 +1982,6 @@ export interface ClientCorporation {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -1930,18 +2038,28 @@ export interface ClientCorporation {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation1 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -1959,9 +2077,6 @@ export interface ClientCorporation1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2018,18 +2133,28 @@ export interface ClientCorporation1 {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation2 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -2047,9 +2172,6 @@ export interface ClientCorporation2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2106,18 +2228,28 @@ export interface ClientCorporation2 {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation3 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -2135,9 +2267,6 @@ export interface ClientCorporation3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2194,18 +2323,28 @@ export interface ClientCorporation3 {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation4 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -2223,9 +2362,6 @@ export interface ClientCorporation4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2282,18 +2418,28 @@ export interface ClientCorporation4 {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation5 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
-    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: CertificationGroup[];
+    certifications?: ClientCorporationCertification[];
     childClientCorporations?: ClientCorporation[];
     clientContactNotes?: Note[];
     clientContacts?: ClientContact[];
@@ -2311,9 +2457,6 @@ export interface ClientCorporation5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2370,12 +2513,36 @@ export interface ClientCorporation5 {
     trackTitle?: Strings;
     twitterHandle?: Strings;
     workWeekStart?: number;
+    customObject1s?: ClientCorporationCustomObjectInstance1[];
+    customObject2s?: ClientCorporationCustomObjectInstance2[];
+    customObject3s?: ClientCorporationCustomObjectInstance3[];
+    customObject4s?: ClientCorporationCustomObjectInstance4[];
+    customObject5s?: ClientCorporationCustomObjectInstance5[];
+    customObject6s?: ClientCorporationCustomObjectInstance6[];
+    customObject7s?: ClientCorporationCustomObjectInstance7[];
+    customObject8s?: ClientCorporationCustomObjectInstance8[];
+    customObject9s?: ClientCorporationCustomObjectInstance9[];
+    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporationAppointment {
     id?: number;
     appointment?: Appointment;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+}
+export interface ClientCorporationCertification {
+    id?: number;
+    alternateCertifications?: Certification[];
+    certification?: Certification;
+    clientCorporation?: ClientCorporation;
+    comments?: Strings;
+    dateLastModified?: Date;
+    isDeleted?: boolean;
+    location?: Strings;
+    migrateGUID?: Strings;
+    modifyingUser?: CorporateUser;
+    offsetDays?: number;
+    quantity?: number;
 }
 export interface ClientCorporationCustomObject {
     id?: number;
@@ -2520,12 +2687,15 @@ export interface ClientCorporationFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isPrivate?: boolean;
     name?: Strings;
@@ -2618,6 +2788,7 @@ export interface CorporateUser {
     fax3?: Strings;
     firstName?: Strings;
     inboundEmailEnabled?: boolean;
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
     isDeleted?: boolean;
     isHidden?: number;
@@ -2681,6 +2852,14 @@ export interface CorporationDepartment {
     enabled?: boolean;
     name?: Strings;
 }
+export interface CorporationGDPRCompliance {
+    id?: number;
+    acceptingUser?: CorporateUser;
+    corporation?: Corporation;
+    dateOfAcceptance?: Date;
+    dateOfNotification?: Date;
+    notifiedUser?: CorporateUser;
+}
 export interface Country {
     id?: number;
     code?: Strings;
@@ -2735,6 +2914,78 @@ export interface DistributionList {
     owner?: CorporateUser;
     searchURL?: Strings;
     type?: Strings;
+}
+export interface EarnCode {
+    id?: number;
+    billOnlyCode?: Strings;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    externalID?: Strings;
+    includeInDistribution?: boolean;
+    isDeleted?: boolean;
+    isOtEligible?: boolean;
+    maximumQuantity?: number;
+    minimumQuantity?: number;
+    owner?: CorporateUser;
+    payBillCode?: Strings;
+    payBillOptions?: Strings;
+    payOnlyCode?: Strings;
+    rateType?: Strings;
+    status?: Strings;
+    timeType?: Strings;
+    title?: Strings;
+    unitOfMeasure?: Strings;
+}
+export interface EarnCodeEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: EarnCodeEditHistoryFieldChange[];
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: EarnCode;
+    transactionID?: Strings;
+}
+export interface EarnCodeEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: EarnCodeEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface EmailHitWordMatch {
     id?: number;
@@ -2862,6 +3113,13 @@ export interface FormTriggerMessage {
     restError?: Strings;
     timeoutError?: Strings;
 }
+export interface GDPRDeletionRequest {
+    id?: number;
+    dateAdded?: Date;
+    deletedPersonFirstName?: Strings;
+    deletedPersonLastName?: Strings;
+    deletingUser?: CorporateUser;
+}
 export interface GoalTarget {
     id?: number;
     endDate?: Date;
@@ -2901,10 +3159,25 @@ export interface HousingComplex {
     customInt2?: number;
     customInt3?: number;
     customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
     customText2?: Strings;
+    customText20?: Strings;
     customText3?: Strings;
     customText4?: Strings;
     customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
     customTextBlock1?: Strings;
     customTextBlock2?: Strings;
     customTextBlock3?: Strings;
@@ -3149,6 +3422,70 @@ export interface JobBoardPost {
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
 }
+export interface JobCode {
+    id?: number;
+    businessSectors?: BusinessSector[];
+    categories?: Category[];
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    departments?: CorporationDepartment[];
+    description?: Strings;
+    externalID?: Strings;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    status?: Strings;
+    title?: Strings;
+}
+export interface JobCodeEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: JobCodeEditHistoryFieldChange[];
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobCode;
+    transactionID?: Strings;
+}
+export interface JobCodeEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobCodeEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
 export interface JobOrder {
     id?: number;
     address?: Address;
@@ -3200,8 +3537,6 @@ export interface JobOrder {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3295,6 +3630,16 @@ export interface JobOrder {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder1 {
     id?: number;
@@ -3347,8 +3692,6 @@ export interface JobOrder1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3442,6 +3785,16 @@ export interface JobOrder1 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder2 {
     id?: number;
@@ -3494,8 +3847,6 @@ export interface JobOrder2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3589,6 +3940,16 @@ export interface JobOrder2 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder3 {
     id?: number;
@@ -3641,8 +4002,6 @@ export interface JobOrder3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3736,6 +4095,16 @@ export interface JobOrder3 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder4 {
     id?: number;
@@ -3788,8 +4157,6 @@ export interface JobOrder4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3883,6 +4250,16 @@ export interface JobOrder4 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder5 {
     id?: number;
@@ -3935,8 +4312,6 @@ export interface JobOrder5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -4030,6 +4405,16 @@ export interface JobOrder5 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrderCustomObject {
     id?: number;
@@ -4154,15 +4539,18 @@ export interface JobOrderFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isOpen?: boolean;
     isPrivate?: boolean;
@@ -4336,6 +4724,7 @@ export interface Lead {
     fax3?: Strings;
     firstName?: Strings;
     history?: LeadHistory[];
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
@@ -4372,7 +4761,6 @@ export interface Lead {
     role?: Strings;
     salary?: number;
     salaryLow?: number;
-    secondaryAddress?: Address;
     secondarySkills?: Skill[];
     skillSet?: Strings;
     smsOptIn?: boolean;
@@ -4454,6 +4842,7 @@ export interface MessageTemplateFileAttachment {
     dateAdded?: Date;
     directory?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     messageTemplate?: MessageTemplate;
     name?: Strings;
@@ -4576,7 +4965,6 @@ export interface Opportunity {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -4659,6 +5047,16 @@ export interface Opportunity {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity1 {
     id?: number;
@@ -4711,7 +5109,6 @@ export interface Opportunity1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -4794,6 +5191,16 @@ export interface Opportunity1 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity2 {
     id?: number;
@@ -4846,7 +5253,6 @@ export interface Opportunity2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -4929,6 +5335,16 @@ export interface Opportunity2 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity3 {
     id?: number;
@@ -4981,7 +5397,6 @@ export interface Opportunity3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -5064,6 +5479,16 @@ export interface Opportunity3 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity4 {
     id?: number;
@@ -5116,7 +5541,6 @@ export interface Opportunity4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -5199,6 +5623,16 @@ export interface Opportunity4 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity5 {
     id?: number;
@@ -5251,7 +5685,6 @@ export interface Opportunity5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -5334,6 +5767,16 @@ export interface Opportunity5 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: OpportunityCustomObjectInstance1[];
+    customObject2s?: OpportunityCustomObjectInstance2[];
+    customObject3s?: OpportunityCustomObjectInstance3[];
+    customObject4s?: OpportunityCustomObjectInstance4[];
+    customObject5s?: OpportunityCustomObjectInstance5[];
+    customObject6s?: OpportunityCustomObjectInstance6[];
+    customObject7s?: OpportunityCustomObjectInstance7[];
+    customObject8s?: OpportunityCustomObjectInstance8[];
+    customObject9s?: OpportunityCustomObjectInstance9[];
+    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface OpportunityCustomObject10EditHistory {
     id?: number;
@@ -5442,15 +5885,18 @@ export interface OpportunityFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isOpen?: boolean;
     isPrivate?: boolean;
@@ -5472,6 +5918,17 @@ export interface OpportunityHistory {
     status?: Strings;
     weightedDealValue?: number;
     winProbabilityPercent?: number;
+}
+export interface PageInteraction {
+    id?: number;
+    action?: Strings;
+    dateLastModified?: Date;
+    enabled?: boolean;
+    modifyingUser?: CorporateUser;
+    name?: Strings;
+    page?: Strings;
+    script?: Strings;
+    sortOrder?: number;
 }
 export interface Person {
     id?: number;
@@ -5517,6 +5974,7 @@ export interface Person {
     fax2?: Strings;
     fax3?: Strings;
     firstName?: Strings;
+    isAnonymized?: boolean;
     isDayLightSavings?: boolean;
     isDeleted?: boolean;
     isLockedOut?: boolean;
@@ -5699,10 +6157,6 @@ export interface Placement {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -5820,6 +6274,16 @@ export interface Placement {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement1 {
     id?: number;
@@ -5892,10 +6356,6 @@ export interface Placement1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -6013,6 +6473,16 @@ export interface Placement1 {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement2 {
     id?: number;
@@ -6085,10 +6555,6 @@ export interface Placement2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -6206,6 +6672,16 @@ export interface Placement2 {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement3 {
     id?: number;
@@ -6278,10 +6754,6 @@ export interface Placement3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -6399,6 +6871,16 @@ export interface Placement3 {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement4 {
     id?: number;
@@ -6471,10 +6953,6 @@ export interface Placement4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -6592,6 +7070,16 @@ export interface Placement4 {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement5 {
     id?: number;
@@ -6664,10 +7152,6 @@ export interface Placement5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject5s?: PlacementCustomObjectInstance5[];
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -6785,6 +7269,16 @@ export interface Placement5 {
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+    customObject1s?: PlacementCustomObjectInstance1[];
+    customObject2s?: PlacementCustomObjectInstance2[];
+    customObject3s?: PlacementCustomObjectInstance3[];
+    customObject4s?: PlacementCustomObjectInstance4[];
+    customObject5s?: PlacementCustomObjectInstance5[];
+    customObject6s?: PlacementCustomObjectInstance6[];
+    customObject7s?: PlacementCustomObjectInstance7[];
+    customObject8s?: PlacementCustomObjectInstance8[];
+    customObject9s?: PlacementCustomObjectInstance9[];
+    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface PlacementCertification {
     id?: number;
@@ -7187,22 +7681,27 @@ export interface PlacementFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    departmentsSharedWith?: CorporationDepartment[];
     description?: Strings;
     directory?: Strings;
     distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
+    fileOwner?: CorporateUser;
     fileSize?: number;
     fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     isOpen?: boolean;
     isPrivate?: boolean;
     isSendOut?: boolean;
+    jobOrder?: JobOrder;
     name?: Strings;
     placement?: Placement;
     type?: Strings;
+    user?: Candidate;
     usersSharedWith?: CorporateUser[];
     uuid?: Strings;
 }
@@ -7593,24 +8092,6 @@ export interface UserEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
-export interface UserHeadshotFile {
-    id?: number;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    description?: Strings;
-    directory?: Strings;
-    externalID?: Strings;
-    fileExtension?: Strings;
-    fileSize?: number;
-    isDeleted?: boolean;
-    isExternal?: boolean;
-    isPrivate?: boolean;
-    name?: Strings;
-    person?: Person;
-    type?: Strings;
-    uuid?: Strings;
-}
 export interface UserIntegration {
     id?: number;
     externalSystem?: Strings;
@@ -7690,6 +8171,7 @@ export interface UserSurvey {
     isFromOwner?: boolean;
     replyTo?: Strings;
     sender?: Strings;
+    type?: Strings;
 }
 export interface UserSurveyOptions {
     id?: number;
