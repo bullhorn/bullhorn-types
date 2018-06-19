@@ -88,11 +88,13 @@ export class EntityTypes {
     static ClientCorporationNote: string = 'ClientCorporationNote';
     static ClientCorporationRatios: string = 'ClientCorporationRatios';
     static ClientCorporationTask: string = 'ClientCorporationTask';
+    static CompletionStatus: string = 'CompletionStatus';
     static CorporateUser: string = 'CorporateUser';
     static Corporation: string = 'Corporation';
     static CorporationDepartment: string = 'CorporationDepartment';
     static CorporationGDPRCompliance: string = 'CorporationGDPRCompliance';
     static Country: string = 'Country';
+    static Currency: string = 'Currency';
     static CustomAction: string = 'CustomAction';
     static CustomListButton: string = 'CustomListButton';
     static Dashboard: string = 'Dashboard';
@@ -118,7 +120,9 @@ export class EntityTypes {
     static HitWord: string = 'HitWord';
     static HousingComplex: string = 'HousingComplex';
     static HousingComplexAmenity: string = 'HousingComplexAmenity';
+    static HousingComplexFurnitureDelivery: string = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: string = 'HousingComplexUnit';
+    static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
     static JobBoardHistory: string = 'JobBoardHistory';
     static JobBoardJobOrder: string = 'JobBoardJobOrder';
     static JobBoardPost: string = 'JobBoardPost';
@@ -277,10 +281,17 @@ export class EntityTypes {
     static PlacementHistory: string = 'PlacementHistory';
     static PrivateLabel: string = 'PrivateLabel';
     static PrivateLabelAttribute: string = 'PrivateLabelAttribute';
+    static ProfitElement: string = 'ProfitElement';
+    static ProfitSubelement1: string = 'ProfitSubelement1';
+    static ProfitSubelement2: string = 'ProfitSubelement2';
+    static ProfitSubelement3: string = 'ProfitSubelement3';
     static PulseConfiguration: string = 'PulseConfiguration';
     static PulseConfigurationValue: string = 'PulseConfigurationValue';
     static Report: string = 'Report';
     static ReportCategory: string = 'ReportCategory';
+    static ReportingCodeTemplate: string = 'ReportingCodeTemplate';
+    static ReportingCodeTemplateEditHistory: string = 'ReportingCodeTemplateEditHistory';
+    static ReportingCodeTemplateEditHistoryFieldChange: string = 'ReportingCodeTemplateEditHistoryFieldChange';
     static SalesQuota: string = 'SalesQuota';
     static Sendout: string = 'Sendout';
     static Shift: string = 'Shift';
@@ -299,12 +310,15 @@ export class EntityTypes {
     static TearsheetMember: string = 'TearsheetMember';
     static TearsheetRecipient: string = 'TearsheetRecipient';
     static TimeUnit: string = 'TimeUnit';
+    static TransactionDocumentType: string = 'TransactionDocumentType';
+    static UnitOfMeasure: string = 'UnitOfMeasure';
     static UserCustomObject: string = 'UserCustomObject';
     static UserCustomObjectAttribute: string = 'UserCustomObjectAttribute';
     static UserCustomObjectAttributeInteraction: string = 'UserCustomObjectAttributeInteraction';
     static UserCustomObjectDepartment: string = 'UserCustomObjectDepartment';
     static UserEditHistory: string = 'UserEditHistory';
     static UserEditHistoryFieldChange: string = 'UserEditHistoryFieldChange';
+    static UserHousingComplexUnit: string = 'UserHousingComplexUnit';
     static UserIntegration: string = 'UserIntegration';
     static UserMessage: string = 'UserMessage';
     static UserMessageFile: string = 'UserMessageFile';
@@ -323,7 +337,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexUnit', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'Task', 'Tearsheet', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -2734,6 +2748,10 @@ export interface ClientCorporationTask {
     clientCorporation?: ClientCorporation;
     task?: Task;
 }
+export interface CompletionStatus {
+    id?: number;
+    name?: Strings;
+}
 export interface CorporateUser {
     id?: number;
     address?: Address;
@@ -2865,6 +2883,12 @@ export interface Country {
     code?: Strings;
     name?: Strings;
     states?: State[];
+}
+export interface Currency {
+    id?: number;
+    code?: Strings;
+    name?: Strings;
+    symbol?: Strings;
 }
 export interface CustomAction {
     id?: number;
@@ -3206,6 +3230,44 @@ export interface HousingComplexAmenity {
     placementChangeRequests?: PlacementChangeRequest[];
     placements?: Placement[];
 }
+export interface HousingComplexFurnitureDelivery {
+    id?: number;
+    address?: Address;
+    billingContactID?: number;
+    comments?: Strings;
+    contactName?: Strings;
+    customContactID1?: number;
+    customContactID2?: number;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    customTextBlock4?: Strings;
+    customTextBlock5?: Strings;
+    dateAdded?: Date;
+    dateOfDelivery?: Date;
+    dateOfOrder?: Date;
+    dateOfPickup?: Date;
+    fax?: Strings;
+    isDeleted?: boolean;
+    migrateGUID?: Strings;
+    name?: Strings;
+    phone?: Strings;
+    unit?: HousingComplexUnit;
+}
 export interface HousingComplexUnit {
     id?: number;
     amenities?: HousingComplexAmenity[];
@@ -3238,6 +3300,7 @@ export interface HousingComplexUnit {
     dateOfDeposit?: Date;
     dateOfRefund?: Date;
     firstMonthProRate?: number;
+    furnitureDeliveries?: HousingComplexFurnitureDelivery[];
     housingComplex?: HousingComplex;
     isDeleted?: boolean;
     isDepositRefundable?: boolean;
@@ -3250,6 +3313,47 @@ export interface HousingComplexUnit {
     penalties?: Strings;
     securityDeposit?: number;
     unitManagerID?: number;
+    userHousingComplexUnits?: UserHousingComplexUnit[];
+    utilityAccounts?: HousingComplexUtilityAccount[];
+}
+export interface HousingComplexUtilityAccount {
+    id?: number;
+    accountNumber?: Strings;
+    address?: Address;
+    billingContactID?: number;
+    comments?: Strings;
+    customContactID1?: number;
+    customContactID2?: number;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    customTextBlock4?: Strings;
+    customTextBlock5?: Strings;
+    dateAdded?: Date;
+    dateConnected?: Date;
+    dateDisconnected?: Date;
+    deposit?: number;
+    fax?: Strings;
+    isDeleted?: boolean;
+    migrateGUID?: Strings;
+    name?: Strings;
+    phone?: Strings;
+    type?: Strings;
+    unit?: HousingComplexUnit;
 }
 export interface JobBoardHistory {
     id?: number;
@@ -7804,6 +7908,28 @@ export interface PrivateLabelAttribute {
     privateLabel?: PrivateLabel;
     value?: Strings;
 }
+export interface ProfitElement {
+    id?: number;
+    childRecords?: ProfitSubelement1[];
+    name?: Strings;
+}
+export interface ProfitSubelement1 {
+    id?: number;
+    childRecords?: ProfitSubelement2[];
+    name?: Strings;
+    parent?: ProfitElement;
+}
+export interface ProfitSubelement2 {
+    id?: number;
+    childRecords?: ProfitSubelement3[];
+    name?: Strings;
+    parent?: ProfitSubelement1;
+}
+export interface ProfitSubelement3 {
+    id?: number;
+    name?: Strings;
+    parent?: ProfitSubelement2;
+}
 export interface PulseConfiguration {
     id?: number;
     dateAdded?: Date;
@@ -7845,6 +7971,67 @@ export interface ReportCategory {
     name?: Strings;
     reports?: Report[];
     sortOrder?: number;
+}
+export interface ReportingCodeTemplate {
+    id?: number;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    externalID?: Strings;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    status?: Strings;
+    title?: Strings;
+}
+export interface ReportingCodeTemplateEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ReportingCodeTemplateEditHistoryFieldChange[];
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ReportingCodeTemplate;
+    transactionID?: Strings;
+}
+export interface ReportingCodeTemplateEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ReportingCodeTemplateEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface SalesQuota {
     id?: number;
@@ -8058,6 +8245,14 @@ export interface TimeUnit {
     timeMarker?: number;
     weekDay?: number;
 }
+export interface TransactionDocumentType {
+    id?: number;
+    name?: Strings;
+}
+export interface UnitOfMeasure {
+    id?: number;
+    name?: Strings;
+}
 export interface UserCustomObject {
     id?: number;
     [propName: string]: any;
@@ -8091,6 +8286,42 @@ export interface UserEditHistoryFieldChange {
     editHistory?: UserEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+}
+export interface UserHousingComplexUnit {
+    id?: number;
+    candidate?: Candidate;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customDate4?: Date;
+    customDate5?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customFloat4?: number;
+    customFloat5?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    customTextBlock4?: Strings;
+    customTextBlock5?: Strings;
+    dateBegin?: Date;
+    dateEnd?: Date;
+    deduction?: number;
+    isDeleted?: boolean;
+    migrateGUID?: Strings;
+    placement?: Placement;
+    unit?: HousingComplexUnit;
 }
 export interface UserIntegration {
     id?: number;
