@@ -29,9 +29,9 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@bullhorn/bullhorn-cli": "*",
-    "ci-publish": "^1.3.0",
-    "typescript": "~2.4.2",
-    "semantic-release": "^11.0.2"
+    "@bullhorn/bullhorn-cli": "^2.2.0",
+    "ci-publish": "^1.3.1",
+    "semantic-release": "^11.0.2",
+    "typescript": "~2.4.2"
   }
 }
