@@ -214,13 +214,19 @@ export class EntityTypes {
     static JobOrderEditHistoryFieldChange: string = 'JobOrderEditHistoryFieldChange';
     static JobOrderFileAttachment: string = 'JobOrderFileAttachment';
     static JobOrderHistory: string = 'JobOrderHistory';
+    static JobOrderIntegration: string = 'JobOrderIntegration';
     static JobOrderTemplate: string = 'JobOrderTemplate';
     static JobSubmission: string = 'JobSubmission';
     static JobSubmissionEditHistory: string = 'JobSubmissionEditHistory';
     static JobSubmissionEditHistoryFieldChange: string = 'JobSubmissionEditHistoryFieldChange';
     static JobSubmissionHistory: string = 'JobSubmissionHistory';
+    static JobSubmissionIntegration: string = 'JobSubmissionIntegration';
     static Lead: string = 'Lead';
     static LeadHistory: string = 'LeadHistory';
+    static Location: string = 'Location';
+    static LocationVersion: string = 'LocationVersion';
+    static LocationVersionEditHistory: string = 'LocationVersionEditHistory';
+    static LocationVersionEditHistoryFieldChange: string = 'LocationVersionEditHistoryFieldChange';
     static MailListPushHistory: string = 'MailListPushHistory';
     static MailListPushHistoryDetail: string = 'MailListPushHistoryDetail';
     static Menu: string = 'Menu';
@@ -393,7 +399,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -745,6 +751,7 @@ export interface Candidate {
     localExemptions?: number;
     localFilingStatus?: Strings;
     localTaxCode?: Strings;
+    locations?: ToMany<Location>;
     massMailOptOut?: boolean;
     masterUserID?: number;
     middleName?: Strings;
@@ -2098,6 +2105,7 @@ export interface ClientCorporation {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -2193,6 +2201,7 @@ export interface ClientCorporation1 {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -2288,6 +2297,7 @@ export interface ClientCorporation2 {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -2383,6 +2393,7 @@ export interface ClientCorporation3 {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -2478,6 +2489,7 @@ export interface ClientCorporation4 {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -2573,6 +2585,7 @@ export interface ClientCorporation5 {
     invoiceFormat?: Strings;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
+    locations?: ToMany<Location>;
     name?: Strings;
     notes?: Strings;
     numEmployees?: number;
@@ -3739,6 +3752,7 @@ export interface JobBoardPost {
     isPublic?: number;
     jobBoardJobOrders?: ToMany<JobBoardJobOrder>;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     jobOrderUUID?: Strings;
     markUpPercentage?: number;
     migrateGUID?: Strings;
@@ -3953,6 +3967,7 @@ export interface JobOrder {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -3996,6 +4011,16 @@ export interface JobOrder {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder1 {
     id?: number;
@@ -4098,6 +4123,7 @@ export interface JobOrder1 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4141,6 +4167,16 @@ export interface JobOrder1 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder2 {
     id?: number;
@@ -4243,6 +4279,7 @@ export interface JobOrder2 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4286,6 +4323,16 @@ export interface JobOrder2 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder3 {
     id?: number;
@@ -4388,6 +4435,7 @@ export interface JobOrder3 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4431,6 +4479,16 @@ export interface JobOrder3 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder4 {
     id?: number;
@@ -4533,6 +4591,7 @@ export interface JobOrder4 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4576,6 +4635,16 @@ export interface JobOrder4 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder5 {
     id?: number;
@@ -4678,6 +4747,7 @@ export interface JobOrder5 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
+    jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4721,6 +4791,16 @@ export interface JobOrder5 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
+    customObject1s?: JobOrderCustomObjectInstance1[];
+    customObject2s?: JobOrderCustomObjectInstance2[];
+    customObject3s?: JobOrderCustomObjectInstance3[];
+    customObject4s?: JobOrderCustomObjectInstance4[];
+    customObject5s?: JobOrderCustomObjectInstance5[];
+    customObject6s?: JobOrderCustomObjectInstance6[];
+    customObject7s?: JobOrderCustomObjectInstance7[];
+    customObject8s?: JobOrderCustomObjectInstance8[];
+    customObject9s?: JobOrderCustomObjectInstance9[];
+    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrderCustomObject {
     id?: number;
@@ -4891,6 +4971,11 @@ export interface JobOrderHistory {
     taxRate?: number;
     type?: number;
 }
+export interface JobOrderIntegration {
+    id?: number;
+    externalSystem?: ExternalSystem;
+    jobOrder?: JobOrder;
+}
 export interface JobOrderTemplate {
     id?: number;
     corporationID?: number;
@@ -4928,6 +5013,7 @@ export interface JobSubmission {
     isDeleted?: boolean;
     isHidden?: boolean;
     jobOrder?: JobOrder;
+    jobSubmissionIntegrations?: ToMany<JobSubmissionIntegration>;
     latestAppointment?: Appointment;
     migrateGUID?: Strings;
     owners?: ToMany<CorporateUser>;
@@ -4965,6 +5051,11 @@ export interface JobSubmissionHistory {
     modifyingUser?: CorporateUser;
     status?: Strings;
     transactionID?: Strings;
+}
+export interface JobSubmissionIntegration {
+    id?: number;
+    externalSystem?: ExternalSystem;
+    jobSubmission?: JobSubmission;
 }
 export interface Lead {
     id?: number;
@@ -5091,6 +5182,81 @@ export interface LeadHistory {
     modifyingUser?: CorporateUser;
     status?: Strings;
 }
+export interface Location {
+    id?: number;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    isDeleted?: boolean;
+    versions?: ToMany<LocationVersion>;
+}
+export interface LocationVersion {
+    id?: number;
+    address?: Address;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalID?: Strings;
+    isBillTo?: boolean;
+    isSoldTo?: boolean;
+    isWorkSite?: boolean;
+    location?: Location;
+    name?: Strings;
+    owner?: CorporateUser;
+    status?: Strings;
+    type?: Strings;
+}
+export interface LocationVersionEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<LocationVersionEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: LocationVersion;
+    transactionID?: Strings;
+}
+export interface LocationVersionEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: LocationVersionEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
 export interface MailListPushHistory {
     id?: number;
     created?: Date;
@@ -5203,6 +5369,7 @@ export interface Note {
     people?: ToMany<Person>;
     personReference?: Person;
     placements?: ToMany<Placement>;
+    primaryDepartmentName?: Strings;
     truestDateAdded?: Date;
 }
 export interface NoteEntity {
