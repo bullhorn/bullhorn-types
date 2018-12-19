@@ -10,23 +10,39 @@
 
 Entity Utils and Typescript Interfaces for the Bullhorn REST Api
 
-
 ## Setup
 
 ```bash
-npm install -g @bullhorn/bullhorn-types
+npm install @bullhorn/bullhorn-types
 ```
+
 ## Usage
 
 ```typescript
-import { EntityTypes, Candidate } from '@bullhorn/bullhorn-types';
+import { EntityTypes, Candidate } from "@bullhorn/bullhorn-types";
 
-console.log(EntityTypes.Candidate === 'Candidate'); // outputs: true
+console.log(EntityTypes.Candidate === "Candidate"); // outputs: true
 
-let person:Candidate = { 
-    firstName: 'John',
-    lastName: 'smith'
+let person: Candidate = {
+  firstName: "John",
+  lastName: "smith"
 };
-
 ```
 
+## Build & Deploy
+
+```bash
+# Clone this repo
+git clone git@github.com:bullhorn/bullhorn-types.git
+cd bullhorn-types
+# Install the Bullhorn CLI tool
+npm install -g @bullhorn/bullhorn-cli
+# Login into the Bullhorn Environment
+bullhorn config set environment YOUR_API_ENDPOINT
+# Login into the Bullhorn Environment
+bullhorn auth login
+# Generate the typings file
+bullhorn typings generate
+```
+
+Travis will build a deploy to NPM when you push to master with appropriate [Semantice Release](https://github.com/semantic-release/semantic-release) messages.

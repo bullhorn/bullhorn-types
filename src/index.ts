@@ -13,6 +13,9 @@ export class EntityTypes {
     static AppointmentTemplate: string = 'AppointmentTemplate';
     static AutoAddBlacklistDomain: string = 'AutoAddBlacklistDomain';
     static BillMaster: string = 'BillMaster';
+    static BillingProfile: string = 'BillingProfile';
+    static BillingProfileVersion: string = 'BillingProfileVersion';
+    static BillingSyncBatch: string = 'BillingSyncBatch';
     static BillingSyncError: string = 'BillingSyncError';
     static Bot: string = 'Bot';
     static BotCondition: string = 'BotCondition';
@@ -161,6 +164,7 @@ export class EntityTypes {
     static EmailHitWordMatchDetail: string = 'EmailHitWordMatchDetail';
     static EmailTemplate: string = 'EmailTemplate';
     static ExternalAccount: string = 'ExternalAccount';
+    static ExternalAccountProfile: string = 'ExternalAccountProfile';
     static ExternalSystem: string = 'ExternalSystem';
     static FieldMapInteraction: string = 'FieldMapInteraction';
     static File: string = 'File';
@@ -232,7 +236,6 @@ export class EntityTypes {
     static Lead: string = 'Lead';
     static LeadHistory: string = 'LeadHistory';
     static Location: string = 'Location';
-    static LocationRoot: string = 'LocationRoot';
     static LocationVersion: string = 'LocationVersion';
     static MailListPushHistory: string = 'MailListPushHistory';
     static MailListPushHistoryDetail: string = 'MailListPushHistoryDetail';
@@ -406,7 +409,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'LocationRoot', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatement', 'InvoiceStatementLineItem', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -548,26 +551,148 @@ export interface AutoAddBlacklistDomain {
 }
 export interface BillMaster {
     id?: number;
+    adjustmentSequenceNumber?: number;
+    adjustmentTo?: BillMaster;
     amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     earnCode?: EarnCode;
-    externalID?: Strings;
     externalLineItemID?: Strings;
     invoiceStatement?: InvoiceStatement;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
+    isReady?: boolean;
     periodEndDate?: Date;
     placement?: Placement;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
-    timeOfExternalEvent?: Date;
     transactionDate?: Date;
     transactionOrigin?: TransactionOrigin;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface BillingProfile {
+    id?: number;
+    bccRecipients?: ToMany<Person>;
+    billingAttention?: Strings;
+    billingClientCorporation?: ClientCorporation;
+    billingContact?: ClientContact;
+    billingCorporateUser?: CorporateUser;
+    billingLocation?: Location;
+    ccRecipients?: ToMany<Person>;
+    clientCorporation?: ClientCorporation;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    deliveryMethod?: Strings;
+    description?: Strings;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalID?: Strings;
+    invoiceTerm?: InvoiceTerm;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    status?: Strings;
+    title?: Strings;
+    toRecipients?: ToMany<Person>;
+    versionID?: number;
+    versions?: ToMany<BillingProfileVersion>;
+}
+export interface BillingProfileVersion {
+    id?: number;
+    bccRecipients?: ToMany<Person>;
+    billingAttention?: Strings;
+    billingClientCorporation?: ClientCorporation;
+    billingContact?: ClientContact;
+    billingCorporateUser?: CorporateUser;
+    ccRecipients?: ToMany<Person>;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    deliveryMethod?: Strings;
+    description?: Strings;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalID?: Strings;
+    isFirst?: boolean;
+    status?: Strings;
+    title?: Strings;
+    toRecipients?: ToMany<Person>;
+}
+export interface BillingSyncBatch {
+    id?: number;
+    billMasters?: ToMany<BillMaster>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    externalID?: Strings;
+    payMasters?: ToMany<PayMaster>;
+    timeOfExternalEvent?: Date;
 }
 export interface BillingSyncError {
     id?: number;
@@ -2164,6 +2289,7 @@ export interface ClientCorporation {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -2260,6 +2386,7 @@ export interface ClientCorporation1 {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -2356,6 +2483,7 @@ export interface ClientCorporation2 {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -2452,6 +2580,7 @@ export interface ClientCorporation3 {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -2548,6 +2677,7 @@ export interface ClientCorporation4 {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -2644,6 +2774,7 @@ export interface ClientCorporation5 {
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
+    billingProfiles?: ToMany<BillingProfile>;
     branch?: Branch;
     businessSectorList?: Strings;
     certificationGroups?: ToMany<CertificationGroup>;
@@ -3168,7 +3299,7 @@ export interface ClientCorporationLine {
     externalID?: Strings;
     isDeleted?: boolean;
     jobCodes?: ToMany<JobCode>;
-    locations?: ToMany<LocationRoot>;
+    locations?: ToMany<Location>;
     owner?: CorporateUser;
     startDate?: Date;
     status?: Strings;
@@ -3514,6 +3645,11 @@ export interface ExternalAccount {
     modifyingUser?: CorporateUser;
     username?: Strings;
 }
+export interface ExternalAccountProfile {
+    id?: number;
+    externalAccount?: ExternalAccount;
+    externalAccountProfile?: Strings;
+}
 export interface ExternalSystem {
     id?: number;
     displayName?: Strings;
@@ -3824,44 +3960,112 @@ export interface HousingComplexUtilityAccount {
 }
 export interface InvoiceStatement {
     id?: number;
+    billingAddress?: Address;
+    billingAttention?: Strings;
+    billingClientContact?: ClientContact;
+    billingCorporateUser?: CorporateUser;
+    billingPeriodEndDate?: Date;
+    billingProfile?: BillingProfile;
+    billingScheduleID?: Strings;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
+    deliveryMethod?: Strings;
+    deliveryStatus?: Strings;
     dueDate?: Date;
+    invoiceDate?: Date;
     invoiceImage?: Strings;
+    invoiceNumber?: Strings;
+    invoiceOrigin?: Strings;
     invoiceStatementLineItems?: ToMany<InvoiceStatementLineItem>;
+    invoiceTerm?: InvoiceTerm;
+    invoiceType?: Strings;
+    isDeleted?: boolean;
     paymentTerms?: Strings;
-    periodEndDate?: Date;
     previousBalance?: number;
     purchaseOrderNumber?: Strings;
-    remitToAddress?: Address;
-    remitToName?: Strings;
-    toAddress?: Address;
-    toName?: Strings;
+    remitInstructions?: Strings;
+    splitBy?: Strings;
+    status?: Strings;
+    subtotal?: number;
+    taxAmount?: number;
+    total?: number;
+    user?: CorporateUser;
 }
 export interface InvoiceStatementLineItem {
     id?: number;
-    amount?: number;
-    candidate?: Candidate;
-    currencyUnit?: CurrencyUnit;
     description?: Strings;
-    earnCode?: EarnCode;
-    group1?: Strings;
-    group2?: Strings;
-    group3?: Strings;
-    groupDate?: Date;
-    hiringManagerUser?: ClientContact;
+    groupBy?: Strings;
     invoiceStatement?: InvoiceStatement;
-    placement?: Placement;
+    isDeleted?: boolean;
+    price?: number;
     quantity?: number;
-    tax?: number;
+    subtotal?: number;
+    summarizeBy?: Strings;
+    taxAmount?: number;
+    total?: number;
 }
 export interface InvoiceTerm {
     id?: number;
+    approvalRequired?: boolean;
     clientCorporation?: ClientCorporation;
+    currencyUnit?: CurrencyUnit;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText11?: Strings;
+    customText12?: Strings;
+    customText13?: Strings;
+    customText14?: Strings;
+    customText15?: Strings;
+    customText16?: Strings;
+    customText17?: Strings;
+    customText18?: Strings;
+    customText19?: Strings;
+    customText2?: Strings;
+    customText20?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalID?: Strings;
+    invoiceApprovedTimecardsRequired?: boolean;
+    invoiceGroupBy?: Strings;
+    invoiceOn?: Strings;
+    invoiceSplitBy?: Strings;
+    invoiceSummarizeBy?: Strings;
+    invoiceTemplate?: Strings;
     isDeleted?: boolean;
+    isFirst?: boolean;
+    paymentTerms?: Strings;
+    purchaseOrderRequired?: boolean;
+    remitInstructions?: Strings;
+    status?: Strings;
+    supplemental?: Strings;
+    title?: Strings;
+    versionID?: number;
     versions?: ToMany<InvoiceTermVersion>;
+    waitForTimecards?: boolean;
 }
 export interface InvoiceTermVersion {
     id?: number;
@@ -3901,17 +4105,17 @@ export interface InvoiceTermVersion {
     customTextBlock3?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
-    deliveryMethod?: Strings;
     description?: Strings;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    invoiceApprovedTimecardsRequired?: boolean;
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
     invoiceSplitBy?: Strings;
     invoiceSummarizeBy?: Strings;
     invoiceTemplate?: Strings;
-    invoiceTerm?: InvoiceTerm;
+    isFirst?: boolean;
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
@@ -3944,6 +4148,7 @@ export interface JobBoardPost {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4167,6 +4372,7 @@ export interface JobOrder {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4326,6 +4532,7 @@ export interface JobOrder1 {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4485,6 +4692,7 @@ export interface JobOrder2 {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4644,6 +4852,7 @@ export interface JobOrder3 {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4803,6 +5012,7 @@ export interface JobOrder4 {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -4962,6 +5172,7 @@ export interface JobOrder5 {
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
     billRateCategoryID?: number;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -5545,13 +5756,6 @@ export interface Location {
     status?: Strings;
     type?: Strings;
     versionID?: number;
-}
-export interface LocationRoot {
-    id?: number;
-    candidate?: Candidate;
-    clientCorporation?: ClientCorporation;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
     versions?: ToMany<LocationVersion>;
 }
 export interface LocationVersion {
@@ -5596,9 +5800,9 @@ export interface LocationVersion {
     effectiveEndDate?: Date;
     externalID?: Strings;
     isBillTo?: boolean;
+    isFirst?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    location?: LocationRoot;
     name?: Strings;
     status?: Strings;
     type?: Strings;
@@ -6751,20 +6955,23 @@ export interface PageInteraction {
 }
 export interface PayMaster {
     id?: number;
+    adjustmentSequenceNumber?: number;
+    adjustmentTo?: PayMaster;
     amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     earnCode?: EarnCode;
-    externalID?: Strings;
     externalLineItemID?: Strings;
+    isReady?: boolean;
     payRollID?: number;
     periodEndDate?: Date;
     placement?: Placement;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
-    timeOfExternalEvent?: Date;
     transactionDate?: Date;
     transactionOrigin?: TransactionOrigin;
     transactionStatus?: TransactionStatus;
@@ -6934,6 +7141,7 @@ export interface Placement {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -6942,6 +7150,7 @@ export interface Placement {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -7150,9 +7359,11 @@ export interface Placement {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -7208,6 +7419,7 @@ export interface Placement1 {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -7216,6 +7428,7 @@ export interface Placement1 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -7424,9 +7637,11 @@ export interface Placement1 {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -7482,6 +7697,7 @@ export interface Placement2 {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -7490,6 +7706,7 @@ export interface Placement2 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -7698,9 +7915,11 @@ export interface Placement2 {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -7756,6 +7975,7 @@ export interface Placement3 {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -7764,6 +7984,7 @@ export interface Placement3 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -7972,9 +8193,11 @@ export interface Placement3 {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -8030,6 +8253,7 @@ export interface Placement4 {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -8038,6 +8262,7 @@ export interface Placement4 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -8246,9 +8471,11 @@ export interface Placement4 {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -8304,6 +8531,7 @@ export interface Placement5 {
     backupApprovingClientContact?: ClientContact;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -8312,6 +8540,7 @@ export interface Placement5 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     commissions?: ToMany<PlacementCommission>;
@@ -8520,9 +8749,11 @@ export interface Placement5 {
     incompleteRequirements?: number;
     invoiceGroupName?: Strings;
     isMultirate?: boolean;
+    jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -8606,8 +8837,10 @@ export interface PlacementChangeRequest {
     approvingUser?: CorporateUser;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
+    billingProfile?: BillingProfile;
     bonusPackage?: Strings;
     clientBillRate?: number;
+    clientCorporationLine?: ClientCorporationLine;
     clientOvertimeRate?: number;
     comments?: Strings;
     correlatedCustomDate1?: Date;
@@ -8811,6 +9044,8 @@ export interface PlacementChangeRequest {
     housingAmenities?: ToMany<HousingComplexAmenity>;
     housingManagerID?: number;
     housingStatus?: Strings;
+    jobCode?: JobCode;
+    location?: Location;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
@@ -9589,8 +9824,6 @@ export interface TransactionOrigin {
 export interface TransactionStatus {
     id?: number;
     name?: Strings;
-    readyForBill?: boolean;
-    readyForPay?: boolean;
 }
 export interface TransactionType {
     id?: number;
@@ -9679,8 +9912,8 @@ export interface UserIntegration {
 export interface UserLinkedInUrn {
     id?: number;
     dateAdded?: Date;
+    isManualMatch?: boolean;
     linkedInUrn?: Strings;
-    matchedOrder?: number;
     person?: Person;
 }
 export interface UserMessage {
