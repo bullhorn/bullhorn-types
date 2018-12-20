@@ -183,6 +183,9 @@ export class EntityTypes {
     static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
     static InvoiceStatement: string = 'InvoiceStatement';
     static InvoiceStatementLineItem: string = 'InvoiceStatementLineItem';
+    static InvoiceStatementLineItemGroupBy: string = 'InvoiceStatementLineItemGroupBy';
+    static InvoiceStatementLineItemSummarizeBy: string = 'InvoiceStatementLineItemSummarizeBy';
+    static InvoiceStatementSplitBy: string = 'InvoiceStatementSplitBy';
     static InvoiceTerm: string = 'InvoiceTerm';
     static InvoiceTermVersion: string = 'InvoiceTermVersion';
     static JobBoardHistory: string = 'JobBoardHistory';
@@ -409,7 +412,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatement', 'InvoiceStatementLineItem', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -3966,7 +3969,7 @@ export interface InvoiceStatement {
     billingCorporateUser?: CorporateUser;
     billingPeriodEndDate?: Date;
     billingProfile?: BillingProfile;
-    billingScheduleID?: Strings;
+    billingScheduleID?: number;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
@@ -3978,33 +3981,53 @@ export interface InvoiceStatement {
     invoiceImage?: Strings;
     invoiceNumber?: Strings;
     invoiceOrigin?: Strings;
-    invoiceStatementLineItems?: ToMany<InvoiceStatementLineItem>;
     invoiceTerm?: InvoiceTerm;
     invoiceType?: Strings;
-    isDeleted?: boolean;
+    lineItems?: ToMany<InvoiceStatementLineItem>;
+    owner?: CorporateUser;
     paymentTerms?: Strings;
     previousBalance?: number;
     purchaseOrderNumber?: Strings;
     remitInstructions?: Strings;
-    splitBy?: Strings;
+    splitBys?: ToMany<InvoiceStatementSplitBy>;
     status?: Strings;
-    subtotal?: number;
+    subTotal?: number;
     taxAmount?: number;
     total?: number;
-    user?: CorporateUser;
 }
 export interface InvoiceStatementLineItem {
     id?: number;
+    billMasters?: ToMany<BillMaster>;
     description?: Strings;
-    groupBy?: Strings;
+    groupBys?: ToMany<InvoiceStatementLineItemGroupBy>;
     invoiceStatement?: InvoiceStatement;
-    isDeleted?: boolean;
     price?: number;
     quantity?: number;
     subtotal?: number;
-    summarizeBy?: Strings;
+    summarizeBys?: ToMany<InvoiceStatementLineItemSummarizeBy>;
     taxAmount?: number;
     total?: number;
+}
+export interface InvoiceStatementLineItemGroupBy {
+    id?: number;
+    displayValue?: Strings;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    sortOrder?: number;
+    value?: Strings;
+}
+export interface InvoiceStatementLineItemSummarizeBy {
+    id?: number;
+    displayValue?: Strings;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    sortOrder?: number;
+    value?: Strings;
+}
+export interface InvoiceStatementSplitBy {
+    id?: number;
+    displayValue?: Strings;
+    invoiceStatement?: InvoiceStatement;
+    sortOrder?: number;
+    value?: Strings;
 }
 export interface InvoiceTerm {
     id?: number;
