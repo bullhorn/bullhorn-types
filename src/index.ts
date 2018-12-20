@@ -161,6 +161,7 @@ export class EntityTypes {
     static EmailHitWordMatchDetail: string = 'EmailHitWordMatchDetail';
     static EmailTemplate: string = 'EmailTemplate';
     static ExternalAccount: string = 'ExternalAccount';
+    static ExternalAccountProfile: string = 'ExternalAccountProfile';
     static ExternalSystem: string = 'ExternalSystem';
     static FieldMapInteraction: string = 'FieldMapInteraction';
     static File: string = 'File';
@@ -177,10 +178,6 @@ export class EntityTypes {
     static HousingComplexFurnitureDelivery: string = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: string = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
-    static InvoiceStatement: string = 'InvoiceStatement';
-    static InvoiceStatementLineItem: string = 'InvoiceStatementLineItem';
-    static InvoiceTerm: string = 'InvoiceTerm';
-    static InvoiceTermVersion: string = 'InvoiceTermVersion';
     static JobBoardHistory: string = 'JobBoardHistory';
     static JobBoardJobOrder: string = 'JobBoardJobOrder';
     static JobBoardPost: string = 'JobBoardPost';
@@ -232,8 +229,9 @@ export class EntityTypes {
     static Lead: string = 'Lead';
     static LeadHistory: string = 'LeadHistory';
     static Location: string = 'Location';
-    static LocationRoot: string = 'LocationRoot';
     static LocationVersion: string = 'LocationVersion';
+    static LocationVersionEditHistory: string = 'LocationVersionEditHistory';
+    static LocationVersionEditHistoryFieldChange: string = 'LocationVersionEditHistoryFieldChange';
     static MailListPushHistory: string = 'MailListPushHistory';
     static MailListPushHistoryDetail: string = 'MailListPushHistoryDetail';
     static Menu: string = 'Menu';
@@ -386,6 +384,7 @@ export class EntityTypes {
     static UserCustomObjectDepartment: string = 'UserCustomObjectDepartment';
     static UserEditHistory: string = 'UserEditHistory';
     static UserEditHistoryFieldChange: string = 'UserEditHistoryFieldChange';
+    static UserHeadshotFile: string = 'UserHeadshotFile';
     static UserHousingComplexUnit: string = 'UserHousingComplexUnit';
     static UserIntegration: string = 'UserIntegration';
     static UserLinkedInUrn: string = 'UserLinkedInUrn';
@@ -406,9 +405,11 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'LocationRoot', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHeadshotFile', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
+
+export type EntityTypesSubset<T extends keyof typeof EntityTypes> = keyof Pick<typeof EntityTypes, T>;
 
 // Interfaces
 export type Scalar = number | string | string[] | Date;
@@ -555,8 +556,7 @@ export interface BillMaster {
     earnCode?: EarnCode;
     externalID?: Strings;
     externalLineItemID?: Strings;
-    invoiceStatement?: InvoiceStatement;
-    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    invoiceID?: number;
     periodEndDate?: Date;
     placement?: Placement;
     quantity?: number;
@@ -3168,7 +3168,7 @@ export interface ClientCorporationLine {
     externalID?: Strings;
     isDeleted?: boolean;
     jobCodes?: ToMany<JobCode>;
-    locations?: ToMany<LocationRoot>;
+    locations?: ToMany<Location>;
     owner?: CorporateUser;
     startDate?: Date;
     status?: Strings;
@@ -3501,11 +3501,6 @@ export interface EmailTemplate {
 }
 export interface ExternalAccount {
     id?: number;
-    customText1?: Strings;
-    customText2?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
     displayName?: Strings;
@@ -3513,6 +3508,11 @@ export interface ExternalAccount {
     isDeleted?: boolean;
     modifyingUser?: CorporateUser;
     username?: Strings;
+}
+export interface ExternalAccountProfile {
+    id?: number;
+    externalAccount?: ExternalAccount;
+    externalAccountProfile?: Strings;
 }
 export interface ExternalSystem {
     id?: number;
@@ -3822,104 +3822,6 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
-export interface InvoiceStatement {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    currencyUnit?: CurrencyUnit;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    dueDate?: Date;
-    invoiceImage?: Strings;
-    invoiceStatementLineItems?: ToMany<InvoiceStatementLineItem>;
-    paymentTerms?: Strings;
-    periodEndDate?: Date;
-    previousBalance?: number;
-    purchaseOrderNumber?: Strings;
-    remitToAddress?: Address;
-    remitToName?: Strings;
-    toAddress?: Address;
-    toName?: Strings;
-}
-export interface InvoiceStatementLineItem {
-    id?: number;
-    amount?: number;
-    candidate?: Candidate;
-    currencyUnit?: CurrencyUnit;
-    description?: Strings;
-    earnCode?: EarnCode;
-    group1?: Strings;
-    group2?: Strings;
-    group3?: Strings;
-    groupDate?: Date;
-    hiringManagerUser?: ClientContact;
-    invoiceStatement?: InvoiceStatement;
-    placement?: Placement;
-    quantity?: number;
-    tax?: number;
-}
-export interface InvoiceTerm {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    isDeleted?: boolean;
-    versions?: ToMany<InvoiceTermVersion>;
-}
-export interface InvoiceTermVersion {
-    id?: number;
-    approvalRequired?: boolean;
-    currencyUnit?: CurrencyUnit;
-    customDate1?: Date;
-    customDate2?: Date;
-    customDate3?: Date;
-    customFloat1?: number;
-    customFloat2?: number;
-    customFloat3?: number;
-    customInt1?: number;
-    customInt2?: number;
-    customInt3?: number;
-    customText1?: Strings;
-    customText10?: Strings;
-    customText11?: Strings;
-    customText12?: Strings;
-    customText13?: Strings;
-    customText14?: Strings;
-    customText15?: Strings;
-    customText16?: Strings;
-    customText17?: Strings;
-    customText18?: Strings;
-    customText19?: Strings;
-    customText2?: Strings;
-    customText20?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
-    customText6?: Strings;
-    customText7?: Strings;
-    customText8?: Strings;
-    customText9?: Strings;
-    customTextBlock1?: Strings;
-    customTextBlock2?: Strings;
-    customTextBlock3?: Strings;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    deliveryMethod?: Strings;
-    description?: Strings;
-    effectiveDate?: Date;
-    effectiveEndDate?: Date;
-    externalID?: Strings;
-    invoiceGroupBy?: Strings;
-    invoiceOn?: Strings;
-    invoiceSplitBy?: Strings;
-    invoiceSummarizeBy?: Strings;
-    invoiceTemplate?: Strings;
-    invoiceTerm?: InvoiceTerm;
-    paymentTerms?: Strings;
-    purchaseOrderRequired?: boolean;
-    remitInstructions?: Strings;
-    status?: Strings;
-    supplemental?: Strings;
-    title?: Strings;
-    waitForTimecards?: boolean;
-}
 export interface JobBoardHistory {
     id?: number;
     dateAdded?: Date;
@@ -3955,7 +3857,6 @@ export interface JobBoardPost {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     companyDescription?: Strings;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
@@ -4043,10 +3944,8 @@ export interface JobBoardPost {
     isPublic?: number;
     jobBoardJobOrders?: ToMany<JobBoardJobOrder>;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     jobOrderUUID?: Strings;
-    location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -4178,7 +4077,6 @@ export interface JobOrder {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -4261,9 +4159,7 @@ export interface JobOrder {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4337,7 +4233,6 @@ export interface JobOrder1 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -4420,9 +4315,7 @@ export interface JobOrder1 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4496,7 +4389,6 @@ export interface JobOrder2 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -4579,9 +4471,7 @@ export interface JobOrder2 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4655,7 +4545,6 @@ export interface JobOrder3 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -4738,9 +4627,7 @@ export interface JobOrder3 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4814,7 +4701,6 @@ export interface JobOrder4 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -4897,9 +4783,7 @@ export interface JobOrder4 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -4973,7 +4857,6 @@ export interface JobOrder5 {
     clientBillRate?: number;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
-    clientCorporationLine?: ClientCorporationLine;
     correlatedCustomDate1?: Date;
     correlatedCustomDate2?: Date;
     correlatedCustomDate3?: Date;
@@ -5056,9 +4939,7 @@ export interface JobOrder5 {
     isOpen?: boolean;
     isPublic?: number;
     jobBoardList?: Strings;
-    jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
-    location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -5495,63 +5376,9 @@ export interface LeadHistory {
 }
 export interface Location {
     id?: number;
-    address?: Address;
-    candidate?: Candidate;
-    clientCorporation?: ClientCorporation;
-    customDate1?: Date;
-    customDate2?: Date;
-    customDate3?: Date;
-    customFloat1?: number;
-    customFloat2?: number;
-    customFloat3?: number;
-    customInt1?: number;
-    customInt2?: number;
-    customInt3?: number;
-    customText1?: Strings;
-    customText10?: Strings;
-    customText11?: Strings;
-    customText12?: Strings;
-    customText13?: Strings;
-    customText14?: Strings;
-    customText15?: Strings;
-    customText16?: Strings;
-    customText17?: Strings;
-    customText18?: Strings;
-    customText19?: Strings;
-    customText2?: Strings;
-    customText20?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
-    customText6?: Strings;
-    customText7?: Strings;
-    customText8?: Strings;
-    customText9?: Strings;
-    customTextBlock1?: Strings;
-    customTextBlock2?: Strings;
-    customTextBlock3?: Strings;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    description?: Strings;
-    effectiveDate?: Date;
-    effectiveEndDate?: Date;
-    externalID?: Strings;
-    isBillTo?: boolean;
-    isDeleted?: boolean;
-    isSoldTo?: boolean;
-    isWorkSite?: boolean;
-    name?: Strings;
-    owner?: CorporateUser;
-    status?: Strings;
-    type?: Strings;
-    versionID?: number;
-}
-export interface LocationRoot {
-    id?: number;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     isDeleted?: boolean;
-    owner?: CorporateUser;
     versions?: ToMany<LocationVersion>;
 }
 export interface LocationVersion {
@@ -5598,10 +5425,29 @@ export interface LocationVersion {
     isBillTo?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    location?: LocationRoot;
+    location?: Location;
     name?: Strings;
+    owner?: CorporateUser;
     status?: Strings;
     type?: Strings;
+}
+export interface LocationVersionEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<LocationVersionEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: LocationVersion;
+    transactionID?: Strings;
+}
+export interface LocationVersionEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: LocationVersionEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface MailListPushHistory {
     id?: number;
@@ -9634,6 +9480,26 @@ export interface UserEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface UserHeadshotFile {
+    id?: number;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    description?: Strings;
+    directory?: Strings;
+    externalID?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isDeleted?: boolean;
+    isEncrypted?: boolean;
+    isExternal?: boolean;
+    isPrivate?: boolean;
+    name?: Strings;
+    person?: Person;
+    type?: Strings;
+    uuid?: Strings;
+}
 export interface UserHousingComplexUnit {
     id?: number;
     candidate?: Candidate;
@@ -9679,8 +9545,8 @@ export interface UserIntegration {
 export interface UserLinkedInUrn {
     id?: number;
     dateAdded?: Date;
+    isManualMatch?: boolean;
     linkedInUrn?: Strings;
-    matchedOrder?: number;
     person?: Person;
 }
 export interface UserMessage {
