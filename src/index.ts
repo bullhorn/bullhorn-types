@@ -384,7 +384,6 @@ export class EntityTypes {
     static UserCustomObjectDepartment: string = 'UserCustomObjectDepartment';
     static UserEditHistory: string = 'UserEditHistory';
     static UserEditHistoryFieldChange: string = 'UserEditHistoryFieldChange';
-    static UserHeadshotFile: string = 'UserHeadshotFile';
     static UserHousingComplexUnit: string = 'UserHousingComplexUnit';
     static UserIntegration: string = 'UserIntegration';
     static UserLinkedInUrn: string = 'UserLinkedInUrn';
@@ -405,7 +404,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHeadshotFile', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -3501,6 +3500,11 @@ export interface EmailTemplate {
 }
 export interface ExternalAccount {
     id?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
     displayName?: Strings;
@@ -5211,7 +5215,7 @@ export interface JobSubmission {
     owners?: ToMany<CorporateUser>;
     payRate?: number;
     salary?: number;
-    sendingUser?: CorporateUser;
+    sendingUser?: Person;
     source?: Strings;
     status?: Strings;
     tasks?: ToMany<Task>;
@@ -8652,11 +8656,13 @@ export interface PlacementChangeRequest {
     employeeType?: Strings;
     employmentType?: Strings;
     fee?: number;
+    flatFee?: number;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
     housingManagerID?: number;
     housingStatus?: Strings;
+    markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
@@ -9479,26 +9485,6 @@ export interface UserEditHistoryFieldChange {
     editHistory?: UserEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
-}
-export interface UserHeadshotFile {
-    id?: number;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    description?: Strings;
-    directory?: Strings;
-    externalID?: Strings;
-    fileExtension?: Strings;
-    fileOwner?: CorporateUser;
-    fileSize?: number;
-    isDeleted?: boolean;
-    isEncrypted?: boolean;
-    isExternal?: boolean;
-    isPrivate?: boolean;
-    name?: Strings;
-    person?: Person;
-    type?: Strings;
-    uuid?: Strings;
 }
 export interface UserHousingComplexUnit {
     id?: number;
