@@ -13,6 +13,7 @@ export class EntityTypes {
     static AppointmentTemplate: string = 'AppointmentTemplate';
     static AutoAddBlacklistDomain: string = 'AutoAddBlacklistDomain';
     static BillMaster: string = 'BillMaster';
+    static BillableCharge: string = 'BillableCharge';
     static BillingProfile: string = 'BillingProfile';
     static BillingProfileVersion: string = 'BillingProfileVersion';
     static BillingSyncBatch: string = 'BillingSyncBatch';
@@ -182,6 +183,7 @@ export class EntityTypes {
     static HousingComplexUnit: string = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
     static InvoiceStatement: string = 'InvoiceStatement';
+    static InvoiceStatementBatch: string = 'InvoiceStatementBatch';
     static InvoiceStatementLineItem: string = 'InvoiceStatementLineItem';
     static InvoiceStatementLineItemGroupBy: string = 'InvoiceStatementLineItemGroupBy';
     static InvoiceStatementLineItemSummarizeBy: string = 'InvoiceStatementLineItemSummarizeBy';
@@ -557,18 +559,14 @@ export interface BillMaster {
     adjustmentSequenceNumber?: number;
     adjustmentTo?: BillMaster;
     amount?: number;
-    billingSyncBatch?: BillingSyncBatch;
-    clientCorporation?: ClientCorporation;
+    billableCharge?: BillableCharge;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     earnCode?: EarnCode;
-    externalLineItemID?: Strings;
     invoiceStatement?: InvoiceStatement;
+    invoiceStatementBatch?: InvoiceStatementBatch;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
-    isReady?: boolean;
-    periodEndDate?: Date;
-    placement?: Placement;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
@@ -577,6 +575,29 @@ export interface BillMaster {
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface BillableCharge {
+    id?: number;
+    billMasters?: ToMany<BillMaster>;
+    billingClientCorporation?: ClientCorporation;
+    billingCorporateUser?: CorporateUser;
+    billingProfile?: BillingProfile;
+    billingScheduleID?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    invoiceTerm?: InvoiceTerm;
+    isInvoiced?: boolean;
+    periodEndDate?: Date;
+    placement?: Placement;
+    readyToBill?: number;
+    readyToBillOverride?: number;
+    subTotal?: number;
+    transactionStatus?: TransactionStatus;
+    transactionType?: TransactionType;
 }
 export interface BillingProfile {
     id?: number;
@@ -690,11 +711,14 @@ export interface BillingProfileVersion {
 }
 export interface BillingSyncBatch {
     id?: number;
-    billMasters?: ToMany<BillMaster>;
+    billableCharges?: ToMany<BillableCharge>;
+    billingProfile?: BillingProfile;
     dateAdded?: Date;
     dateLastModified?: Date;
     externalID?: Strings;
     payMasters?: ToMany<PayMaster>;
+    periodEndDate?: Date;
+    placement?: Placement;
     timeOfExternalEvent?: Date;
 }
 export interface BillingSyncError {
@@ -3995,10 +4019,18 @@ export interface InvoiceStatement {
     taxAmount?: number;
     total?: number;
 }
+export interface InvoiceStatementBatch {
+    id?: number;
+    billMasters?: ToMany<BillMaster>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    owner?: CorporateUser;
+}
 export interface InvoiceStatementLineItem {
     id?: number;
     billMasters?: ToMany<BillMaster>;
     description?: Strings;
+    groupByDisplay?: Strings;
     groupBys?: ToMany<InvoiceStatementLineItemGroupBy>;
     invoiceStatement?: InvoiceStatement;
     price?: number;
@@ -4025,6 +4057,7 @@ export interface InvoiceStatementLineItemSummarizeBy {
 export interface InvoiceStatementSplitBy {
     id?: number;
     displayValue?: Strings;
+    field?: Strings;
     invoiceStatement?: InvoiceStatement;
     sortOrder?: number;
     value?: Strings;
@@ -5774,9 +5807,9 @@ export interface Location {
     isDeleted?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    name?: Strings;
     owner?: CorporateUser;
     status?: Strings;
+    title?: Strings;
     type?: Strings;
     versionID?: number;
     versions?: ToMany<LocationVersion>;
@@ -5826,8 +5859,8 @@ export interface LocationVersion {
     isFirst?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    name?: Strings;
     status?: Strings;
+    title?: Strings;
     type?: Strings;
 }
 export interface MailListPushHistory {
@@ -6988,10 +7021,7 @@ export interface PayMaster {
     dateLastModified?: Date;
     earnCode?: EarnCode;
     externalLineItemID?: Strings;
-    isReady?: boolean;
     payRollID?: number;
-    periodEndDate?: Date;
-    placement?: Placement;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
@@ -9062,6 +9092,7 @@ export interface PlacementChangeRequest {
     employeeType?: Strings;
     employmentType?: Strings;
     fee?: number;
+    flatFee?: number;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -9069,6 +9100,7 @@ export interface PlacementChangeRequest {
     housingStatus?: Strings;
     jobCode?: JobCode;
     location?: Location;
+    markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
