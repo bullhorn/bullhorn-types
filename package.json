@@ -2,7 +2,6 @@
   "name": "@bullhorn/bullhorn-types",
   "version": "0.0.0-development",
   "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
-  "author": "Brian Kimball <bvkimball@gmail.com>",
   "license": "MIT",
   "files": [
     "lib/"
