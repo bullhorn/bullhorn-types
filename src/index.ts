@@ -184,10 +184,15 @@ export class EntityTypes {
     static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
     static InvoiceStatement: string = 'InvoiceStatement';
     static InvoiceStatementBatch: string = 'InvoiceStatementBatch';
+    static InvoiceStatementEditHistory: string = 'InvoiceStatementEditHistory';
+    static InvoiceStatementEditHistoryFieldChange: string = 'InvoiceStatementEditHistoryFieldChange';
+    static InvoiceStatementExport: string = 'InvoiceStatementExport';
+    static InvoiceStatementHistory: string = 'InvoiceStatementHistory';
     static InvoiceStatementLineItem: string = 'InvoiceStatementLineItem';
     static InvoiceStatementLineItemGroupBy: string = 'InvoiceStatementLineItemGroupBy';
     static InvoiceStatementLineItemSummarizeBy: string = 'InvoiceStatementLineItemSummarizeBy';
     static InvoiceStatementSplitBy: string = 'InvoiceStatementSplitBy';
+    static InvoiceStatementTemplate: string = 'InvoiceStatementTemplate';
     static InvoiceTerm: string = 'InvoiceTerm';
     static InvoiceTermVersion: string = 'InvoiceTermVersion';
     static JobBoardHistory: string = 'JobBoardHistory';
@@ -580,7 +585,9 @@ export interface BillableCharge {
     id?: number;
     billMasters?: ToMany<BillMaster>;
     billingClientCorporation?: ClientCorporation;
+    billingClientUser?: CorporateUser;
     billingCorporateUser?: CorporateUser;
+    billingFrequency?: Strings;
     billingProfile?: BillingProfile;
     billingScheduleID?: number;
     billingSyncBatch?: BillingSyncBatch;
@@ -589,13 +596,15 @@ export interface BillableCharge {
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
+    description?: Strings;
     invoiceTerm?: InvoiceTerm;
     isInvoiced?: boolean;
+    jobOrder?: JobOrder;
     periodEndDate?: Date;
     placement?: Placement;
     readyToBill?: number;
     readyToBillOverride?: number;
-    subTotal?: number;
+    subtotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
 }
@@ -3987,7 +3996,6 @@ export interface HousingComplexUtilityAccount {
 }
 export interface InvoiceStatement {
     id?: number;
-    billingAddress?: Address;
     billingAttention?: Strings;
     billingClientContact?: ClientContact;
     billingCorporateUser?: CorporateUser;
@@ -4007,6 +4015,7 @@ export interface InvoiceStatement {
     invoiceOrigin?: Strings;
     invoiceTerm?: InvoiceTerm;
     invoiceType?: Strings;
+    isFinalized?: boolean;
     lineItems?: ToMany<InvoiceStatementLineItem>;
     owner?: CorporateUser;
     paymentTerms?: Strings;
@@ -4015,7 +4024,7 @@ export interface InvoiceStatement {
     remitInstructions?: Strings;
     splitBys?: ToMany<InvoiceStatementSplitBy>;
     status?: Strings;
-    subTotal?: number;
+    subtotal?: number;
     taxAmount?: number;
     total?: number;
 }
@@ -4025,6 +4034,46 @@ export interface InvoiceStatementBatch {
     dateAdded?: Date;
     dateLastModified?: Date;
     owner?: CorporateUser;
+}
+export interface InvoiceStatementEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<InvoiceStatementEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: InvoiceStatement;
+    transactionID?: Strings;
+}
+export interface InvoiceStatementEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: InvoiceStatementEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface InvoiceStatementExport {
+    id?: number;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    invoiceStatement?: InvoiceStatement;
+    isCurrent?: boolean;
+    isFinalized?: boolean;
+    name?: Strings;
+}
+export interface InvoiceStatementHistory {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    invoiceStatement?: InvoiceStatement;
+    modifyingUser?: CorporateUser;
+    status?: Strings;
 }
 export interface InvoiceStatementLineItem {
     id?: number;
@@ -4061,6 +4110,20 @@ export interface InvoiceStatementSplitBy {
     invoiceStatement?: InvoiceStatement;
     sortOrder?: number;
     value?: Strings;
+}
+export interface InvoiceStatementTemplate {
+    id?: number;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    name?: Strings;
+    type?: Strings;
 }
 export interface InvoiceTerm {
     id?: number;
@@ -4109,8 +4172,8 @@ export interface InvoiceTerm {
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
     invoiceSplitBy?: Strings;
+    invoiceStatementTemplate?: InvoiceStatementTemplate;
     invoiceSummarizeBy?: Strings;
-    invoiceTemplate?: Strings;
     isDeleted?: boolean;
     isFirst?: boolean;
     paymentTerms?: Strings;
@@ -4169,8 +4232,8 @@ export interface InvoiceTermVersion {
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
     invoiceSplitBy?: Strings;
+    invoiceStatementTemplate?: InvoiceStatementTemplate;
     invoiceSummarizeBy?: Strings;
-    invoiceTemplate?: Strings;
     isFirst?: boolean;
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
@@ -5597,7 +5660,7 @@ export interface JobSubmission {
     owners?: ToMany<CorporateUser>;
     payRate?: number;
     salary?: number;
-    sendingUser?: CorporateUser;
+    sendingUser?: Person;
     source?: Strings;
     status?: Strings;
     tasks?: ToMany<Task>;
