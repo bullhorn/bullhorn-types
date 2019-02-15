@@ -4013,6 +4013,7 @@ export interface InvoiceStatement {
     invoiceImage?: Strings;
     invoiceNumber?: Strings;
     invoiceOrigin?: Strings;
+    invoiceStatementExports?: ToMany<InvoiceStatementExport>;
     invoiceTerm?: InvoiceTerm;
     invoiceType?: Strings;
     isFinalized?: boolean;
