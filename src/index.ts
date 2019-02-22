@@ -182,6 +182,7 @@ export class EntityTypes {
     static HousingComplexFurnitureDelivery: string = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: string = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: string = 'HousingComplexUtilityAccount';
+    static InvoiceNumberFormat: string = 'InvoiceNumberFormat';
     static InvoiceStatement: string = 'InvoiceStatement';
     static InvoiceStatementBatch: string = 'InvoiceStatementBatch';
     static InvoiceStatementEditHistory: string = 'InvoiceStatementEditHistory';
@@ -3994,6 +3995,18 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
+export interface InvoiceNumberFormat {
+    id?: number;
+    creditSuffix?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    name?: Strings;
+    nextInSequence?: number;
+    prefix?: Strings;
+    sequenceLength?: number;
+    sequenceStart?: number;
+}
 export interface InvoiceStatement {
     id?: number;
     billingAttention?: Strings;
@@ -4014,6 +4027,7 @@ export interface InvoiceStatement {
     invoiceNumber?: Strings;
     invoiceOrigin?: Strings;
     invoiceStatementExports?: ToMany<InvoiceStatementExport>;
+    invoiceStatementTemplate?: InvoiceStatementTemplate;
     invoiceTerm?: InvoiceTerm;
     invoiceType?: Strings;
     isFinalized?: boolean;
@@ -4079,6 +4093,7 @@ export interface InvoiceStatementHistory {
 export interface InvoiceStatementLineItem {
     id?: number;
     billMasters?: ToMany<BillMaster>;
+    comment?: Strings;
     description?: Strings;
     groupByDisplay?: Strings;
     groupBys?: ToMany<InvoiceStatementLineItemGroupBy>;
