@@ -12,7 +12,9 @@ export class EntityTypes {
     static AppointmentEditHistoryFieldChange: 'AppointmentEditHistoryFieldChange' = 'AppointmentEditHistoryFieldChange';
     static AppointmentTemplate: 'AppointmentTemplate' = 'AppointmentTemplate';
     static AutoAddBlacklistDomain: 'AutoAddBlacklistDomain' = 'AutoAddBlacklistDomain';
+    static BatchGroup: 'BatchGroup' = 'BatchGroup';
     static BillMaster: 'BillMaster' = 'BillMaster';
+    static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
@@ -182,6 +184,7 @@ export class EntityTypes {
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: 'HousingComplexUnit' = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
+    static InvoiceNumberFormat: 'InvoiceNumberFormat' = 'InvoiceNumberFormat';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementEditHistory: 'InvoiceStatementEditHistory' = 'InvoiceStatementEditHistory';
@@ -290,6 +293,8 @@ export class EntityTypes {
     static OpportunityHistory: 'OpportunityHistory' = 'OpportunityHistory';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
     static PayMaster: 'PayMaster' = 'PayMaster';
+    static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
+    static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static Person: 'Person' = 'Person';
     static PersonCustomObject10EditHistory: 'PersonCustomObject10EditHistory' = 'PersonCustomObject10EditHistory';
     static PersonCustomObject1EditHistory: 'PersonCustomObject1EditHistory' = 'PersonCustomObject1EditHistory';
@@ -562,23 +567,36 @@ export interface AutoAddBlacklistDomain {
     dateAdded?: Date;
     domain?: Strings;
 }
+export interface BatchGroup {
+    id?: number;
+    billingSyncBatches?: ToMany<BillingSyncBatch>;
+    dateAdded?: Date;
+}
 export interface BillMaster {
     id?: number;
-    adjustmentSequenceNumber?: number;
-    adjustmentTo?: BillMaster;
-    amount?: number;
+    billMasterTransactions?: ToMany<BillMasterTransaction>;
     billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    canInvoice?: boolean;
+    earnCode?: EarnCode;
+    transactionDate?: Date;
+}
+export interface BillMasterTransaction {
+    id?: number;
+    adjustmentSequenceNumber?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    comment?: Strings;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
-    earnCode?: EarnCode;
     invoiceStatement?: InvoiceStatement;
     invoiceStatementBatch?: InvoiceStatementBatch;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
-    transactionDate?: Date;
+    reversalOfTransaction?: BillMasterTransaction;
     transactionOrigin?: TransactionOrigin;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
@@ -592,8 +610,7 @@ export interface BillableCharge {
     billingCorporateUser?: CorporateUser;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
-    billingScheduleID?: number;
-    billingSyncBatch?: BillingSyncBatch;
+    billingSchedule?: number;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
@@ -607,7 +624,7 @@ export interface BillableCharge {
     placement?: Placement;
     readyToBill?: number;
     readyToBillOverride?: number;
-    subtotal?: number;
+    subTotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
 }
@@ -723,15 +740,17 @@ export interface BillingProfileVersion {
 }
 export interface BillingSyncBatch {
     id?: number;
-    billableCharges?: ToMany<BillableCharge>;
-    billingProfile?: BillingProfile;
+    batchGroup?: BatchGroup;
+    billMasters?: ToMany<BillMaster>;
     dateAdded?: Date;
     dateLastModified?: Date;
+    defaultBillableCharge?: BillableCharge;
+    defaultPayableCharge?: PayableCharge;
     externalID?: Strings;
     payMasters?: ToMany<PayMaster>;
     periodEndDate?: Date;
-    placement?: Placement;
     timeOfExternalEvent?: Date;
+    transactionOrigin?: TransactionOrigin;
 }
 export interface BillingSyncError {
     id?: number;
@@ -3997,6 +4016,16 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
+export interface InvoiceNumberFormat {
+    id?: number;
+    creditSuffix?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    name?: Strings;
+    prefix?: Strings;
+    sequenceLength?: number;
+}
 export interface InvoiceStatement {
     id?: number;
     billingAttention?: Strings;
@@ -4038,7 +4067,7 @@ export interface InvoiceStatement {
 }
 export interface InvoiceStatementBatch {
     id?: number;
-    billMasters?: ToMany<BillMaster>;
+    billMasterTransactions?: ToMany<BillMasterTransaction>;
     dateAdded?: Date;
     dateLastModified?: Date;
     owner?: CorporateUser;
@@ -4086,7 +4115,7 @@ export interface InvoiceStatementHistory {
 }
 export interface InvoiceStatementLineItem {
     id?: number;
-    billMasters?: ToMany<BillMaster>;
+    billMasterTransactions?: ToMany<BillMasterTransaction>;
     comment?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
@@ -7086,25 +7115,40 @@ export interface PageInteraction {
 }
 export interface PayMaster {
     id?: number;
-    adjustmentSequenceNumber?: number;
-    adjustmentTo?: PayMaster;
-    amount?: number;
     billingSyncBatch?: BillingSyncBatch;
-    clientCorporation?: ClientCorporation;
+    earnCode?: EarnCode;
+    payMasterTransactions?: ToMany<PayMasterTransaction>;
+    payableCharge?: PayableCharge;
+    transactionDate?: Date;
+}
+export interface PayMasterTransaction {
+    id?: number;
+    adjustmentSequenceNumber?: number;
+    amount?: number;
+    comment?: Strings;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
-    earnCode?: EarnCode;
-    externalLineItemID?: Strings;
-    payRollID?: number;
+    payMaster?: PayMaster;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
-    transactionDate?: Date;
+    reversalOfTransaction?: PayMasterTransaction;
     transactionOrigin?: TransactionOrigin;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface PayableCharge {
+    id?: number;
+    billingSyncBatches?: ToMany<BillingSyncBatch>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    payMasters?: ToMany<PayMaster>;
+    periodEndDate?: Date;
+    placement?: Placement;
+    readyToPayOverride?: number;
 }
 export interface Person {
     id?: number;
