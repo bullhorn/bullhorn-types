@@ -13,14 +13,14 @@ before_install:
   - sudo apt-get install libnotify-bin
 install:
   - npm install
-  - npm install -g @bullhorn/bullhorn-cli
-  - npm install -g travis-deploy-once@4
+  - npm install -g @bullhorn/bullhorn-cli travis-deploy-once@4
 script:
-  - bh config set environment ${bhenvironment}
-  - bh generate all -u ${bhusername} -p ${bhpassword} -d ./src
+  - bullhorn set environment ${environment}
+  - bullhorn auth login -u ${username} -p ${password}
+  - travis_wait 1 bullhorn typings generate -d ./src
   - npm run build
 after_success:
   - travis-deploy-once "npm run semantic-release"
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
