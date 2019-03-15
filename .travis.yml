@@ -15,7 +15,7 @@ install:
   - npm install
   - npm install -g @bullhorn/bullhorn-cli travis-deploy-once@4
 script:
-  - bullhorn set environment ${environment}
+  - bullhorn config set environment ${environment}
   - bullhorn auth login -u ${username} -p ${password}
   - travis_wait 1 bullhorn typings generate -d ./src
   - npm run build
