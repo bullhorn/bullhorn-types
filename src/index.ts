@@ -16,6 +16,7 @@ export class EntityTypes {
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
+    static BillableChargeFileAttachment: 'BillableChargeFileAttachment' = 'BillableChargeFileAttachment';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
@@ -194,7 +195,9 @@ export class EntityTypes {
     static InvoiceStatementLineItem: 'InvoiceStatementLineItem' = 'InvoiceStatementLineItem';
     static InvoiceStatementLineItemGroupBy: 'InvoiceStatementLineItemGroupBy' = 'InvoiceStatementLineItemGroupBy';
     static InvoiceStatementLineItemSummarizeBy: 'InvoiceStatementLineItemSummarizeBy' = 'InvoiceStatementLineItemSummarizeBy';
+    static InvoiceStatementMessageTemplate: 'InvoiceStatementMessageTemplate' = 'InvoiceStatementMessageTemplate';
     static InvoiceStatementSplitBy: 'InvoiceStatementSplitBy' = 'InvoiceStatementSplitBy';
+    static InvoiceStatementStatusLookup: 'InvoiceStatementStatusLookup' = 'InvoiceStatementStatusLookup';
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
@@ -424,7 +427,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementStatusLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -605,8 +608,8 @@ export interface BillMasterTransaction {
 export interface BillableCharge {
     id?: number;
     billMasters?: ToMany<BillMaster>;
+    billingClientContact?: ClientContact;
     billingClientCorporation?: ClientCorporation;
-    billingClientUser?: CorporateUser;
     billingCorporateUser?: CorporateUser;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -617,6 +620,7 @@ export interface BillableCharge {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
+    fileAttachments?: ToMany<BillableChargeFileAttachment>;
     invoiceTerm?: InvoiceTerm;
     isInvoiced?: boolean;
     jobOrder?: JobOrder;
@@ -624,9 +628,21 @@ export interface BillableCharge {
     placement?: Placement;
     readyToBill?: number;
     readyToBillOverride?: number;
-    subTotal?: number;
+    subtotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
+}
+export interface BillableChargeFileAttachment {
+    id?: number;
+    billableCharge?: BillableCharge;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    name?: Strings;
 }
 export interface BillingProfile {
     id?: number;
@@ -755,10 +771,10 @@ export interface BillingSyncBatch {
 export interface BillingSyncError {
     id?: number;
     acknowledgedByUser?: Person;
+    acknowledgedDate?: Date;
     dateAdded?: Date;
     errorCode?: Strings;
     externalID?: Strings;
-    externalLineItemID?: Strings;
     placement?: Placement;
     rawDataPacket?: Strings;
     rawError?: Strings;
@@ -4060,7 +4076,7 @@ export interface InvoiceStatement {
     purchaseOrderNumber?: Strings;
     remitInstructions?: Strings;
     splitBys?: ToMany<InvoiceStatementSplitBy>;
-    status?: Strings;
+    status?: InvoiceStatementStatusLookup;
     subtotal?: number;
     taxAmount?: number;
     total?: number;
@@ -4117,22 +4133,25 @@ export interface InvoiceStatementLineItem {
     id?: number;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
     comment?: Strings;
+    currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
     groupByDisplay?: Strings;
     groupBys?: ToMany<InvoiceStatementLineItemGroupBy>;
     invoiceStatement?: InvoiceStatement;
-    price?: number;
     quantity?: number;
+    rate?: number;
     subtotal?: number;
     summarizeBys?: ToMany<InvoiceStatementLineItemSummarizeBy>;
     taxAmount?: number;
     total?: number;
+    unitOfMeasure?: UnitOfMeasure;
 }
 export interface InvoiceStatementLineItemGroupBy {
     id?: number;
     displayValue?: Strings;
+    field?: Strings;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
     sortOrder?: number;
     value?: Strings;
@@ -4140,9 +4159,18 @@ export interface InvoiceStatementLineItemGroupBy {
 export interface InvoiceStatementLineItemSummarizeBy {
     id?: number;
     displayValue?: Strings;
+    field?: Strings;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
     sortOrder?: number;
     value?: Strings;
+}
+export interface InvoiceStatementMessageTemplate {
+    id?: number;
+    dateAdded?: Date;
+    messageText?: Strings;
+    name?: Strings;
+    owner?: CorporateUser;
+    subject?: Strings;
 }
 export interface InvoiceStatementSplitBy {
     id?: number;
@@ -4151,6 +4179,21 @@ export interface InvoiceStatementSplitBy {
     invoiceStatement?: InvoiceStatement;
     sortOrder?: number;
     value?: Strings;
+}
+export interface InvoiceStatementStatusLookup {
+    id?: number;
+    canBypass?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isDownstreamOnly?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
+    workflowOrder?: number;
 }
 export interface InvoiceStatementTemplate {
     id?: number;
@@ -7141,14 +7184,22 @@ export interface PayMasterTransaction {
 }
 export interface PayableCharge {
     id?: number;
-    billingSyncBatches?: ToMany<BillingSyncBatch>;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
+    employeeType?: Strings;
+    jobOrder?: JobOrder;
     payMasters?: ToMany<PayMaster>;
     periodEndDate?: Date;
     placement?: Placement;
+    readyToPay?: number;
     readyToPayOverride?: number;
+    subtotal?: number;
+    transactionStatus?: TransactionStatus;
+    transactionType?: TransactionType;
 }
 export interface Person {
     id?: number;
