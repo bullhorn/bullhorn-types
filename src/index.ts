@@ -185,7 +185,6 @@ export class EntityTypes {
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: 'HousingComplexUnit' = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
-    static InvoiceNumberFormat: 'InvoiceNumberFormat' = 'InvoiceNumberFormat';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementEditHistory: 'InvoiceStatementEditHistory' = 'InvoiceStatementEditHistory';
@@ -196,6 +195,7 @@ export class EntityTypes {
     static InvoiceStatementLineItemGroupBy: 'InvoiceStatementLineItemGroupBy' = 'InvoiceStatementLineItemGroupBy';
     static InvoiceStatementLineItemSummarizeBy: 'InvoiceStatementLineItemSummarizeBy' = 'InvoiceStatementLineItemSummarizeBy';
     static InvoiceStatementMessageTemplate: 'InvoiceStatementMessageTemplate' = 'InvoiceStatementMessageTemplate';
+    static InvoiceStatementNumberFormat: 'InvoiceStatementNumberFormat' = 'InvoiceStatementNumberFormat';
     static InvoiceStatementSplitBy: 'InvoiceStatementSplitBy' = 'InvoiceStatementSplitBy';
     static InvoiceStatementStatusLookup: 'InvoiceStatementStatusLookup' = 'InvoiceStatementStatusLookup';
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
@@ -4032,16 +4032,6 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
-export interface InvoiceNumberFormat {
-    id?: number;
-    creditSuffix?: Strings;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    description?: Strings;
-    name?: Strings;
-    prefix?: Strings;
-    sequenceLength?: number;
-}
 export interface InvoiceStatement {
     id?: number;
     billingAttention?: Strings;
@@ -4060,14 +4050,13 @@ export interface InvoiceStatement {
     deliveryStatus?: Strings;
     dueDate?: Date;
     effectiveDate?: Date;
-    invoiceDate?: Date;
-    invoiceImage?: Strings;
-    invoiceNumber?: Strings;
-    invoiceOrigin?: Strings;
+    invoiceStatementDate?: Date;
     invoiceStatementExports?: ToMany<InvoiceStatementExport>;
+    invoiceStatementNumber?: Strings;
+    invoiceStatementOrigin?: Strings;
     invoiceStatementTemplate?: InvoiceStatementTemplate;
+    invoiceStatementType?: Strings;
     invoiceTerm?: InvoiceTerm;
-    invoiceType?: Strings;
     isFinalized?: boolean;
     lineItems?: ToMany<InvoiceStatementLineItem>;
     owner?: CorporateUser;
@@ -4171,6 +4160,16 @@ export interface InvoiceStatementMessageTemplate {
     name?: Strings;
     owner?: CorporateUser;
     subject?: Strings;
+}
+export interface InvoiceStatementNumberFormat {
+    id?: number;
+    creditSuffix?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    name?: Strings;
+    prefix?: Strings;
+    sequenceLength?: number;
 }
 export interface InvoiceStatementSplitBy {
     id?: number;
