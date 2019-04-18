@@ -1,6 +1,6 @@
 {
   "name": "@bullhorn/bullhorn-types",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Entity Utils and Typescript Interfaces for the Bullhorn REST Api",
   "license": "MIT",
   "files": [
