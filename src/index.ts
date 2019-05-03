@@ -17,6 +17,7 @@ export class EntityTypes {
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
     static BillableChargeFileAttachment: 'BillableChargeFileAttachment' = 'BillableChargeFileAttachment';
+    static BillableChargeStatusLookup: 'BillableChargeStatusLookup' = 'BillableChargeStatusLookup';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
@@ -178,6 +179,7 @@ export class EntityTypes {
     static FormTriggerInstance: 'FormTriggerInstance' = 'FormTriggerInstance';
     static FormTriggerMessage: 'FormTriggerMessage' = 'FormTriggerMessage';
     static GDPRDeletionRequest: 'GDPRDeletionRequest' = 'GDPRDeletionRequest';
+    static GeneralLedgerAccount: 'GeneralLedgerAccount' = 'GeneralLedgerAccount';
     static GoalTarget: 'GoalTarget' = 'GoalTarget';
     static HitWord: 'HitWord' = 'HitWord';
     static HousingComplex: 'HousingComplex' = 'HousingComplex';
@@ -198,6 +200,7 @@ export class EntityTypes {
     static InvoiceStatementNumberFormat: 'InvoiceStatementNumberFormat' = 'InvoiceStatementNumberFormat';
     static InvoiceStatementSplitBy: 'InvoiceStatementSplitBy' = 'InvoiceStatementSplitBy';
     static InvoiceStatementStatusLookup: 'InvoiceStatementStatusLookup' = 'InvoiceStatementStatusLookup';
+    static InvoiceStatementTax: 'InvoiceStatementTax' = 'InvoiceStatementTax';
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
@@ -393,6 +396,8 @@ export class EntityTypes {
     static TaskEditHistory: 'TaskEditHistory' = 'TaskEditHistory';
     static TaskEditHistoryFieldChange: 'TaskEditHistoryFieldChange' = 'TaskEditHistoryFieldChange';
     static TaskTemplate: 'TaskTemplate' = 'TaskTemplate';
+    static Tax: 'Tax' = 'Tax';
+    static TaxType: 'TaxType' = 'TaxType';
     static Tearsheet: 'Tearsheet' = 'Tearsheet';
     static TearsheetMember: 'TearsheetMember' = 'TearsheetMember';
     static TearsheetRecipient: 'TearsheetRecipient' = 'TearsheetRecipient';
@@ -427,7 +432,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementStatusLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BillableChargeStatusLookup', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementStatusLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -628,6 +633,7 @@ export interface BillableCharge {
     placement?: Placement;
     readyToBill?: number;
     readyToBillOverride?: number;
+    status?: BillableChargeStatusLookup;
     subtotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
@@ -643,6 +649,18 @@ export interface BillableChargeFileAttachment {
     fileOwner?: CorporateUser;
     fileSize?: number;
     name?: Strings;
+}
+export interface BillableChargeStatusLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface BillingProfile {
     id?: number;
@@ -693,6 +711,7 @@ export interface BillingProfile {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    invoiceStatementMessageTemplate?: InvoiceStatementMessageTemplate;
     invoiceTerm?: InvoiceTerm;
     isDeleted?: boolean;
     owner?: CorporateUser;
@@ -749,6 +768,7 @@ export interface BillingProfileVersion {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    invoiceStatementMessageTemplate?: InvoiceStatementMessageTemplate;
     isFirst?: boolean;
     status?: Strings;
     title?: Strings;
@@ -3706,11 +3726,6 @@ export interface EmailTemplate {
 }
 export interface ExternalAccount {
     id?: number;
-    customText1?: Strings;
-    customText2?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
     displayName?: Strings;
@@ -3820,6 +3835,19 @@ export interface GDPRDeletionRequest {
     deletedPersonFirstName?: Strings;
     deletedPersonLastName?: Strings;
     deletingUser?: CorporateUser;
+}
+export interface GeneralLedgerAccount {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    externalAccountDetailType?: Strings;
+    externalAccountName?: Strings;
+    externalAccountNumber?: number;
+    externalAccountType?: Strings;
+    isAccountsReceivable?: boolean;
+    isActive?: boolean;
+    isBill?: boolean;
+    isPay?: boolean;
 }
 export interface GoalTarget {
     id?: number;
@@ -4058,6 +4086,7 @@ export interface InvoiceStatement {
     invoiceStatementType?: Strings;
     invoiceTerm?: InvoiceTerm;
     isFinalized?: boolean;
+    lineItemTotal?: number;
     lineItems?: ToMany<InvoiceStatementLineItem>;
     owner?: CorporateUser;
     paymentTerms?: Strings;
@@ -4068,6 +4097,7 @@ export interface InvoiceStatement {
     status?: InvoiceStatementStatusLookup;
     subtotal?: number;
     taxAmount?: number;
+    taxes?: ToMany<InvoiceStatementTax>;
     total?: number;
 }
 export interface InvoiceStatementBatch {
@@ -4193,6 +4223,16 @@ export interface InvoiceStatementStatusLookup {
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
     workflowOrder?: number;
+}
+export interface InvoiceStatementTax {
+    id?: number;
+    addedByUser?: CorporateUser;
+    dateAdded?: Date;
+    earnCode?: EarnCode;
+    finalizedValue?: number;
+    label?: Strings;
+    taxType?: TaxType;
+    value?: number;
 }
 export interface InvoiceStatementTemplate {
     id?: number;
@@ -10000,6 +10040,19 @@ export interface TaskTemplate {
     name?: Strings;
     owner?: CorporateUser;
     templateType?: Strings;
+}
+export interface Tax {
+    id?: number;
+    addedByUser?: CorporateUser;
+    dateAdded?: Date;
+    earnCode?: EarnCode;
+    label?: Strings;
+    taxType?: TaxType;
+    value?: number;
+}
+export interface TaxType {
+    id?: number;
+    label?: Strings;
 }
 export interface Tearsheet {
     id?: number;
