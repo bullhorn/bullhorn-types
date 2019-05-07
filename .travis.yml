@@ -16,8 +16,6 @@ install:
   - npm install -g @bullhorn/bullhorn-cli
   - npm install -g travis-deploy-once@4
 script:
-  - bh config set environment ${bhenvironment}
-  - bh generate all -u ${bhusername} -p ${bhpassword} -d ./src
   - npm run build
 after_success:
   - travis-deploy-once "npm run semantic-release"
