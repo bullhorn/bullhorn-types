@@ -13,14 +13,18 @@ export class EntityTypes {
     static AppointmentTemplate: 'AppointmentTemplate' = 'AppointmentTemplate';
     static AutoAddBlacklistDomain: 'AutoAddBlacklistDomain' = 'AutoAddBlacklistDomain';
     static BatchGroup: 'BatchGroup' = 'BatchGroup';
+    static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
+    static BillableChargeEditHistory: 'BillableChargeEditHistory' = 'BillableChargeEditHistory';
+    static BillableChargeEditHistoryFieldChange: 'BillableChargeEditHistoryFieldChange' = 'BillableChargeEditHistoryFieldChange';
     static BillableChargeFileAttachment: 'BillableChargeFileAttachment' = 'BillableChargeFileAttachment';
     static BillableChargeStatusLookup: 'BillableChargeStatusLookup' = 'BillableChargeStatusLookup';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
+    static BillingSyncBatchFileAttachment: 'BillingSyncBatchFileAttachment' = 'BillingSyncBatchFileAttachment';
     static BillingSyncError: 'BillingSyncError' = 'BillingSyncError';
     static Bot: 'Bot' = 'Bot';
     static BotCondition: 'BotCondition' = 'BotCondition';
@@ -32,6 +36,9 @@ export class EntityTypes {
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
     static CandidateCertificationEditHistoryFieldChange: 'CandidateCertificationEditHistoryFieldChange' = 'CandidateCertificationEditHistoryFieldChange';
+    static CandidateCertificationRequirement: 'CandidateCertificationRequirement' = 'CandidateCertificationRequirement';
+    static CandidateCertificationRequirementEditHistory: 'CandidateCertificationRequirementEditHistory' = 'CandidateCertificationRequirementEditHistory';
+    static CandidateCertificationRequirementEditHistoryFieldChange: 'CandidateCertificationRequirementEditHistoryFieldChange' = 'CandidateCertificationRequirementEditHistoryFieldChange';
     static CandidateComment: 'CandidateComment' = 'CandidateComment';
     static CandidateEducation: 'CandidateEducation' = 'CandidateEducation';
     static CandidateFileAttachment: 'CandidateFileAttachment' = 'CandidateFileAttachment';
@@ -48,6 +55,7 @@ export class EntityTypes {
     static Category: 'Category' = 'Category';
     static Certification: 'Certification' = 'Certification';
     static CertificationGroup: 'CertificationGroup' = 'CertificationGroup';
+    static CertificationRequirement: 'CertificationRequirement' = 'CertificationRequirement';
     static ClientContact: 'ClientContact' = 'ClientContact';
     static ClientContact1: 'ClientContact1' = 'ClientContact1';
     static ClientContact2: 'ClientContact2' = 'ClientContact2';
@@ -167,6 +175,7 @@ export class EntityTypes {
     static EarnCode: 'EarnCode' = 'EarnCode';
     static EarnCodeEditHistory: 'EarnCodeEditHistory' = 'EarnCodeEditHistory';
     static EarnCodeEditHistoryFieldChange: 'EarnCodeEditHistoryFieldChange' = 'EarnCodeEditHistoryFieldChange';
+    static EditHistoryActionLookup: 'EditHistoryActionLookup' = 'EditHistoryActionLookup';
     static EmailHitWordMatch: 'EmailHitWordMatch' = 'EmailHitWordMatch';
     static EmailHitWordMatchDetail: 'EmailHitWordMatchDetail' = 'EmailHitWordMatchDetail';
     static EmailTemplate: 'EmailTemplate' = 'EmailTemplate';
@@ -182,6 +191,7 @@ export class EntityTypes {
     static FormTriggerMessage: 'FormTriggerMessage' = 'FormTriggerMessage';
     static GDPRDeletionRequest: 'GDPRDeletionRequest' = 'GDPRDeletionRequest';
     static GeneralLedgerAccount: 'GeneralLedgerAccount' = 'GeneralLedgerAccount';
+    static GeneralLedgerExportStatusLookup: 'GeneralLedgerExportStatusLookup' = 'GeneralLedgerExportStatusLookup';
     static GeneralLedgerSegment: 'GeneralLedgerSegment' = 'GeneralLedgerSegment';
     static GeneralLedgerSegment1: 'GeneralLedgerSegment1' = 'GeneralLedgerSegment1';
     static GeneralLedgerSegment2: 'GeneralLedgerSegment2' = 'GeneralLedgerSegment2';
@@ -199,8 +209,10 @@ export class EntityTypes {
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
+    static InvoiceStatementDeliveryStatusLookup: 'InvoiceStatementDeliveryStatusLookup' = 'InvoiceStatementDeliveryStatusLookup';
     static InvoiceStatementDiscount: 'InvoiceStatementDiscount' = 'InvoiceStatementDiscount';
     static InvoiceStatementEditHistory: 'InvoiceStatementEditHistory' = 'InvoiceStatementEditHistory';
+    static InvoiceStatementEditHistoryAssociationChange: 'InvoiceStatementEditHistoryAssociationChange' = 'InvoiceStatementEditHistoryAssociationChange';
     static InvoiceStatementEditHistoryFieldChange: 'InvoiceStatementEditHistoryFieldChange' = 'InvoiceStatementEditHistoryFieldChange';
     static InvoiceStatementExport: 'InvoiceStatementExport' = 'InvoiceStatementExport';
     static InvoiceStatementHistory: 'InvoiceStatementHistory' = 'InvoiceStatementHistory';
@@ -214,6 +226,7 @@ export class EntityTypes {
     static InvoiceStatementSurcharge: 'InvoiceStatementSurcharge' = 'InvoiceStatementSurcharge';
     static InvoiceStatementTax: 'InvoiceStatementTax' = 'InvoiceStatementTax';
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
+    static InvoiceStatementTypeLookup: 'InvoiceStatementTypeLookup' = 'InvoiceStatementTypeLookup';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
     static JobBoardHistory: 'JobBoardHistory' = 'JobBoardHistory';
@@ -260,6 +273,9 @@ export class EntityTypes {
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
     static JobSubmission: 'JobSubmission' = 'JobSubmission';
+    static JobSubmissionCertificationRequirement: 'JobSubmissionCertificationRequirement' = 'JobSubmissionCertificationRequirement';
+    static JobSubmissionCertificationRequirementEditHistory: 'JobSubmissionCertificationRequirementEditHistory' = 'JobSubmissionCertificationRequirementEditHistory';
+    static JobSubmissionCertificationRequirementEditHistoryFieldChange: 'JobSubmissionCertificationRequirementEditHistoryFieldChange' = 'JobSubmissionCertificationRequirementEditHistoryFieldChange';
     static JobSubmissionEditHistory: 'JobSubmissionEditHistory' = 'JobSubmissionEditHistory';
     static JobSubmissionEditHistoryFieldChange: 'JobSubmissionEditHistoryFieldChange' = 'JobSubmissionEditHistoryFieldChange';
     static JobSubmissionHistory: 'JobSubmissionHistory' = 'JobSubmissionHistory';
@@ -310,9 +326,14 @@ export class EntityTypes {
     static OpportunityFileAttachment: 'OpportunityFileAttachment' = 'OpportunityFileAttachment';
     static OpportunityHistory: 'OpportunityHistory' = 'OpportunityHistory';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
+    static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
+    static PayExportTypeLookup: 'PayExportTypeLookup' = 'PayExportTypeLookup';
     static PayMaster: 'PayMaster' = 'PayMaster';
     static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
+    static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
+    static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
+    static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
     static Person: 'Person' = 'Person';
     static PersonCustomObject10EditHistory: 'PersonCustomObject10EditHistory' = 'PersonCustomObject10EditHistory';
     static PersonCustomObject1EditHistory: 'PersonCustomObject1EditHistory' = 'PersonCustomObject1EditHistory';
@@ -452,7 +473,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BillableChargeStatusLookup', 'BillingProfile', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'ExternalAccount', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementStatusLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'CorporateUser', 'EarnCode', 'EditHistoryActionLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'Task', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -600,6 +621,11 @@ export interface BatchGroup {
     billingSyncBatches?: ToMany<BillingSyncBatch>;
     dateAdded?: Date;
 }
+export interface BatchStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface BillMaster {
     id?: number;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
@@ -621,6 +647,7 @@ export interface BillMasterTransaction {
     invoiceStatement?: InvoiceStatement;
     invoiceStatementBatch?: InvoiceStatementBatch;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
+    needsReview?: boolean;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
@@ -632,6 +659,7 @@ export interface BillMasterTransaction {
 }
 export interface BillableCharge {
     id?: number;
+    addedByUser?: CorporateUser;
     billMasters?: ToMany<BillMaster>;
     billingClientContact?: ClientContact;
     billingClientCorporation?: ClientCorporation;
@@ -646,6 +674,11 @@ export interface BillableCharge {
     dateLastModified?: Date;
     description?: Strings;
     fileAttachments?: ToMany<BillableChargeFileAttachment>;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     invoiceTerm?: InvoiceTerm;
     isInvoiced?: boolean;
     jobOrder?: JobOrder;
@@ -656,6 +689,24 @@ export interface BillableCharge {
     subtotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
+}
+export interface BillableChargeEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<BillableChargeEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: BillableCharge;
+    transactionID?: Strings;
+}
+export interface BillableChargeEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: BillableChargeEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface BillableChargeFileAttachment {
     id?: number;
@@ -806,6 +857,27 @@ export interface BillingSyncBatch {
     periodEndDate?: Date;
     timeOfExternalEvent?: Date;
     transactionOrigin?: TransactionOrigin;
+}
+export interface BillingSyncBatchFileAttachment {
+    id?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    description?: Strings;
+    directory?: Strings;
+    externalID?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isDeleted?: boolean;
+    isEncrypted?: boolean;
+    isExternal?: boolean;
+    isPrivate?: boolean;
+    keyVersionEncryptedWith?: Strings;
+    name?: Strings;
+    type?: Strings;
+    uuid?: Strings;
 }
 export interface BillingSyncError {
     id?: number;
@@ -1257,6 +1329,36 @@ export interface CandidateCertificationEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface CandidateCertificationRequirement {
+    id?: number;
+    candidate?: Candidate;
+    candidateCertification?: CandidateCertification;
+    certification?: Certification;
+    dateAdded?: Date;
+    matchingCredentialCount?: number;
+    modifyingUser?: CorporateUser;
+    owner?: CorporateUser;
+    userCertificationName?: Strings;
+    userCertificationStatus?: Strings;
+}
+export interface CandidateCertificationRequirementEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<CandidateCertificationRequirementEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: CandidateCertificationRequirement;
+    transactionID?: Strings;
+}
+export interface CandidateCertificationRequirementEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: CandidateCertificationRequirementEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
 export interface CandidateComment {
     id?: number;
     comments?: Strings;
@@ -1526,9 +1628,37 @@ export interface Category {
 }
 export interface Certification {
     id?: number;
+    category?: Category;
+    country?: Strings;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customTextBlock1?: Strings;
+    customTextBlock2?: Strings;
+    customTextBlock3?: Strings;
+    customTextBlock4?: Strings;
+    customTextBlock5?: Strings;
     description?: Strings;
     expirationDateOptional?: boolean;
     name?: Strings;
+    specialty?: Specialty;
+    state?: Strings;
 }
 export interface CertificationGroup {
     id?: number;
@@ -1537,6 +1667,20 @@ export interface CertificationGroup {
     dateLastModified?: Date;
     name?: Strings;
     privateLabelID?: number;
+}
+export interface CertificationRequirement {
+    id?: number;
+    candidate?: Candidate;
+    candidateCertification?: CandidateCertification;
+    certification?: Certification;
+    dateAdded?: Date;
+    jobSubmission?: JobSubmission;
+    matchingCredentialCount?: number;
+    modifyingUser?: CorporateUser;
+    owner?: CorporateUser;
+    placement?: Placement;
+    userCertificationName?: Strings;
+    userCertificationStatus?: Strings;
 }
 export interface ClientContact {
     id?: number;
@@ -3698,6 +3842,9 @@ export interface EarnCode {
     dateLastModified?: Date;
     description?: Strings;
     externalID?: Strings;
+    generalLedgerBillAccount?: GeneralLedgerAccount;
+    generalLedgerPayAccount?: GeneralLedgerAccount;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     includeInDistribution?: boolean;
     isDeleted?: boolean;
     maximumQuantity?: number;
@@ -3729,6 +3876,11 @@ export interface EarnCodeEditHistoryFieldChange {
     editHistory?: EarnCodeEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+}
+export interface EditHistoryActionLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface EmailHitWordMatch {
     id?: number;
@@ -3879,12 +4031,25 @@ export interface GeneralLedgerAccount {
     dateLastModified?: Date;
     externalAccountDetailType?: Strings;
     externalAccountName?: Strings;
-    externalAccountNumber?: number;
+    externalAccountNumber?: Strings;
     externalAccountType?: Strings;
     isAccountsReceivable?: boolean;
     isActive?: boolean;
     isBill?: boolean;
+    isDeleted?: boolean;
     isPay?: boolean;
+}
+export interface GeneralLedgerExportStatusLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface GeneralLedgerSegment {
     id?: number;
@@ -3956,7 +4121,7 @@ export interface GeneralLedgerServiceCode {
     dateAdded?: Date;
     dateLastModified?: Date;
     externalServiceCodeName?: Strings;
-    externalServiceCodeNumber?: number;
+    externalServiceCodeNumber?: Strings;
     isActive?: boolean;
     isDeleted?: boolean;
 }
@@ -4186,17 +4351,20 @@ export interface InvoiceStatement {
     dateAdded?: Date;
     dateLastModified?: Date;
     deliveryMethod?: Strings;
-    deliveryStatus?: Strings;
+    deliveryStatus?: InvoiceStatementDeliveryStatusLookup;
     discountTotal?: number;
     discounts?: ToMany<InvoiceStatementDiscount>;
     dueDate?: Date;
     effectiveDate?: Date;
+    emailErrorReason?: Strings;
+    generalLedgerExportStatusLookup?: GeneralLedgerExportStatusLookup;
     invoiceStatementDate?: Date;
     invoiceStatementExports?: ToMany<InvoiceStatementExport>;
+    invoiceStatementFinalizedDate?: Date;
     invoiceStatementNumber?: Strings;
     invoiceStatementOrigin?: Strings;
     invoiceStatementTemplate?: InvoiceStatementTemplate;
-    invoiceStatementType?: Strings;
+    invoiceStatementType?: InvoiceStatementTypeLookup;
     invoiceTerm?: InvoiceTerm;
     isCredited?: boolean;
     isFinalized?: boolean;
@@ -4225,14 +4393,24 @@ export interface InvoiceStatementBatch {
     dateLastModified?: Date;
     owner?: CorporateUser;
 }
-export interface InvoiceStatementDiscount {
+export interface InvoiceStatementDeliveryStatusLookup {
     id?: number;
     addedByUser?: CorporateUser;
     dateAdded?: Date;
-    discountType?: DiscountType;
-    earnCode?: EarnCode;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
     label?: Strings;
-    value?: number;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
+}
+export interface InvoiceStatementDiscount {
+    id?: number;
+    discount?: Discount;
+    finalizedValue?: number;
+    invoiceStatement?: InvoiceStatement;
 }
 export interface InvoiceStatementEditHistory {
     id?: number;
@@ -4243,6 +4421,13 @@ export interface InvoiceStatementEditHistory {
     modifyingPerson?: Person;
     targetEntity?: InvoiceStatement;
     transactionID?: Strings;
+}
+export interface InvoiceStatementEditHistoryAssociationChange {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    entityID?: number;
+    entityName?: Strings;
+    invoiceStatementEditHistoryFieldChange?: InvoiceStatementEditHistoryFieldChange;
 }
 export interface InvoiceStatementEditHistoryFieldChange {
     id?: number;
@@ -4356,9 +4541,8 @@ export interface InvoiceStatementSurcharge {
     dateAdded?: Date;
     earnCode?: EarnCode;
     finalizedValue?: number;
-    label?: Strings;
-    surchargeType?: SurchargeType;
-    value?: number;
+    invoiceStatement?: InvoiceStatement;
+    surcharge?: Surcharge;
 }
 export interface InvoiceStatementTax {
     id?: number;
@@ -4366,9 +4550,8 @@ export interface InvoiceStatementTax {
     dateAdded?: Date;
     earnCode?: EarnCode;
     finalizedValue?: number;
-    label?: Strings;
-    taxType?: TaxType;
-    value?: number;
+    invoiceStatement?: InvoiceStatement;
+    tax?: Tax;
 }
 export interface InvoiceStatementTemplate {
     id?: number;
@@ -4383,6 +4566,18 @@ export interface InvoiceStatementTemplate {
     fileSize?: number;
     name?: Strings;
     type?: Strings;
+}
+export interface InvoiceStatementTypeLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface InvoiceTerm {
     id?: number;
@@ -4427,6 +4622,8 @@ export interface InvoiceTerm {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    generalLedgerAccountsReceivable?: GeneralLedgerAccount;
+    includeAttachments?: boolean;
     invoiceApprovedTimecardsRequired?: boolean;
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
@@ -4487,6 +4684,8 @@ export interface InvoiceTermVersion {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    generalLedgerAccountsReceivable?: GeneralLedgerAccount;
+    includeAttachments?: boolean;
     invoiceApprovedTimecardsRequired?: boolean;
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
@@ -5924,6 +6123,36 @@ export interface JobSubmission {
     status?: Strings;
     tasks?: ToMany<Task>;
 }
+export interface JobSubmissionCertificationRequirement {
+    id?: number;
+    candidateCertification?: CandidateCertification;
+    certification?: Certification;
+    dateAdded?: Date;
+    jobSubmission?: JobSubmission;
+    matchingCredentialCount?: number;
+    modifyingUser?: CorporateUser;
+    owner?: CorporateUser;
+    userCertificationName?: Strings;
+    userCertificationStatus?: Strings;
+}
+export interface JobSubmissionCertificationRequirementEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<JobSubmissionCertificationRequirementEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobSubmissionCertificationRequirement;
+    transactionID?: Strings;
+}
+export interface JobSubmissionCertificationRequirementEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobSubmissionCertificationRequirementEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
 export interface JobSubmissionEditHistory {
     id?: number;
     auditTrail?: Strings;
@@ -7331,9 +7560,24 @@ export interface PageInteraction {
     script?: Strings;
     sortOrder?: number;
 }
+export interface PayExportBatch {
+    id?: number;
+    batchStatusLookup?: BatchStatusLookup;
+    canvasReport?: CanvasReport;
+    dateAdded?: Date;
+    payExportTypeLookup?: PayExportTypeLookup;
+    payMasterTransactions?: ToMany<PayMasterTransaction>;
+    user?: CorporateUser;
+}
+export interface PayExportTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface PayMaster {
     id?: number;
     billingSyncBatch?: BillingSyncBatch;
+    canExport?: boolean;
     earnCode?: EarnCode;
     payMasterTransactions?: ToMany<PayMasterTransaction>;
     payableCharge?: PayableCharge;
@@ -7347,6 +7591,7 @@ export interface PayMasterTransaction {
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
+    payExportBatch?: PayExportBatch;
     payMaster?: PayMaster;
     quantity?: number;
     rate?: number;
@@ -7359,6 +7604,8 @@ export interface PayMasterTransaction {
 }
 export interface PayableCharge {
     id?: number;
+    addedByUser?: CorporateUser;
+    canExport?: boolean;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
@@ -7366,15 +7613,50 @@ export interface PayableCharge {
     dateLastModified?: Date;
     description?: Strings;
     employeeType?: Strings;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     jobOrder?: JobOrder;
     payMasters?: ToMany<PayMaster>;
     periodEndDate?: Date;
     placement?: Placement;
-    readyToPay?: number;
-    readyToPayOverride?: number;
+    readyToPayOverride?: boolean;
+    status?: PayableChargeStatusLookup;
     subtotal?: number;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
+}
+export interface PayableChargeEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<PayableChargeEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PayableCharge;
+    transactionID?: Strings;
+}
+export interface PayableChargeEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PayableChargeEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PayableChargeStatusLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface Person {
     id?: number;
@@ -7749,6 +8031,11 @@ export interface Placement {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -8027,6 +8314,11 @@ export interface Placement1 {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -8305,6 +8597,11 @@ export interface Placement2 {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -8583,6 +8880,11 @@ export interface Placement3 {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -8861,6 +9163,11 @@ export interface Placement4 {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -9139,6 +9446,11 @@ export interface Placement5 {
     fee?: number;
     fileAttachments?: ToMany<PlacementFileAttachment>;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -9210,6 +9522,7 @@ export interface PlacementCertification {
     editHistories?: ToMany<PlacementCertificationEditHistory>;
     matchingCredentialCount?: number;
     modifyingUser?: CorporateUser;
+    owner?: CorporateUser;
     placement?: Placement;
 }
 export interface PlacementCertificationEditHistory {
@@ -9438,6 +9751,11 @@ export interface PlacementChangeRequest {
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -9713,6 +10031,11 @@ export interface PlacementChangeRequest2 {
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -9988,6 +10311,11 @@ export interface PlacementChangeRequest3 {
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -10263,6 +10591,11 @@ export interface PlacementChangeRequest4 {
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -10538,6 +10871,11 @@ export interface PlacementChangeRequest5 {
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     hoursOfOperation?: Strings;
     hoursPerDay?: number;
     housingAmenities?: ToMany<HousingComplexAmenity>;
@@ -11475,6 +11813,7 @@ export interface UserMessage {
     externalFrom?: Strings;
     externalTo?: Strings;
     folder?: Strings;
+    invoiceStatements?: ToMany<InvoiceStatement>;
     isPrivate?: boolean;
     isSenderChecked?: boolean;
     isSenderDeleted?: boolean;
