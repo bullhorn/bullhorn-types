@@ -1331,6 +1331,7 @@ export interface CandidateCertification {
     dateExpiration?: Date;
     dateLastModified?: Date;
     displayStatus?: Strings;
+    fileAttachments?: ToMany<CandidateFileAttachment>;
     isComplete?: boolean;
     isDeleted?: boolean;
     issuedBy?: Strings;
@@ -1405,6 +1406,7 @@ export interface CandidateCertificationRequirement {
     dateAdded?: Date;
     dateExpiration?: Date;
     documentDeadline?: Date;
+    fileAttachments?: ToMany<CandidateFileAttachment>;
     matchingCredentialCount?: number;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
@@ -6285,6 +6287,7 @@ export interface JobSubmissionCertificationRequirement {
     dateAdded?: Date;
     dateExpiration?: Date;
     documentDeadline?: Date;
+    fileAttachments?: ToMany<CandidateFileAttachment>;
     jobSubmission?: JobSubmission;
     matchingCredentialCount?: number;
     modifyingUser?: CorporateUser;
@@ -9640,6 +9643,7 @@ export interface PlacementCertification {
     dateLastModified?: Date;
     documentDeadline?: Date;
     editHistories?: ToMany<PlacementCertificationEditHistory>;
+    fileAttachments?: ToMany<CandidateFileAttachment>;
     matchingCredentialCount?: number;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
