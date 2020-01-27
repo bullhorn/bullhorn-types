@@ -54,6 +54,7 @@ export class EntityTypes {
     static CardCategory: 'CardCategory' = 'CardCategory';
     static Category: 'Category' = 'Category';
     static Certification: 'Certification' = 'Certification';
+    static CertificationFileAttachment: 'CertificationFileAttachment' = 'CertificationFileAttachment';
     static CertificationGroup: 'CertificationGroup' = 'CertificationGroup';
     static CertificationRequirement: 'CertificationRequirement' = 'CertificationRequirement';
     static CertificationRequirementStatusLookup: 'CertificationRequirementStatusLookup' = 'CertificationRequirementStatusLookup';
@@ -1313,6 +1314,7 @@ export interface CandidateCertification {
     boardCertification?: Strings;
     candidate?: Candidate;
     certification?: Certification;
+    certificationFileAttachments?: ToMany<CertificationFileAttachment>;
     comments?: Strings;
     compact?: number;
     copyOnFile?: number;
@@ -1385,6 +1387,7 @@ export interface CandidateCertificationRequirement {
     candidate?: Candidate;
     candidateCertification?: CandidateCertification;
     certification?: Certification;
+    certificationFileAttachments?: ToMany<CertificationFileAttachment>;
     customDate1?: Date;
     customDate10?: Date;
     customDate2?: Date;
@@ -1753,6 +1756,21 @@ export interface Certification {
     specialty?: Specialty;
     state?: Strings;
 }
+export interface CertificationFileAttachment {
+    id?: number;
+    candidate?: Candidate;
+    candidateCertification?: CandidateCertification;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isExternal?: boolean;
+    name?: Strings;
+    type?: Strings;
+}
 export interface CertificationGroup {
     id?: number;
     certifications?: ToMany<Certification>;
@@ -1766,6 +1784,7 @@ export interface CertificationRequirement {
     candidate?: Candidate;
     candidateCertification?: CandidateCertification;
     certification?: Certification;
+    certificationFileAttachments?: ToMany<CertificationFileAttachment>;
     customDate1?: Date;
     customDate10?: Date;
     customDate2?: Date;
@@ -6605,6 +6624,7 @@ export interface JobSubmissionCertificationRequirement {
     id?: number;
     candidateCertification?: CandidateCertification;
     certification?: Certification;
+    certificationFileAttachments?: ToMany<CertificationFileAttachment>;
     customDate1?: Date;
     customDate10?: Date;
     customDate2?: Date;
@@ -10142,6 +10162,7 @@ export interface PlacementCertification {
     candidateCertificationName?: Strings;
     candidateCertificationStatus?: Strings;
     certification?: Certification;
+    certificationFileAttachments?: ToMany<CertificationFileAttachment>;
     customDate1?: Date;
     customDate10?: Date;
     customDate2?: Date;
