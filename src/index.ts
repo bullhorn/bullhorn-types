@@ -1925,6 +1925,7 @@ export interface ClientContact {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2060,6 +2061,7 @@ export interface ClientContact1 {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2195,6 +2197,7 @@ export interface ClientContact2 {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2330,6 +2333,7 @@ export interface ClientContact3 {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2465,6 +2469,7 @@ export interface ClientContact4 {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2600,6 +2605,7 @@ export interface ClientContact5 {
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
+    departmentOwners?: ToMany<CorporationDepartment>;
     description?: Strings;
     desiredCategories?: Strings;
     desiredLocations?: Strings;
@@ -2788,6 +2794,7 @@ export interface ClientCorporation {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -2816,6 +2823,7 @@ export interface ClientCorporation {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -2886,6 +2894,7 @@ export interface ClientCorporation1 {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -2914,6 +2923,7 @@ export interface ClientCorporation1 {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -2984,6 +2994,7 @@ export interface ClientCorporation2 {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -3012,6 +3023,7 @@ export interface ClientCorporation2 {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -3082,6 +3094,7 @@ export interface ClientCorporation3 {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -3110,6 +3123,7 @@ export interface ClientCorporation3 {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -3180,6 +3194,7 @@ export interface ClientCorporation4 {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -3208,6 +3223,7 @@ export interface ClientCorporation4 {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -3278,6 +3294,7 @@ export interface ClientCorporation5 {
     dateFounded?: Date;
     dateLastModified?: Date;
     department?: CorporationDepartment;
+    departmentOwners?: ToMany<CorporationDepartment>;
     exemptionStatus?: ClientCorporationTaxExemptionStatusLookup;
     externalID?: Strings;
     facebookProfileName?: Strings;
@@ -3306,6 +3323,7 @@ export interface ClientCorporation5 {
     tickerSymbol?: Strings;
     trackTitle?: Strings;
     twitterHandle?: Strings;
+    userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
     customObject1s?: ClientCorporationCustomObjectInstance1[];
     customObject2s?: ClientCorporationCustomObjectInstance2[];
@@ -6851,6 +6869,7 @@ export interface LeadHistory {
 }
 export interface Location {
     id?: number;
+    address?: Address;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     customDate1?: Date;
@@ -6932,6 +6951,7 @@ export interface LocationEffectiveDateChange {
 }
 export interface LocationVersion {
     id?: number;
+    address?: Address;
     customDate1?: Date;
     customDate2?: Date;
     customDate3?: Date;
