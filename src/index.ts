@@ -430,6 +430,10 @@ export class EntityTypes {
     static PlacementEditHistoryFieldChange: 'PlacementEditHistoryFieldChange' = 'PlacementEditHistoryFieldChange';
     static PlacementFileAttachment: 'PlacementFileAttachment' = 'PlacementFileAttachment';
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
+    static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
+    static PlacementRateCardLine: 'PlacementRateCardLine' = 'PlacementRateCardLine';
+    static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
+    static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
     static PrivateLabel: 'PrivateLabel' = 'PrivateLabel';
@@ -518,7 +522,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -8713,6 +8717,7 @@ export interface Placement {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -8999,6 +9004,7 @@ export interface Placement1 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -9285,6 +9291,7 @@ export interface Placement2 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -9571,6 +9578,7 @@ export interface Placement3 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -9857,6 +9865,7 @@ export interface Placement4 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -10143,6 +10152,7 @@ export interface Placement5 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -11930,6 +11940,48 @@ export interface PlacementHistory {
     taxState?: Strings;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
+}
+export interface PlacementRateCard {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    placement?: Placement;
+    placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
+    versionID?: number;
+    versions?: ToMany<PlacementRateCardVersion>;
+}
+export interface PlacementRateCardLine {
+    id?: number;
+    alias?: Strings;
+    billCurrencyUnit?: CurrencyUnit;
+    billRate?: number;
+    earnCode?: EarnCode;
+    externalID?: Strings;
+    migrateGUID?: Strings;
+    payCurrencyUnit?: CurrencyUnit;
+    payRate?: number;
+    placementRateCardLineGroup?: PlacementRateCardLineGroup;
+}
+export interface PlacementRateCardLineGroup {
+    id?: number;
+    earnCodeGroup?: EarnCodeGroup;
+    externalID?: Strings;
+    migrateGUID?: Strings;
+    placementRateCardLines?: ToMany<PlacementRateCardLine>;
+    placementRateCardVersion?: PlacementRateCardVersion;
+}
+export interface PlacementRateCardVersion {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isFirst?: boolean;
+    placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
 }
 export interface PlacementTaxExemptionStatusLookup {
     id?: number;
