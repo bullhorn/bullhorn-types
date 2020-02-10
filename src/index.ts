@@ -349,6 +349,7 @@ export class EntityTypes {
     static OpportunityEditHistoryFieldChange: 'OpportunityEditHistoryFieldChange' = 'OpportunityEditHistoryFieldChange';
     static OpportunityFileAttachment: 'OpportunityFileAttachment' = 'OpportunityFileAttachment';
     static OpportunityHistory: 'OpportunityHistory' = 'OpportunityHistory';
+    static OtherSalesTaxRate: 'OtherSalesTaxRate' = 'OtherSalesTaxRate';
     static OvertimeEarnCode: 'OvertimeEarnCode' = 'OvertimeEarnCode';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
     static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
@@ -474,6 +475,10 @@ export class EntityTypes {
     static Surcharge: 'Surcharge' = 'Surcharge';
     static SurchargeEditHistory: 'SurchargeEditHistory' = 'SurchargeEditHistory';
     static SurchargeEditHistoryFieldChange: 'SurchargeEditHistoryFieldChange' = 'SurchargeEditHistoryFieldChange';
+    static SurchargeRate: 'SurchargeRate' = 'SurchargeRate';
+    static SurchargeRateTypeLookup: 'SurchargeRateTypeLookup' = 'SurchargeRateTypeLookup';
+    static SurchargeRateVersion: 'SurchargeRateVersion' = 'SurchargeRateVersion';
+    static SurchargeRateVersionEarnCode: 'SurchargeRateVersionEarnCode' = 'SurchargeRateVersionEarnCode';
     static SurchargeType: 'SurchargeType' = 'SurchargeType';
     static Task: 'Task' = 'Task';
     static TaskEditHistory: 'TaskEditHistory' = 'TaskEditHistory';
@@ -522,7 +527,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -1046,6 +1051,7 @@ export interface BusinessSector {
 }
 export interface Candidate {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -1879,6 +1885,7 @@ export interface CitySalesTaxRate {
 }
 export interface ClientContact {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -2015,6 +2022,7 @@ export interface ClientContact {
 }
 export interface ClientContact1 {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -2151,6 +2159,7 @@ export interface ClientContact1 {
 }
 export interface ClientContact2 {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -2287,6 +2296,7 @@ export interface ClientContact2 {
 }
 export interface ClientContact3 {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -2423,6 +2433,7 @@ export interface ClientContact3 {
 }
 export interface ClientContact4 {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -2559,6 +2570,7 @@ export interface ClientContact4 {
 }
 export interface ClientContact5 {
     id?: number;
+    activePlacements?: ToMany<Placement>;
     address?: Address;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
@@ -6910,6 +6922,7 @@ export interface Location {
     customTextBlock3?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
+    declineToApplyTaxes?: boolean;
     description?: Strings;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
@@ -8136,6 +8149,33 @@ export interface OpportunityHistory {
     status?: Strings;
     weightedDealValue?: number;
     winProbabilityPercent?: number;
+}
+export interface OtherSalesTaxRate {
+    id?: number;
+    amount?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    isDeleted?: boolean;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    label?: Strings;
+    owner?: CorporateUser;
+    rate?: number;
+    reportingCodeName?: Strings;
+    source?: SalesTaxRateSourceLookup;
+    status?: TaxStatusLookup;
+    taxType?: TaxTypeLookup;
+    type?: SalesTaxRateTypeLookup;
+    versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface OvertimeEarnCode {
     id?: number;
@@ -12286,13 +12326,14 @@ export interface SalesTaxGroup {
     districtSalesTaxRate?: DistrictSalesTaxRate;
     externalID?: number;
     label?: Strings;
-    otherSalesTaxRates?: ToMany<SalesTaxRate>;
-    salesTaxRateSourceLookup?: SalesTaxRateSourceLookup;
+    otherSalesTaxRates?: ToMany<OtherSalesTaxRate>;
+    source?: SalesTaxRateSourceLookup;
     stateID?: number;
     stateSalesTaxRate?: StateSalesTaxRate;
-    taxStatusLookup?: TaxStatusLookup;
-    zipPlus4High?: number;
-    zipPlus4Low?: number;
+    status?: TaxStatusLookup;
+    totalRate?: number;
+    zipPlus4High?: Strings;
+    zipPlus4Low?: Strings;
     zipcode?: Strings;
 }
 export interface SalesTaxRate {
@@ -12519,6 +12560,66 @@ export interface SurchargeEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface SurchargeRate {
+    id?: number;
+    amount?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    earnCodes?: ToMany<SurchargeRateVersionEarnCode>;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment;
+    generalLedgerSegment2?: GeneralLedgerSegment;
+    generalLedgerSegment3?: GeneralLedgerSegment;
+    generalLedgerSegment4?: GeneralLedgerSegment;
+    generalLedgerSegment5?: GeneralLedgerSegment;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    isFirst?: boolean;
+    owner?: CorporateUser;
+    rate?: number;
+    status?: StatusLookup;
+    title?: Strings;
+    type?: SurchargeRateTypeLookup;
+    versionID?: number;
+    versions?: ToMany<SurchargeRateVersion>;
+}
+export interface SurchargeRateTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface SurchargeRateVersion {
+    id?: number;
+    amount?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    earnCodes?: ToMany<SurchargeRateVersionEarnCode>;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment;
+    generalLedgerSegment2?: GeneralLedgerSegment;
+    generalLedgerSegment3?: GeneralLedgerSegment;
+    generalLedgerSegment4?: GeneralLedgerSegment;
+    generalLedgerSegment5?: GeneralLedgerSegment;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isFirst?: boolean;
+    rate?: number;
+    status?: StatusLookup;
+    title?: Strings;
+    type?: SurchargeRateTypeLookup;
+}
+export interface SurchargeRateVersionEarnCode {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    earnCode?: EarnCode;
+    owner?: CorporateUser;
+    surchargeRateVersion?: SurchargeRateVersion;
+}
+
 export interface SurchargeType {
     id?: number;
     label?: Strings;
