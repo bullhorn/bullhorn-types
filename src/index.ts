@@ -833,6 +833,7 @@ export interface BillableChargeSummaryTransaction {
     billingSyncBatch?: BillingSyncBatch;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
+    location?: Location;
     quantity?: number;
     rate?: number;
     transactionDate?: Date;
