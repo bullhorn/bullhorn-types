@@ -17,10 +17,14 @@ export class EntityTypes {
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
+    static BillableChargeBillableTransaction: 'BillableChargeBillableTransaction' = 'BillableChargeBillableTransaction';
     static BillableChargeEditHistory: 'BillableChargeEditHistory' = 'BillableChargeEditHistory';
     static BillableChargeEditHistoryFieldChange: 'BillableChargeEditHistoryFieldChange' = 'BillableChargeEditHistoryFieldChange';
     static BillableChargeFileAttachment: 'BillableChargeFileAttachment' = 'BillableChargeFileAttachment';
+    static BillableChargeInvoicedTransaction: 'BillableChargeInvoicedTransaction' = 'BillableChargeInvoicedTransaction';
     static BillableChargeStatusLookup: 'BillableChargeStatusLookup' = 'BillableChargeStatusLookup';
+    static BillableChargeTransaction: 'BillableChargeTransaction' = 'BillableChargeTransaction';
+    static BillableChargeUnbillableTransaction: 'BillableChargeUnbillableTransaction' = 'BillableChargeUnbillableTransaction';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
@@ -360,6 +364,8 @@ export class EntityTypes {
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
     static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
+    static PayableChargeExportedTransaction: 'PayableChargeExportedTransaction' = 'PayableChargeExportedTransaction';
+    static PayableChargePayableTransaction: 'PayableChargePayableTransaction' = 'PayableChargePayableTransaction';
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
     static Person: 'Person' = 'Person';
     static PersonCustomObject10EditHistory: 'PersonCustomObject10EditHistory' = 'PersonCustomObject10EditHistory';
@@ -715,6 +721,7 @@ export interface BillableCharge {
     id?: number;
     addedByUser?: CorporateUser;
     billMasters?: ToMany<BillMaster>;
+    billableTransactions?: ToMany<BillableChargeBillableTransaction>;
     billingClientContact?: ClientContact;
     billingClientCorporation?: ClientCorporation;
     billingCorporateUser?: CorporateUser;
@@ -735,6 +742,7 @@ export interface BillableCharge {
     generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     invoiceTerm?: InvoiceTerm;
+    invoicedTransactions?: ToMany<BillableChargeInvoicedTransaction>;
     isInvoiced?: boolean;
     jobOrder?: JobOrder;
     periodEndDate?: Date;
@@ -742,8 +750,23 @@ export interface BillableCharge {
     readyToBillOverride?: boolean;
     status?: BillableChargeStatusLookup;
     subtotal?: number;
+    summaryTransactions?: ToMany<BillableChargeSummaryTransaction>;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
+    unbillableTransactions?: ToMany<BillableChargeUnbillableTransaction>;
+}
+export interface BillableChargeBillableTransaction {
+    id?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
 }
 export interface BillableChargeEditHistory {
     id?: number;
@@ -775,6 +798,21 @@ export interface BillableChargeFileAttachment {
     fileSize?: number;
     name?: Strings;
 }
+export interface BillableChargeInvoicedTransaction {
+    id?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    invoiceStatement?: InvoiceStatement;
+    invoiceStatementBatch?: InvoiceStatementBatch;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
+}
 export interface BillableChargeStatusLookup {
     id?: number;
     dateAdded?: Date;
@@ -786,6 +824,33 @@ export interface BillableChargeStatusLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface BillableChargeSummaryTransaction {
+    id?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    location?: Location;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
+}
+export interface BillableChargeUnbillableTransaction {
+    id?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
 }
 export interface BillingProfile {
     id?: number;
@@ -8303,6 +8368,7 @@ export interface PayableCharge {
     dateLastModified?: Date;
     description?: Strings;
     employeeType?: Strings;
+    exportedTransactions?: ToMany<PayableChargeExportedTransaction>;
     generalLedgerSegment1?: GeneralLedgerSegment1;
     generalLedgerSegment2?: GeneralLedgerSegment2;
     generalLedgerSegment3?: GeneralLedgerSegment3;
@@ -8311,6 +8377,7 @@ export interface PayableCharge {
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     jobOrder?: JobOrder;
     payMasters?: ToMany<PayMaster>;
+    payableTransactions?: ToMany<PayableChargePayableTransaction>;
     periodEndDate?: Date;
     placement?: Placement;
     readyToPayOverride?: boolean;
@@ -8336,6 +8403,35 @@ export interface PayableChargeEditHistoryFieldChange {
     editHistory?: PayableChargeEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+}
+export interface PayableChargeExportedTransaction {
+    id?: number;
+    amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    canvasReportID?: CanvasReport;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    earnCode?: EarnCode;
+    payExportBatchID?: PayExportBatch;
+    payMaster?: PayMaster;
+    payableCharge?: PayableCharge;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
+}
+export interface PayableChargePayableTransaction {
+    id?: number;
+    amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    payMaster?: PayMaster;
+    payableCharge?: PayableCharge;
+    quantity?: number;
+    rate?: number;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
 }
 export interface PayableChargeStatusLookup {
     id?: number;
