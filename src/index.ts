@@ -23,7 +23,7 @@ export class EntityTypes {
     static BillableChargeFileAttachment: 'BillableChargeFileAttachment' = 'BillableChargeFileAttachment';
     static BillableChargeInvoicedTransaction: 'BillableChargeInvoicedTransaction' = 'BillableChargeInvoicedTransaction';
     static BillableChargeStatusLookup: 'BillableChargeStatusLookup' = 'BillableChargeStatusLookup';
-    static BillableChargeTransaction: 'BillableChargeTransaction' = 'BillableChargeTransaction';
+    static BillableChargeSummaryTransaction: 'BillableChargeSummaryTransaction' = 'BillableChargeSummaryTransaction';
     static BillableChargeUnbillableTransaction: 'BillableChargeUnbillableTransaction' = 'BillableChargeUnbillableTransaction';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
