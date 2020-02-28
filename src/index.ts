@@ -357,6 +357,7 @@ export class EntityTypes {
     static OvertimeEarnCode: 'OvertimeEarnCode' = 'OvertimeEarnCode';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
     static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
+    static PayBillSetting: 'PayBillSetting' = 'PayBillSetting';
     static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
     static PayExportTypeLookup: 'PayExportTypeLookup' = 'PayExportTypeLookup';
     static PayMaster: 'PayMaster' = 'PayMaster';
@@ -8313,6 +8314,10 @@ export interface PayBillOptionsLookup {
     allowPay?: boolean;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface PayBillSetting {
+    id?: number;
+    taxableStates?: ToMany<State>;
 }
 export interface PayExportBatch {
     id?: number;
