@@ -5218,6 +5218,7 @@ export interface InvoiceTerm {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
+    discountRates?: DiscountRate;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
@@ -5235,6 +5236,7 @@ export interface InvoiceTerm {
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
     status?: Strings;
+    surchargeRates?: SurchargeRate;
     title?: Strings;
     versionID?: number;
     versions?: ToMany<InvoiceTermVersion>;
