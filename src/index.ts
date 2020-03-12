@@ -1846,6 +1846,7 @@ export interface CertificationFileAttachment {
     isExternal?: boolean;
     name?: Strings;
     type?: Strings;
+    isEncrypted?: boolean;
 }
 export interface CertificationGroup {
     id?: number;
