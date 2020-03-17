@@ -6752,6 +6752,7 @@ export interface JobSubmission {
     isDeleted?: boolean;
     isHidden?: boolean;
     jobOrder?: JobOrder;
+    jobSubmissionCertificationRequirements?: ToMany<JobSubmissionCertificationRequirement>;
     jobSubmissionIntegrations?: ToMany<JobSubmissionIntegration>;
     latestAppointment?: Appointment;
     migrateGUID?: Strings;
