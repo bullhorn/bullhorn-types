@@ -15,7 +15,12 @@ export class EntityTypes {
     static BatchGroup: 'BatchGroup' = 'BatchGroup';
     static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
     static BillMaster: 'BillMaster' = 'BillMaster';
+    static BillMasterDiscountRate: 'BillMasterDiscountRate' = 'BillMasterDiscountRate';
+    static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
+    static BillMasterTransactionDiscountRate: 'BillMasterTransactionDiscountRate' = 'BillMasterTransactionDiscountRate';
+    static BillMasterTransactionSalesTaxRate: 'BillMasterTransactionSalesTaxRate' = 'BillMasterTransactionSalesTaxRate';
+    static BillMasterTransactionSurchargeRate: 'BillMasterTransactionSurchargeRate' = 'BillMasterTransactionSurchargeRate';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
     static BillableChargeBillableTransaction: 'BillableChargeBillableTransaction' = 'BillableChargeBillableTransaction';
     static BillableChargeEditHistory: 'BillableChargeEditHistory' = 'BillableChargeEditHistory';
@@ -62,6 +67,7 @@ export class EntityTypes {
     static CertificationGroup: 'CertificationGroup' = 'CertificationGroup';
     static CertificationRequirement: 'CertificationRequirement' = 'CertificationRequirement';
     static CertificationRequirementStatusLookup: 'CertificationRequirementStatusLookup' = 'CertificationRequirementStatusLookup';
+    static ChargeTypeLookup: 'ChargeTypeLookup' = 'ChargeTypeLookup';
     static CitySalesTaxRate: 'CitySalesTaxRate' = 'CitySalesTaxRate';
     static ClientContact: 'ClientContact' = 'ClientContact';
     static ClientContact1: 'ClientContact1' = 'ClientContact1';
@@ -200,8 +206,10 @@ export class EntityTypes {
     static EmailHitWordMatchDetail: 'EmailHitWordMatchDetail' = 'EmailHitWordMatchDetail';
     static EmailTemplate: 'EmailTemplate' = 'EmailTemplate';
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
+    static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
+    static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
     static ExternalSystem: 'ExternalSystem' = 'ExternalSystem';
     static FieldMapInteraction: 'FieldMapInteraction' = 'FieldMapInteraction';
     static File: 'File' = 'File';
@@ -359,15 +367,23 @@ export class EntityTypes {
     static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
     static PayBillSetting: 'PayBillSetting' = 'PayBillSetting';
     static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
+    static PayExportBatchExternal: 'PayExportBatchExternal' = 'PayExportBatchExternal';
     static PayExportTypeLookup: 'PayExportTypeLookup' = 'PayExportTypeLookup';
+    static PayGroupLookup: 'PayGroupLookup' = 'PayGroupLookup';
     static PayMaster: 'PayMaster' = 'PayMaster';
     static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
+    static PayMasterTransactionPayExportBatch: 'PayMasterTransactionPayExportBatch' = 'PayMasterTransactionPayExportBatch';
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
     static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
     static PayableChargeExportedTransaction: 'PayableChargeExportedTransaction' = 'PayableChargeExportedTransaction';
     static PayableChargePayableTransaction: 'PayableChargePayableTransaction' = 'PayableChargePayableTransaction';
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
+    static PayrollEmployeeTypeLookup: 'PayrollEmployeeTypeLookup' = 'PayrollEmployeeTypeLookup';
+    static PayrollExportConfig: 'PayrollExportConfig' = 'PayrollExportConfig';
+    static PayrollExportTargetLookup: 'PayrollExportTargetLookup' = 'PayrollExportTargetLookup';
+    static PayrollExportTypeLookup: 'PayrollExportTypeLookup' = 'PayrollExportTypeLookup';
+    static PayrollSyncStatusLookup: 'PayrollSyncStatusLookup' = 'PayrollSyncStatusLookup';
     static Person: 'Person' = 'Person';
     static PersonCustomObject10EditHistory: 'PersonCustomObject10EditHistory' = 'PersonCustomObject10EditHistory';
     static PersonCustomObject1EditHistory: 'PersonCustomObject1EditHistory' = 'PersonCustomObject1EditHistory';
@@ -534,7 +550,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -693,8 +709,26 @@ export interface BillMaster {
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
     canInvoice?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
     earnCode?: EarnCode;
+    location?: Location;
+    owner?: CorporateUser;
     transactionDate?: Date;
+}
+export interface BillMasterDiscountRate {
+    id?: number;
+    billMaster?: BillMaster;
+    dateAdded?: Date;
+    discountRate?: DiscountRate;
+    owner?: CorporateUser;
+}
+export interface BillMasterSurchargeRate {
+    id?: number;
+    billMaster?: BillMaster;
+    dateAdded?: Date;
+    owner?: CorporateUser;
+    surchargeRate?: SurchargeRate;
 }
 export interface BillMasterTransaction {
     id?: number;
@@ -717,6 +751,42 @@ export interface BillMasterTransaction {
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface BillMasterTransactionDiscountRate {
+    id?: number;
+    adjustmentSequenceNumber?: number;
+    baseAmount?: number;
+    billMasterTransaction?: BillMasterTransaction;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    discountAmount?: number;
+    discountRate?: DiscountRate;
+    discountRateVersionID?: number;
+    reversalOfTransactionDiscountRate?: BillMasterTransactionDiscountRate;
+}
+export interface BillMasterTransactionSalesTaxRate {
+    id?: number;
+    adjustmentSequenceNumber?: number;
+    baseAmount?: number;
+    billMasterTransaction?: BillMasterTransaction;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    reversalOfTransactionSalesTaxRate?: BillMasterTransactionSalesTaxRate;
+    salesTaxRate?: SalesTaxRate;
+    salesTaxRateVersionID?: number;
+    taxAmount?: number;
+}
+export interface BillMasterTransactionSurchargeRate {
+    id?: number;
+    adjustmentSequenceNumber?: number;
+    baseAmount?: number;
+    billMasterTransaction?: BillMasterTransaction;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    reversalOfTransactionSurchargeRate?: BillMasterTransactionSurchargeRate;
+    surchargeAmount?: number;
+    surchargeRate?: SurchargeRate;
+    surchargeRateVersionID?: number;
 }
 export interface BillableCharge {
     id?: number;
@@ -833,10 +903,12 @@ export interface BillableChargeSummaryTransaction {
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
     currencyUnit?: CurrencyUnit;
+    discountRates?: ToMany<DiscountRate>;
     earnCode?: EarnCode;
     location?: Location;
     quantity?: number;
     rate?: number;
+    surchargeRates?: ToMany<SurchargeRate>;
     transactionDate?: Date;
     unitOfMeasure?: UnitOfMeasure;
 }
@@ -1305,6 +1377,7 @@ export interface Candidate {
     localFilingStatus?: Strings;
     localTaxCode?: Strings;
     locations?: ToMany<Location>;
+    maritalStatus?: Strings;
     massMailOptOut?: boolean;
     masterUserID?: number;
     middleName?: Strings;
@@ -1319,6 +1392,10 @@ export interface Candidate {
     numCategories?: number;
     numOwners?: number;
     occupation?: Strings;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     otherDeductionsAmount?: number;
     otherIncomeAmount?: number;
     owner?: CorporateUser;
@@ -1326,6 +1403,8 @@ export interface Candidate {
     pager?: Strings;
     paperWorkOnFile?: Strings;
     password?: Strings;
+    payrollClientStartDate?: Date;
+    payrollStatus?: Strings;
     personSubtype?: Strings;
     phone?: Strings;
     phone2?: Strings;
@@ -1359,6 +1438,7 @@ export interface Candidate {
     taxState?: Strings;
     tearsheets?: ToMany<Tearsheet>;
     timeZoneOffsetEST?: number;
+    tobaccoUser?: Strings;
     totalDependentClaimAmount?: number;
     travelLimit?: number;
     travelMethod?: Strings;
@@ -1843,10 +1923,10 @@ export interface CertificationFileAttachment {
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
+    isEncrypted?: boolean;
     isExternal?: boolean;
     name?: Strings;
     type?: Strings;
-    isEncrypted?: boolean;
 }
 export interface CertificationGroup {
     id?: number;
@@ -1923,6 +2003,11 @@ export interface CertificationRequirementStatusLookup {
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
 }
+export interface ChargeTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface CitySalesTaxRate {
     id?: number;
     amount?: number;
@@ -1944,6 +2029,7 @@ export interface CitySalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -3965,6 +4051,7 @@ export interface CorporateUser {
     isHidden?: number;
     isLockedOut?: boolean;
     isOutboundFaxEnabled?: boolean;
+    isPasswordCaseSensitive?: boolean;
     jobAssignments?: ToMany<JobOrder>;
     lastName?: Strings;
     massMailOptOut?: boolean;
@@ -4058,6 +4145,7 @@ export interface CountySalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -4196,6 +4284,7 @@ export interface DiscountRate {
     dateAdded?: Date;
     dateLastModified?: Date;
     discountTypeLookup?: DiscountTypeLookup;
+    earnCodes?: ToMany<EarnCode>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     generalLedgerAccount?: GeneralLedgerAccount;
@@ -4224,6 +4313,7 @@ export interface DiscountRateVersion {
     dateAdded?: Date;
     dateLastModified?: Date;
     discountTypeLookup?: DiscountTypeLookup;
+    earnCodes?: ToMany<EarnCode>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     generalLedgerAccount?: GeneralLedgerAccount;
@@ -4284,6 +4374,7 @@ export interface DistrictSalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -4420,9 +4511,11 @@ export interface EarnCodeGroup {
     id?: number;
     accruesOT?: boolean;
     allowForSelfService?: boolean;
+    chargeTypeLookup?: ChargeTypeLookup;
     defaultEarnCode?: DefaultEarnCode;
     doubleTimeEarnCode?: DoubleTimeEarnCode;
     earnCodeGroupStatusLookup?: EarnCodeGroupStatusLookup;
+    isTaxable?: boolean;
     overtimeEarnCode?: OvertimeEarnCode;
     payBillOptionsLookup?: PayBillOptionsLookup;
     unitOfMeasure?: UnitOfMeasure;
@@ -4473,6 +4566,11 @@ export interface EntityFieldTypeLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
+export interface EntryTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface ExternalAccount {
     id?: number;
     customText1?: Strings;
@@ -4492,6 +4590,15 @@ export interface ExternalAccountProfile {
     id?: number;
     externalAccount?: ExternalAccount;
     externalAccountProfile?: Strings;
+}
+export interface ExternalBatchStatusRequest {
+    id?: number;
+    batchStatusLookup?: BatchStatusLookup;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    rawErrors?: Strings;
+    rawPayload?: Strings;
+    retrySequenceNumber?: number;
 }
 export interface ExternalSystem {
     id?: number;
@@ -4918,6 +5025,7 @@ export interface InvoiceStatement {
     dateLastModified?: Date;
     deliveryMethod?: Strings;
     deliveryStatus?: InvoiceStatementDeliveryStatusLookup;
+    discountAmount?: number;
     discountTotal?: number;
     discounts?: ToMany<InvoiceStatementDiscount>;
     dueDate?: Date;
@@ -5219,7 +5327,7 @@ export interface InvoiceTerm {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
-    discountRates?: DiscountRate;
+    discountRates?: ToMany<DiscountRate>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
@@ -5237,7 +5345,7 @@ export interface InvoiceTerm {
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
     status?: Strings;
-    surchargeRates?: SurchargeRate;
+    surchargeRates?: ToMany<SurchargeRate>;
     title?: Strings;
     versionID?: number;
     versions?: ToMany<InvoiceTermVersion>;
@@ -5282,6 +5390,7 @@ export interface InvoiceTermVersion {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
+    discountRates?: ToMany<DiscountRate>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
@@ -5298,6 +5407,7 @@ export interface InvoiceTermVersion {
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
     status?: Strings;
+    surchargeRates?: ToMany<SurchargeRate>;
     title?: Strings;
     waitForTimecards?: boolean;
 }
@@ -7113,6 +7223,7 @@ export interface LocationVersion {
     customTextBlock3?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
+    declineToApplyTaxes?: boolean;
     description?: Strings;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
@@ -8281,6 +8392,7 @@ export interface OtherSalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -8361,6 +8473,7 @@ export interface PayBillOptionsLookup {
 }
 export interface PayBillSetting {
     id?: number;
+    taxImportEnabledThomsonReuters?: boolean;
     taxableStates?: ToMany<State>;
 }
 export interface PayExportBatch {
@@ -8371,9 +8484,20 @@ export interface PayExportBatch {
     payExportTypeLookup?: PayExportTypeLookup;
     payMasterTransactions?: ToMany<PayMasterTransaction>;
     payableCharges?: ToMany<PayableCharge>;
+    payrollExportTargetLookup?: PayrollExportTargetLookup;
     user?: CorporateUser;
 }
+export interface PayExportBatchExternal {
+    id?: number;
+    externalID?: Strings;
+    status?: Strings;
+}
 export interface PayExportTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface PayGroupLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
@@ -8405,6 +8529,15 @@ export interface PayMasterTransaction {
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface PayMasterTransactionPayExportBatch {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    externalPayMasterTransactionExportStatusLookup?: BatchStatusLookup;
+    payExportBatch?: PayExportBatch;
+    payExportBatchExternal?: PayExportBatchExternal;
+    payMasterTransaction?: PayMasterTransaction;
 }
 export interface PayableCharge {
     id?: number;
@@ -8493,6 +8626,38 @@ export interface PayableChargeStatusLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface PayrollEmployeeTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface PayrollExportConfig {
+    id?: number;
+    canvasReportID?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    editingUserID?: number;
+    exportWebhookHeaderProperties?: Strings;
+    exportWebhookUrl?: Strings;
+    httpVerb?: Strings;
+    payrollExportTarget?: PayrollExportTargetLookup;
+    payrollExportType?: PayrollExportTypeLookup;
+}
+export interface PayrollExportTargetLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface PayrollExportTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface PayrollSyncStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface Person {
     id?: number;
@@ -8655,6 +8820,7 @@ export interface Placement {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -8862,6 +9028,7 @@ export interface Placement {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -8890,6 +9057,10 @@ export interface Placement {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -8898,10 +9069,14 @@ export interface Placement {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -8942,6 +9117,7 @@ export interface Placement1 {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -9149,6 +9325,7 @@ export interface Placement1 {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -9177,6 +9354,10 @@ export interface Placement1 {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -9185,10 +9366,14 @@ export interface Placement1 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -9229,6 +9414,7 @@ export interface Placement2 {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -9436,6 +9622,7 @@ export interface Placement2 {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -9464,6 +9651,10 @@ export interface Placement2 {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -9472,10 +9663,14 @@ export interface Placement2 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -9516,6 +9711,7 @@ export interface Placement3 {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -9723,6 +9919,7 @@ export interface Placement3 {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -9751,6 +9948,10 @@ export interface Placement3 {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -9759,10 +9960,14 @@ export interface Placement3 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -9803,6 +10008,7 @@ export interface Placement4 {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -10010,6 +10216,7 @@ export interface Placement4 {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -10038,6 +10245,10 @@ export interface Placement4 {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -10046,10 +10257,14 @@ export interface Placement4 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -10090,6 +10305,7 @@ export interface Placement5 {
     approvedChangeRequests?: number;
     approvingClientContact?: ClientContact;
     backupApprovingClientContact?: ClientContact;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -10297,6 +10513,7 @@ export interface Placement5 {
     daysProRated?: number;
     durationWeeks?: number;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
@@ -10325,6 +10542,10 @@ export interface Placement5 {
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
+    onboardingDocumentReceivedCount?: number;
+    onboardingDocumentSentCount?: number;
+    onboardingPercentComplete?: number;
+    onboardingStatus?: Strings;
     optionsPackage?: Strings;
     otExemption?: number;
     otherHourlyFee?: number;
@@ -10333,10 +10554,14 @@ export interface Placement5 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
+    payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    positionCode?: Strings;
     placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
@@ -10447,6 +10672,7 @@ export interface PlacementCertificationEditHistoryFieldChange {
 export interface PlacementChangeRequest {
     id?: number;
     approvingUser?: CorporateUser;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -10649,6 +10875,7 @@ export interface PlacementChangeRequest {
     durationWeeks?: number;
     editHistory?: ToMany<PlacementChangeRequestEditHistory>;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
@@ -10673,8 +10900,11 @@ export interface PlacementChangeRequest {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
+    positionCode?: Strings;
     recruitingManagerPercentGrossMargin?: number;
     referralFee?: number;
     referralFeeType?: Strings;
@@ -10731,6 +10961,7 @@ export interface PlacementChangeRequest {
 export interface PlacementChangeRequest2 {
     id?: number;
     approvingUser?: CorporateUser;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -10933,6 +11164,7 @@ export interface PlacementChangeRequest2 {
     durationWeeks?: number;
     editHistory?: ToMany<PlacementChangeRequestEditHistory>;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
@@ -10957,8 +11189,11 @@ export interface PlacementChangeRequest2 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
+    positionCode?: Strings;
     recruitingManagerPercentGrossMargin?: number;
     referralFee?: number;
     referralFeeType?: Strings;
@@ -11015,6 +11250,7 @@ export interface PlacementChangeRequest2 {
 export interface PlacementChangeRequest3 {
     id?: number;
     approvingUser?: CorporateUser;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -11217,6 +11453,7 @@ export interface PlacementChangeRequest3 {
     durationWeeks?: number;
     editHistory?: ToMany<PlacementChangeRequestEditHistory>;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
@@ -11241,8 +11478,11 @@ export interface PlacementChangeRequest3 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
+    positionCode?: Strings;
     recruitingManagerPercentGrossMargin?: number;
     referralFee?: number;
     referralFeeType?: Strings;
@@ -11299,6 +11539,7 @@ export interface PlacementChangeRequest3 {
 export interface PlacementChangeRequest4 {
     id?: number;
     approvingUser?: CorporateUser;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -11501,6 +11742,7 @@ export interface PlacementChangeRequest4 {
     durationWeeks?: number;
     editHistory?: ToMany<PlacementChangeRequestEditHistory>;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
@@ -11525,8 +11767,11 @@ export interface PlacementChangeRequest4 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
+    positionCode?: Strings;
     recruitingManagerPercentGrossMargin?: number;
     referralFee?: number;
     referralFeeType?: Strings;
@@ -11583,6 +11828,7 @@ export interface PlacementChangeRequest4 {
 export interface PlacementChangeRequest5 {
     id?: number;
     approvingUser?: CorporateUser;
+    benefitGroup?: Strings;
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
@@ -11785,6 +12031,7 @@ export interface PlacementChangeRequest5 {
     durationWeeks?: number;
     editHistory?: ToMany<PlacementChangeRequestEditHistory>;
     employeeType?: Strings;
+    employmentStartDate?: Date;
     employmentType?: Strings;
     fee?: number;
     flatFee?: number;
@@ -11809,8 +12056,11 @@ export interface PlacementChangeRequest5 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
+    payGroup?: PayGroupLookup;
     payRate?: number;
+    payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
+    positionCode?: Strings;
     recruitingManagerPercentGrossMargin?: number;
     referralFee?: number;
     referralFeeType?: Strings;
@@ -12136,6 +12386,8 @@ export interface PlacementRateCard {
     owner?: CorporateUser;
     placement?: Placement;
     placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
+    rootExternalID?: Strings;
+    rootMigrateGUID?: Strings;
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
 }
@@ -12155,7 +12407,9 @@ export interface PlacementRateCardLineGroup {
     id?: number;
     earnCodeGroup?: EarnCodeGroup;
     externalID?: Strings;
+    isBase?: boolean;
     migrateGUID?: Strings;
+    placementRateCard?: PlacementRateCard;
     placementRateCardLines?: ToMany<PlacementRateCardLine>;
     placementRateCardVersion?: PlacementRateCardVersion;
 }
@@ -12205,6 +12459,7 @@ export interface PlacementTimeAndExpense {
     placement?: Placement;
     proxyCPAFlag?: Strings;
     rounding?: Strings;
+    timeAndExpenseBranch?: Strings;
     timeAndExpenseSource?: Strings;
     vmsAssignmentNumber?: Strings;
     vmsCostCenter?: Strings;
@@ -12502,6 +12757,7 @@ export interface SalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -12553,8 +12809,17 @@ export interface SalesTaxRateVersion {
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     isFirst?: boolean;
+    jurisdictionName?: Strings;
+    label?: Strings;
     rate?: number;
+    reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
@@ -12630,6 +12895,7 @@ export interface State {
     id?: number;
     code?: Strings;
     country?: Country;
+    importTaxes?: boolean;
     name?: Strings;
 }
 export interface StateSalesTaxRate {
@@ -12653,6 +12919,7 @@ export interface StateSalesTaxRate {
     rate?: number;
     reportingCodeName?: Strings;
     source?: SalesTaxRateSourceLookup;
+    stateID?: number;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
@@ -12710,15 +12977,15 @@ export interface SurchargeRate {
     amount?: number;
     dateAdded?: Date;
     dateLastModified?: Date;
-    earnCodes?: ToMany<SurchargeRateVersionEarnCode>;
+    earnCodes?: ToMany<EarnCode>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment;
-    generalLedgerSegment2?: GeneralLedgerSegment;
-    generalLedgerSegment3?: GeneralLedgerSegment;
-    generalLedgerSegment4?: GeneralLedgerSegment;
-    generalLedgerSegment5?: GeneralLedgerSegment;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     isFirst?: boolean;
@@ -12740,15 +13007,15 @@ export interface SurchargeRateVersion {
     amount?: number;
     dateAdded?: Date;
     dateLastModified?: Date;
-    earnCodes?: ToMany<SurchargeRateVersionEarnCode>;
+    earnCodes?: ToMany<EarnCode>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment;
-    generalLedgerSegment2?: GeneralLedgerSegment;
-    generalLedgerSegment3?: GeneralLedgerSegment;
-    generalLedgerSegment4?: GeneralLedgerSegment;
-    generalLedgerSegment5?: GeneralLedgerSegment;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isFirst?: boolean;
     rate?: number;
