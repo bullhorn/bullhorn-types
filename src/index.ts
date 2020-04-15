@@ -315,6 +315,7 @@ export class EntityTypes {
     static JobSubmissionIntegration: 'JobSubmissionIntegration' = 'JobSubmissionIntegration';
     static Lead: 'Lead' = 'Lead';
     static LeadHistory: 'LeadHistory' = 'LeadHistory';
+    static LegalBusinessEntity: 'LegalBusinessEntity' = 'LegalBusinessEntity';
     static Location: 'Location' = 'Location';
     static LocationEditHistory: 'LocationEditHistory' = 'LocationEditHistory';
     static LocationEditHistoryFieldChange: 'LocationEditHistoryFieldChange' = 'LocationEditHistoryFieldChange';
@@ -7102,6 +7103,17 @@ export interface LeadHistory {
     migrateGUID?: Strings;
     modifyingUser?: Person;
     status?: Strings;
+}
+export interface LegalBusinessEntity {
+    id?: number;
+    countryID?: number;
+    dateAdded?: Date;
+    defaultCurrencyUnit?: CurrencyUnit;
+    isDeleted?: boolean;
+    legalEntityNumber?: Strings;
+    legalName?: Strings;
+    shortName?: Strings;
+    statusLookup?: StatusLookup;
 }
 export interface Location {
     id?: number;
