@@ -7113,7 +7113,7 @@ export interface LegalBusinessEntity {
     legalEntityNumber?: Strings;
     legalName?: Strings;
     shortName?: Strings;
-    statusLookup? StatusLookup;
+    statusLookup?: StatusLookup;
 }
 export interface Location {
     id?: number;
