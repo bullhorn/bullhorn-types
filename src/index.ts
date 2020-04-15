@@ -7097,6 +7097,15 @@ export interface Lead {
 }
 export interface LeadHistory {
     id?: number;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    lead?: Lead;
+    migrateGUID?: Strings;
+    modifyingUser?: Person;
+    status?: Strings;
+}
+export interface LegalBusinessEntity {
+    id?: number;
     countryID?: number;
     dateAdded?: Date;
     defaultCurrencyUnit?: CurrencyUnit;
@@ -7105,15 +7114,6 @@ export interface LeadHistory {
     legalName?: Strings;
     shortName?: Strings;
     statusLookup? StatusLookup;
-}
-export interface LegalBusinessEntity {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    dateAdded?: Date;
-    lead?: Lead;
-    migrateGUID?: Strings;
-    modifyingUser?: Person;
-    status?: Strings;
 }
 export interface Location {
     id?: number;
