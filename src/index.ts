@@ -323,6 +323,7 @@ export class EntityTypes {
     static LocationVersion: 'LocationVersion' = 'LocationVersion';
     static MailListPushHistory: 'MailListPushHistory' = 'MailListPushHistory';
     static MailListPushHistoryDetail: 'MailListPushHistoryDetail' = 'MailListPushHistoryDetail';
+    static MappedEntityConfiguration: 'MappedEntityConfiguration' = 'MappedEntityConfiguration';
     static Menu: 'Menu' = 'Menu';
     static MessageTemplate: 'MessageTemplate' = 'MessageTemplate';
     static MessageTemplateFileAttachment: 'MessageTemplateFileAttachment' = 'MessageTemplateFileAttachment';
@@ -7267,6 +7268,12 @@ export interface MailListPushHistoryDetail {
     externalListId?: Strings;
     externalListName?: Strings;
     mailListPushHistory?: MailListPushHistory;
+}
+export interface MappedEntityConfiguration {
+    id?: number;
+    entityName?: Strings;
+    fields?: Strings;
+    mappedName?: Strings;
 }
 export interface Menu {
     id?: number;
