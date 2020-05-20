@@ -35,12 +35,14 @@ let person: Candidate = {
 # Clone this repo
 git clone git@github.com:bullhorn/bullhorn-types.git
 cd bullhorn-types
-# Install the Bullhorn CLI tool
+
+# Install the Bullhorn CLI tool globally
 npm install -g @bullhorn/bullhorn-cli
+
 # Login into the Bullhorn Environment
-bullhorn config set environment YOUR_API_ENDPOINT
-# Login into the Bullhorn Environment
+bullhorn config set environment http://qabox-backend:8182
 bullhorn auth login
+
 # Generate the typings file
 bullhorn typings generate
 ```

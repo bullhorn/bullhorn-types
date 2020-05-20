@@ -262,6 +262,9 @@ export class EntityTypes {
     static InvoiceStatementTypeLookup: 'InvoiceStatementTypeLookup' = 'InvoiceStatementTypeLookup';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
+    static Issue: 'Issue' = 'Issue';
+    static IssueItems: 'IssueItems' = 'IssueItems';
+    static IssueResolutionStatusLookup: 'IssueResolutionStatusLookup' = 'IssueResolutionStatusLookup';
     static JobBoardHistory: 'JobBoardHistory' = 'JobBoardHistory';
     static JobBoardJobOrder: 'JobBoardJobOrder' = 'JobBoardJobOrder';
     static JobBoardPost: 'JobBoardPost' = 'JobBoardPost';
@@ -375,6 +378,7 @@ export class EntityTypes {
     static PayMaster: 'PayMaster' = 'PayMaster';
     static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
     static PayMasterTransactionPayExportBatch: 'PayMasterTransactionPayExportBatch' = 'PayMasterTransactionPayExportBatch';
+    static PayMasterTransactionPayExportBatchIssues: 'PayMasterTransactionPayExportBatchIssues' = 'PayMasterTransactionPayExportBatchIssues';
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
     static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
@@ -5413,6 +5417,44 @@ export interface InvoiceTermVersion {
     title?: Strings;
     waitForTimecards?: boolean;
 }
+export interface Issue {
+    id?: number;
+    action?: Strings;
+    actionEntityID?: number;
+    actionEntityName?: Strings;
+    dateAdded?: Date;
+    externalSystemName?: Strings;
+    issueItems?: ToMany<IssueItems>;
+    payMasterTransactionPayExportBatchIssues?: ToMany<PayMasterTransactionPayExportBatchIssues>;
+    severity?: Strings;
+}
+export interface IssueItems {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    errorType?: Strings;
+    externalEntityID?: Strings;
+    externalEntityName?: Strings;
+    fieldReference?: Strings;
+    fixInBullhorn?: boolean;
+    fixableByUser?: boolean;
+    issue?: Issue;
+    issueResolutionStatusLookup?: IssueResolutionStatusLookup;
+    modifiedByUser?: CorporateUser;
+    referenceUrl?: Strings;
+    referenceUrlMethod?: Strings;
+    referenceUrlResponse?: Strings;
+    referenceUrlStatusCode?: number;
+    severity?: Strings;
+    sourceEntity?: Strings;
+    sourceEntityID?: number;
+}
+export interface IssueResolutionStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface JobBoardHistory {
     id?: number;
     dateAdded?: Date;
@@ -8557,6 +8599,11 @@ export interface PayMasterTransactionPayExportBatch {
     payExportBatch?: PayExportBatch;
     payExportBatchExternal?: PayExportBatchExternal;
     payMasterTransaction?: PayMasterTransaction;
+}
+export interface PayMasterTransactionPayExportBatchIssues {
+    id?: number;
+    issue?: Issue;
+    payMasterTransactionPayExportBatch?: PayMasterTransactionPayExportBatch;
 }
 export interface PayableCharge {
     id?: number;
