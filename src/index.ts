@@ -5419,41 +5419,41 @@ export interface InvoiceTermVersion {
 }
 export interface Issue {
     id?: number;
-    action?: Strings;
+    action?: string;
     actionEntityID?: number;
-    actionEntityName?: Strings;
+    actionEntityName?: string;
     dateAdded?: Date;
-    externalSystemName?: Strings;
+    externalSystemName?: string;
     issueItems?: ToMany<IssueItems>;
     payMasterTransactionPayExportBatchIssues?: ToMany<PayMasterTransactionPayExportBatchIssues>;
-    severity?: Strings;
+    severity?: string;
 }
 export interface IssueItems {
     id?: number;
-    comments?: Strings;
+    comments?: string;
     dateAdded?: Date;
     dateLastModified?: Date;
-    errorType?: Strings;
-    externalEntityID?: Strings;
-    externalEntityName?: Strings;
-    fieldReference?: Strings;
+    errorType?: string;
+    externalEntityID?: string;
+    externalEntityName?: string;
+    fieldReference?: string;
     fixInBullhorn?: boolean;
     fixableByUser?: boolean;
     issue?: Issue;
     issueResolutionStatusLookup?: IssueResolutionStatusLookup;
     modifiedByUser?: CorporateUser;
-    referenceUrl?: Strings;
-    referenceUrlMethod?: Strings;
-    referenceUrlResponse?: Strings;
+    referenceUrl?: string;
+    referenceUrlMethod?: string;
+    referenceUrlResponse?: string;
     referenceUrlStatusCode?: number;
-    severity?: Strings;
-    sourceEntity?: Strings;
+    severity?: string;
+    sourceEntity?: string;
     sourceEntityID?: number;
 }
 export interface IssueResolutionStatusLookup {
     id?: number;
     isDeleted?: boolean;
-    label?: Strings;
+    label?: string;
 }
 export interface JobBoardHistory {
     id?: number;
