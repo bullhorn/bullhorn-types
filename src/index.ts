@@ -4356,6 +4356,7 @@ export interface DistributionList {
     migrateGUID?: Strings;
     name?: Strings;
     owner?: CorporateUser;
+    restrictListToRecordType?: Strings;
     searchURL?: Strings;
     type?: Strings;
 }
