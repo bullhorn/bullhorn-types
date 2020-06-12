@@ -4580,7 +4580,7 @@ export interface EntryTypeLookup {
     label?: Strings;
 }
 export interface EstaffMappableFlowback {
-    estaffMappableFlowbackID?: number;
+    id?: number;
     estaffFieldType?: Strings;
     estaffRecordType?: Strings;
     atsField?: Strings;
