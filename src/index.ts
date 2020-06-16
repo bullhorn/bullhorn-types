@@ -207,7 +207,6 @@ export class EntityTypes {
     static EmailTemplate: 'EmailTemplate' = 'EmailTemplate';
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
-    static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
@@ -4578,14 +4577,6 @@ export interface EntryTypeLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
-}
-export interface EstaffMappableFlowback {
-    id?: number;
-    estaffFieldType?: Strings;
-    estaffRecordType?: Strings;
-    atsField?: Strings;
-    atsEntity?: Strings;
-    alwaysOverwrite?: boolean;
 }
 export interface ExternalAccount {
     id?: number;
