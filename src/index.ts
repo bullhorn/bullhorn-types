@@ -19,6 +19,7 @@ export class EntityTypes {
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillMasterTransactionDiscountRate: 'BillMasterTransactionDiscountRate' = 'BillMasterTransactionDiscountRate';
+    static BillMasterTransactionDistributionBatch: 'BillMasterTransactionDistributionBatch' = 'BillMasterTransactionDistributionBatch';
     static BillMasterTransactionSalesTaxRate: 'BillMasterTransactionSalesTaxRate' = 'BillMasterTransactionSalesTaxRate';
     static BillMasterTransactionSurchargeRate: 'BillMasterTransactionSurchargeRate' = 'BillMasterTransactionSurchargeRate';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
@@ -742,6 +743,7 @@ export interface BillMasterTransaction {
     adjustmentSequenceNumber?: number;
     amount?: number;
     billMaster?: BillMaster;
+    billMasterTransactionDistributionBatch?: BillMasterTransactionDistributionBatch;
     comment?: Strings;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
@@ -771,6 +773,15 @@ export interface BillMasterTransactionDiscountRate {
     discountRateVersionID?: number;
     reversalOfTransactionDiscountRate?: BillMasterTransactionDiscountRate;
 }
+export interface BillMasterTransactionDistributionBatch {
+    id?: number;
+    batchStatus?: BatchStatusLookup;
+    billMasterTransactions?: ToMany<BillMasterTransaction>;
+    billableCharges?: ToMany<BillableCharge>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    owner?: CorporateUser;
+}
 export interface BillMasterTransactionSalesTaxRate {
     id?: number;
     adjustmentSequenceNumber?: number;
@@ -798,6 +809,7 @@ export interface BillMasterTransactionSurchargeRate {
 export interface BillableCharge {
     id?: number;
     addedByUser?: CorporateUser;
+    billMasterTransactionDistributionBatches?: ToMany<BillMasterTransactionDistributionBatch>;
     billMasters?: ToMany<BillMaster>;
     billableTransactions?: ToMany<BillableChargeBillableTransaction>;
     billingClientContact?: ClientContact;
