@@ -5,6 +5,8 @@ export class EntityTypes {
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
+    static AllSalesTaxGroup: 'AllSalesTaxGroup' = 'AllSalesTaxGroup';
+    static AllSalesTaxRate: 'AllSalesTaxRate' = 'AllSalesTaxRate';
     static Application: 'Application' = 'Application';
     static Appointment: 'Appointment' = 'Appointment';
     static AppointmentAttendee: 'AppointmentAttendee' = 'AppointmentAttendee';
@@ -562,7 +564,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'AllSalesTaxRate', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -620,6 +622,50 @@ export interface ActivityGoalTarget {
     goal?: number;
     periodName?: Strings;
     user?: CorporateUser;
+}
+export interface AllSalesTaxGroup {
+    id?: number;
+    citySalesTaxRate?: CitySalesTaxRate;
+    countySalesTaxRate?: CountySalesTaxRate;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    districtSalesTaxRate?: DistrictSalesTaxRate;
+    externalID?: number;
+    externalSalesTaxGroupID?: number;
+    label?: Strings;
+    salesTaxGroupID?: number;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    stateSalesTaxRate?: StateSalesTaxRate;
+    status?: TaxStatusLookup;
+    totalRate?: number;
+    zipPlus4High?: Strings;
+    zipPlus4Low?: Strings;
+    zipcode?: Strings;
+}
+export interface AllSalesTaxRate {
+    id?: number;
+    amount?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalSalesTaxRateID?: number;
+    isDeleted?: boolean;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    label?: Strings;
+    owner?: CorporateUser;
+    rate?: number;
+    reportingCodeName?: Strings;
+    salesTaxRateID?: number;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    status?: TaxStatusLookup;
+    taxType?: TaxTypeLookup;
+    type?: SalesTaxRateTypeLookup;
+    versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface Application {
     id?: number;
@@ -789,6 +835,7 @@ export interface BillMasterTransactionDistributionBatch {
 export interface BillMasterTransactionSalesTaxRate {
     id?: number;
     adjustmentSequenceNumber?: number;
+    allSalesTaxRate?: AllSalesTaxRate;
     baseAmount?: number;
     billMasterTransaction?: BillMasterTransaction;
     currencyUnit?: CurrencyUnit;
@@ -7240,7 +7287,7 @@ export interface Location {
     isSoldTo?: boolean;
     isWorkSite?: boolean;
     owner?: CorporateUser;
-    salesTaxGroups?: ToMany<SalesTaxGroup>;
+    salesTaxGroups?: ToMany<AllSalesTaxGroup>;
     status?: Strings;
     title?: Strings;
     versionID?: number;
@@ -7320,7 +7367,7 @@ export interface LocationVersion {
     isFirst?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    salesTaxGroups?: ToMany<SalesTaxGroup>;
+    salesTaxGroups?: ToMany<AllSalesTaxGroup>;
     status?: Strings;
     title?: Strings;
 }
