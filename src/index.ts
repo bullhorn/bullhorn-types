@@ -5,6 +5,8 @@ export class EntityTypes {
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
+    static AllSalesTaxGroup: 'AllSalesTaxGroup' = 'AllSalesTaxGroup';
+    static AllSalesTaxRate: 'AllSalesTaxRate' = 'AllSalesTaxRate';
     static Application: 'Application' = 'Application';
     static Appointment: 'Appointment' = 'Appointment';
     static AppointmentAttendee: 'AppointmentAttendee' = 'AppointmentAttendee';
@@ -621,6 +623,50 @@ export interface ActivityGoalTarget {
     periodName?: Strings;
     user?: CorporateUser;
 }
+export interface AllSalesTaxGroup {
+    id?: number;
+    citySalesTaxRate?: CitySalesTaxRate;
+    countySalesTaxRate?: CountySalesTaxRate;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    districtSalesTaxRate?: DistrictSalesTaxRate;
+    externalID?: number;
+    externalSalesTaxGroupID?: number;
+    label?: Strings;
+    salesTaxGroupID?: number;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    stateSalesTaxRate?: StateSalesTaxRate;
+    status?: TaxStatusLookup;
+    totalRate?: number;
+    zipPlus4High?: Strings;
+    zipPlus4Low?: Strings;
+    zipcode?: Strings;
+}
+export interface AllSalesTaxRate {
+    id?: number;
+    amount?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalSalesTaxRateID?: number;
+    isDeleted?: boolean;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    label?: Strings;
+    owner?: CorporateUser;
+    rate?: number;
+    reportingCodeName?: Strings;
+    salesTaxRateID?: number;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    status?: TaxStatusLookup;
+    taxType?: TaxTypeLookup;
+    type?: SalesTaxRateTypeLookup;
+    versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
 export interface Application {
     id?: number;
     dateAdded?: Date;
@@ -789,6 +835,7 @@ export interface BillMasterTransactionDistributionBatch {
 export interface BillMasterTransactionSalesTaxRate {
     id?: number;
     adjustmentSequenceNumber?: number;
+    allSalesTaxRate?: AllSalesTaxRate;
     baseAmount?: number;
     billMasterTransaction?: BillMasterTransaction;
     currencyUnit?: CurrencyUnit;
@@ -7240,7 +7287,7 @@ export interface Location {
     isSoldTo?: boolean;
     isWorkSite?: boolean;
     owner?: CorporateUser;
-    salesTaxGroups?: ToMany<SalesTaxGroup>;
+    salesTaxGroups?: ToMany<AllSalesTaxGroup>;
     status?: Strings;
     title?: Strings;
     versionID?: number;
@@ -7320,7 +7367,7 @@ export interface LocationVersion {
     isFirst?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
-    salesTaxGroups?: ToMany<SalesTaxGroup>;
+    salesTaxGroups?: ToMany<AllSalesTaxGroup>;
     status?: Strings;
     title?: Strings;
 }
