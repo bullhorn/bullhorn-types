@@ -244,6 +244,7 @@ export class EntityTypes {
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementDeliveryStatusLookup: 'InvoiceStatementDeliveryStatusLookup' = 'InvoiceStatementDeliveryStatusLookup';
     static InvoiceStatementDiscount: 'InvoiceStatementDiscount' = 'InvoiceStatementDiscount';
+    static InvoiceStatementDistributionBatch: 'InvoiceStatementDistributionBatch' = 'InvoiceStatementDistributionBatch';
     static InvoiceStatementEditHistory: 'InvoiceStatementEditHistory' = 'InvoiceStatementEditHistory';
     static InvoiceStatementEditHistoryAssociationChange: 'InvoiceStatementEditHistoryAssociationChange' = 'InvoiceStatementEditHistoryAssociationChange';
     static InvoiceStatementEditHistoryFieldChange: 'InvoiceStatementEditHistoryFieldChange' = 'InvoiceStatementEditHistoryFieldChange';
@@ -251,6 +252,7 @@ export class EntityTypes {
     static InvoiceStatementExport: 'InvoiceStatementExport' = 'InvoiceStatementExport';
     static InvoiceStatementExportBatch: 'InvoiceStatementExportBatch' = 'InvoiceStatementExportBatch';
     static InvoiceStatementHistory: 'InvoiceStatementHistory' = 'InvoiceStatementHistory';
+    static InvoiceStatementLineDistribution: 'InvoiceStatementLineDistribution' = 'InvoiceStatementLineDistribution';
     static InvoiceStatementLineDistributionTypeLookup: 'InvoiceStatementLineDistributionTypeLookup' = 'InvoiceStatementLineDistributionTypeLookup';
     static InvoiceStatementLineItem: 'InvoiceStatementLineItem' = 'InvoiceStatementLineItem';
     static InvoiceStatementLineItemEditHistory: 'InvoiceStatementLineItemEditHistory' = 'InvoiceStatementLineItemEditHistory';
@@ -5112,9 +5114,11 @@ export interface InvoiceStatement {
     emailErrorReason?: Strings;
     generalLedgerExportStatusLookup?: GeneralLedgerExportStatusLookup;
     invoiceStatementDate?: Date;
+    invoiceStatementDistributionBatch?: InvoiceStatementDistributionBatch;
     invoiceStatementExportBatches?: ToMany<InvoiceStatementExportBatch>;
     invoiceStatementExports?: ToMany<InvoiceStatementExport>;
     invoiceStatementFinalizedDate?: Date;
+    invoiceStatementLineDistributions?: ToMany<InvoiceStatementLineDistribution>;
     invoiceStatementNumber?: Strings;
     invoiceStatementOrigin?: Strings;
     invoiceStatementTemplate?: InvoiceStatementTemplate;
@@ -5166,6 +5170,17 @@ export interface InvoiceStatementDiscount {
     discount?: Discount;
     finalizedValue?: number;
     invoiceStatement?: InvoiceStatement;
+}
+export interface InvoiceStatementDistributionBatch {
+    id?: number;
+    accountingDate?: Date;
+    batchStatus?: BatchStatusLookup;
+    canvasReport?: CanvasReport;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    invoiceStatementLineDistributions?: ToMany<InvoiceStatementLineDistribution>;
+    invoiceStatements?: ToMany<InvoiceStatement>;
+    owner?: CorporateUser;
 }
 export interface InvoiceStatementEditHistory {
     id?: number;
@@ -5232,6 +5247,20 @@ export interface InvoiceStatementHistory {
     invoiceStatement?: InvoiceStatement;
     modifyingUser?: Person;
     status?: Strings;
+}
+export interface InvoiceStatementLineDistribution {
+    id?: number;
+    accountingCode?: Strings;
+    creditAmount?: number;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    debitAmount?: number;
+    description?: Strings;
+    invoiceStatement?: InvoiceStatement;
+    invoiceStatementDistributionBatch?: InvoiceStatementDistributionBatch;
+    invoiceStatementLineDistributionTypeLookup?: InvoiceStatementLineDistributionTypeLookup;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
 }
 export interface InvoiceStatementLineDistributionTypeLookup {
     id?: number;

@@ -36,15 +36,15 @@ let person: Candidate = {
 git clone git@github.com:bullhorn/bullhorn-types.git
 cd bullhorn-types
 
-# Install the Bullhorn CLI tool globally
-npm install -g @bullhorn/bullhorn-cli
+mkdir typings
+npm install
 
 # Login into the Bullhorn Environment
-bullhorn config set environment http://qabox-backend:8182
-bullhorn auth login
+npx bullhorn config set environment http://qabox-backend:8182
+npx bullhorn auth login
 
 # Generate the typings file
-bullhorn typings generate
+npx bullhorn typings generate
 ```
 
 Travis will build a deploy to NPM when you push to master with appropriate [Semantice Release](https://github.com/semantic-release/semantic-release) messages.
