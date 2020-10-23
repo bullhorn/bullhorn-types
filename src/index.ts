@@ -44,6 +44,9 @@ export class EntityTypes {
     static BotOutcome: 'BotOutcome' = 'BotOutcome';
     static Branch: 'Branch' = 'Branch';
     static BusinessSector: 'BusinessSector' = 'BusinessSector';
+    static Calendar: 'Calendar' = 'Calendar';
+    static CalendarFrequencyLookup: 'CalendarFrequencyLookup' = 'CalendarFrequencyLookup';
+    static CalendarInstance: 'CalendarInstance' = 'CalendarInstance';
     static Candidate: 'Candidate' = 'Candidate';
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
@@ -377,6 +380,7 @@ export class EntityTypes {
     static OvertimeEarnCode: 'OvertimeEarnCode' = 'OvertimeEarnCode';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
     static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
+    static PayBillCycle: 'PayBillCycle' = 'PayBillCycle';
     static PayBillSetting: 'PayBillSetting' = 'PayBillSetting';
     static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
     static PayExportBatchExternal: 'PayExportBatchExternal' = 'PayExportBatchExternal';
