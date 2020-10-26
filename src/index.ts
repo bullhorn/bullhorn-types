@@ -1263,6 +1263,29 @@ export interface BusinessSector {
     dateAdded?: Date;
     name?: Strings;
 }
+export interface Calendar {
+    id?: number;
+    calendarFrequencyLookup?: CalendarFrequencyLookup;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    label?: Strings;
+}
+export interface CalendarFrequencyLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface CalendarInstance {
+    id?: number;
+    calendar?: Calendar;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    endDate?: Date;
+    label?: Strings;
+    startDate?: Date;
+}
 export interface Candidate {
     id?: number;
     activePlacements?: ToMany<Placement>;
@@ -8637,6 +8660,14 @@ export interface PageInteraction {
     page?: Strings;
     script?: Strings;
     sortOrder?: number;
+}
+export interface PayBillCycle {
+    id?: number;
+    billingCalendar?: Calendar;
+    billingCalendarFrequencyLookup?: CalendarFrequencyLookup;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    label?: Strings;
 }
 export interface PayBillOptionsLookup {
     id?: number;
