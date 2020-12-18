@@ -1046,6 +1046,7 @@ export interface BillingProfile {
     dateAdded?: Date;
     dateLastModified?: Date;
     deliveryMethod?: Strings;
+    deliveryMethodLookup?: DeliveryMethodLookup;
     description?: Strings;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
@@ -4346,6 +4347,18 @@ export interface Department {
     description?: Strings;
     enabled?: boolean;
     name?: Strings;
+}
+export interface DeliveryMethodLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface Discount {
     id?: number;
