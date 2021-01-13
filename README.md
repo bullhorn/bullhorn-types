@@ -40,7 +40,7 @@ mkdir typings
 npm install
 
 # Login into the Bullhorn Environment
-npx bullhorn config set environment http://qabox-backend:8182
+npx bullhorn config set environment http://maryn-backend.bh-bos2.bullhorn.com:8182
 npx bullhorn auth login
 
 # Generate the typings file
