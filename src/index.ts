@@ -4691,6 +4691,7 @@ export interface EstaffMappableFlowback {
     atsField?: Strings;
     atsEntity?: Strings;
     alwaysOverwrite?: boolean;
+    conversion?: Strings;
 }
 export interface ExternalAccount {
     id?: number;
