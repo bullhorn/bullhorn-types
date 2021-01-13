@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Validate Repository
+        run: npm run validate-repository
       - name: Cache node modules
         uses: actions/cache@v1
         with:
