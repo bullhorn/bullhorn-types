@@ -48,6 +48,7 @@ export class EntityTypes {
     static CalendarFrequencyLookup: 'CalendarFrequencyLookup' = 'CalendarFrequencyLookup';
     static CalendarInstance: 'CalendarInstance' = 'CalendarInstance';
     static Candidate: 'Candidate' = 'Candidate';
+    static CandidateAvailability: 'CandidateAvailability' = 'CandidateAvailability';
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
     static CandidateCertificationEditHistoryFieldChange: 'CandidateCertificationEditHistoryFieldChange' = 'CandidateCertificationEditHistoryFieldChange';
@@ -61,6 +62,7 @@ export class EntityTypes {
     static CandidateReference: 'CandidateReference' = 'CandidateReference';
     static CandidateReferenceQuestion: 'CandidateReferenceQuestion' = 'CandidateReferenceQuestion';
     static CandidateReferenceResponse: 'CandidateReferenceResponse' = 'CandidateReferenceResponse';
+    static CandidateShiftPreference: 'CandidateShiftPreference' = 'CandidateShiftPreference';
     static CandidateSource: 'CandidateSource' = 'CandidateSource';
     static CandidateWorkHistory: 'CandidateWorkHistory' = 'CandidateWorkHistory';
     static CanvasReport: 'CanvasReport' = 'CanvasReport';
@@ -318,6 +320,9 @@ export class EntityTypes {
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
+    static JobShift: 'JobShift' = 'JobShift';
+    static JobShiftAssignment: 'JobShiftAssignment' = 'JobShiftAssignment';
+    static JobShiftSubmission: 'JobShiftSubmission' = 'JobShiftSubmission';
     static JobSubmission: 'JobSubmission' = 'JobSubmission';
     static JobSubmissionCertificationRequirement: 'JobSubmissionCertificationRequirement' = 'JobSubmissionCertificationRequirement';
     static JobSubmissionCertificationRequirementEditHistory: 'JobSubmissionCertificationRequirementEditHistory' = 'JobSubmissionCertificationRequirementEditHistory';
@@ -503,6 +508,7 @@ export class EntityTypes {
     static SalesTaxRateVersion: 'SalesTaxRateVersion' = 'SalesTaxRateVersion';
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
+    static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
     static Skill: 'Skill' = 'Skill';
     static SmsTracking: 'SmsTracking' = 'SmsTracking';
@@ -1291,6 +1297,7 @@ export interface Candidate {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    availability?: ToMany<CandidateAvailability>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
     canEnterTime?: boolean;
@@ -1468,6 +1475,7 @@ export interface Candidate {
     isEditable?: boolean;
     isExempt?: boolean;
     isLockedOut?: boolean;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
     lastName?: Strings;
     latestComment?: ToMany<CandidateComment>;
     leads?: ToMany<Lead>;
@@ -1522,6 +1530,7 @@ export interface Candidate {
     secondaryOwners?: ToMany<CorporateUser>;
     secondarySkills?: ToMany<Skill>;
     sendouts?: ToMany<Sendout>;
+    shiftPreferences?: ToMany<CandidateShiftPreference>;
     shifts?: ToMany<Shift>;
     skillSet?: Strings;
     smsOptIn?: boolean;
@@ -1565,6 +1574,15 @@ export interface Candidate {
     customObject9s?: PersonCustomObjectInstance9[];
     customObject10s?: PersonCustomObjectInstance10[];
 }
+export interface CandidateAvailability {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    endTime?: Strings;
+    isAvailable?: boolean;
+    startTime?: Strings;
+    type?: Strings;
+}
 export interface CandidateCertification {
     id?: number;
     boardCertification?: Strings;
@@ -1604,6 +1622,7 @@ export interface CandidateCertification {
     customTextBlock7?: Strings;
     customTextBlock8?: Strings;
     customTextBlock9?: Strings;
+    dateAdded?: Date;
     dateCertified?: Date;
     dateExpiration?: Date;
     dateLastModified?: Date;
@@ -1615,6 +1634,7 @@ export interface CandidateCertification {
     licenseNumber?: Strings;
     licenseType?: Strings;
     location?: Strings;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     name?: Strings;
     results?: Strings;
@@ -1682,9 +1702,12 @@ export interface CandidateCertificationRequirement {
     customTextBlock9?: Strings;
     dateAdded?: Date;
     dateExpiration?: Date;
+    dateLastModified?: Date;
     documentDeadline?: Date;
     fileAttachments?: ToMany<CandidateFileAttachment>;
+    isDeleted?: boolean;
     matchingCredentialCount?: number;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
     status?: CertificationRequirementStatusLookup;
@@ -1856,6 +1879,15 @@ export interface CandidateReferenceResponse {
     question?: CandidateReferenceQuestion;
     reference?: CandidateReference;
     responseText?: Strings;
+}
+export interface CandidateShiftPreference {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dayNumber?: number;
+    dayOfWeek?: Strings;
+    isAvailable?: boolean;
+    shiftType?: ShiftType;
 }
 export interface CandidateSource {
     id?: number;
@@ -5950,6 +5982,7 @@ export interface JobOrder {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6110,6 +6143,7 @@ export interface JobOrder1 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6270,6 +6304,7 @@ export interface JobOrder2 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6430,6 +6465,7 @@ export interface JobOrder3 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6590,6 +6626,7 @@ export interface JobOrder4 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6750,6 +6787,7 @@ export interface JobOrder5 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6998,6 +7036,50 @@ export interface JobOrderTemplate {
     tabName?: Strings;
     type?: Strings;
 }
+export interface JobShift {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    endTime?: Strings;
+    isOpen?: boolean;
+    jobOrder?: JobOrder;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
+    jobShiftSubmissions?: ToMany<JobShiftSubmission>;
+    name?: Strings;
+    openings?: number;
+    reasonClosed?: Strings;
+    sequenceID?: Strings;
+    shift?: Shift;
+    shiftTypes?: ToMany<ShiftType>;
+    startTime?: Strings;
+}
+export interface JobShiftAssignment {
+    id?: number;
+    actualEndTime?: Strings;
+    actualStartTime?: Strings;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isCancelled?: boolean;
+    jobShift?: JobShift;
+    linkedJobShiftSubmission?: JobShiftSubmission;
+    owner?: CorporateUser;
+    placement?: Placement;
+    reasonCancelled?: Strings;
+    scheduledEndTime?: Strings;
+    scheduledStartTime?: Strings;
+    status?: Strings;
+}
+export interface JobShiftSubmission {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isPublished?: boolean;
+    jobShift?: JobShift;
+    status?: Strings;
+}
 export interface JobSubmission {
     id?: number;
     appointments?: ToMany<Appointment>;
@@ -7053,6 +7135,7 @@ export interface JobSubmission {
     dateAdded?: Date;
     dateLastModified?: Date;
     dateWebResponse?: Date;
+    endDate?: Date;
     isDeleted?: boolean;
     isHidden?: boolean;
     jobOrder?: JobOrder;
@@ -7065,6 +7148,7 @@ export interface JobSubmission {
     salary?: number;
     sendingUser?: Person;
     source?: Strings;
+    startDate?: Date;
     status?: Strings;
     tasks?: ToMany<Task>;
 }
@@ -13077,6 +13161,14 @@ export interface Shift {
     shortName?: Strings;
     startTime?: Date;
     type?: Strings;
+}
+export interface ShiftType {
+    id?: number;
+    endTime?: Strings;
+    icon?: Strings;
+    isDeleted?: boolean;
+    name?: Strings;
+    startTime?: Strings;
 }
 export interface SignatureTemplate {
     id?: number;
