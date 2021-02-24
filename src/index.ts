@@ -34,6 +34,9 @@ export class EntityTypes {
     static BillableChargeSummaryTransaction: 'BillableChargeSummaryTransaction' = 'BillableChargeSummaryTransaction';
     static BillableChargeUnbillableTransaction: 'BillableChargeUnbillableTransaction' = 'BillableChargeUnbillableTransaction';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
+    static BillingProfileEditHistory: 'BillingProfileEditHistory' = 'BillingProfileEditHistory';
+    static BillingProfileEditHistoryFieldChange: 'BillingProfileEditHistoryFieldChange' = 'BillingProfileEditHistoryFieldChange';
+    static BillingProfileEffectiveDateChange: 'BillingProfileEffectiveDateChange' = 'BillingProfileEffectiveDateChange';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
     static BillingSyncBatchFileAttachment: 'BillingSyncBatchFileAttachment' = 'BillingSyncBatchFileAttachment';
@@ -195,6 +198,10 @@ export class EntityTypes {
     static DiscountEditHistory: 'DiscountEditHistory' = 'DiscountEditHistory';
     static DiscountEditHistoryFieldChange: 'DiscountEditHistoryFieldChange' = 'DiscountEditHistoryFieldChange';
     static DiscountRate: 'DiscountRate' = 'DiscountRate';
+    static DiscountRateAssociationChangeHistory: 'DiscountRateAssociationChangeHistory' = 'DiscountRateAssociationChangeHistory';
+    static DiscountRateEditHistory: 'DiscountRateEditHistory' = 'DiscountRateEditHistory';
+    static DiscountRateEditHistoryFieldChange: 'DiscountRateEditHistoryFieldChange' = 'DiscountRateEditHistoryFieldChange';
+    static DiscountRateEffectiveDateChange: 'DiscountRateEffectiveDateChange' = 'DiscountRateEffectiveDateChange';
     static DiscountRateVersion: 'DiscountRateVersion' = 'DiscountRateVersion';
     static DiscountType: 'DiscountType' = 'DiscountType';
     static DiscountTypeLookup: 'DiscountTypeLookup' = 'DiscountTypeLookup';
@@ -271,6 +278,9 @@ export class EntityTypes {
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
     static InvoiceStatementTypeLookup: 'InvoiceStatementTypeLookup' = 'InvoiceStatementTypeLookup';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
+    static InvoiceTermEditHistory: 'InvoiceTermEditHistory' = 'InvoiceTermEditHistory';
+    static InvoiceTermEditHistoryFieldChange: 'InvoiceTermEditHistoryFieldChange' = 'InvoiceTermEditHistoryFieldChange';
+    static InvoiceTermEffectiveDateChange: 'InvoiceTermEffectiveDateChange' = 'InvoiceTermEffectiveDateChange';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
     static Issue: 'Issue' = 'Issue';
     static IssueItems: 'IssueItems' = 'IssueItems';
@@ -516,6 +526,10 @@ export class EntityTypes {
     static SurchargeEditHistory: 'SurchargeEditHistory' = 'SurchargeEditHistory';
     static SurchargeEditHistoryFieldChange: 'SurchargeEditHistoryFieldChange' = 'SurchargeEditHistoryFieldChange';
     static SurchargeRate: 'SurchargeRate' = 'SurchargeRate';
+    static SurchargeRateAssociationChangeHistory: 'SurchargeRateAssociationChangeHistory' = 'SurchargeRateAssociationChangeHistory';
+    static SurchargeRateEditHistory: 'SurchargeRateEditHistory' = 'SurchargeRateEditHistory';
+    static SurchargeRateEditHistoryFieldChange: 'SurchargeRateEditHistoryFieldChange' = 'SurchargeRateEditHistoryFieldChange';
+    static SurchargeRateEffectiveDateChange: 'SurchargeRateEffectiveDateChange' = 'SurchargeRateEffectiveDateChange';
     static SurchargeRateTypeLookup: 'SurchargeRateTypeLookup' = 'SurchargeRateTypeLookup';
     static SurchargeRateVersion: 'SurchargeRateVersion' = 'SurchargeRateVersion';
     static SurchargeRateVersionEarnCode: 'SurchargeRateVersionEarnCode' = 'SurchargeRateVersionEarnCode';
@@ -1060,6 +1074,34 @@ export interface BillingProfile {
     toRecipients?: ToMany<Person>;
     versionID?: number;
     versions?: ToMany<BillingProfileVersion>;
+}
+export interface BillingProfileEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: BillingProfileEffectiveDateChange;
+    fieldChanges?: ToMany<BillingProfileEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: BillingProfile;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface BillingProfileEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: BillingProfileEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface BillingProfileEffectiveDateChange {
+    id?: number;
+    editHistory?: BillingProfileEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface BillingProfileVersion {
     id?: number;
@@ -4417,6 +4459,41 @@ export interface DiscountRate {
     versionID?: number;
     versions?: ToMany<DiscountRateVersion>;
 }
+export interface DiscountRateAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: DiscountRateEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface DiscountRateEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: DiscountRateEffectiveDateChange;
+    fieldChanges?: ToMany<DiscountRateEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: DiscountRate;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface DiscountRateEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: DiscountRateEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface DiscountRateEffectiveDateChange {
+    id?: number;
+    editHistory?: DiscountRateEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface DiscountRateVersion {
     id?: number;
     amount?: number;
@@ -5506,6 +5583,34 @@ export interface InvoiceTerm {
     versionID?: number;
     versions?: ToMany<InvoiceTermVersion>;
     waitForTimecards?: boolean;
+}
+export interface InvoiceTermEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: InvoiceTermEffectiveDateChange;
+    fieldChanges?: ToMany<InvoiceTermEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: InvoiceTerm;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface InvoiceTermEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: InvoiceTermEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface InvoiceTermEffectiveDateChange {
+    id?: number;
+    editHistory?: InvoiceTermEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface InvoiceTermVersion {
     id?: number;
@@ -13220,6 +13325,40 @@ export interface SurchargeRate {
     type?: SurchargeRateTypeLookup;
     versionID?: number;
     versions?: ToMany<SurchargeRateVersion>;
+}
+export interface SurchargeRateAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: SurchargeRateEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface SurchargeRateEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: SurchargeRateEffectiveDateChange;
+    fieldChanges?: ToMany<SurchargeRateEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface SurchargeRateEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: SurchargeRateEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface SurchargeRateEffectiveDateChange {
+    id?: number;
+    editHistory?: SurchargeRateEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface SurchargeRateTypeLookup {
     id?: number;
