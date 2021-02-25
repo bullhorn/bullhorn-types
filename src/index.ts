@@ -8799,6 +8799,10 @@ export interface PayBillSetting {
     id?: number;
     taxImportEnabledThomsonReuters?: boolean;
     taxableStates?: ToMany<State>;
+    overtimeBillMultiplier? : number;
+    doubletimeBillMultiplier? : number;
+    overtimePayMultiplier? : number;
+    doubletimePayMultiplier? : number;
 }
 export interface PayExportBatch {
     id?: number;
