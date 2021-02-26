@@ -22,6 +22,7 @@
   "scripts": {
     "bh": "bullhorn",
     "refresh": "bh generate all",
+    "validate-repository": "node ./repository-validator.js",
     "build": "tsc",
     "ci-publish": "ci-publish",
     "test": "echo \"Error: no test specified\" && exit 1",
