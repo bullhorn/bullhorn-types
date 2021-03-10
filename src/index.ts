@@ -13580,6 +13580,7 @@ export interface TimeLaborEvalRule {
     timeLaborEvalRuleStatus?: TimeLaborEvalRuleStatus;
     timeLaborEvalRuleType?: TimeLaborEvalRuleType;
 }
+
 export interface TimeLaborEvalRuleCategory {
     id?: number;
     name?: Strings;
