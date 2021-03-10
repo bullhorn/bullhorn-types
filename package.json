@@ -24,13 +24,13 @@
     "refresh": "bh generate all",
     "build": "tsc",
     "ci-publish": "ci-publish",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "bh config set environment http://bte2-backend.bh-bos2.bullhorn.com:8182; bh auth login; bh typings generate",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@bullhorn/bullhorn-cli": "^2.2.6",
     "ci-publish": "^1.3.1",
-    "semantic-release": "^17.1.1",
-    "typescript": "~3.9.7"
+    "semantic-release": "^17.4.1",
+    "typescript": "~4.2.3"
   }
 }
