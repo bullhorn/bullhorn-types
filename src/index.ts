@@ -548,6 +548,12 @@ export class EntityTypes {
     static Tearsheet: 'Tearsheet' = 'Tearsheet';
     static TearsheetMember: 'TearsheetMember' = 'TearsheetMember';
     static TearsheetRecipient: 'TearsheetRecipient' = 'TearsheetRecipient';
+    static TimeLaborEvalKind: 'TimeLaborEvalKind' = 'TimeLaborEvalKind';
+    static TimeLaborEvalRule: 'TimeLaborEvalRule' = 'TimeLaborEvalRule';
+    static TimeLaborEvalRuleCategory: 'TimeLaborEvalRuleCategory' = 'TimeLaborEvalRuleCategory';
+    static TimeLaborEvalRuleCombineCriteria: 'TimeLaborEvalRuleCombineCriteria' = 'TimeLaborEvalRuleCombineCriteria';
+    static TimeLaborEvalRuleStatus: 'TimeLaborEvalRuleStatus' = 'TimeLaborEvalRuleStatus';
+    static TimeLaborEvalRuleType: 'TimeLaborEvalRuleType' = 'TimeLaborEvalRuleType';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
@@ -13555,6 +13561,45 @@ export interface TearsheetRecipient {
     jobOrder?: JobOrder;
     person?: Person;
     tearsheet?: Tearsheet;
+}
+export interface TimeLaborEvalKind {
+    id?: number;
+    name?: Strings;
+}
+export interface TimeLaborEvalRule {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    lastModifiedAtUtc?: Date;
+    modifyingUser?: CorporateUser;
+    name?: Strings;
+    parameters?: Strings;
+    states?: ToMany<State>;
+    timeLaborEvalKind?: TimeLaborEvalKind;
+    timeLaborEvalRuleCombineCriteria?: TimeLaborEvalRuleCombineCriteria;
+    timeLaborEvalRuleStatus?: TimeLaborEvalRuleStatus;
+    timeLaborEvalRuleType?: TimeLaborEvalRuleType;
+}
+export interface TimeLaborEvalRuleCategory {
+    id?: number;
+    name?: Strings;
+    sortOrder?: number;
+}
+export interface TimeLaborEvalRuleCombineCriteria {
+    id?: number;
+    name?: Strings;
+}
+export interface TimeLaborEvalRuleStatus {
+    id?: number;
+    name?: Strings;
+}
+export interface TimeLaborEvalRuleType {
+    id?: number;
+    description?: Strings;
+    name?: Strings;
+    priority?: number;
+    timeLaborEvalRuleCategory?: TimeLaborEvalRuleCategory;
+    timeLaborEvalRuleCombineCriteria?: TimeLaborEvalRuleCombineCriteria;
 }
 export interface TimeUnit {
     id?: number;
