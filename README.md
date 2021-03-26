@@ -35,8 +35,8 @@ let person: Candidate = {
 # Clone this repo
 git clone git@github.com:bullhorn/bullhorn-types.git
 cd bullhorn-types
-
-mkdir typings
+# does not look like the line below is needed.
+mkdir typings 
 npm install
 
 # Login into the Bullhorn Environment
