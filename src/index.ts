@@ -2196,6 +2196,7 @@ export interface ClientContact {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
