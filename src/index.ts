@@ -2334,6 +2334,7 @@ export interface ClientContact1 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2471,6 +2472,7 @@ export interface ClientContact2 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2608,6 +2610,7 @@ export interface ClientContact3 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2745,6 +2748,7 @@ export interface ClientContact4 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2882,6 +2886,7 @@ export interface ClientContact5 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
