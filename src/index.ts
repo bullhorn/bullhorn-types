@@ -12740,11 +12740,13 @@ export interface PlacementRateCardLine {
     id?: number;
     alias?: Strings;
     billCurrencyUnit?: CurrencyUnit;
+    billMultiplier?: number;
     billRate?: number;
     earnCode?: EarnCode;
     externalID?: Strings;
     migrateGUID?: Strings;
     payCurrencyUnit?: CurrencyUnit;
+    payMultiplier?: number;
     payRate?: number;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
