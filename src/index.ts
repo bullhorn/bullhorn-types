@@ -12745,6 +12745,8 @@ export interface PlacementRateCardLine {
     earnCode?: EarnCode;
     externalID?: Strings;
     migrateGUID?: Strings;
+    markupPercent?: number;
+    markupValue?: number;
     payCurrencyUnit?: CurrencyUnit;
     payMultiplier?: number;
     payRate?: number;
