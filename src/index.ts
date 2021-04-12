@@ -7429,6 +7429,7 @@ export interface Location {
     id?: number;
     address?: Address;
     candidate?: Candidate;
+    clientContacts?: ToMany<ClientContact>;
     clientCorporation?: ClientCorporation;
     customDate1?: Date;
     customDate2?: Date;
