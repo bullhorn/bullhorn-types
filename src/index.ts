@@ -1,28 +1,39 @@
 // Generated with @bullhorn/bullhorn-cli
-
 // Utility Classes
 export class EntityTypes {
+    static Action: 'Action' = 'Action';
+    static ActivityCenterIgnore: 'ActivityCenterIgnore' = 'ActivityCenterIgnore';
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
     static AllSalesTaxGroup: 'AllSalesTaxGroup' = 'AllSalesTaxGroup';
     static AllSalesTaxRate: 'AllSalesTaxRate' = 'AllSalesTaxRate';
     static Application: 'Application' = 'Application';
+    static ApplicationServer: 'ApplicationServer' = 'ApplicationServer';
+    static ApplicationServerSetting: 'ApplicationServerSetting' = 'ApplicationServerSetting';
     static Appointment: 'Appointment' = 'Appointment';
     static AppointmentAttendee: 'AppointmentAttendee' = 'AppointmentAttendee';
     static AppointmentEditHistory: 'AppointmentEditHistory' = 'AppointmentEditHistory';
     static AppointmentEditHistoryFieldChange: 'AppointmentEditHistoryFieldChange' = 'AppointmentEditHistoryFieldChange';
+    static AppointmentFileAttachment: 'AppointmentFileAttachment' = 'AppointmentFileAttachment';
     static AppointmentTemplate: 'AppointmentTemplate' = 'AppointmentTemplate';
+    static Article: 'Article' = 'Article';
     static AutoAddBlacklistDomain: 'AutoAddBlacklistDomain' = 'AutoAddBlacklistDomain';
     static BatchGroup: 'BatchGroup' = 'BatchGroup';
     static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterDiscountRate: 'BillMasterDiscountRate' = 'BillMasterDiscountRate';
+    static BillMasterEditHistory: 'BillMasterEditHistory' = 'BillMasterEditHistory';
+    static BillMasterEditHistoryAssociationChange: 'BillMasterEditHistoryAssociationChange' = 'BillMasterEditHistoryAssociationChange';
+    static BillMasterEditHistoryFieldChange: 'BillMasterEditHistoryFieldChange' = 'BillMasterEditHistoryFieldChange';
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
+    static BillMasterTransactionDiscountDetail: 'BillMasterTransactionDiscountDetail' = 'BillMasterTransactionDiscountDetail';
     static BillMasterTransactionDiscountRate: 'BillMasterTransactionDiscountRate' = 'BillMasterTransactionDiscountRate';
     static BillMasterTransactionDistributionBatch: 'BillMasterTransactionDistributionBatch' = 'BillMasterTransactionDistributionBatch';
+    static BillMasterTransactionSalesTaxDetail: 'BillMasterTransactionSalesTaxDetail' = 'BillMasterTransactionSalesTaxDetail';
     static BillMasterTransactionSalesTaxRate: 'BillMasterTransactionSalesTaxRate' = 'BillMasterTransactionSalesTaxRate';
+    static BillMasterTransactionSurchargeDetail: 'BillMasterTransactionSurchargeDetail' = 'BillMasterTransactionSurchargeDetail';
     static BillMasterTransactionSurchargeRate: 'BillMasterTransactionSurchargeRate' = 'BillMasterTransactionSurchargeRate';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
     static BillableChargeBillableTransaction: 'BillableChargeBillableTransaction' = 'BillableChargeBillableTransaction';
@@ -37,10 +48,14 @@ export class EntityTypes {
     static BillingProfileEditHistory: 'BillingProfileEditHistory' = 'BillingProfileEditHistory';
     static BillingProfileEditHistoryFieldChange: 'BillingProfileEditHistoryFieldChange' = 'BillingProfileEditHistoryFieldChange';
     static BillingProfileEffectiveDateChange: 'BillingProfileEffectiveDateChange' = 'BillingProfileEffectiveDateChange';
+    static BillingProfileRoot: 'BillingProfileRoot' = 'BillingProfileRoot';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
     static BillingSyncBatchFileAttachment: 'BillingSyncBatchFileAttachment' = 'BillingSyncBatchFileAttachment';
+    static BillingSyncBatchFileTypeLookup: 'BillingSyncBatchFileTypeLookup' = 'BillingSyncBatchFileTypeLookup';
     static BillingSyncError: 'BillingSyncError' = 'BillingSyncError';
+    static BillingSyncErrorStatus: 'BillingSyncErrorStatus' = 'BillingSyncErrorStatus';
+    static BillingSyncErrorType: 'BillingSyncErrorType' = 'BillingSyncErrorType';
     static Bot: 'Bot' = 'Bot';
     static BotCondition: 'BotCondition' = 'BotCondition';
     static BotExecutionHistory: 'BotExecutionHistory' = 'BotExecutionHistory';
@@ -51,6 +66,11 @@ export class EntityTypes {
     static CalendarFrequencyLookup: 'CalendarFrequencyLookup' = 'CalendarFrequencyLookup';
     static CalendarInstance: 'CalendarInstance' = 'CalendarInstance';
     static Candidate: 'Candidate' = 'Candidate';
+    static CandidateAssessment: 'CandidateAssessment' = 'CandidateAssessment';
+    static CandidateAssessmentFileAttachment: 'CandidateAssessmentFileAttachment' = 'CandidateAssessmentFileAttachment';
+    static CandidateAssessmentSystem: 'CandidateAssessmentSystem' = 'CandidateAssessmentSystem';
+    static CandidateAvailability: 'CandidateAvailability' = 'CandidateAvailability';
+    static CandidateAvailabilityMask: 'CandidateAvailabilityMask' = 'CandidateAvailabilityMask';
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
     static CandidateCertificationEditHistoryFieldChange: 'CandidateCertificationEditHistoryFieldChange' = 'CandidateCertificationEditHistoryFieldChange';
@@ -64,6 +84,7 @@ export class EntityTypes {
     static CandidateReference: 'CandidateReference' = 'CandidateReference';
     static CandidateReferenceQuestion: 'CandidateReferenceQuestion' = 'CandidateReferenceQuestion';
     static CandidateReferenceResponse: 'CandidateReferenceResponse' = 'CandidateReferenceResponse';
+    static CandidateShiftPreference: 'CandidateShiftPreference' = 'CandidateShiftPreference';
     static CandidateSource: 'CandidateSource' = 'CandidateSource';
     static CandidateWorkHistory: 'CandidateWorkHistory' = 'CandidateWorkHistory';
     static CanvasReport: 'CanvasReport' = 'CanvasReport';
@@ -71,6 +92,7 @@ export class EntityTypes {
     static Card: 'Card' = 'Card';
     static CardCategory: 'CardCategory' = 'CardCategory';
     static Category: 'Category' = 'Category';
+    static CategoryList: 'CategoryList' = 'CategoryList';
     static Certification: 'Certification' = 'Certification';
     static CertificationFileAttachment: 'CertificationFileAttachment' = 'CertificationFileAttachment';
     static CertificationGroup: 'CertificationGroup' = 'CertificationGroup';
@@ -78,6 +100,7 @@ export class EntityTypes {
     static CertificationRequirementStatusLookup: 'CertificationRequirementStatusLookup' = 'CertificationRequirementStatusLookup';
     static ChargeTypeLookup: 'ChargeTypeLookup' = 'ChargeTypeLookup';
     static CitySalesTaxRate: 'CitySalesTaxRate' = 'CitySalesTaxRate';
+    static CitySalesTaxRateRoot: 'CitySalesTaxRateRoot' = 'CitySalesTaxRateRoot';
     static ClientContact: 'ClientContact' = 'ClientContact';
     static ClientContact1: 'ClientContact1' = 'ClientContact1';
     static ClientContact2: 'ClientContact2' = 'ClientContact2';
@@ -94,6 +117,7 @@ export class EntityTypes {
     static ClientCorporation4: 'ClientCorporation4' = 'ClientCorporation4';
     static ClientCorporation5: 'ClientCorporation5' = 'ClientCorporation5';
     static ClientCorporationAppointment: 'ClientCorporationAppointment' = 'ClientCorporationAppointment';
+    static ClientCorporationAttribute: 'ClientCorporationAttribute' = 'ClientCorporationAttribute';
     static ClientCorporationCertification: 'ClientCorporationCertification' = 'ClientCorporationCertification';
     static ClientCorporationCustomObject: 'ClientCorporationCustomObject' = 'ClientCorporationCustomObject';
     static ClientCorporationCustomObject10EditHistory: 'ClientCorporationCustomObject10EditHistory' = 'ClientCorporationCustomObject10EditHistory';
@@ -175,6 +199,7 @@ export class EntityTypes {
     static ClientCorporationFile: 'ClientCorporationFile' = 'ClientCorporationFile';
     static ClientCorporationFileAttachment: 'ClientCorporationFileAttachment' = 'ClientCorporationFileAttachment';
     static ClientCorporationHistory: 'ClientCorporationHistory' = 'ClientCorporationHistory';
+    static ClientCorporationInvoiceGroup: 'ClientCorporationInvoiceGroup' = 'ClientCorporationInvoiceGroup';
     static ClientCorporationLine: 'ClientCorporationLine' = 'ClientCorporationLine';
     static ClientCorporationLineEditHistory: 'ClientCorporationLineEditHistory' = 'ClientCorporationLineEditHistory';
     static ClientCorporationLineEditHistoryFieldChange: 'ClientCorporationLineEditHistoryFieldChange' = 'ClientCorporationLineEditHistoryFieldChange';
@@ -182,18 +207,34 @@ export class EntityTypes {
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
+    static ClientCorporationTemplate: 'ClientCorporationTemplate' = 'ClientCorporationTemplate';
+    static ClientCorporationTemplateAttribute: 'ClientCorporationTemplateAttribute' = 'ClientCorporationTemplateAttribute';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
     static CorporationDepartment: 'CorporationDepartment' = 'CorporationDepartment';
     static CorporationGDPRCompliance: 'CorporationGDPRCompliance' = 'CorporationGDPRCompliance';
+    static CostCenter: 'CostCenter' = 'CostCenter';
     static Country: 'Country' = 'Country';
     static CountySalesTaxRate: 'CountySalesTaxRate' = 'CountySalesTaxRate';
+    static CountySalesTaxRateRoot: 'CountySalesTaxRateRoot' = 'CountySalesTaxRateRoot';
     static CurrencyUnit: 'CurrencyUnit' = 'CurrencyUnit';
     static CustomAction: 'CustomAction' = 'CustomAction';
+    static CustomEntity: 'CustomEntity' = 'CustomEntity';
+    static CustomEntityType: 'CustomEntityType' = 'CustomEntityType';
     static CustomListButton: 'CustomListButton' = 'CustomListButton';
+    static CustomModule: 'CustomModule' = 'CustomModule';
+    static CustomModuleRevision: 'CustomModuleRevision' = 'CustomModuleRevision';
     static Dashboard: 'Dashboard' = 'Dashboard';
     static DefaultEarnCode: 'DefaultEarnCode' = 'DefaultEarnCode';
+    static DeliveryMethodLookup: 'DeliveryMethodLookup' = 'DeliveryMethodLookup';
     static Department: 'Department' = 'Department';
+    static DepartmentClientCorporationTemplate: 'DepartmentClientCorporationTemplate' = 'DepartmentClientCorporationTemplate';
+    static DepartmentJobOrderTemplate: 'DepartmentJobOrderTemplate' = 'DepartmentJobOrderTemplate';
+    static DepartmentPlacementTemplate: 'DepartmentPlacementTemplate' = 'DepartmentPlacementTemplate';
+    static DepartmentUserTemplate: 'DepartmentUserTemplate' = 'DepartmentUserTemplate';
+    static DesktopModule: 'DesktopModule' = 'DesktopModule';
+    static DirectDepositAccount: 'DirectDepositAccount' = 'DirectDepositAccount';
+    static DirectDepositAccountTypeLookup: 'DirectDepositAccountTypeLookup' = 'DirectDepositAccountTypeLookup';
     static Discount: 'Discount' = 'Discount';
     static DiscountEditHistory: 'DiscountEditHistory' = 'DiscountEditHistory';
     static DiscountEditHistoryFieldChange: 'DiscountEditHistoryFieldChange' = 'DiscountEditHistoryFieldChange';
@@ -202,16 +243,19 @@ export class EntityTypes {
     static DiscountRateEditHistory: 'DiscountRateEditHistory' = 'DiscountRateEditHistory';
     static DiscountRateEditHistoryFieldChange: 'DiscountRateEditHistoryFieldChange' = 'DiscountRateEditHistoryFieldChange';
     static DiscountRateEffectiveDateChange: 'DiscountRateEffectiveDateChange' = 'DiscountRateEffectiveDateChange';
+    static DiscountRateRoot: 'DiscountRateRoot' = 'DiscountRateRoot';
     static DiscountRateVersion: 'DiscountRateVersion' = 'DiscountRateVersion';
     static DiscountType: 'DiscountType' = 'DiscountType';
     static DiscountTypeLookup: 'DiscountTypeLookup' = 'DiscountTypeLookup';
     static DistributionList: 'DistributionList' = 'DistributionList';
     static DistrictSalesTaxRate: 'DistrictSalesTaxRate' = 'DistrictSalesTaxRate';
+    static DistrictSalesTaxRateRoot: 'DistrictSalesTaxRateRoot' = 'DistrictSalesTaxRateRoot';
     static DoubleTimeEarnCode: 'DoubleTimeEarnCode' = 'DoubleTimeEarnCode';
     static EarnCode: 'EarnCode' = 'EarnCode';
-    static EarnCodeEditHistory: 'EarnCodeEditHistory' = 'EarnCodeEditHistory';
     static EarnCodeEditHistoryFieldChange: 'EarnCodeEditHistoryFieldChange' = 'EarnCodeEditHistoryFieldChange';
     static EarnCodeGroup: 'EarnCodeGroup' = 'EarnCodeGroup';
+    static EarnCodeGroupEditHistory: 'EarnCodeGroupEditHistory' = 'EarnCodeGroupEditHistory';
+    static EarnCodeGroupEditHistoryFieldChange: 'EarnCodeGroupEditHistoryFieldChange' = 'EarnCodeGroupEditHistoryFieldChange';
     static EarnCodeGroupStatusLookup: 'EarnCodeGroupStatusLookup' = 'EarnCodeGroupStatusLookup';
     static EarnCodeTypeLookup: 'EarnCodeTypeLookup' = 'EarnCodeTypeLookup';
     static EditHistoryActionLookup: 'EditHistoryActionLookup' = 'EditHistoryActionLookup';
@@ -221,17 +265,28 @@ export class EntityTypes {
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
     static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
+    static Extension: 'Extension' = 'Extension';
+    static ExtensionPoint: 'ExtensionPoint' = 'ExtensionPoint';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
+    static ExternalResume: 'ExternalResume' = 'ExternalResume';
+    static ExternalSalesTaxGroup: 'ExternalSalesTaxGroup' = 'ExternalSalesTaxGroup';
+    static ExternalSalesTaxRate: 'ExternalSalesTaxRate' = 'ExternalSalesTaxRate';
+    static ExternalSalesTaxRateRoot: 'ExternalSalesTaxRateRoot' = 'ExternalSalesTaxRateRoot';
+    static ExternalSalesTaxRateVersion: 'ExternalSalesTaxRateVersion' = 'ExternalSalesTaxRateVersion';
     static ExternalSystem: 'ExternalSystem' = 'ExternalSystem';
+    static FieldMap: 'FieldMap' = 'FieldMap';
+    static FieldMapInstance: 'FieldMapInstance' = 'FieldMapInstance';
     static FieldMapInteraction: 'FieldMapInteraction' = 'FieldMapInteraction';
     static File: 'File' = 'File';
+    static FileExport: 'FileExport' = 'FileExport';
     static FormTrigger: 'FormTrigger' = 'FormTrigger';
     static FormTriggerEvent: 'FormTriggerEvent' = 'FormTriggerEvent';
     static FormTriggerFull: 'FormTriggerFull' = 'FormTriggerFull';
     static FormTriggerInstance: 'FormTriggerInstance' = 'FormTriggerInstance';
     static FormTriggerMessage: 'FormTriggerMessage' = 'FormTriggerMessage';
+    static FrontPageArticle: 'FrontPageArticle' = 'FrontPageArticle';
     static GDPRDeletionRequest: 'GDPRDeletionRequest' = 'GDPRDeletionRequest';
     static GeneralLedgerAccount: 'GeneralLedgerAccount' = 'GeneralLedgerAccount';
     static GeneralLedgerExportStatusLookup: 'GeneralLedgerExportStatusLookup' = 'GeneralLedgerExportStatusLookup';
@@ -244,16 +299,22 @@ export class EntityTypes {
     static GeneralLedgerSegmentType: 'GeneralLedgerSegmentType' = 'GeneralLedgerSegmentType';
     static GeneralLedgerServiceCode: 'GeneralLedgerServiceCode' = 'GeneralLedgerServiceCode';
     static GoalTarget: 'GoalTarget' = 'GoalTarget';
+    static HideFromSearch: 'HideFromSearch' = 'HideFromSearch';
     static HitWord: 'HitWord' = 'HitWord';
     static HousingComplex: 'HousingComplex' = 'HousingComplex';
     static HousingComplexAmenity: 'HousingComplexAmenity' = 'HousingComplexAmenity';
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: 'HousingComplexUnit' = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
+    static Invoice: 'Invoice' = 'Invoice';
+    static InvoiceBatch: 'InvoiceBatch' = 'InvoiceBatch';
+    static InvoiceGroup: 'InvoiceGroup' = 'InvoiceGroup';
+    static InvoiceItem: 'InvoiceItem' = 'InvoiceItem';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementDeliveryStatusLookup: 'InvoiceStatementDeliveryStatusLookup' = 'InvoiceStatementDeliveryStatusLookup';
     static InvoiceStatementDiscount: 'InvoiceStatementDiscount' = 'InvoiceStatementDiscount';
+    static InvoiceStatementDiscountRate: 'InvoiceStatementDiscountRate' = 'InvoiceStatementDiscountRate';
     static InvoiceStatementDistributionBatch: 'InvoiceStatementDistributionBatch' = 'InvoiceStatementDistributionBatch';
     static InvoiceStatementEditHistory: 'InvoiceStatementEditHistory' = 'InvoiceStatementEditHistory';
     static InvoiceStatementEditHistoryAssociationChange: 'InvoiceStatementEditHistoryAssociationChange' = 'InvoiceStatementEditHistoryAssociationChange';
@@ -265,15 +326,20 @@ export class EntityTypes {
     static InvoiceStatementLineDistribution: 'InvoiceStatementLineDistribution' = 'InvoiceStatementLineDistribution';
     static InvoiceStatementLineDistributionTypeLookup: 'InvoiceStatementLineDistributionTypeLookup' = 'InvoiceStatementLineDistributionTypeLookup';
     static InvoiceStatementLineItem: 'InvoiceStatementLineItem' = 'InvoiceStatementLineItem';
+    static InvoiceStatementLineItemDiscountRate: 'InvoiceStatementLineItemDiscountRate' = 'InvoiceStatementLineItemDiscountRate';
     static InvoiceStatementLineItemEditHistory: 'InvoiceStatementLineItemEditHistory' = 'InvoiceStatementLineItemEditHistory';
     static InvoiceStatementLineItemEditHistoryFieldChange: 'InvoiceStatementLineItemEditHistoryFieldChange' = 'InvoiceStatementLineItemEditHistoryFieldChange';
     static InvoiceStatementLineItemGroupBy: 'InvoiceStatementLineItemGroupBy' = 'InvoiceStatementLineItemGroupBy';
+    static InvoiceStatementLineItemSalesTaxRate: 'InvoiceStatementLineItemSalesTaxRate' = 'InvoiceStatementLineItemSalesTaxRate';
     static InvoiceStatementLineItemSummarizeBy: 'InvoiceStatementLineItemSummarizeBy' = 'InvoiceStatementLineItemSummarizeBy';
+    static InvoiceStatementLineItemSurchargeRate: 'InvoiceStatementLineItemSurchargeRate' = 'InvoiceStatementLineItemSurchargeRate';
     static InvoiceStatementMessageTemplate: 'InvoiceStatementMessageTemplate' = 'InvoiceStatementMessageTemplate';
     static InvoiceStatementNumberFormat: 'InvoiceStatementNumberFormat' = 'InvoiceStatementNumberFormat';
+    static InvoiceStatementSalesTaxRate: 'InvoiceStatementSalesTaxRate' = 'InvoiceStatementSalesTaxRate';
     static InvoiceStatementSplitBy: 'InvoiceStatementSplitBy' = 'InvoiceStatementSplitBy';
     static InvoiceStatementStatusLookup: 'InvoiceStatementStatusLookup' = 'InvoiceStatementStatusLookup';
     static InvoiceStatementSurcharge: 'InvoiceStatementSurcharge' = 'InvoiceStatementSurcharge';
+    static InvoiceStatementSurchargeRate: 'InvoiceStatementSurchargeRate' = 'InvoiceStatementSurchargeRate';
     static InvoiceStatementTax: 'InvoiceStatementTax' = 'InvoiceStatementTax';
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
     static InvoiceStatementTypeLookup: 'InvoiceStatementTypeLookup' = 'InvoiceStatementTypeLookup';
@@ -281,12 +347,23 @@ export class EntityTypes {
     static InvoiceTermEditHistory: 'InvoiceTermEditHistory' = 'InvoiceTermEditHistory';
     static InvoiceTermEditHistoryFieldChange: 'InvoiceTermEditHistoryFieldChange' = 'InvoiceTermEditHistoryFieldChange';
     static InvoiceTermEffectiveDateChange: 'InvoiceTermEffectiveDateChange' = 'InvoiceTermEffectiveDateChange';
+    static InvoiceTermRoot: 'InvoiceTermRoot' = 'InvoiceTermRoot';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
     static Issue: 'Issue' = 'Issue';
     static IssueItems: 'IssueItems' = 'IssueItems';
     static IssueResolutionStatusLookup: 'IssueResolutionStatusLookup' = 'IssueResolutionStatusLookup';
+    static JobAgent: 'JobAgent' = 'JobAgent';
+    static JobAgentCriteria: 'JobAgentCriteria' = 'JobAgentCriteria';
+    static JobAgentExternalAccount: 'JobAgentExternalAccount' = 'JobAgentExternalAccount';
+    static JobAgentExternalAccountSuppliment: 'JobAgentExternalAccountSuppliment' = 'JobAgentExternalAccountSuppliment';
+    static JobAgentNotification: 'JobAgentNotification' = 'JobAgentNotification';
+    static JobAgentResult: 'JobAgentResult' = 'JobAgentResult';
+    static JobAgentResultProcessing: 'JobAgentResultProcessing' = 'JobAgentResultProcessing';
+    static JobAgentSearchException: 'JobAgentSearchException' = 'JobAgentSearchException';
+    static JobAgentSearchRequest: 'JobAgentSearchRequest' = 'JobAgentSearchRequest';
     static JobBoardHistory: 'JobBoardHistory' = 'JobBoardHistory';
     static JobBoardJobOrder: 'JobBoardJobOrder' = 'JobBoardJobOrder';
+    static JobBoardMetaData: 'JobBoardMetaData' = 'JobBoardMetaData';
     static JobBoardPost: 'JobBoardPost' = 'JobBoardPost';
     static JobCode: 'JobCode' = 'JobCode';
     static JobCodeEditHistory: 'JobCodeEditHistory' = 'JobCodeEditHistory';
@@ -297,6 +374,7 @@ export class EntityTypes {
     static JobOrder3: 'JobOrder3' = 'JobOrder3';
     static JobOrder4: 'JobOrder4' = 'JobOrder4';
     static JobOrder5: 'JobOrder5' = 'JobOrder5';
+    static JobOrderAttribute: 'JobOrderAttribute' = 'JobOrderAttribute';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
@@ -328,6 +406,10 @@ export class EntityTypes {
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
+    static JobOrderTemplateAttribute: 'JobOrderTemplateAttribute' = 'JobOrderTemplateAttribute';
+    static JobShift: 'JobShift' = 'JobShift';
+    static JobShiftAssignment: 'JobShiftAssignment' = 'JobShiftAssignment';
+    static JobShiftSubmission: 'JobShiftSubmission' = 'JobShiftSubmission';
     static JobSubmission: 'JobSubmission' = 'JobSubmission';
     static JobSubmissionCertificationRequirement: 'JobSubmissionCertificationRequirement' = 'JobSubmissionCertificationRequirement';
     static JobSubmissionCertificationRequirementEditHistory: 'JobSubmissionCertificationRequirementEditHistory' = 'JobSubmissionCertificationRequirementEditHistory';
@@ -343,11 +425,25 @@ export class EntityTypes {
     static LocationEditHistory: 'LocationEditHistory' = 'LocationEditHistory';
     static LocationEditHistoryFieldChange: 'LocationEditHistoryFieldChange' = 'LocationEditHistoryFieldChange';
     static LocationEffectiveDateChange: 'LocationEffectiveDateChange' = 'LocationEffectiveDateChange';
+    static LocationRoot: 'LocationRoot' = 'LocationRoot';
     static LocationVersion: 'LocationVersion' = 'LocationVersion';
     static MailListPushHistory: 'MailListPushHistory' = 'MailListPushHistory';
     static MailListPushHistoryDetail: 'MailListPushHistoryDetail' = 'MailListPushHistoryDetail';
     static MappedEntityConfiguration: 'MappedEntityConfiguration' = 'MappedEntityConfiguration';
+    static MappedEntityConfigurationEditHistory: 'MappedEntityConfigurationEditHistory' = 'MappedEntityConfigurationEditHistory';
+    static MappedEntityConfigurationEditHistoryFieldChange: 'MappedEntityConfigurationEditHistoryFieldChange' = 'MappedEntityConfigurationEditHistoryFieldChange';
+    static MasterApplication: 'MasterApplication' = 'MasterApplication';
+    static MasterCertification: 'MasterCertification' = 'MasterCertification';
+    static MasterCorporateUser: 'MasterCorporateUser' = 'MasterCorporateUser';
+    static MasterCorporation: 'MasterCorporation' = 'MasterCorporation';
+    static MasterOAuthRegistry: 'MasterOAuthRegistry' = 'MasterOAuthRegistry';
+    static MasterOAuthRegistryCorpAssociation: 'MasterOAuthRegistryCorpAssociation' = 'MasterOAuthRegistryCorpAssociation';
+    static MasterPrivateLabel: 'MasterPrivateLabel' = 'MasterPrivateLabel';
+    static MasterUserType: 'MasterUserType' = 'MasterUserType';
     static Menu: 'Menu' = 'Menu';
+    static MenuLocalization: 'MenuLocalization' = 'MenuLocalization';
+    static MessageFolder: 'MessageFolder' = 'MessageFolder';
+    static MessageRecipient: 'MessageRecipient' = 'MessageRecipient';
     static MessageTemplate: 'MessageTemplate' = 'MessageTemplate';
     static MessageTemplateFileAttachment: 'MessageTemplateFileAttachment' = 'MessageTemplateFileAttachment';
     static NPSResponse: 'NPSResponse' = 'NPSResponse';
@@ -355,6 +451,7 @@ export class EntityTypes {
     static Note: 'Note' = 'Note';
     static NoteEntity: 'NoteEntity' = 'NoteEntity';
     static NoteTemplate: 'NoteTemplate' = 'NoteTemplate';
+    static OAuthConsent: 'OAuthConsent' = 'OAuthConsent';
     static Opportunity: 'Opportunity' = 'Opportunity';
     static Opportunity1: 'Opportunity1' = 'Opportunity1';
     static Opportunity2: 'Opportunity2' = 'Opportunity2';
@@ -387,19 +484,22 @@ export class EntityTypes {
     static OpportunityFileAttachment: 'OpportunityFileAttachment' = 'OpportunityFileAttachment';
     static OpportunityHistory: 'OpportunityHistory' = 'OpportunityHistory';
     static OtherSalesTaxRate: 'OtherSalesTaxRate' = 'OtherSalesTaxRate';
+    static OtherSalesTaxRateRoot: 'OtherSalesTaxRateRoot' = 'OtherSalesTaxRateRoot';
     static OvertimeEarnCode: 'OvertimeEarnCode' = 'OvertimeEarnCode';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
-    static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
     static PayBillCycle: 'PayBillCycle' = 'PayBillCycle';
+    static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
     static PayBillSetting: 'PayBillSetting' = 'PayBillSetting';
+    static PayBillSettingEditHistory: 'PayBillSettingEditHistory' = 'PayBillSettingEditHistory';
+    static PayBillSettingEditHistoryFieldChange: 'PayBillSettingEditHistoryFieldChange' = 'PayBillSettingEditHistoryFieldChange';
     static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
     static PayExportBatchExternal: 'PayExportBatchExternal' = 'PayExportBatchExternal';
     static PayExportTypeLookup: 'PayExportTypeLookup' = 'PayExportTypeLookup';
-    static PayGroupLookup: 'PayGroupLookup' = 'PayGroupLookup';
     static PayMaster: 'PayMaster' = 'PayMaster';
     static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
     static PayMasterTransactionPayExportBatch: 'PayMasterTransactionPayExportBatch' = 'PayMasterTransactionPayExportBatch';
     static PayMasterTransactionPayExportBatchIssues: 'PayMasterTransactionPayExportBatchIssues' = 'PayMasterTransactionPayExportBatchIssues';
+    static PayServiceExportAuditLog: 'PayServiceExportAuditLog' = 'PayServiceExportAuditLog';
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
     static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
@@ -408,6 +508,8 @@ export class EntityTypes {
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
     static PayrollEmployeeTypeLookup: 'PayrollEmployeeTypeLookup' = 'PayrollEmployeeTypeLookup';
     static PayrollExportConfig: 'PayrollExportConfig' = 'PayrollExportConfig';
+    static PayrollExportConfigEditHistory: 'PayrollExportConfigEditHistory' = 'PayrollExportConfigEditHistory';
+    static PayrollExportConfigEditHistoryFieldChange: 'PayrollExportConfigEditHistoryFieldChange' = 'PayrollExportConfigEditHistoryFieldChange';
     static PayrollExportTargetLookup: 'PayrollExportTargetLookup' = 'PayrollExportTargetLookup';
     static PayrollExportTypeLookup: 'PayrollExportTypeLookup' = 'PayrollExportTypeLookup';
     static PayrollSyncStatusLookup: 'PayrollSyncStatusLookup' = 'PayrollSyncStatusLookup';
@@ -452,6 +554,7 @@ export class EntityTypes {
     static PlacementCommission: 'PlacementCommission' = 'PlacementCommission';
     static PlacementCommissionEditHistory: 'PlacementCommissionEditHistory' = 'PlacementCommissionEditHistory';
     static PlacementCommissionEditHistoryFieldChange: 'PlacementCommissionEditHistoryFieldChange' = 'PlacementCommissionEditHistoryFieldChange';
+    static PlacementCommissionHistory: 'PlacementCommissionHistory' = 'PlacementCommissionHistory';
     static PlacementCustomObject: 'PlacementCustomObject' = 'PlacementCustomObject';
     static PlacementCustomObject10EditHistory: 'PlacementCustomObject10EditHistory' = 'PlacementCustomObject10EditHistory';
     static PlacementCustomObject1EditHistory: 'PlacementCustomObject1EditHistory' = 'PlacementCustomObject1EditHistory';
@@ -482,43 +585,71 @@ export class EntityTypes {
     static PlacementFileAttachment: 'PlacementFileAttachment' = 'PlacementFileAttachment';
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
+    static PlacementRateCardEditHistory: 'PlacementRateCardEditHistory' = 'PlacementRateCardEditHistory';
+    static PlacementRateCardEditHistoryFieldChange: 'PlacementRateCardEditHistoryFieldChange' = 'PlacementRateCardEditHistoryFieldChange';
+    static PlacementRateCardEffectiveDateChange: 'PlacementRateCardEffectiveDateChange' = 'PlacementRateCardEffectiveDateChange';
     static PlacementRateCardLine: 'PlacementRateCardLine' = 'PlacementRateCardLine';
+    static PlacementRateCardLineEditHistoryFieldChange: 'PlacementRateCardLineEditHistoryFieldChange' = 'PlacementRateCardLineEditHistoryFieldChange';
     static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
+    static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange';
+    static PlacementRateCardRoot: 'PlacementRateCardRoot' = 'PlacementRateCardRoot';
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
+    static PlacementTemplate: 'PlacementTemplate' = 'PlacementTemplate';
+    static PlacementTemplateAttribute: 'PlacementTemplateAttribute' = 'PlacementTemplateAttribute';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
     static PrivateLabel: 'PrivateLabel' = 'PrivateLabel';
     static PrivateLabelAttribute: 'PrivateLabelAttribute' = 'PrivateLabelAttribute';
     static PulseConfiguration: 'PulseConfiguration' = 'PulseConfiguration';
     static PulseConfigurationValue: 'PulseConfigurationValue' = 'PulseConfigurationValue';
+    static RateCard: 'RateCard' = 'RateCard';
     static RateDetail: 'RateDetail' = 'RateDetail';
     static RateDetailEditHistory: 'RateDetailEditHistory' = 'RateDetailEditHistory';
     static RateDetailEditHistoryFieldChange: 'RateDetailEditHistoryFieldChange' = 'RateDetailEditHistoryFieldChange';
     static RateGroup: 'RateGroup' = 'RateGroup';
     static RateGroupEditHistory: 'RateGroupEditHistory' = 'RateGroupEditHistory';
     static RateGroupEditHistoryFieldChange: 'RateGroupEditHistoryFieldChange' = 'RateGroupEditHistoryFieldChange';
+    static ReadOnlyAppointment: 'ReadOnlyAppointment' = 'ReadOnlyAppointment';
+    static RecurringAppointmentDelete: 'RecurringAppointmentDelete' = 'RecurringAppointmentDelete';
     static Report: 'Report' = 'Report';
     static ReportCategory: 'ReportCategory' = 'ReportCategory';
+    static ReportCriteria: 'ReportCriteria' = 'ReportCriteria';
+    static ReportEditHistory: 'ReportEditHistory' = 'ReportEditHistory';
+    static ReportEditHistoryFieldChange: 'ReportEditHistoryFieldChange' = 'ReportEditHistoryFieldChange';
+    static ReportOutput: 'ReportOutput' = 'ReportOutput';
     static ReportingCodeTemplate: 'ReportingCodeTemplate' = 'ReportingCodeTemplate';
     static ReportingCodeTemplateEditHistory: 'ReportingCodeTemplateEditHistory' = 'ReportingCodeTemplateEditHistory';
     static ReportingCodeTemplateEditHistoryFieldChange: 'ReportingCodeTemplateEditHistoryFieldChange' = 'ReportingCodeTemplateEditHistoryFieldChange';
     static SalesQuota: 'SalesQuota' = 'SalesQuota';
     static SalesTaxGroup: 'SalesTaxGroup' = 'SalesTaxGroup';
+    static SalesTaxGroupEditHistory: 'SalesTaxGroupEditHistory' = 'SalesTaxGroupEditHistory';
+    static SalesTaxGroupEditHistoryFieldChange: 'SalesTaxGroupEditHistoryFieldChange' = 'SalesTaxGroupEditHistoryFieldChange';
     static SalesTaxRate: 'SalesTaxRate' = 'SalesTaxRate';
     static SalesTaxRateEditHistory: 'SalesTaxRateEditHistory' = 'SalesTaxRateEditHistory';
     static SalesTaxRateEditHistoryFieldChange: 'SalesTaxRateEditHistoryFieldChange' = 'SalesTaxRateEditHistoryFieldChange';
     static SalesTaxRateEffectiveDateChange: 'SalesTaxRateEffectiveDateChange' = 'SalesTaxRateEffectiveDateChange';
+    static SalesTaxRateRoot: 'SalesTaxRateRoot' = 'SalesTaxRateRoot';
     static SalesTaxRateSourceLookup: 'SalesTaxRateSourceLookup' = 'SalesTaxRateSourceLookup';
     static SalesTaxRateTypeLookup: 'SalesTaxRateTypeLookup' = 'SalesTaxRateTypeLookup';
     static SalesTaxRateVersion: 'SalesTaxRateVersion' = 'SalesTaxRateVersion';
+    static SavedSearch: 'SavedSearch' = 'SavedSearch';
+    static SearchBasicField: 'SearchBasicField' = 'SearchBasicField';
+    static SearchExternalField: 'SearchExternalField' = 'SearchExternalField';
+    static Section: 'Section' = 'Section';
+    static SectionFieldMap: 'SectionFieldMap' = 'SectionFieldMap';
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
+    static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
+    static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
     static Skill: 'Skill' = 'Skill';
+    static SkillList: 'SkillList' = 'SkillList';
     static SmsTracking: 'SmsTracking' = 'SmsTracking';
     static Specialty: 'Specialty' = 'Specialty';
+    static SpecialtyList: 'SpecialtyList' = 'SpecialtyList';
     static State: 'State' = 'State';
     static StateSalesTaxRate: 'StateSalesTaxRate' = 'StateSalesTaxRate';
+    static StateSalesTaxRateRoot: 'StateSalesTaxRateRoot' = 'StateSalesTaxRateRoot';
     static StatusLookup: 'StatusLookup' = 'StatusLookup';
     static StopWord: 'StopWord' = 'StopWord';
     static SubmissionTemplate: 'SubmissionTemplate' = 'SubmissionTemplate';
@@ -530,10 +661,14 @@ export class EntityTypes {
     static SurchargeRateEditHistory: 'SurchargeRateEditHistory' = 'SurchargeRateEditHistory';
     static SurchargeRateEditHistoryFieldChange: 'SurchargeRateEditHistoryFieldChange' = 'SurchargeRateEditHistoryFieldChange';
     static SurchargeRateEffectiveDateChange: 'SurchargeRateEffectiveDateChange' = 'SurchargeRateEffectiveDateChange';
+    static SurchargeRateRoot: 'SurchargeRateRoot' = 'SurchargeRateRoot';
     static SurchargeRateTypeLookup: 'SurchargeRateTypeLookup' = 'SurchargeRateTypeLookup';
     static SurchargeRateVersion: 'SurchargeRateVersion' = 'SurchargeRateVersion';
-    static SurchargeRateVersionEarnCode: 'SurchargeRateVersionEarnCode' = 'SurchargeRateVersionEarnCode';
     static SurchargeType: 'SurchargeType' = 'SurchargeType';
+    static Survey: 'Survey' = 'Survey';
+    static SurveyQuestion: 'SurveyQuestion' = 'SurveyQuestion';
+    static SurveyResponse: 'SurveyResponse' = 'SurveyResponse';
+    static SurveyTemplate: 'SurveyTemplate' = 'SurveyTemplate';
     static Task: 'Task' = 'Task';
     static TaskEditHistory: 'TaskEditHistory' = 'TaskEditHistory';
     static TaskEditHistoryFieldChange: 'TaskEditHistoryFieldChange' = 'TaskEditHistoryFieldChange';
@@ -548,13 +683,18 @@ export class EntityTypes {
     static Tearsheet: 'Tearsheet' = 'Tearsheet';
     static TearsheetMember: 'TearsheetMember' = 'TearsheetMember';
     static TearsheetRecipient: 'TearsheetRecipient' = 'TearsheetRecipient';
-    static TimeLaborCalcTypeLookup: 'TimeLaborCalcTypeLookup' = 'TimeLaborCalcTypeLookup';
-    static TimeLaborEvalRule: 'TimeLaborEvalRule' = 'TimeLaborEvalRule';
-    static TimeLaborEvalRuleCategoryLookup: 'TimeLaborEvalRuleCategoryLookup' = 'TimeLaborEvalRuleCategoryLookup';
-    static TimeLaborEvalRuleCombineCriteriaLookup: 'TimeLaborEvalRuleCombineCriteriaLookup' = 'TimeLaborEvalRuleCombineCriteriaLookup';
-    static TimeLaborEvalRuleStatusLookup: 'TimeLaborEvalRuleStatusLookup' = 'TimeLaborEvalRuleStatusLookup';
-    static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';    
+    static TestCategory: 'TestCategory' = 'TestCategory';
+    static TestEntity: 'TestEntity' = 'TestEntity';
+    static TestJob: 'TestJob' = 'TestJob';
+    static TestOwner: 'TestOwner' = 'TestOwner';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
+    static Timecard: 'Timecard' = 'Timecard';
+    static TimecardBatch: 'TimecardBatch' = 'TimecardBatch';
+    static TimecardExpense: 'TimecardExpense' = 'TimecardExpense';
+    static TimecardFileAttachment: 'TimecardFileAttachment' = 'TimecardFileAttachment';
+    static TimecardHistory: 'TimecardHistory' = 'TimecardHistory';
+    static TimecardPayClass: 'TimecardPayClass' = 'TimecardPayClass';
+    static TimecardTime: 'TimecardTime' = 'TimecardTime';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
@@ -562,17 +702,22 @@ export class EntityTypes {
     static TransactionType: 'TransactionType' = 'TransactionType';
     static UnbilledRevenueDistribution: 'UnbilledRevenueDistribution' = 'UnbilledRevenueDistribution';
     static UnbilledRevenueDistributionBatch: 'UnbilledRevenueDistributionBatch' = 'UnbilledRevenueDistributionBatch';
-    static UnbilledRevenueDistributionGeneralLedgerExportStatusLookup: 'UnbilledRevenueDistributionGeneralLedgerExportStatusLookup' = 'UnbilledRevenueDistributionGeneralLedgerExportStatusLookup';
+    static UnbilledRevenueGeneralLedgerExportStatusLookup: 'UnbilledRevenueGeneralLedgerExportStatusLookup' = 'UnbilledRevenueGeneralLedgerExportStatusLookup';
     static UnitOfMeasure: 'UnitOfMeasure' = 'UnitOfMeasure';
+    static UserAttribute: 'UserAttribute' = 'UserAttribute';
     static UserCustomObject: 'UserCustomObject' = 'UserCustomObject';
     static UserCustomObjectAttribute: 'UserCustomObjectAttribute' = 'UserCustomObjectAttribute';
     static UserCustomObjectAttributeInteraction: 'UserCustomObjectAttributeInteraction' = 'UserCustomObjectAttributeInteraction';
     static UserCustomObjectDepartment: 'UserCustomObjectDepartment' = 'UserCustomObjectDepartment';
+    static UserDepartmentGrouping: 'UserDepartmentGrouping' = 'UserDepartmentGrouping';
     static UserEditHistory: 'UserEditHistory' = 'UserEditHistory';
     static UserEditHistoryFieldChange: 'UserEditHistoryFieldChange' = 'UserEditHistoryFieldChange';
+    static UserHit: 'UserHit' = 'UserHit';
     static UserHousingComplexUnit: 'UserHousingComplexUnit' = 'UserHousingComplexUnit';
     static UserIntegration: 'UserIntegration' = 'UserIntegration';
     static UserLinkedInUrn: 'UserLinkedInUrn' = 'UserLinkedInUrn';
+    static UserLogin: 'UserLogin' = 'UserLogin';
+    static UserMenu: 'UserMenu' = 'UserMenu';
     static UserMessage: 'UserMessage' = 'UserMessage';
     static UserMessageFile: 'UserMessageFile' = 'UserMessageFile';
     static UserPulseCallLog: 'UserPulseCallLog' = 'UserPulseCallLog';
@@ -580,34 +725,31 @@ export class EntityTypes {
     static UserSetting: 'UserSetting' = 'UserSetting';
     static UserSurvey: 'UserSurvey' = 'UserSurvey';
     static UserSurveyOptions: 'UserSurveyOptions' = 'UserSurveyOptions';
+    static UserTemplate: 'UserTemplate' = 'UserTemplate';
+    static UserTemplateAttribute: 'UserTemplateAttribute' = 'UserTemplateAttribute';
     static UserType: 'UserType' = 'UserType';
+    static UserWork: 'UserWork' = 'UserWork';
+    static UserWorkFile: 'UserWorkFile' = 'UserWorkFile';
     static WorkersCompensation: 'WorkersCompensation' = 'WorkersCompensation';
     static WorkersCompensationRate: 'WorkersCompensationRate' = 'WorkersCompensationRate';
     static ZipCodeGis: 'ZipCodeGis' = 'ZipCodeGis';
-
     static isSearchable(entity: string): boolean {
         return ['Candidate', 'ClientContact', 'ClientCorporation', 'JobOrder', 'Opportunity', 'JobSubmission', 'Placement', 'Note', 'Task', 'Appointment'].indexOf(entity) >= 0
     }
-
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'AllSalesTaxGroup', 'AllSalesTaxRate', 'Appointment', 'AppointmentFileAttachment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingProfileRoot', 'BillingSyncBatchFileAttachment', 'BillingSyncBatchFileTypeLookup', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'CalendarFrequencyLookup', 'Candidate', 'CandidateAssessment', 'CandidateAssessmentFileAttachment', 'CandidateCertification', 'CandidateCertificationRequirement', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirement', 'CertificationRequirementStatusLookup', 'ChargeTypeLookup', 'CitySalesTaxRate', 'CitySalesTaxRateRoot', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'CountySalesTaxRateRoot', 'DefaultEarnCode', 'DeliveryMethodLookup', 'DirectDepositAccountTypeLookup', 'DiscountRate', 'DiscountRateRoot', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DistrictSalesTaxRateRoot', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'EntryTypeLookup', 'ExternalAccount', 'ExternalSalesTaxGroup', 'ExternalSalesTaxRateRoot', 'FileExport', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'Invoice', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermRoot', 'IssueResolutionStatusLookup', 'JobAgent', 'JobAgentResult', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'JobSubmissionCertificationRequirement', 'Lead', 'LegalBusinessEntity', 'Location', 'LocationRoot', 'MessageFolder', 'MessageRecipient', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OtherSalesTaxRateRoot', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementCertification', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementRateCardRoot', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateCard', 'RateDetail', 'RateGroup', 'ReadOnlyAppointment', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateRoot', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StateSalesTaxRateRoot', 'StatusLookup', 'SurchargeRate', 'SurchargeRateRoot', 'SurchargeRateTypeLookup', 'SurveyQuestion', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimecardBatch', 'TimecardFileAttachment', 'UnbilledRevenueGeneralLedgerExportStatusLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'UserWork', 'UserWorkFile', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
-
 export type EntityName = Exclude<keyof typeof EntityTypes, 'prototype'>;
 export type EntityNameSubset<T extends EntityName> = Extract<EntityName, T>;
-
 // Interfaces
 export type Scalar = number | string | string[] | Date;
 export type Strings = string | string[];
-
 export type ToMany<T> = ToManyRef<T> | T[];
-
 export interface ToManyRef<T> {
   total: number;
   data: T[];
 }
-
 export interface Address {
     address1?: string;
     address2?: string;
@@ -617,8 +759,24 @@ export interface Address {
     countryID?: number;
     countryName?: string;
     countryCode?: string;
+    timezone?: string;
+    latitude?: number;
+    longitude?: number;
 }
-
+export interface Action {
+    id?: number;
+    description?: Strings;
+    name?: Strings;
+    userTypes?: ToMany<UserType>;
+}
+export interface ActivityCenterIgnore {
+    id?: number;
+    contactID?: number;
+    dateAdded?: Date;
+    email?: Strings;
+    emailName?: Strings;
+    userID?: number;
+}
 export interface ActivityGoal {
     id?: number;
     activityType?: Strings;
@@ -651,18 +809,20 @@ export interface ActivityGoalTarget {
 }
 export interface AllSalesTaxGroup {
     id?: number;
-    citySalesTaxRate?: CitySalesTaxRate;
-    countySalesTaxRate?: CountySalesTaxRate;
+    allCitySalesTaxRate?: AllSalesTaxRate;
+    allCountySalesTaxRate?: AllSalesTaxRate;
+    allDistrictSalesTaxRate?: AllSalesTaxRate;
+    allStateSalesTaxRate?: AllSalesTaxRate;
     dateAdded?: Date;
     dateLastModified?: Date;
-    districtSalesTaxRate?: DistrictSalesTaxRate;
+    dateOfDeletion?: Date;
     externalID?: number;
-    externalSalesTaxGroupID?: number;
+    externalSalesTaxGroup?: ExternalSalesTaxGroup;
+    isDeleted?: boolean;
     label?: Strings;
-    salesTaxGroupID?: number;
+    salesTaxGroup?: SalesTaxGroup;
     source?: SalesTaxRateSourceLookup;
     stateID?: number;
-    stateSalesTaxRate?: StateSalesTaxRate;
     status?: TaxStatusLookup;
     totalRate?: number;
     zipPlus4High?: Strings;
@@ -676,22 +836,27 @@ export interface AllSalesTaxRate {
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
-    externalSalesTaxRateID?: number;
+    externalSalesTaxRate?: ExternalSalesTaxRate;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
+    isFirst?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
     label?: Strings;
     owner?: CorporateUser;
     rate?: number;
     reportingCodeName?: Strings;
-    salesTaxRateID?: number;
+    salesTaxRate?: SalesTaxRate;
     source?: SalesTaxRateSourceLookup;
     stateID?: number;
-    status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
-    versionID?: number;
-    versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface Application {
     id?: number;
@@ -699,6 +864,24 @@ export interface Application {
     description?: Strings;
     menus?: ToMany<Menu>;
     name?: Strings;
+    serverSettings?: ToMany<ApplicationServerSetting>;
+    userLogins?: ToMany<UserLogin>;
+}
+export interface ApplicationServer {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    fileStorageDirectory?: Strings;
+    ipAddress?: Strings;
+    name?: Strings;
+    serverSettings?: ToMany<ApplicationServerSetting>;
+}
+export interface ApplicationServerSetting {
+    id?: number;
+    application?: Application;
+    server?: ApplicationServer;
+    setting?: Strings;
+    value?: Strings;
 }
 export interface Appointment {
     id?: number;
@@ -713,6 +896,7 @@ export interface Appointment {
     dateLastModified?: Date;
     description?: Strings;
     editHistory?: ToMany<AppointmentEditHistory>;
+    fileAttachments?: ToMany<AppointmentFileAttachment>;
     guests?: ToMany<Person>;
     isAllDay?: boolean;
     isDeleted?: boolean;
@@ -733,6 +917,7 @@ export interface Appointment {
     recurrenceMonthBits?: number;
     recurrenceStyle?: Strings;
     recurrenceType?: Strings;
+    recurringDeletes?: ToMany<RecurringAppointmentDelete>;
     showTimeAs?: Strings;
     subject?: Strings;
     timeZoneID?: Strings;
@@ -763,14 +948,53 @@ export interface AppointmentEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface AppointmentFileAttachment {
+    id?: number;
+    appointment?: Appointment;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    departmentsSharedWith?: ToMany<CorporationDepartment>;
+    description?: Strings;
+    directory?: Strings;
+    externalID?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isCopied?: boolean;
+    isDeleted?: boolean;
+    isEncrypted?: boolean;
+    isExternal?: boolean;
+    isOpen?: boolean;
+    isPrivate?: boolean;
+    isSendOut?: boolean;
+    name?: Strings;
+    type?: Strings;
+    usersSharedWith?: ToMany<CorporateUser>;
+    uuid?: Strings;
+}
 export interface AppointmentTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
     templateType?: Strings;
+}
+export interface Article {
+    id?: number;
+    author?: Strings;
+    bodyText?: Strings;
+    copyright?: Strings;
+    dateAdded?: Date;
+    datePublished?: Date;
+    filter?: Strings;
+    frontPageArticle?: FrontPageArticle;
+    headline?: Strings;
+    puclicCategories?: ToMany<Category>;
+    shortHeadline?: Strings;
+    source?: Strings;
+    time?: number;
 }
 export interface AutoAddBlacklistDomain {
     id?: number;
@@ -791,21 +1015,54 @@ export interface BillMaster {
     id?: number;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
     billableCharge?: BillableCharge;
+    billingCalendarInstance?: CalendarInstance;
     billingSyncBatch?: BillingSyncBatch;
+    billingSyncBatchFileAttachments?: ToMany<BillingSyncBatchFileAttachment>;
     canInvoice?: boolean;
+    chargeTypeLookup?: ChargeTypeLookup;
     dateAdded?: Date;
     dateLastModified?: Date;
     earnCode?: EarnCode;
+    externalID?: Strings;
+    isEligible?: boolean;
     location?: Location;
     owner?: CorporateUser;
+    payBillCycle?: PayBillCycle;
     transactionDate?: Date;
+    transactionStatus?: TransactionStatus;
 }
 export interface BillMasterDiscountRate {
     id?: number;
     billMaster?: BillMaster;
     dateAdded?: Date;
     discountRate?: DiscountRate;
+    discountRateRoot?: DiscountRateRoot;
     owner?: CorporateUser;
+}
+export interface BillMasterEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<BillMasterEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: BillMaster;
+    transactionID?: Strings;
+}
+export interface BillMasterEditHistoryAssociationChange {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: undefined;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface BillMasterEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: BillMasterEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface BillMasterSurchargeRate {
     id?: number;
@@ -813,6 +1070,7 @@ export interface BillMasterSurchargeRate {
     dateAdded?: Date;
     owner?: CorporateUser;
     surchargeRate?: SurchargeRate;
+    surchargeRateRoot?: SurchargeRateRoot;
 }
 export interface BillMasterTransaction {
     id?: number;
@@ -833,15 +1091,30 @@ export interface BillMasterTransaction {
     recordingDate?: Date;
     reversalOfTransaction?: BillMasterTransaction;
     transactionOrigin?: TransactionOrigin;
-    transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
+    unbilledRevenueDistributions?: ToMany<UnbilledRevenueDistribution>;
+    unbilledRevenueGeneralLedgerExportStatusLookup?: UnbilledRevenueGeneralLedgerExportStatusLookup;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface BillMasterTransactionDiscountDetail {
+    id?: number;
+    billMasterTransactionDiscountRates?: ToMany<BillMasterTransactionDiscountRate>;
+    calculateAndDisplayOnInvoice?: boolean;
+    calculatePriority?: number;
+    dateAdded?: Date;
+    discountRate?: DiscountRate;
+    discountRateRoot?: DiscountRateRoot;
+    ignoreForSalesTaxCalculations?: boolean;
+    rate?: number;
+    sentToAccountsReceivable?: boolean;
+    title?: Strings;
 }
 export interface BillMasterTransactionDiscountRate {
     id?: number;
     adjustmentSequenceNumber?: number;
     baseAmount?: number;
     billMasterTransaction?: BillMasterTransaction;
+    billMasterTransactionDiscountDetail?: BillMasterTransactionDiscountDetail;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     discountAmount?: number;
@@ -851,6 +1124,7 @@ export interface BillMasterTransactionDiscountRate {
 }
 export interface BillMasterTransactionDistributionBatch {
     id?: number;
+    accountingDate?: Date;
     batchStatus?: BatchStatusLookup;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
     billableCharges?: ToMany<BillableCharge>;
@@ -858,24 +1132,44 @@ export interface BillMasterTransactionDistributionBatch {
     dateLastModified?: Date;
     owner?: CorporateUser;
 }
+export interface BillMasterTransactionSalesTaxDetail {
+    id?: number;
+    allSalesTaxRate?: AllSalesTaxRate;
+    billMasterTransactionSalesTaxRates?: ToMany<BillMasterTransactionSalesTaxRate>;
+    dateAdded?: Date;
+    jurisdictionName?: Strings;
+    rate?: number;
+}
 export interface BillMasterTransactionSalesTaxRate {
     id?: number;
     adjustmentSequenceNumber?: number;
     allSalesTaxRate?: AllSalesTaxRate;
     baseAmount?: number;
     billMasterTransaction?: BillMasterTransaction;
+    billMasterTransactionSalesTaxDetail?: BillMasterTransactionSalesTaxDetail;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     reversalOfTransactionSalesTaxRate?: BillMasterTransactionSalesTaxRate;
-    salesTaxRate?: SalesTaxRate;
     salesTaxRateVersionID?: number;
     taxAmount?: number;
+}
+export interface BillMasterTransactionSurchargeDetail {
+    id?: number;
+    amount?: number;
+    billMasterTransactionSurchargeRates?: ToMany<BillMasterTransactionSurchargeRate>;
+    dateAdded?: Date;
+    rate?: number;
+    surchargeRate?: SurchargeRate;
+    surchargeRateRoot?: SurchargeRateRoot;
+    surchargeRateType?: SurchargeRateTypeLookup;
+    title?: Strings;
 }
 export interface BillMasterTransactionSurchargeRate {
     id?: number;
     adjustmentSequenceNumber?: number;
     baseAmount?: number;
     billMasterTransaction?: BillMasterTransaction;
+    billMasterTransactionSurchargeDetail?: BillMasterTransactionSurchargeDetail;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     reversalOfTransactionSurchargeRate?: BillMasterTransactionSurchargeRate;
@@ -889,18 +1183,23 @@ export interface BillableCharge {
     billMasterTransactionDistributionBatches?: ToMany<BillMasterTransactionDistributionBatch>;
     billMasters?: ToMany<BillMaster>;
     billableTransactions?: ToMany<BillableChargeBillableTransaction>;
+    billingCalendarInstances?: ToMany<CalendarInstance>;
     billingClientContact?: ClientContact;
     billingClientCorporation?: ClientCorporation;
     billingCorporateUser?: CorporateUser;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     billingSchedule?: number;
+    billingSyncBatchFileAttachments?: ToMany<BillingSyncBatchFileAttachment>;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
+    entryTypeLookup?: EntryTypeLookup;
+    externalID?: Strings;
     fileAttachments?: ToMany<BillableChargeFileAttachment>;
     generalLedgerSegment1?: GeneralLedgerSegment1;
     generalLedgerSegment2?: GeneralLedgerSegment2;
@@ -908,10 +1207,13 @@ export interface BillableCharge {
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    generalLedgerStatus?: UnbilledRevenueGeneralLedgerExportStatusLookup;
     invoiceTerm?: InvoiceTerm;
     invoicedTransactions?: ToMany<BillableChargeInvoicedTransaction>;
     isInvoiced?: boolean;
     jobOrder?: JobOrder;
+    markAsReadyEligible?: boolean;
+    payBillCycles?: ToMany<PayBillCycle>;
     periodEndDate?: Date;
     placement?: Placement;
     readyToBillOverride?: boolean;
@@ -928,8 +1230,10 @@ export interface BillableChargeBillableTransaction {
     billMaster?: BillMaster;
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
+    isEligible?: boolean;
     quantity?: number;
     rate?: number;
     transactionDate?: Date;
@@ -971,10 +1275,12 @@ export interface BillableChargeInvoicedTransaction {
     billMaster?: BillMaster;
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
     invoiceStatement?: InvoiceStatement;
     invoiceStatementBatch?: InvoiceStatementBatch;
+    isEligible?: boolean;
     quantity?: number;
     rate?: number;
     transactionDate?: Date;
@@ -998,12 +1304,23 @@ export interface BillableChargeSummaryTransaction {
     billMaster?: BillMaster;
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
+    calendarInstance?: CalendarInstance;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
+    discountRateRoots?: ToMany<DiscountRateRoot>;
+    discountRateVersions?: ToMany<DiscountRateVersion>;
     discountRates?: ToMany<DiscountRate>;
     earnCode?: EarnCode;
+    isEligible?: boolean;
+    isEligibleOverride?: boolean;
     location?: Location;
+    locationRoot?: LocationRoot;
+    locationVersion?: LocationVersion;
+    payBillCycle?: PayBillCycle;
     quantity?: number;
     rate?: number;
+    surchargeRateRoots?: ToMany<SurchargeRateRoot>;
+    surchargeRateVersions?: ToMany<SurchargeRateVersion>;
     surchargeRates?: ToMany<SurchargeRate>;
     transactionDate?: Date;
     unitOfMeasure?: UnitOfMeasure;
@@ -1014,8 +1331,10 @@ export interface BillableChargeUnbillableTransaction {
     billMaster?: BillMaster;
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
+    isEligible?: boolean;
     quantity?: number;
     rate?: number;
     transactionDate?: Date;
@@ -1090,6 +1409,7 @@ export interface BillingProfileEditHistory {
     migrateGUID?: Strings;
     modifyingPerson?: Person;
     targetEntity?: BillingProfile;
+    targetRootEntity?: BillingProfileRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -1109,6 +1429,13 @@ export interface BillingProfileEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
+export interface BillingProfileRoot {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    versions?: ToMany<BillingProfileVersion>;
+}
 export interface BillingProfileVersion {
     id?: number;
     bccRecipients?: ToMany<Person>;
@@ -1116,6 +1443,8 @@ export interface BillingProfileVersion {
     billingClientCorporation?: ClientCorporation;
     billingContact?: ClientContact;
     billingCorporateUser?: CorporateUser;
+    billingLocation?: LocationRoot;
+    billingProfile?: undefined;
     ccRecipients?: ToMany<Person>;
     customDate1?: Date;
     customDate2?: Date;
@@ -1152,11 +1481,13 @@ export interface BillingProfileVersion {
     dateAdded?: Date;
     dateLastModified?: Date;
     deliveryMethod?: Strings;
+    deliveryMethodLookup?: DeliveryMethodLookup;
     description?: Strings;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
     invoiceStatementMessageTemplate?: InvoiceStatementMessageTemplate;
+    invoiceTerm?: InvoiceTermRoot;
     isFirst?: boolean;
     status?: Strings;
     title?: Strings;
@@ -1178,10 +1509,14 @@ export interface BillingSyncBatch {
 }
 export interface BillingSyncBatchFileAttachment {
     id?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
+    billingSyncBatchFileTypeLookup?: BillingSyncBatchFileTypeLookup;
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    dateLastModified?: Date;
     description?: Strings;
     directory?: Strings;
     externalID?: Strings;
@@ -1194,13 +1529,28 @@ export interface BillingSyncBatchFileAttachment {
     isPrivate?: boolean;
     keyVersionEncryptedWith?: Strings;
     name?: Strings;
+    transactionOrigin?: TransactionOrigin;
     type?: Strings;
     uuid?: Strings;
+}
+export interface BillingSyncBatchFileTypeLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface BillingSyncError {
     id?: number;
     acknowledgedByUser?: Person;
     acknowledgedDate?: Date;
+    billingSyncErrorStatus?: BillingSyncErrorStatus;
+    billingSyncErrorType?: BillingSyncErrorType;
     dateAdded?: Date;
     errorCode?: Strings;
     externalID?: Strings;
@@ -1210,6 +1560,14 @@ export interface BillingSyncError {
     tokens?: Strings;
     transactionDate?: Date;
     transactionOrigin?: TransactionOrigin;
+}
+export interface BillingSyncErrorStatus {
+    id?: number;
+    name?: Strings;
+}
+export interface BillingSyncErrorType {
+    id?: number;
+    name?: Strings;
 }
 export interface Bot {
     id?: number;
@@ -1311,6 +1669,7 @@ export interface BusinessSector {
     id?: number;
     dateAdded?: Date;
     name?: Strings;
+    privateLabels?: ToMany<PrivateLabel>;
 }
 export interface Calendar {
     id?: number;
@@ -1339,6 +1698,7 @@ export interface Candidate {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    availability?: ToMany<CandidateAvailability>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
     canEnterTime?: boolean;
@@ -1421,6 +1781,16 @@ export interface Candidate {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -1477,6 +1847,7 @@ export interface Candidate {
     dateI9Expiration?: Date;
     dateLastComment?: Date;
     dateLastModified?: Date;
+    dateLastPayrollProviderSync?: Date;
     dateNextCall?: Date;
     dateOfBirth?: Date;
     dayRate?: number;
@@ -1493,6 +1864,7 @@ export interface Candidate {
     email3?: Strings;
     employeeType?: Strings;
     employmentPreference?: Strings;
+    estaffGUID?: Strings;
     ethnicity?: Strings;
     experience?: number;
     externalID?: Strings;
@@ -1511,11 +1883,11 @@ export interface Candidate {
     i9OnFile?: number;
     interviews?: ToMany<Appointment>;
     isAnonymized?: boolean;
-    isDayLightSavings?: boolean;
     isDeleted?: boolean;
     isEditable?: boolean;
     isExempt?: boolean;
     isLockedOut?: boolean;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
     lastName?: Strings;
     latestComment?: ToMany<CandidateComment>;
     leads?: ToMany<Lead>;
@@ -1567,9 +1939,11 @@ export interface Candidate {
     referredByPerson?: Person;
     salary?: number;
     salaryLow?: number;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     secondarySkills?: ToMany<Skill>;
     sendouts?: ToMany<Sendout>;
+    shiftPreferences?: ToMany<CandidateShiftPreference>;
     shifts?: ToMany<Shift>;
     skillSet?: Strings;
     smsOptIn?: boolean;
@@ -1602,16 +1976,67 @@ export interface Candidate {
     workAuthorized?: boolean;
     workHistories?: ToMany<CandidateWorkHistory>;
     workPhone?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
+}
+export interface CandidateAssessment {
+    id?: number;
+    addingUser?: CorporateUser;
+    assessmentCode?: Strings;
+    assessmentName?: Strings;
+    assessmentSystem?: CandidateAssessmentSystem;
+    candidate?: Candidate;
+    comments?: Strings;
+    dateAdded?: Date;
+    fileAttachments?: ToMany<CandidateAssessmentFileAttachment>;
+    isDeleted?: boolean;
+    migrateGUID?: Strings;
+    resultCode?: Strings;
+    resultDate?: Date;
+    scoreValue?: Strings;
+    sessionCode?: Strings;
+}
+export interface CandidateAssessmentFileAttachment {
+    id?: number;
+    candidateAssessment?: CandidateAssessment;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    departmentsSharedWith?: ToMany<CorporationDepartment>;
+    description?: Strings;
+    directory?: Strings;
+    externalID?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isCopied?: boolean;
+    isDeleted?: boolean;
+    isEncrypted?: boolean;
+    isExternal?: boolean;
+    isOpen?: boolean;
+    isPrivate?: boolean;
+    isSendOut?: boolean;
+    name?: Strings;
+    type?: Strings;
+    usersSharedWith?: ToMany<CorporateUser>;
+    uuid?: Strings;
+}
+export interface CandidateAssessmentSystem {
+    id?: number;
+    assessments?: ToMany<CandidateAssessment>;
+    name?: Strings;
+}
+export interface CandidateAvailability {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    isAvailable?: boolean;
+    type?: Strings;
+}
+export interface CandidateAvailabilityMask {
+    id?: number;
+    availabilityBitMask?: number;
+    candidate?: Candidate;
+    candidateAvailability?: ToMany<CandidateAvailability>;
+    utcDateAvailable?: Date;
 }
 export interface CandidateCertification {
     id?: number;
@@ -1652,6 +2077,7 @@ export interface CandidateCertification {
     customTextBlock7?: Strings;
     customTextBlock8?: Strings;
     customTextBlock9?: Strings;
+    dateAdded?: Date;
     dateCertified?: Date;
     dateExpiration?: Date;
     dateLastModified?: Date;
@@ -1663,6 +2089,7 @@ export interface CandidateCertification {
     licenseNumber?: Strings;
     licenseType?: Strings;
     location?: Strings;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     name?: Strings;
     results?: Strings;
@@ -1730,9 +2157,12 @@ export interface CandidateCertificationRequirement {
     customTextBlock9?: Strings;
     dateAdded?: Date;
     dateExpiration?: Date;
+    dateLastModified?: Date;
     documentDeadline?: Date;
     fileAttachments?: ToMany<CandidateFileAttachment>;
+    isDeleted?: boolean;
     matchingCredentialCount?: number;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
     status?: CertificationRequirementStatusLookup;
@@ -1814,12 +2244,10 @@ export interface CandidateFileAttachment {
     departmentsSharedWith?: ToMany<CorporationDepartment>;
     description?: Strings;
     directory?: Strings;
-    distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
-    fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
     isEncrypted?: boolean;
@@ -1904,6 +2332,15 @@ export interface CandidateReferenceResponse {
     question?: CandidateReferenceQuestion;
     reference?: CandidateReference;
     responseText?: Strings;
+}
+export interface CandidateShiftPreference {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dayNumber?: number;
+    dayOfWeek?: Strings;
+    isAvailable?: boolean;
+    shiftType?: ShiftType;
 }
 export interface CandidateSource {
     id?: number;
@@ -2020,8 +2457,21 @@ export interface Category {
     name?: Strings;
     occupation?: Strings;
     privateLabels?: ToMany<PrivateLabel>;
+    puclicArticles?: ToMany<Article>;
     skills?: ToMany<Skill>;
     specialties?: ToMany<Specialty>;
+    type?: Strings;
+    userTemplates?: ToMany<UserTemplate>;
+}
+export interface CategoryList {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    enabled?: boolean;
+    externalID?: number;
+    name?: Strings;
+    occupation?: Strings;
+    privateLabels?: ToMany<PrivateLabel>;
     type?: Strings;
 }
 export interface Certification {
@@ -2053,8 +2503,11 @@ export interface Certification {
     customTextBlock3?: Strings;
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
     description?: Strings;
     expirationDateOptional?: boolean;
+    migrateGUID?: Strings;
     name?: Strings;
     privateLabels?: ToMany<PrivateLabel>;
     specialty?: Specialty;
@@ -2067,12 +2520,14 @@ export interface CertificationFileAttachment {
     contentSubType?: Strings;
     contentType?: Strings;
     dateAdded?: Date;
+    dateLastModified?: Date;
     directory?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
     isEncrypted?: boolean;
     isExternal?: boolean;
+    migrateGUID?: Strings;
     name?: Strings;
     type?: Strings;
 }
@@ -2081,6 +2536,7 @@ export interface CertificationGroup {
     certifications?: ToMany<Certification>;
     dateAdded?: Date;
     dateLastModified?: Date;
+    migrateGUID?: Strings;
     name?: Strings;
     privateLabelID?: number;
 }
@@ -2129,9 +2585,12 @@ export interface CertificationRequirement {
     dateAdded?: Date;
     dateExpiration?: Date;
     documentDeadline?: Date;
+    entityName?: Strings;
     fileAttachments?: ToMany<CandidateFileAttachment>;
+    isDeleted?: boolean;
     jobSubmission?: JobSubmission;
     matchingCredentialCount?: number;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
     placement?: Placement;
@@ -2169,6 +2628,7 @@ export interface CitySalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -2184,6 +2644,24 @@ export interface CitySalesTaxRate {
     versionID?: number;
     versions?: ToMany<SalesTaxRateVersion>;
 }
+export interface CitySalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
 export interface ClientContact {
     id?: number;
     activePlacements?: ToMany<Placement>;
@@ -2196,7 +2674,6 @@ export interface ClientContact {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2208,6 +2685,16 @@ export interface ClientContact {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2234,7 +2721,6 @@ export interface ClientContact {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2290,9 +2776,9 @@ export interface ClientContact {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2307,20 +2793,9 @@ export interface ClientContact {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact1 {
     id?: number;
@@ -2334,7 +2809,6 @@ export interface ClientContact1 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2346,6 +2820,16 @@ export interface ClientContact1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2372,7 +2856,6 @@ export interface ClientContact1 {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2428,9 +2911,9 @@ export interface ClientContact1 {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2445,20 +2928,9 @@ export interface ClientContact1 {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact2 {
     id?: number;
@@ -2472,7 +2944,6 @@ export interface ClientContact2 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2484,6 +2955,16 @@ export interface ClientContact2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2510,7 +2991,6 @@ export interface ClientContact2 {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2566,9 +3046,9 @@ export interface ClientContact2 {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2583,20 +3063,9 @@ export interface ClientContact2 {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact3 {
     id?: number;
@@ -2610,7 +3079,6 @@ export interface ClientContact3 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2622,6 +3090,16 @@ export interface ClientContact3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2648,7 +3126,6 @@ export interface ClientContact3 {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2704,9 +3181,9 @@ export interface ClientContact3 {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2721,20 +3198,9 @@ export interface ClientContact3 {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact4 {
     id?: number;
@@ -2748,7 +3214,6 @@ export interface ClientContact4 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2760,6 +3225,16 @@ export interface ClientContact4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2786,7 +3261,6 @@ export interface ClientContact4 {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2842,9 +3316,9 @@ export interface ClientContact4 {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2859,20 +3333,9 @@ export interface ClientContact4 {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContact5 {
     id?: number;
@@ -2886,7 +3349,6 @@ export interface ClientContact5 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
-    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2898,6 +3360,16 @@ export interface ClientContact5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -2924,7 +3396,6 @@ export interface ClientContact5 {
     customTextBlock4?: Strings;
     customTextBlock5?: Strings;
     dateAdded?: Date;
-    dateLastComment?: Date;
     dateLastModified?: Date;
     dateLastVisit?: Date;
     deleteMe?: Strings;
@@ -2980,9 +3451,9 @@ export interface ClientContact5 {
     phone3?: Strings;
     placements?: ToMany<Placement>;
     preferredContact?: Strings;
-    privateLabel?: PrivateLabel;
     referredByPerson?: Person;
     reportToPerson?: Person;
+    secondaryAddress?: Address;
     secondaryOwners?: ToMany<CorporateUser>;
     sendouts?: ToMany<Sendout>;
     skillSet?: Strings;
@@ -2997,20 +3468,9 @@ export interface ClientContact5 {
     timeZoneOffsetEST?: number;
     trackTitle?: Strings;
     type?: Strings;
-    userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
     username?: Strings;
-    customObject1s?: PersonCustomObjectInstance1[];
-    customObject2s?: PersonCustomObjectInstance2[];
-    customObject3s?: PersonCustomObjectInstance3[];
-    customObject4s?: PersonCustomObjectInstance4[];
-    customObject5s?: PersonCustomObjectInstance5[];
-    customObject6s?: PersonCustomObjectInstance6[];
-    customObject7s?: PersonCustomObjectInstance7[];
-    customObject8s?: PersonCustomObjectInstance8[];
-    customObject9s?: PersonCustomObjectInstance9[];
-    customObject10s?: PersonCustomObjectInstance10[];
 }
 export interface ClientContactFileAttachment {
     id?: number;
@@ -3021,12 +3481,10 @@ export interface ClientContactFileAttachment {
     departmentsSharedWith?: ToMany<CorporationDepartment>;
     description?: Strings;
     directory?: Strings;
-    distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
-    fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
     isEncrypted?: boolean;
@@ -3063,6 +3521,7 @@ export interface ClientCorporation {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3074,6 +3533,7 @@ export interface ClientCorporation {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3088,6 +3548,41 @@ export interface ClientCorporation {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3127,6 +3622,8 @@ export interface ClientCorporation {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3138,8 +3635,10 @@ export interface ClientCorporation {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3148,21 +3647,12 @@ export interface ClientCorporation {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation1 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3174,6 +3664,7 @@ export interface ClientCorporation1 {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3188,6 +3679,41 @@ export interface ClientCorporation1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3227,6 +3753,8 @@ export interface ClientCorporation1 {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3238,8 +3766,10 @@ export interface ClientCorporation1 {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3248,21 +3778,12 @@ export interface ClientCorporation1 {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation2 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3274,6 +3795,7 @@ export interface ClientCorporation2 {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3288,6 +3810,41 @@ export interface ClientCorporation2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3327,6 +3884,8 @@ export interface ClientCorporation2 {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3338,8 +3897,10 @@ export interface ClientCorporation2 {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3348,21 +3909,12 @@ export interface ClientCorporation2 {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation3 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3374,6 +3926,7 @@ export interface ClientCorporation3 {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3388,6 +3941,41 @@ export interface ClientCorporation3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3427,6 +4015,8 @@ export interface ClientCorporation3 {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3438,8 +4028,10 @@ export interface ClientCorporation3 {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3448,21 +4040,12 @@ export interface ClientCorporation3 {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation4 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3474,6 +4057,7 @@ export interface ClientCorporation4 {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3488,6 +4072,41 @@ export interface ClientCorporation4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3527,6 +4146,8 @@ export interface ClientCorporation4 {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3538,8 +4159,10 @@ export interface ClientCorporation4 {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3548,21 +4171,12 @@ export interface ClientCorporation4 {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporation5 {
     id?: number;
     address?: Address;
     annualRevenue?: number;
+    billingAddress?: Address;
     billingContact?: Strings;
     billingFrequency?: Strings;
     billingPhone?: Strings;
@@ -3574,6 +4188,7 @@ export interface ClientCorporation5 {
     childClientCorporations?: ToMany<ClientCorporation>;
     clientContactNotes?: ToMany<Note>;
     clientContacts?: ToMany<ClientContact>;
+    clientCorporationAttributes?: ToMany<ClientCorporationAttribute>;
     clientCorporationFiles?: ToMany<ClientCorporationFile>;
     companyDescription?: Strings;
     companyURL?: Strings;
@@ -3588,6 +4203,41 @@ export interface ClientCorporation5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<ClientCorporationCustomObjectInstance10>;
+    customObject11s?: ToMany<ClientCorporationCustomObjectInstance11>;
+    customObject12s?: ToMany<ClientCorporationCustomObjectInstance12>;
+    customObject13s?: ToMany<ClientCorporationCustomObjectInstance13>;
+    customObject14s?: ToMany<ClientCorporationCustomObjectInstance14>;
+    customObject15s?: ToMany<ClientCorporationCustomObjectInstance15>;
+    customObject16s?: ToMany<ClientCorporationCustomObjectInstance16>;
+    customObject17s?: ToMany<ClientCorporationCustomObjectInstance17>;
+    customObject18s?: ToMany<ClientCorporationCustomObjectInstance18>;
+    customObject19s?: ToMany<ClientCorporationCustomObjectInstance19>;
+    customObject1s?: ToMany<ClientCorporationCustomObjectInstance1>;
+    customObject20s?: ToMany<ClientCorporationCustomObjectInstance20>;
+    customObject21s?: ToMany<ClientCorporationCustomObjectInstance21>;
+    customObject22s?: ToMany<ClientCorporationCustomObjectInstance22>;
+    customObject23s?: ToMany<ClientCorporationCustomObjectInstance23>;
+    customObject24s?: ToMany<ClientCorporationCustomObjectInstance24>;
+    customObject25s?: ToMany<ClientCorporationCustomObjectInstance25>;
+    customObject26s?: ToMany<ClientCorporationCustomObjectInstance26>;
+    customObject27s?: ToMany<ClientCorporationCustomObjectInstance27>;
+    customObject28s?: ToMany<ClientCorporationCustomObjectInstance28>;
+    customObject29s?: ToMany<ClientCorporationCustomObjectInstance29>;
+    customObject2s?: ToMany<ClientCorporationCustomObjectInstance2>;
+    customObject30s?: ToMany<ClientCorporationCustomObjectInstance30>;
+    customObject31s?: ToMany<ClientCorporationCustomObjectInstance31>;
+    customObject32s?: ToMany<ClientCorporationCustomObjectInstance32>;
+    customObject33s?: ToMany<ClientCorporationCustomObjectInstance33>;
+    customObject34s?: ToMany<ClientCorporationCustomObjectInstance34>;
+    customObject35s?: ToMany<ClientCorporationCustomObjectInstance35>;
+    customObject3s?: ToMany<ClientCorporationCustomObjectInstance3>;
+    customObject4s?: ToMany<ClientCorporationCustomObjectInstance4>;
+    customObject5s?: ToMany<ClientCorporationCustomObjectInstance5>;
+    customObject6s?: ToMany<ClientCorporationCustomObjectInstance6>;
+    customObject7s?: ToMany<ClientCorporationCustomObjectInstance7>;
+    customObject8s?: ToMany<ClientCorporationCustomObjectInstance8>;
+    customObject9s?: ToMany<ClientCorporationCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -3627,6 +4277,8 @@ export interface ClientCorporation5 {
     funding?: Strings;
     industryList?: Strings;
     invoiceFormat?: Strings;
+    invoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    invoices?: ToMany<Invoice>;
     leads?: ToMany<Lead>;
     linkedinProfileName?: Strings;
     locations?: ToMany<Location>;
@@ -3638,8 +4290,10 @@ export interface ClientCorporation5 {
     ownership?: Strings;
     parentClientCorporation?: ClientCorporation;
     phone?: Strings;
+    rateCards?: ToMany<RateCard>;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3648,22 +4302,23 @@ export interface ClientCorporation5 {
     twitterHandle?: Strings;
     userOwners?: ToMany<CorporateUser>;
     workWeekStart?: number;
-    customObject1s?: ClientCorporationCustomObjectInstance1[];
-    customObject2s?: ClientCorporationCustomObjectInstance2[];
-    customObject3s?: ClientCorporationCustomObjectInstance3[];
-    customObject4s?: ClientCorporationCustomObjectInstance4[];
-    customObject5s?: ClientCorporationCustomObjectInstance5[];
-    customObject6s?: ClientCorporationCustomObjectInstance6[];
-    customObject7s?: ClientCorporationCustomObjectInstance7[];
-    customObject8s?: ClientCorporationCustomObjectInstance8[];
-    customObject9s?: ClientCorporationCustomObjectInstance9[];
-    customObject10s?: ClientCorporationCustomObjectInstance10[];
 }
 export interface ClientCorporationAppointment {
     id?: number;
     appointment?: Appointment;
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
+}
+export interface ClientCorporationAttribute {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    dateValue?: Date;
+    floatValue?: number;
+    instance?: number;
+    intValue?: number;
+    migrateGUID?: Strings;
+    templateAttribute?: ClientCorporationTemplateAttribute;
+    value?: Strings;
 }
 export interface ClientCorporationCertification {
     id?: number;
@@ -4047,6 +4702,11 @@ export interface ClientCorporationHistory {
     modifyingUser?: Person;
     status?: Strings;
 }
+export interface ClientCorporationInvoiceGroup {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    invoiceGroup?: InvoiceGroup;
+}
 export interface ClientCorporationLine {
     id?: number;
     businessSectors?: ToMany<BusinessSector>;
@@ -4094,6 +4754,7 @@ export interface ClientCorporationLine {
     externalID?: Strings;
     isDeleted?: boolean;
     jobCodes?: ToMany<JobCode>;
+    locationRoots?: ToMany<LocationRoot>;
     locations?: ToMany<Location>;
     owner?: CorporateUser;
     startDate?: Date;
@@ -4145,13 +4806,47 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
+export interface ClientCorporationTemplate {
+    id?: number;
+    category?: Category;
+    corporationID?: number;
+    dateAdded?: Date;
+    departmentTemplates?: ToMany<DepartmentClientCorporationTemplate>;
+    description?: Strings;
+    displayType?: Strings;
+    enabled?: boolean;
+    groupName?: Strings;
+    isSearchable?: boolean;
+    migrateStatus?: Strings;
+    name?: Strings;
+    objectEnabled?: boolean;
+    objectNumber?: number;
+    reportID?: number;
+    staticTemplateName?: Strings;
+    tabName?: Strings;
+    templateAttributes?: ToMany<ClientCorporationTemplateAttribute>;
+}
+export interface ClientCorporationTemplateAttribute {
+    id?: number;
+    attributeType?: Strings;
+    columnName?: Strings;
+    description?: Strings;
+    enabled?: boolean;
+    hint?: Strings;
+    isRequired?: boolean;
+    isSearchable?: boolean;
+    name?: Strings;
+    optionList?: Strings;
+    sortOrder?: number;
+    staticFieldName?: Strings;
+    template?: ClientCorporationTemplate;
+}
 export interface CorporateUser {
     id?: number;
     address?: Address;
     branch?: Branch;
     branches?: ToMany<Branch>;
     companyName?: Strings;
-    corporation?: Corporation;
     customDate1?: Date;
     customDate2?: Date;
     customDate3?: Date;
@@ -4161,6 +4856,16 @@ export interface CorporateUser {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -4181,7 +4886,6 @@ export interface CorporateUser {
     customText7?: Strings;
     customText8?: Strings;
     customText9?: Strings;
-    dateLastComment?: Date;
     delegations?: ToMany<CorporateUser>;
     departmentIdList?: Strings;
     departments?: ToMany<CorporationDepartment>;
@@ -4206,16 +4910,13 @@ export interface CorporateUser {
     isLockedOut?: boolean;
     isOutboundFaxEnabled?: boolean;
     isPasswordCaseSensitive?: boolean;
-    jobAssignments?: ToMany<JobOrder>;
+    jobAssignments?: ToMany<undefined>;
     lastName?: Strings;
     massMailOptOut?: boolean;
     masterUserID?: number;
     middleName?: Strings;
     mobile?: Strings;
     name?: Strings;
-    namePrefix?: Strings;
-    nameSuffix?: Strings;
-    nickName?: Strings;
     npsUserInfo?: NPSUserInfo;
     occupation?: Strings;
     pager?: Strings;
@@ -4229,7 +4930,7 @@ export interface CorporateUser {
     reportToPerson?: Person;
     smsOptIn?: boolean;
     status?: Strings;
-    taskAssignments?: ToMany<Task>;
+    taskAssignments?: ToMany<undefined>;
     timeZoneOffsetEST?: number;
     userDateAdded?: Date;
     userType?: UserType;
@@ -4259,9 +4960,14 @@ export interface Corporation {
 }
 export interface CorporationDepartment {
     id?: number;
+    costCenter?: CostCenter;
     dateAdded?: Date;
+    departmentClientCorporationTemplates?: ToMany<DepartmentClientCorporationTemplate>;
+    departmentJobOrderTemplates?: ToMany<DepartmentJobOrderTemplate>;
+    departmentUserTemplates?: ToMany<DepartmentUserTemplate>;
     description?: Strings;
     enabled?: boolean;
+    groupings?: ToMany<UserDepartmentGrouping>;
     name?: Strings;
 }
 export interface CorporationGDPRCompliance {
@@ -4270,7 +4976,15 @@ export interface CorporationGDPRCompliance {
     corporation?: Corporation;
     dateOfAcceptance?: Date;
     dateOfNotification?: Date;
-    notifiedUser?: CorporateUser;
+}
+export interface CostCenter {
+    id?: number;
+    corporation?: Corporation;
+    dateAdded?: Date;
+    departments?: ToMany<CorporationDepartment>;
+    description?: Strings;
+    enabled?: boolean;
+    name?: Strings;
 }
 export interface Country {
     id?: number;
@@ -4291,6 +5005,7 @@ export interface CountySalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -4304,6 +5019,24 @@ export interface CountySalesTaxRate {
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
     versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
+export interface CountySalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
     versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface CurrencyUnit {
@@ -4324,6 +5057,143 @@ export interface CustomAction {
     name?: Strings;
     privateLabel?: PrivateLabel;
 }
+export interface CustomEntity {
+    id?: number;
+    clientCorporation1?: ClientCorporation;
+    clientCorporation2?: ClientCorporation;
+    clientCorporation3?: ClientCorporation;
+    clientCorporation4?: ClientCorporation;
+    clientCorporation5?: ClientCorporation;
+    customEntity1?: CustomEntity;
+    customEntity2?: CustomEntity;
+    customEntity3?: CustomEntity;
+    customEntity4?: CustomEntity;
+    customEntity5?: CustomEntity;
+    customEntityType?: CustomEntityType;
+    date1?: Date;
+    date10?: Date;
+    date11?: Date;
+    date12?: Date;
+    date13?: Date;
+    date14?: Date;
+    date15?: Date;
+    date2?: Date;
+    date3?: Date;
+    date4?: Date;
+    date5?: Date;
+    date6?: Date;
+    date7?: Date;
+    date8?: Date;
+    date9?: Date;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    float1?: number;
+    float10?: number;
+    float11?: number;
+    float12?: number;
+    float13?: number;
+    float14?: number;
+    float15?: number;
+    float2?: number;
+    float3?: number;
+    float4?: number;
+    float5?: number;
+    float6?: number;
+    float7?: number;
+    float8?: number;
+    float9?: number;
+    int1?: number;
+    int10?: number;
+    int11?: number;
+    int12?: number;
+    int13?: number;
+    int14?: number;
+    int15?: number;
+    int2?: number;
+    int3?: number;
+    int4?: number;
+    int5?: number;
+    int6?: number;
+    int7?: number;
+    int8?: number;
+    int9?: number;
+    jobOrder1?: JobOrder;
+    jobOrder2?: JobOrder;
+    jobOrder3?: JobOrder;
+    jobOrder4?: JobOrder;
+    jobOrder5?: JobOrder;
+    migrateGUID?: Strings;
+    opportunity1?: Opportunity;
+    opportunity2?: Opportunity;
+    opportunity3?: Opportunity;
+    opportunity4?: Opportunity;
+    opportunity5?: Opportunity;
+    person1?: Person;
+    person2?: Person;
+    person3?: Person;
+    person4?: Person;
+    person5?: Person;
+    placement1?: Placement;
+    placement2?: Placement;
+    placement3?: Placement;
+    placement4?: Placement;
+    placement5?: Placement;
+    text1?: Strings;
+    text10?: Strings;
+    text11?: Strings;
+    text12?: Strings;
+    text13?: Strings;
+    text14?: Strings;
+    text15?: Strings;
+    text16?: Strings;
+    text17?: Strings;
+    text18?: Strings;
+    text19?: Strings;
+    text2?: Strings;
+    text20?: Strings;
+    text21?: Strings;
+    text22?: Strings;
+    text23?: Strings;
+    text24?: Strings;
+    text25?: Strings;
+    text26?: Strings;
+    text27?: Strings;
+    text28?: Strings;
+    text29?: Strings;
+    text3?: Strings;
+    text30?: Strings;
+    text31?: Strings;
+    text32?: Strings;
+    text33?: Strings;
+    text34?: Strings;
+    text35?: Strings;
+    text36?: Strings;
+    text37?: Strings;
+    text38?: Strings;
+    text39?: Strings;
+    text4?: Strings;
+    text40?: Strings;
+    text5?: Strings;
+    text6?: Strings;
+    text7?: Strings;
+    text8?: Strings;
+    text9?: Strings;
+    textBlock1?: Strings;
+    textBlock10?: Strings;
+    textBlock2?: Strings;
+    textBlock3?: Strings;
+    textBlock4?: Strings;
+    textBlock5?: Strings;
+    textBlock6?: Strings;
+    textBlock7?: Strings;
+    textBlock8?: Strings;
+    textBlock9?: Strings;
+}
+export interface CustomEntityType {
+    id?: number;
+    dateAdded?: Date;
+    name?: Strings;
+}
 export interface CustomListButton {
     id?: number;
     componentURL?: Strings;
@@ -4333,6 +5203,27 @@ export interface CustomListButton {
     privateLabel?: PrivateLabel;
     sortOrder?: number;
     userTypes?: ToMany<UserType>;
+}
+export interface CustomModule {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    enabled?: boolean;
+    inParameters?: Strings;
+    name?: Strings;
+    outParameters?: Strings;
+    privateLabel?: PrivateLabel;
+    revisions?: ToMany<CustomModuleRevision>;
+}
+export interface CustomModuleRevision {
+    id?: number;
+    comments?: Strings;
+    customModule?: CustomModule;
+    dateAdded?: Date;
+    isActive?: boolean;
+    modifyingUser?: CorporateUser;
+    moduleCode?: Strings;
+    version?: number;
 }
 export interface Dashboard {
     id?: number;
@@ -4396,12 +5287,6 @@ export interface DefaultEarnCode {
     status?: Strings;
     title?: Strings;
 }
-export interface Department {
-    id?: number;
-    description?: Strings;
-    enabled?: boolean;
-    name?: Strings;
-}
 export interface DeliveryMethodLookup {
     id?: number;
     dateAdded?: Date;
@@ -4413,6 +5298,63 @@ export interface DeliveryMethodLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface Department {
+    id?: number;
+    description?: Strings;
+    enabled?: boolean;
+    name?: Strings;
+}
+export interface DepartmentClientCorporationTemplate {
+    id?: number;
+    isEditable?: boolean;
+}
+export interface DepartmentJobOrderTemplate {
+    id?: number;
+    isEditable?: boolean;
+}
+export interface DepartmentPlacementTemplate {
+    id?: number;
+    isEditable?: boolean;
+}
+export interface DepartmentUserTemplate {
+    id?: number;
+    isEditable?: boolean;
+}
+export interface DesktopModule {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    detailStyle?: Strings;
+    displayName?: Strings;
+    enabled?: boolean;
+    entitlements?: ToMany<UserType>;
+    moduleName?: Strings;
+    moduleType?: Strings;
+    name?: Strings;
+    sectionStyle?: Strings;
+    sortOrder?: number;
+}
+export interface DirectDepositAccount {
+    id?: number;
+    accountNumber?: Strings;
+    amount?: number;
+    bankName?: Strings;
+    candidate?: Candidate;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    directDepositAccountTypeLookup?: DirectDepositAccountTypeLookup;
+    institutionNumber?: Strings;
+    paymentOrder?: number;
+    percentValue?: number;
+    remainder?: boolean;
+    transitNumber?: Strings;
+}
+export interface DirectDepositAccountTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface Discount {
     id?: number;
@@ -4487,6 +5429,7 @@ export interface DiscountRateEditHistory {
     migrateGUID?: Strings;
     modifyingPerson?: Person;
     targetEntity?: DiscountRate;
+    targetRootEntity?: DiscountRateRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -4506,6 +5449,14 @@ export interface DiscountRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
+export interface DiscountRateRoot {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    versions?: ToMany<DiscountRateVersion>;
+}
 export interface DiscountRateVersion {
     id?: number;
     amount?: number;
@@ -4513,6 +5464,8 @@ export interface DiscountRateVersion {
     calculatePriority?: number;
     dateAdded?: Date;
     dateLastModified?: Date;
+    discountRate?: DiscountRateRoot;
+    discountRateID?: number;
     discountTypeLookup?: DiscountTypeLookup;
     earnCodes?: ToMany<EarnCode>;
     effectiveDate?: Date;
@@ -4537,8 +5490,15 @@ export interface DiscountType {
 }
 export interface DiscountTypeLookup {
     id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
     isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
     label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface DistributionList {
     id?: number;
@@ -4568,6 +5528,7 @@ export interface DistrictSalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -4581,6 +5542,24 @@ export interface DistrictSalesTaxRate {
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
     versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
+export interface DistrictSalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
     versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface DoubleTimeEarnCode {
@@ -4691,29 +5670,22 @@ export interface EarnCode {
     status?: Strings;
     title?: Strings;
 }
-export interface EarnCodeEditHistory {
-    id?: number;
-    auditTrail?: Strings;
-    dateAdded?: Date;
-    fieldChanges?: ToMany<EarnCodeEditHistoryFieldChange>;
-    migrateGUID?: Strings;
-    modifyingPerson?: Person;
-    targetEntity?: EarnCode;
-    transactionID?: Strings;
-}
 export interface EarnCodeEditHistoryFieldChange {
     id?: number;
     columnName?: Strings;
     display?: Strings;
-    editHistory?: EarnCodeEditHistory;
+    editHistory?: EarnCodeGroupEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+    parentFieldName?: Strings;
 }
 export interface EarnCodeGroup {
     id?: number;
     accruesOT?: boolean;
     allowForSelfService?: boolean;
     chargeTypeLookup?: ChargeTypeLookup;
+    dateAdded?: Date;
+    dateLastModified?: Date;
     defaultEarnCode?: DefaultEarnCode;
     doubleTimeEarnCode?: DoubleTimeEarnCode;
     earnCodeGroupStatusLookup?: EarnCodeGroupStatusLookup;
@@ -4721,6 +5693,25 @@ export interface EarnCodeGroup {
     overtimeEarnCode?: OvertimeEarnCode;
     payBillOptionsLookup?: PayBillOptionsLookup;
     unitOfMeasure?: UnitOfMeasure;
+}
+export interface EarnCodeGroupEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    embeddedFieldChanges?: ToMany<EarnCodeEditHistoryFieldChange>;
+    fieldChanges?: ToMany<EarnCodeGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: EarnCodeGroup;
+    transactionID?: Strings;
+}
+export interface EarnCodeGroupEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: EarnCodeGroupEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface EarnCodeGroupStatusLookup {
     id?: number;
@@ -4756,7 +5747,6 @@ export interface EmailHitWordMatchDetail {
 export interface EmailTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageTemplateFiles?: ToMany<MessageTemplateFileAttachment>;
     messageText?: Strings;
     name?: Strings;
@@ -4775,12 +5765,24 @@ export interface EntryTypeLookup {
 }
 export interface EstaffMappableFlowback {
     id?: number;
+    alwaysOverwrite?: boolean;
+    atsEntity?: Strings;
+    atsField?: Strings;
+    conversion?: Strings;
     estaffFieldType?: Strings;
     estaffRecordType?: Strings;
-    atsField?: Strings;
-    atsEntity?: Strings;
-    alwaysOverwrite?: boolean;
-    conversion?: Strings;
+}
+export interface Extension {
+    id?: number;
+    description?: Strings;
+    extensionPoints?: ToMany<ExtensionPoint>;
+    name?: Strings;
+}
+export interface ExtensionPoint {
+    id?: number;
+    extension?: Extension;
+    extensionPointEntityID?: number;
+    extensionPointEntityType?: Strings;
 }
 export interface ExternalAccount {
     id?: number;
@@ -4811,12 +5813,117 @@ export interface ExternalBatchStatusRequest {
     rawPayload?: Strings;
     retrySequenceNumber?: number;
 }
+export interface ExternalResume {
+    id?: number;
+    dateLastModified?: Date;
+    externalAccount?: ExternalAccount;
+    jobboardResumeID?: Strings;
+    numViews?: number;
+}
+export interface ExternalSalesTaxGroup {
+    id?: number;
+    dateAdded?: Date;
+    dateOfDeletion?: Date;
+    externalCitySalesTaxRate?: ExternalSalesTaxRate;
+    externalCountySalesTaxRate?: ExternalSalesTaxRate;
+    externalDistrictSalesTaxRate?: ExternalSalesTaxRate;
+    externalStateSalesTaxRate?: ExternalSalesTaxRate;
+    isDeleted?: boolean;
+    label?: Strings;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    totalRate?: number;
+    zipPlus4High?: Strings;
+    zipPlus4Low?: Strings;
+    zipcode?: Strings;
+}
+export interface ExternalSalesTaxRate {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    label?: Strings;
+    rate?: number;
+    source?: SalesTaxRateSourceLookup;
+    stateID?: number;
+    taxType?: TaxTypeLookup;
+    versionID?: number;
+    versions?: ToMany<ExternalSalesTaxRateVersion>;
+}
+export interface ExternalSalesTaxRateRoot {
+    id?: number;
+    dateAdded?: Date;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    versions?: ToMany<ExternalSalesTaxRateVersion>;
+}
+export interface ExternalSalesTaxRateVersion {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    externalSalesTaxRate?: ExternalSalesTaxRateRoot;
+    isFirst?: boolean;
+    jurisdictionName?: Strings;
+    rate?: number;
+}
 export interface ExternalSystem {
     id?: number;
     displayName?: Strings;
     enabled?: boolean;
     name?: Strings;
     webServiceURL?: Strings;
+}
+export interface FieldMap {
+    id?: number;
+    allowMultiple?: boolean;
+    columnName?: Strings;
+    dateLastModified?: Date;
+    defaultValue?: Strings;
+    description?: Strings;
+    display?: Strings;
+    displayList?: Strings;
+    editType?: Strings;
+    entity?: Strings;
+    hideFromSearch?: boolean;
+    hint?: Strings;
+    isDescending?: boolean;
+    isHidden?: boolean;
+    isRequired?: boolean;
+    lastModifyingMasterUserID?: number;
+    limit?: number;
+    privateLabel?: PrivateLabel;
+    sectionFieldMaps?: ToMany<SectionFieldMap>;
+    someField?: number;
+    sortOrder?: number;
+    valueList?: Strings;
+}
+export interface FieldMapInstance {
+    id?: number;
+    allowMultiple?: boolean;
+    columnName?: Strings;
+    dateLastModified?: Date;
+    defaultValue?: Strings;
+    description?: Strings;
+    display?: Strings;
+    displayList?: Strings;
+    editType?: Strings;
+    entity?: Strings;
+    hint?: Strings;
+    isDescending?: boolean;
+    isHidden?: boolean;
+    isRequired?: boolean;
+    lastModifyingMasterUserID?: number;
+    limit?: number;
+    privateLabel?: number;
+    sortOrder?: number;
+    valueList?: Strings;
 }
 export interface FieldMapInteraction {
     id?: number;
@@ -4848,8 +5955,19 @@ export interface File {
     name?: Strings;
     title?: Strings;
     type?: Strings;
-    userID?: number;
     userType?: Strings;
+}
+export interface FileExport {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    fileName?: Strings;
+    isDeleted?: boolean;
+    name?: Strings;
+    reportID?: number;
+    timecardBatches?: ToMany<TimecardBatch>;
+    type?: Strings;
+    user?: CorporateUser;
 }
 export interface FormTrigger {
     id?: number;
@@ -4858,7 +5976,6 @@ export interface FormTrigger {
     isAsync?: boolean;
     onErrorProceed?: boolean;
     triggerName?: Strings;
-    waitTimeout?: number;
 }
 export interface FormTriggerEvent {
     id?: number;
@@ -4887,8 +6004,6 @@ export interface FormTriggerFull {
 export interface FormTriggerInstance {
     id?: number;
     dateLastErrorOccurred?: Date;
-    errorCount?: number;
-    executionOrder?: number;
     formTrigger?: FormTrigger;
     isEnabled?: boolean;
     reasonForDisable?: Strings;
@@ -4900,6 +6015,10 @@ export interface FormTriggerMessage {
     modifyingUserID?: CorporateUser;
     restError?: Strings;
     timeoutError?: Strings;
+}
+export interface FrontPageArticle {
+    id?: number;
+    sortOrder?: number;
 }
 export interface GDPRDeletionRequest {
     id?: number;
@@ -5018,6 +6137,12 @@ export interface GoalTarget {
     startDate?: Date;
     target?: number;
     userId?: number;
+}
+export interface HideFromSearch {
+    id?: number;
+    columnName?: Strings;
+    entity?: Strings;
+    privateLabel?: PrivateLabel;
 }
 export interface HitWord {
     id?: number;
@@ -5220,8 +6345,75 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
+export interface Invoice {
+    id?: number;
+    amountPaid?: number;
+    clientCorporation?: ClientCorporation;
+    comments?: Strings;
+    costCenter?: Strings;
+    dateAdded?: Date;
+    dateBegin?: Date;
+    dateDue?: Date;
+    dateEnd?: Date;
+    dateExported?: Date;
+    dateInvoice?: Date;
+    dateLastModified?: Date;
+    fileExport?: FileExport;
+    invoiceBatch?: InvoiceBatch;
+    invoiceItems?: ToMany<InvoiceItem>;
+    isDeleted?: boolean;
+    isExported?: boolean;
+    migrateGUID?: Strings;
+    outstandingBalance?: number;
+    placements?: ToMany<Placement>;
+    recipientUserID?: number;
+    status?: Strings;
+    terms?: Strings;
+    timecardBatches?: ToMany<TimecardBatch>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    user?: CorporateUser;
+}
+export interface InvoiceBatch {
+    id?: number;
+    dateAdded?: Date;
+    invoices?: ToMany<Invoice>;
+    migrateGUID?: Strings;
+    user?: CorporateUser;
+}
+export interface InvoiceGroup {
+    id?: number;
+    clientCorporationInvoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
+    corporation?: Corporation;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    lastModifyingUser?: CorporateUser;
+    migrateGUID?: Strings;
+    name?: Strings;
+    placements?: ToMany<Placement>;
+}
+export interface InvoiceItem {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    invoice?: Invoice;
+    migrateGUID?: Strings;
+    payPeriod?: Strings;
+    placement?: Placement;
+    quantity?: number;
+    rate?: number;
+    taxRate?: number;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    unit?: Strings;
+    unitOld?: Strings;
+    wasManuallyCreated?: boolean;
+}
 export interface InvoiceStatement {
     id?: number;
+    billingAddress?: Address;
     billingAttention?: Strings;
     billingClientContact?: ClientContact;
     billingCorporateUser?: CorporateUser;
@@ -5235,6 +6427,7 @@ export interface InvoiceStatement {
     dateAdded?: Date;
     dateLastModified?: Date;
     deliveryMethod?: Strings;
+    deliveryMethodLookup?: DeliveryMethodLookup;
     deliveryStatus?: InvoiceStatementDeliveryStatusLookup;
     discountAmount?: number;
     discountTotal?: number;
@@ -5242,6 +6435,7 @@ export interface InvoiceStatement {
     dueDate?: Date;
     effectiveDate?: Date;
     emailErrorReason?: Strings;
+    fileTypesForInvoicing?: ToMany<BillingSyncBatchFileTypeLookup>;
     generalLedgerExportStatusLookup?: GeneralLedgerExportStatusLookup;
     invoiceStatementDate?: Date;
     invoiceStatementDistributionBatch?: InvoiceStatementDistributionBatch;
@@ -5267,6 +6461,7 @@ export interface InvoiceStatement {
     splitBys?: ToMany<InvoiceStatementSplitBy>;
     status?: InvoiceStatementStatusLookup;
     subtotal?: number;
+    surchargeAmount?: number;
     surchargeTotal?: number;
     surcharges?: ToMany<InvoiceStatementSurcharge>;
     taxAmount?: number;
@@ -5301,6 +6496,21 @@ export interface InvoiceStatementDiscount {
     finalizedValue?: number;
     invoiceStatement?: InvoiceStatement;
 }
+export interface InvoiceStatementDiscountRate {
+    id?: number;
+    baseAmount?: number;
+    billMasterTransactionDiscountDetail?: BillMasterTransactionDiscountDetail;
+    calculateAndDisplayOnInvoice?: boolean;
+    dateAdded?: Date;
+    discountAmount?: number;
+    discountRate?: DiscountRate;
+    discountRateRoot?: DiscountRateRoot;
+    ignoreForSalesTaxCalculations?: boolean;
+    invoiceStatement?: InvoiceStatement;
+    rate?: number;
+    sentToAccountsReceivable?: boolean;
+    title?: Strings;
+}
 export interface InvoiceStatementDistributionBatch {
     id?: number;
     accountingDate?: Date;
@@ -5325,7 +6535,7 @@ export interface InvoiceStatementEditHistory {
 export interface InvoiceStatementEditHistoryAssociationChange {
     id?: number;
     editHistoryActionLookup?: EditHistoryActionLookup;
-    editHistoryFieldChange?: InvoiceStatementEditHistoryFieldChange;
+    editHistoryFieldChange?: undefined;
     entityID?: number;
     entityName?: Strings;
 }
@@ -5343,6 +6553,7 @@ export interface InvoiceStatementEmailBatch {
     comment?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
+    emailTooLarge?: boolean;
     invoiceStatementExport?: InvoiceStatementExport;
     owner?: CorporateUser;
 }
@@ -5402,6 +6613,7 @@ export interface InvoiceStatementLineDistributionTypeLookup {
 export interface InvoiceStatementLineItem {
     id?: number;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
+    chargeTypeLookup?: ChargeTypeLookup;
     comment?: Strings;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
@@ -5410,12 +6622,29 @@ export interface InvoiceStatementLineItem {
     groupByDisplay?: Strings;
     groupBys?: ToMany<InvoiceStatementLineItemGroupBy>;
     invoiceStatement?: InvoiceStatement;
+    invoiceStatementLineDistributions?: ToMany<InvoiceStatementLineDistribution>;
     quantity?: number;
     rate?: number;
     subtotal?: number;
     summarizeBys?: ToMany<InvoiceStatementLineItemSummarizeBy>;
     taxAmount?: number;
     total?: number;
+    unitOfMeasure?: UnitOfMeasure;
+}
+export interface InvoiceStatementLineItemDiscountRate {
+    id?: number;
+    baseAmount?: number;
+    billMasterTransactionDiscountDetail?: BillMasterTransactionDiscountDetail;
+    calculateAndDisplayOnInvoice?: boolean;
+    dateAdded?: Date;
+    discountAmount?: number;
+    discountRate?: DiscountRate;
+    discountRateRoot?: DiscountRateRoot;
+    ignoreForSalesTaxCalculations?: boolean;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    rate?: number;
+    sentToAccountsReceivable?: boolean;
+    title?: Strings;
 }
 export interface InvoiceStatementLineItemEditHistory {
     id?: number;
@@ -5437,23 +6666,53 @@ export interface InvoiceStatementLineItemEditHistoryFieldChange {
 }
 export interface InvoiceStatementLineItemGroupBy {
     id?: number;
+    dateAdded?: Date;
     displayValue?: Strings;
     field?: Strings;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
     sortOrder?: number;
     value?: Strings;
 }
+export interface InvoiceStatementLineItemSalesTaxRate {
+    id?: number;
+    allSalesTaxRate?: AllSalesTaxRate;
+    baseAmount?: number;
+    billMasterTransactionSalesTaxDetail?: BillMasterTransactionSalesTaxDetail;
+    dateAdded?: Date;
+    externalSalesTaxRate?: ExternalSalesTaxRate;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    rate?: number;
+    salesTaxRate?: SalesTaxRate;
+    taxAmount?: number;
+}
 export interface InvoiceStatementLineItemSummarizeBy {
     id?: number;
+    dateAdded?: Date;
     displayValue?: Strings;
     field?: Strings;
     invoiceStatementLineItem?: InvoiceStatementLineItem;
     sortOrder?: number;
     value?: Strings;
+}
+export interface InvoiceStatementLineItemSurchargeRate {
+    id?: number;
+    amount?: number;
+    baseAmount?: number;
+    billMasterTransactionSurchargeDetail?: BillMasterTransactionSurchargeDetail;
+    dateAdded?: Date;
+    invoiceStatementLineItem?: InvoiceStatementLineItem;
+    rate?: number;
+    surchargeAmount?: number;
+    surchargeRate?: SurchargeRate;
+    surchargeRateRoot?: SurchargeRateRoot;
+    title?: Strings;
 }
 export interface InvoiceStatementMessageTemplate {
     id?: number;
     dateAdded?: Date;
+    fromEmail?: Strings;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
@@ -5469,8 +6728,23 @@ export interface InvoiceStatementNumberFormat {
     prefix?: Strings;
     sequenceLength?: number;
 }
+export interface InvoiceStatementSalesTaxRate {
+    id?: number;
+    allSalesTaxRate?: AllSalesTaxRate;
+    baseAmount?: number;
+    billMasterTransactionSalesTaxDetail?: BillMasterTransactionSalesTaxDetail;
+    dateAdded?: Date;
+    externalSalesTaxRate?: ExternalSalesTaxRate;
+    invoiceStatement?: InvoiceStatement;
+    jurisdictionName?: Strings;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    rate?: number;
+    salesTaxRate?: SalesTaxRate;
+    taxAmount?: number;
+}
 export interface InvoiceStatementSplitBy {
     id?: number;
+    dateAdded?: Date;
     displayValue?: Strings;
     field?: Strings;
     invoiceStatement?: InvoiceStatement;
@@ -5498,12 +6772,26 @@ export interface InvoiceStatementSurcharge {
     invoiceStatement?: InvoiceStatement;
     surcharge?: Surcharge;
 }
+export interface InvoiceStatementSurchargeRate {
+    id?: number;
+    amount?: number;
+    baseAmount?: number;
+    billMasterTransactionSurchargeDetail?: BillMasterTransactionSurchargeDetail;
+    dateAdded?: Date;
+    invoiceStatement?: InvoiceStatement;
+    rate?: number;
+    surchargeAmount?: number;
+    surchargeRate?: SurchargeRate;
+    surchargeRateRoot?: SurchargeRateRoot;
+    title?: Strings;
+}
 export interface InvoiceStatementTax {
     id?: number;
     finalizedValue?: number;
     invoiceStatement?: InvoiceStatement;
     isDeleted?: boolean;
     salesTaxRate?: SalesTaxRate;
+    salesTaxRateRoot?: SalesTaxRateRoot;
     tax?: Tax;
 }
 export interface InvoiceStatementTemplate {
@@ -5576,8 +6864,8 @@ export interface InvoiceTerm {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    fileTypesForInvoicing?: ToMany<BillingSyncBatchFileTypeLookup>;
     generalLedgerAccountsReceivable?: GeneralLedgerAccount;
-    includeAttachments?: boolean;
     invoiceApprovedTimecardsRequired?: boolean;
     invoiceGroupBy?: Strings;
     invoiceOn?: Strings;
@@ -5586,6 +6874,8 @@ export interface InvoiceTerm {
     invoiceSummarizeBy?: Strings;
     isDeleted?: boolean;
     isFirst?: boolean;
+    owner?: CorporateUser;
+    payBillCycle?: PayBillCycle;
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
@@ -5605,6 +6895,7 @@ export interface InvoiceTermEditHistory {
     migrateGUID?: Strings;
     modifyingPerson?: Person;
     targetEntity?: InvoiceTerm;
+    targetRootEntity?: InvoiceTermRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -5623,6 +6914,14 @@ export interface InvoiceTermEffectiveDateChange {
     editHistory?: InvoiceTermEditHistory;
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
+}
+export interface InvoiceTermRoot {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    versions?: ToMany<InvoiceTermVersion>;
 }
 export interface InvoiceTermVersion {
     id?: number;
@@ -5663,10 +6962,11 @@ export interface InvoiceTermVersion {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
-    discountRates?: ToMany<DiscountRate>;
+    discountRates?: ToMany<DiscountRateRoot>;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     externalID?: Strings;
+    fileTypesForInvoicing?: ToMany<BillingSyncBatchFileTypeLookup>;
     generalLedgerAccountsReceivable?: GeneralLedgerAccount;
     includeAttachments?: boolean;
     invoiceApprovedTimecardsRequired?: boolean;
@@ -5675,12 +6975,14 @@ export interface InvoiceTermVersion {
     invoiceSplitBy?: Strings;
     invoiceStatementTemplate?: InvoiceStatementTemplate;
     invoiceSummarizeBy?: Strings;
+    invoiceTerm?: InvoiceTermRoot;
     isFirst?: boolean;
+    payBillCycle?: PayBillCycle;
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
     status?: Strings;
-    surchargeRates?: ToMany<SurchargeRate>;
+    surchargeRates?: ToMany<SurchargeRateRoot>;
     title?: Strings;
     waitForTimecards?: boolean;
 }
@@ -5700,6 +7002,7 @@ export interface IssueItems {
     comments?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
+    description?: Strings;
     errorType?: Strings;
     externalEntityID?: Strings;
     externalEntityName?: Strings;
@@ -5709,6 +7012,7 @@ export interface IssueItems {
     issue?: Issue;
     issueResolutionStatusLookup?: IssueResolutionStatusLookup;
     modifiedByUser?: CorporateUser;
+    rawIssueItemPayload?: Strings;
     referenceUrl?: Strings;
     referenceUrlMethod?: Strings;
     referenceUrlResponse?: Strings;
@@ -5721,6 +7025,114 @@ export interface IssueResolutionStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface JobAgent {
+    id?: number;
+    candidate?: Candidate;
+    criterias?: ToMany<JobAgentCriteria>;
+    dateAdded?: Date;
+    dateBegin?: Date;
+    dateEnd?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    externalAccounts?: ToMany<JobAgentExternalAccount>;
+    frequencyHours?: number;
+    isAutomaticParse?: boolean;
+    isDeleted?: boolean;
+    jobAgentNotifications?: ToMany<JobAgentNotification>;
+    jobOrder?: JobOrder;
+    lastModifyingUser?: CorporateUser;
+    maxResults?: number;
+    maxResultsPerAccount?: number;
+    maxResultsPerSearch?: number;
+    notificationUser?: CorporateUser;
+    positionId?: Strings;
+    priority?: number;
+    results?: ToMany<JobAgentResult>;
+    searchRequests?: ToMany<JobAgentSearchRequest>;
+    status?: Strings;
+    title?: Strings;
+}
+export interface JobAgentCriteria {
+    id?: number;
+    jobAgent?: JobAgent;
+    searchTerms?: Strings;
+    type?: Strings;
+}
+export interface JobAgentExternalAccount {
+    id?: number;
+    externalAccount?: ExternalAccount;
+    jobAgent?: JobAgent;
+    suppliments?: ToMany<JobAgentExternalAccountSuppliment>;
+}
+export interface JobAgentExternalAccountSuppliment {
+    id?: number;
+    externalAccount?: JobAgentExternalAccount;
+    name?: Strings;
+    value?: Strings;
+}
+export interface JobAgentNotification {
+    id?: number;
+    jobAgent?: JobAgent;
+    user?: CorporateUser;
+}
+export interface JobAgentResult {
+    id?: number;
+    candidate?: Candidate;
+    city?: Strings;
+    conceptScore?: number;
+    country?: Strings;
+    dateAdded?: Date;
+    datePosted?: Date;
+    email?: Strings;
+    externalSystem?: ExternalSystem;
+    firstName?: Strings;
+    isDeleted?: boolean;
+    isNotified?: boolean;
+    jobAgent?: JobAgent;
+    jobSubmission?: JobSubmission;
+    lastName?: Strings;
+    parseStatus?: Strings;
+    ranking?: number;
+    resultProcessing?: JobAgentResultProcessing;
+    resumeBody?: Strings;
+    resumeID?: Strings;
+    searchRequest?: JobAgentSearchRequest;
+    source?: Strings;
+    state?: Strings;
+    status?: Strings;
+    title?: Strings;
+}
+export interface JobAgentResultProcessing {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    results?: ToMany<JobAgentResult>;
+    searchRequest?: JobAgentSearchRequest;
+    status?: Strings;
+    xmlData?: Strings;
+}
+export interface JobAgentSearchException {
+    id?: number;
+    dateAdded?: Date;
+    exceptionText?: Strings;
+    notified?: boolean;
+    searchDateTime?: Date;
+    searchId?: Strings;
+    seatSourceId?: Strings;
+    sourceId?: Strings;
+}
+export interface JobAgentSearchRequest {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    externalAccount?: ExternalAccount;
+    externalSystemSearchRequestID?: Strings;
+    jobAgent?: JobAgent;
+    resultProcessings?: ToMany<JobAgentResultProcessing>;
+    results?: ToMany<JobAgentResult>;
+    status?: Strings;
+    xmlData?: Strings;
 }
 export interface JobBoardHistory {
     id?: number;
@@ -5737,6 +7149,13 @@ export interface JobBoardJobOrder {
     jobBoardHistories?: ToMany<JobBoardHistory>;
     jobCastModule?: Strings;
     jobOrder?: JobOrder;
+    metaDatas?: ToMany<JobBoardMetaData>;
+}
+export interface JobBoardMetaData {
+    id?: number;
+    columnName?: Strings;
+    defaultValue?: Strings;
+    jobBoardJobOrder?: JobBoardJobOrder;
 }
 export interface JobBoardPost {
     id?: number;
@@ -5747,6 +7166,7 @@ export interface JobBoardPost {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -5792,6 +7212,21 @@ export interface JobBoardPost {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -5805,8 +7240,28 @@ export interface JobBoardPost {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -5849,7 +7304,9 @@ export interface JobBoardPost {
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     jobOrderUUID?: Strings;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -5890,6 +7347,7 @@ export interface JobBoardPost {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -5971,6 +7429,7 @@ export interface JobOrder {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6015,6 +7474,21 @@ export interface JobOrder {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6028,8 +7502,28 @@ export interface JobOrder {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6067,7 +7561,9 @@ export interface JobOrder {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6104,6 +7600,7 @@ export interface JobOrder {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6111,16 +7608,6 @@ export interface JobOrder {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder1 {
     id?: number;
@@ -6131,6 +7618,7 @@ export interface JobOrder1 {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6175,6 +7663,21 @@ export interface JobOrder1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6188,8 +7691,28 @@ export interface JobOrder1 {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6227,7 +7750,9 @@ export interface JobOrder1 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6264,6 +7789,7 @@ export interface JobOrder1 {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6271,16 +7797,6 @@ export interface JobOrder1 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder2 {
     id?: number;
@@ -6291,6 +7807,7 @@ export interface JobOrder2 {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6335,6 +7852,21 @@ export interface JobOrder2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6348,8 +7880,28 @@ export interface JobOrder2 {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6387,7 +7939,9 @@ export interface JobOrder2 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6424,6 +7978,7 @@ export interface JobOrder2 {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6431,16 +7986,6 @@ export interface JobOrder2 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder3 {
     id?: number;
@@ -6451,6 +7996,7 @@ export interface JobOrder3 {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6495,6 +8041,21 @@ export interface JobOrder3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6508,8 +8069,28 @@ export interface JobOrder3 {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6547,7 +8128,9 @@ export interface JobOrder3 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6584,6 +8167,7 @@ export interface JobOrder3 {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6591,16 +8175,6 @@ export interface JobOrder3 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder4 {
     id?: number;
@@ -6611,6 +8185,7 @@ export interface JobOrder4 {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6655,6 +8230,21 @@ export interface JobOrder4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6668,8 +8258,28 @@ export interface JobOrder4 {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6707,7 +8317,9 @@ export interface JobOrder4 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6744,6 +8356,7 @@ export interface JobOrder4 {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6751,16 +8364,6 @@ export interface JobOrder4 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
 }
 export interface JobOrder5 {
     id?: number;
@@ -6771,6 +8374,7 @@ export interface JobOrder5 {
     benefits?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     branchCode?: Strings;
@@ -6815,6 +8419,21 @@ export interface JobOrder5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customInt6?: number;
+    customInt7?: number;
+    customInt8?: number;
+    customObject10s?: ToMany<JobOrderCustomObjectInstance10>;
+    customObject1s?: ToMany<JobOrderCustomObjectInstance1>;
+    customObject2s?: ToMany<JobOrderCustomObjectInstance2>;
+    customObject3s?: ToMany<JobOrderCustomObjectInstance3>;
+    customObject4s?: ToMany<JobOrderCustomObjectInstance4>;
+    customObject5s?: ToMany<JobOrderCustomObjectInstance5>;
+    customObject6s?: ToMany<JobOrderCustomObjectInstance6>;
+    customObject7s?: ToMany<JobOrderCustomObjectInstance7>;
+    customObject8s?: ToMany<JobOrderCustomObjectInstance8>;
+    customObject9s?: ToMany<JobOrderCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -6828,8 +8447,28 @@ export interface JobOrder5 {
     customText19?: Strings;
     customText2?: Strings;
     customText20?: Strings;
+    customText21?: Strings;
+    customText22?: Strings;
+    customText23?: Strings;
+    customText24?: Strings;
+    customText25?: Strings;
+    customText26?: Strings;
+    customText27?: Strings;
+    customText28?: Strings;
+    customText29?: Strings;
     customText3?: Strings;
+    customText30?: Strings;
+    customText31?: Strings;
+    customText32?: Strings;
+    customText33?: Strings;
+    customText34?: Strings;
+    customText35?: Strings;
+    customText36?: Strings;
+    customText37?: Strings;
+    customText38?: Strings;
+    customText39?: Strings;
     customText4?: Strings;
+    customText40?: Strings;
     customText5?: Strings;
     customText6?: Strings;
     customText7?: Strings;
@@ -6867,7 +8506,9 @@ export interface JobOrder5 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
     numOpenings?: number;
@@ -6904,6 +8545,7 @@ export interface JobOrder5 {
     title?: Strings;
     travelRequirements?: Strings;
     type?: number;
+    userWorks?: ToMany<UserWork>;
     usersAssigned?: Strings;
     webResponses?: ToMany<JobSubmission>;
     willRelocate?: boolean;
@@ -6911,16 +8553,17 @@ export interface JobOrder5 {
     willSponsor?: boolean;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: JobOrderCustomObjectInstance1[];
-    customObject2s?: JobOrderCustomObjectInstance2[];
-    customObject3s?: JobOrderCustomObjectInstance3[];
-    customObject4s?: JobOrderCustomObjectInstance4[];
-    customObject5s?: JobOrderCustomObjectInstance5[];
-    customObject6s?: JobOrderCustomObjectInstance6[];
-    customObject7s?: JobOrderCustomObjectInstance7[];
-    customObject8s?: JobOrderCustomObjectInstance8[];
-    customObject9s?: JobOrderCustomObjectInstance9[];
-    customObject10s?: JobOrderCustomObjectInstance10[];
+}
+export interface JobOrderAttribute {
+    id?: number;
+    dateValue?: Date;
+    floatValue?: number;
+    instance?: number;
+    intValue?: number;
+    jobOrder?: JobOrder;
+    migrateGUID?: Strings;
+    templateAttribute?: JobOrderTemplateAttribute;
+    value?: Strings;
 }
 export interface JobOrderCustomObject {
     id?: number;
@@ -7048,12 +8691,10 @@ export interface JobOrderFileAttachment {
     departmentsSharedWith?: ToMany<CorporationDepartment>;
     description?: Strings;
     directory?: Strings;
-    distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
-    fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
     isEncrypted?: boolean;
@@ -7100,6 +8741,7 @@ export interface JobOrderTemplate {
     id?: number;
     corporationID?: number;
     dateAdded?: Date;
+    departmentTemplates?: ToMany<DepartmentJobOrderTemplate>;
     description?: Strings;
     displayType?: Strings;
     enabled?: boolean;
@@ -7113,7 +8755,64 @@ export interface JobOrderTemplate {
     reportID?: number;
     staticTemplateName?: Strings;
     tabName?: Strings;
+    templateAttributes?: ToMany<JobOrderTemplateAttribute>;
     type?: Strings;
+}
+export interface JobOrderTemplateAttribute {
+    id?: number;
+    attributeType?: Strings;
+    columnName?: Strings;
+    description?: Strings;
+    enabled?: boolean;
+    hint?: Strings;
+    isRequired?: boolean;
+    isSearchable?: boolean;
+    name?: Strings;
+    optionList?: Strings;
+    sortOrder?: number;
+    staticFieldName?: Strings;
+    template?: JobOrderTemplate;
+}
+export interface JobShift {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    fillRatio?: number;
+    isOpen?: boolean;
+    jobOrder?: JobOrder;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
+    jobShiftSubmissions?: ToMany<JobShiftSubmission>;
+    location?: Location;
+    name?: Strings;
+    numAssigned?: number;
+    openings?: number;
+    reasonClosed?: Strings;
+    sequenceID?: Strings;
+    shift?: Shift;
+    shiftTypes?: ToMany<ShiftType>;
+}
+export interface JobShiftAssignment {
+    id?: number;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isCancelled?: boolean;
+    jobShift?: JobShift;
+    linkedJobShiftSubmission?: JobShiftSubmission;
+    owner?: CorporateUser;
+    placement?: Placement;
+    reasonCancelled?: Strings;
+    status?: Strings;
+}
+export interface JobShiftSubmission {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isPublished?: boolean;
+    jobShift?: JobShift;
+    status?: Strings;
 }
 export interface JobSubmission {
     id?: number;
@@ -7138,14 +8837,6 @@ export interface JobSubmission {
     customInt4?: number;
     customInt5?: number;
     customText1?: Strings;
-    customText2?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
-    customText6?: Strings;
-    customText7?: Strings;
-    customText8?: Strings;
-    customText9?: Strings;
     customText10?: Strings;
     customText11?: Strings;
     customText12?: Strings;
@@ -7156,12 +8847,20 @@ export interface JobSubmission {
     customText17?: Strings;
     customText18?: Strings;
     customText19?: Strings;
+    customText2?: Strings;
     customText20?: Strings;
     customText21?: Strings;
     customText22?: Strings;
     customText23?: Strings;
     customText24?: Strings;
     customText25?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
     customTextBlock1?: Strings;
     customTextBlock2?: Strings;
     customTextBlock3?: Strings;
@@ -7170,6 +8869,7 @@ export interface JobSubmission {
     dateAdded?: Date;
     dateLastModified?: Date;
     dateWebResponse?: Date;
+    endDate?: Date;
     isDeleted?: boolean;
     isHidden?: boolean;
     jobOrder?: JobOrder;
@@ -7182,6 +8882,7 @@ export interface JobSubmission {
     salary?: number;
     sendingUser?: Person;
     source?: Strings;
+    startDate?: Date;
     status?: Strings;
     tasks?: ToMany<Task>;
 }
@@ -7228,10 +8929,13 @@ export interface JobSubmissionCertificationRequirement {
     customTextBlock9?: Strings;
     dateAdded?: Date;
     dateExpiration?: Date;
+    dateLastModified?: Date;
     documentDeadline?: Date;
     fileAttachments?: ToMany<CandidateFileAttachment>;
+    isDeleted?: boolean;
     jobSubmission?: JobSubmission;
     matchingCredentialCount?: number;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
     status?: CertificationRequirementStatusLookup;
@@ -7313,6 +9017,16 @@ export interface Lead {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -7390,6 +9104,7 @@ export interface Lead {
     role?: Strings;
     salary?: number;
     salaryLow?: number;
+    secondaryAddress?: Address;
     secondarySkills?: ToMany<Skill>;
     skillSet?: Strings;
     smsOptIn?: boolean;
@@ -7418,6 +9133,7 @@ export interface LegalBusinessEntity {
     id?: number;
     countryID?: number;
     dateAdded?: Date;
+    dateLastModified?: Date;
     defaultCurrencyUnit?: CurrencyUnit;
     isDeleted?: boolean;
     legalEntityNumber?: Strings;
@@ -7490,6 +9206,7 @@ export interface LocationEditHistory {
     migrateGUID?: Strings;
     modifyingPerson?: Person;
     targetEntity?: Location;
+    targetRootEntity?: LocationRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -7508,6 +9225,14 @@ export interface LocationEffectiveDateChange {
     editHistory?: LocationEditHistory;
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
+}
+export interface LocationRoot {
+    id?: number;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    versions?: ToMany<LocationVersion>;
 }
 export interface LocationVersion {
     id?: number;
@@ -7555,6 +9280,7 @@ export interface LocationVersion {
     isFirst?: boolean;
     isSoldTo?: boolean;
     isWorkSite?: boolean;
+    location?: LocationRoot;
     salesTaxGroups?: ToMany<AllSalesTaxGroup>;
     status?: Strings;
     title?: Strings;
@@ -7585,6 +9311,202 @@ export interface MappedEntityConfiguration {
     fields?: Strings;
     mappedName?: Strings;
 }
+export interface MappedEntityConfigurationEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<MappedEntityConfigurationEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: MappedEntityConfiguration;
+    transactionID?: Strings;
+}
+export interface MappedEntityConfigurationEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: MappedEntityConfigurationEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface MasterApplication {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    name?: Strings;
+}
+export interface MasterCertification {
+    id?: number;
+    description?: Strings;
+    name?: Strings;
+    privateLabels?: ToMany<MasterPrivateLabel>;
+}
+export interface MasterCorporateUser {
+    id?: number;
+    address?: Address;
+    application?: MasterApplication;
+    certifications?: Strings;
+    checkPayableTo?: Strings;
+    companyDescription?: Strings;
+    companyName?: Strings;
+    companyURL?: Strings;
+    contactDateAdded?: Date;
+    corporation?: MasterCorporation;
+    dateAvailable?: Date;
+    dateAvailableEnd?: Date;
+    dateLastAlerted?: Date;
+    dateLastComment?: Date;
+    dateOfBirth?: Date;
+    dayRate?: number;
+    degreeList?: Strings;
+    delegates?: ToMany<MasterCorporateUser>;
+    delegations?: ToMany<MasterCorporateUser>;
+    description?: Strings;
+    desiredLocations?: Strings;
+    educationDegree?: Strings;
+    email?: Strings;
+    email2?: Strings;
+    email3?: Strings;
+    emailDefaultText?: Strings;
+    emailNotify?: boolean;
+    emailOld?: Strings;
+    emailSignature?: Strings;
+    employmentPreference?: Strings;
+    enabled?: boolean;
+    experience?: number;
+    externalEmail?: Strings;
+    externalID?: Strings;
+    fax?: Strings;
+    fax2?: Strings;
+    fax3?: Strings;
+    firstName?: Strings;
+    getClientNewsLetter?: boolean;
+    getNewsLetter?: boolean;
+    hourlyRate?: number;
+    inboundEmailEnabled?: boolean;
+    internationalMailingAddress?: Strings;
+    isBuySide?: boolean;
+    isCreditCardValid?: boolean;
+    isDayLightSavings?: boolean;
+    isLockedOut?: boolean;
+    isOutboundFaxEnabled?: boolean;
+    isPasswordCaseSensitive?: boolean;
+    isPublic?: boolean;
+    isSellSide?: boolean;
+    isValidEmail?: boolean;
+    lastName?: Strings;
+    middleName?: Strings;
+    mobile?: Strings;
+    name?: Strings;
+    namePrefix?: Strings;
+    nameSuffix?: Strings;
+    numEmployees?: number;
+    occupation?: Strings;
+    pager?: Strings;
+    password?: Strings;
+    phone?: Strings;
+    phone2?: Strings;
+    phone3?: Strings;
+    privateLabel?: MasterPrivateLabel;
+    projectMinimum?: number;
+    recentAwardList?: Strings;
+    recentClientList?: Strings;
+    referredBy?: Strings;
+    registrationType?: Strings;
+    salary?: number;
+    secondaryAddress?: Address;
+    skillSet?: Strings;
+    source?: Strings;
+    ssn?: Strings;
+    taxID?: Strings;
+    timeZoneOffsetEST?: number;
+    travelLimit?: number;
+    userDateAdded?: Date;
+    userType?: MasterUserType;
+    userUUID?: Strings;
+    username?: Strings;
+    willRelocate?: boolean;
+    willTravel?: boolean;
+    workAuthorized?: boolean;
+    workPhone?: Strings;
+}
+export interface MasterCorporation {
+    id?: number;
+    activityTrackingEmail?: Strings;
+    address?: Address;
+    companyURL?: Strings;
+    dateAdded?: Date;
+    dateBillingBegin?: Date;
+    dateBillingEnd?: Date;
+    enabled?: boolean;
+    externalID?: Strings;
+    fax?: Strings;
+    flatMonthlyFee?: number;
+    flatStorageLimitMB?: number;
+    inboundListenerEmail?: Strings;
+    minimumMonthlyFee?: number;
+    name?: Strings;
+    newLeadEmail?: Strings;
+    perUserStorageLimitMB?: number;
+    phone?: Strings;
+    privateLabel?: MasterPrivateLabel;
+    privateLabels?: ToMany<MasterPrivateLabel>;
+    storageFee?: number;
+}
+export interface MasterOAuthRegistry {
+    id?: number;
+    clientId?: Strings;
+    dateAdded?: Date;
+    enabled?: boolean;
+    issueRefreshToken?: boolean;
+    name?: Strings;
+    redirectUris?: Strings;
+    secret?: Strings;
+    termsOfService?: Strings;
+}
+export interface MasterOAuthRegistryCorpAssociation {
+    id?: number;
+    corporationID?: number;
+    masterOAuthRegistry?: MasterOAuthRegistry;
+    password?: Strings;
+}
+export interface MasterPrivateLabel {
+    id?: number;
+    application?: MasterApplication;
+    attributeList?: Strings;
+    certifications?: ToMany<MasterCertification>;
+    coBrandedTitle?: Strings;
+    coBrandedURL?: Strings;
+    dateAdded?: Date;
+    defaultRecruiterUser?: MasterCorporateUser;
+    description?: Strings;
+    enabled?: boolean;
+    footerHTML?: Strings;
+    headerHTML?: Strings;
+    keyWords?: Strings;
+    name?: Strings;
+    noLookAndFeel?: number;
+    onLoadScript?: Strings;
+    parentPrivateLabel?: MasterPrivateLabel;
+    splashPage?: Strings;
+    styleHTML?: Strings;
+    title?: Strings;
+    type?: Strings;
+    updateCanvas?: boolean;
+    url?: Strings;
+    userType?: MasterUserType;
+}
+export interface MasterUserType {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    enabled?: boolean;
+    isAdministrator?: boolean;
+    isHidden?: boolean;
+    maxActiveUsers?: number;
+    monthlyFee?: number;
+    name?: Strings;
+}
 export interface Menu {
     id?: number;
     application?: Application;
@@ -7597,6 +9519,7 @@ export interface Menu {
     imageSrc?: Strings;
     isRestricted?: boolean;
     isSSL?: boolean;
+    menuLocalizations?: ToMany<MenuLocalization>;
     name?: Strings;
     nestLevel?: number;
     parentMenu?: Menu;
@@ -7606,10 +9529,52 @@ export interface Menu {
     templateName?: Strings;
     windowType?: Strings;
 }
+export interface MenuLocalization {
+    id?: number;
+    locale?: Strings;
+    menu?: Menu;
+    name?: Strings;
+}
+export interface MessageFolder {
+    id?: number;
+    groupBy?: Strings;
+    isDeleted?: boolean;
+    isExpanded?: boolean;
+    migrateGUID?: Strings;
+    name?: Strings;
+    owner?: Person;
+    parentMessageFolder?: MessageFolder;
+    selectedColumns?: Strings;
+}
+export interface MessageRecipient {
+    id?: number;
+    dateForward?: Date;
+    dateLastModified?: Date;
+    dateReply?: Date;
+    email?: Strings;
+    externalFrom?: Strings;
+    flagColor?: Strings;
+    folder?: Strings;
+    isDeleted?: boolean;
+    isPrivate?: boolean;
+    isRead?: boolean;
+    isSpam?: boolean;
+    messageFolder?: MessageFolder;
+    migrateGUID?: Strings;
+    numAttachments?: number;
+    priority?: number;
+    recipientSort?: Strings;
+    recipientType?: Strings;
+    scheduleID?: number;
+    sender?: Person;
+    smtpReceiveDate?: Date;
+    subject?: Strings;
+    subjectSort?: Strings;
+    threadID?: Strings;
+}
 export interface MessageTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
@@ -7689,11 +9654,19 @@ export interface NoteEntity {
 export interface NoteTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
     templateType?: Strings;
+}
+export interface OAuthConsent {
+    id?: number;
+    clientId?: Strings;
+    consented?: boolean;
+    corporationId?: number;
+    dateAdded?: Date;
+    level?: Strings;
+    masterUserId?: number;
 }
 export interface Opportunity {
     id?: number;
@@ -7746,6 +9719,16 @@ export interface Opportunity {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -7828,16 +9811,6 @@ export interface Opportunity {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity1 {
     id?: number;
@@ -7890,6 +9863,16 @@ export interface Opportunity1 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -7972,16 +9955,6 @@ export interface Opportunity1 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity2 {
     id?: number;
@@ -8034,6 +10007,16 @@ export interface Opportunity2 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -8116,16 +10099,6 @@ export interface Opportunity2 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity3 {
     id?: number;
@@ -8178,6 +10151,16 @@ export interface Opportunity3 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -8260,16 +10243,6 @@ export interface Opportunity3 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity4 {
     id?: number;
@@ -8322,6 +10295,16 @@ export interface Opportunity4 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -8404,16 +10387,6 @@ export interface Opportunity4 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface Opportunity5 {
     id?: number;
@@ -8466,6 +10439,16 @@ export interface Opportunity5 {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<OpportunityCustomObjectInstance10>;
+    customObject1s?: ToMany<OpportunityCustomObjectInstance1>;
+    customObject2s?: ToMany<OpportunityCustomObjectInstance2>;
+    customObject3s?: ToMany<OpportunityCustomObjectInstance3>;
+    customObject4s?: ToMany<OpportunityCustomObjectInstance4>;
+    customObject5s?: ToMany<OpportunityCustomObjectInstance5>;
+    customObject6s?: ToMany<OpportunityCustomObjectInstance6>;
+    customObject7s?: ToMany<OpportunityCustomObjectInstance7>;
+    customObject8s?: ToMany<OpportunityCustomObjectInstance8>;
+    customObject9s?: ToMany<OpportunityCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -8548,16 +10531,6 @@ export interface Opportunity5 {
     winProbabilityPercent?: number;
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
-    customObject1s?: OpportunityCustomObjectInstance1[];
-    customObject2s?: OpportunityCustomObjectInstance2[];
-    customObject3s?: OpportunityCustomObjectInstance3[];
-    customObject4s?: OpportunityCustomObjectInstance4[];
-    customObject5s?: OpportunityCustomObjectInstance5[];
-    customObject6s?: OpportunityCustomObjectInstance6[];
-    customObject7s?: OpportunityCustomObjectInstance7[];
-    customObject8s?: OpportunityCustomObjectInstance8[];
-    customObject9s?: OpportunityCustomObjectInstance9[];
-    customObject10s?: OpportunityCustomObjectInstance10[];
 }
 export interface OpportunityCustomObject10EditHistory {
     id?: number;
@@ -8669,12 +10642,10 @@ export interface OpportunityFileAttachment {
     departmentsSharedWith?: ToMany<CorporationDepartment>;
     description?: Strings;
     directory?: Strings;
-    distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
-    fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
     isEncrypted?: boolean;
@@ -8713,6 +10684,7 @@ export interface OtherSalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -8726,6 +10698,24 @@ export interface OtherSalesTaxRate {
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
     versionID?: number;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
+export interface OtherSalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
     versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface OvertimeEarnCode {
@@ -8810,18 +10800,44 @@ export interface PayBillOptionsLookup {
 }
 export interface PayBillSetting {
     id?: number;
-    taxImportEnabledThomsonReuters?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    doubletimeBillMultiplier?: number;
+    doubletimePayMultiplier?: number;
+    generalLedgerCanvasReport?: CanvasReport;
+    generalLedgerCustomerNameField?: Strings;
+    invoiceStatementExportToGeneralLedgerExportStatusLookup?: GeneralLedgerExportStatusLookup;
+    invoiceStatementFinalizeGeneralLedgerExportStatusLookup?: GeneralLedgerExportStatusLookup;
+    overtimeBillMultiplier?: number;
+    overtimePayMultiplier?: number;
     taxableStates?: ToMany<State>;
-    overtimeBillMultiplier? : number;
-    doubletimeBillMultiplier? : number;
-    overtimePayMultiplier? : number;
-    doubletimePayMultiplier? : number;
+    unbilledRevenueCanvasReport?: CanvasReport;
+}
+export interface PayBillSettingEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<PayBillSettingEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PayBillSetting;
+    transactionID?: Strings;
+}
+export interface PayBillSettingEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PayBillSettingEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface PayExportBatch {
     id?: number;
+    accountingDate?: Date;
     batchStatusLookup?: BatchStatusLookup;
     canvasReport?: CanvasReport;
     dateAdded?: Date;
+    dateLastModified?: Date;
     payExportTypeLookup?: PayExportTypeLookup;
     payMasterTransactions?: ToMany<PayMasterTransaction>;
     payableCharges?: ToMany<PayableCharge>;
@@ -8830,6 +10846,8 @@ export interface PayExportBatch {
 }
 export interface PayExportBatchExternal {
     id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
     externalID?: Strings;
     status?: Strings;
 }
@@ -8838,19 +10856,18 @@ export interface PayExportTypeLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
-export interface PayGroupLookup {
-    id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
-}
 export interface PayMaster {
     id?: number;
     billingSyncBatch?: BillingSyncBatch;
     canExport?: boolean;
+    chargeTypeLookup?: ChargeTypeLookup;
+    dateAdded?: Date;
     earnCode?: EarnCode;
+    externalID?: Strings;
     payMasterTransactions?: ToMany<PayMasterTransaction>;
     payableCharge?: PayableCharge;
     transactionDate?: Date;
+    transactionStatus?: TransactionStatus;
 }
 export interface PayMasterTransaction {
     id?: number;
@@ -8861,13 +10878,13 @@ export interface PayMasterTransaction {
     dateAdded?: Date;
     dateLastModified?: Date;
     payExportBatch?: PayExportBatch;
+    payExportBatches?: ToMany<PayExportBatch>;
     payMaster?: PayMaster;
     quantity?: number;
     rate?: number;
     recordingDate?: Date;
     reversalOfTransaction?: PayMasterTransaction;
     transactionOrigin?: TransactionOrigin;
-    transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
     unitOfMeasure?: UnitOfMeasure;
 }
@@ -8885,6 +10902,16 @@ export interface PayMasterTransactionPayExportBatchIssues {
     issue?: Issue;
     payMasterTransactionPayExportBatch?: PayMasterTransactionPayExportBatch;
 }
+export interface PayServiceExportAuditLog {
+    id?: number;
+    dateAdded?: Date;
+    isSuccess?: boolean;
+    payExportBatch?: PayExportBatch;
+    payrollConfiguration?: PayrollExportConfig;
+    rawResponseMessage?: Strings;
+    responseStatusCode?: number;
+    webhookDataObject?: Strings;
+}
 export interface PayableCharge {
     id?: number;
     addedByUser?: CorporateUser;
@@ -8894,9 +10921,12 @@ export interface PayableCharge {
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     dateLastModified?: Date;
+    department?: Strings;
     description?: Strings;
     employeeType?: Strings;
+    entryTypeLookup?: EntryTypeLookup;
     exportedTransactions?: ToMany<PayableChargeExportedTransaction>;
+    externalID?: Strings;
     generalLedgerSegment1?: GeneralLedgerSegment1;
     generalLedgerSegment2?: GeneralLedgerSegment2;
     generalLedgerSegment3?: GeneralLedgerSegment3;
@@ -8904,6 +10934,9 @@ export interface PayableCharge {
     generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     jobOrder?: JobOrder;
+    legalBusinessEntity?: LegalBusinessEntity;
+    locationState?: Strings;
+    payGroup?: Strings;
     payMasters?: ToMany<PayMaster>;
     payableTransactions?: ToMany<PayableChargePayableTransaction>;
     periodEndDate?: Date;
@@ -8911,6 +10944,8 @@ export interface PayableCharge {
     readyToPayOverride?: boolean;
     status?: PayableChargeStatusLookup;
     subtotal?: number;
+    timeAndExpenseBranch?: Strings;
+    timeAndExpenseSource?: Strings;
     transactionStatus?: TransactionStatus;
     transactionType?: TransactionType;
 }
@@ -8936,22 +10971,27 @@ export interface PayableChargeExportedTransaction {
     id?: number;
     amount?: number;
     billingSyncBatch?: BillingSyncBatch;
-    canvasReportID?: CanvasReport;
+    canvasReport?: CanvasReport;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     dateAdded?: Date;
     earnCode?: EarnCode;
-    payExportBatchID?: PayExportBatch;
+    numberOfIssues?: number;
+    payExportBatch?: PayExportBatch;
+    payExportBatchExternal?: PayExportBatchExternal;
     payMaster?: PayMaster;
     payableCharge?: PayableCharge;
     quantity?: number;
     rate?: number;
     transactionDate?: Date;
+    transactionStatus?: BatchStatusLookup;
     unitOfMeasure?: UnitOfMeasure;
 }
 export interface PayableChargePayableTransaction {
     id?: number;
     amount?: number;
     billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
     payMaster?: PayMaster;
@@ -8990,6 +11030,24 @@ export interface PayrollExportConfig {
     payrollExportTarget?: PayrollExportTargetLookup;
     payrollExportType?: PayrollExportTypeLookup;
 }
+export interface PayrollExportConfigEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<PayrollExportConfigEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PayrollExportConfig;
+    transactionID?: Strings;
+}
+export interface PayrollExportConfigEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PayrollExportConfigEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
 export interface PayrollExportTargetLookup {
     id?: number;
     isDeleted?: boolean;
@@ -9019,6 +11077,16 @@ export interface Person {
     customInt1?: number;
     customInt2?: number;
     customInt3?: number;
+    customObject10s?: ToMany<PersonCustomObjectInstance10>;
+    customObject1s?: ToMany<PersonCustomObjectInstance1>;
+    customObject2s?: ToMany<PersonCustomObjectInstance2>;
+    customObject3s?: ToMany<PersonCustomObjectInstance3>;
+    customObject4s?: ToMany<PersonCustomObjectInstance4>;
+    customObject5s?: ToMany<PersonCustomObjectInstance5>;
+    customObject6s?: ToMany<PersonCustomObjectInstance6>;
+    customObject7s?: ToMany<PersonCustomObjectInstance7>;
+    customObject8s?: ToMany<PersonCustomObjectInstance8>;
+    customObject9s?: ToMany<PersonCustomObjectInstance9>;
     customText1?: Strings;
     customText10?: Strings;
     customText11?: Strings;
@@ -9170,6 +11238,7 @@ export interface Placement {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -9284,6 +11353,16 @@ export interface Placement {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -9376,6 +11455,7 @@ export interface Placement {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -9393,13 +11473,18 @@ export interface Placement {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -9415,15 +11500,15 @@ export interface Placement {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -9437,25 +11522,20 @@ export interface Placement {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement1 {
     id?: number;
@@ -9467,6 +11547,7 @@ export interface Placement1 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -9581,6 +11662,16 @@ export interface Placement1 {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -9673,6 +11764,7 @@ export interface Placement1 {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -9690,13 +11782,18 @@ export interface Placement1 {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -9712,15 +11809,15 @@ export interface Placement1 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -9734,25 +11831,20 @@ export interface Placement1 {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement2 {
     id?: number;
@@ -9764,6 +11856,7 @@ export interface Placement2 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -9878,6 +11971,16 @@ export interface Placement2 {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -9970,6 +12073,7 @@ export interface Placement2 {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -9987,13 +12091,18 @@ export interface Placement2 {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -10009,15 +12118,15 @@ export interface Placement2 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -10031,25 +12140,20 @@ export interface Placement2 {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement3 {
     id?: number;
@@ -10061,6 +12165,7 @@ export interface Placement3 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -10175,6 +12280,16 @@ export interface Placement3 {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -10267,6 +12382,7 @@ export interface Placement3 {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -10284,13 +12400,18 @@ export interface Placement3 {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -10306,15 +12427,15 @@ export interface Placement3 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -10328,25 +12449,20 @@ export interface Placement3 {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement4 {
     id?: number;
@@ -10358,6 +12474,7 @@ export interface Placement4 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -10472,6 +12589,16 @@ export interface Placement4 {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -10564,6 +12691,7 @@ export interface Placement4 {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -10581,13 +12709,18 @@ export interface Placement4 {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -10603,15 +12736,15 @@ export interface Placement4 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -10625,25 +12758,20 @@ export interface Placement4 {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface Placement5 {
     id?: number;
@@ -10655,6 +12783,7 @@ export interface Placement5 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     branch?: Branch;
     canEnterTime?: boolean;
@@ -10769,6 +12898,16 @@ export interface Placement5 {
     customInt7?: number;
     customInt8?: number;
     customInt9?: number;
+    customObject10s?: ToMany<PlacementCustomObjectInstance10>;
+    customObject1s?: ToMany<PlacementCustomObjectInstance1>;
+    customObject2s?: ToMany<PlacementCustomObjectInstance2>;
+    customObject3s?: ToMany<PlacementCustomObjectInstance3>;
+    customObject4s?: ToMany<PlacementCustomObjectInstance4>;
+    customObject5s?: ToMany<PlacementCustomObjectInstance5>;
+    customObject6s?: ToMany<PlacementCustomObjectInstance6>;
+    customObject7s?: ToMany<PlacementCustomObjectInstance7>;
+    customObject8s?: ToMany<PlacementCustomObjectInstance8>;
+    customObject9s?: ToMany<PlacementCustomObjectInstance9>;
     customPayRate1?: number;
     customPayRate10?: number;
     customPayRate2?: number;
@@ -10861,6 +13000,7 @@ export interface Placement5 {
     employeeType?: Strings;
     employmentStartDate?: Date;
     employmentType?: Strings;
+    estaffGUID?: Strings;
     exemptionStatus?: PlacementTaxExemptionStatusLookup;
     expiringCredentials?: number;
     fee?: number;
@@ -10878,13 +13018,18 @@ export interface Placement5 {
     housingManagerID?: number;
     housingStatus?: Strings;
     incompleteRequirements?: number;
+    invoice?: Invoice;
+    invoiceGroup?: InvoiceGroup;
     invoiceGroupName?: Strings;
+    invoiceItems?: ToMany<InvoiceItem>;
     isMultirate?: boolean;
     jobCode?: JobCode;
     jobOrder?: JobOrder;
     jobSubmission?: JobSubmission;
     lastApprovedPlacementChangeRequest?: PlacementChangeRequest;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     notes?: ToMany<Note>;
@@ -10900,15 +13045,15 @@ export interface Placement5 {
     overtimeRate?: number;
     owner?: CorporateUser;
     owners?: ToMany<CorporateUser>;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     payrollSyncStatus?: PayrollSyncStatusLookup;
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
@@ -10922,25 +13067,20 @@ export interface Placement5 {
     shift?: Shift;
     statementClientContact?: ClientContact;
     status?: Strings;
+    surveys?: ToMany<Survey>;
     tasks?: ToMany<Task>;
     taxRate?: number;
     taxState?: Strings;
     terminationReason?: Strings;
     timeAndExpense?: PlacementTimeAndExpense;
     timeUnits?: ToMany<TimeUnit>;
+    timecardExpenses?: ToMany<TimecardExpense>;
+    timecardTimes?: ToMany<TimecardTime>;
+    timecards?: ToMany<Timecard>;
+    userWorks?: ToMany<UserWork>;
     vendorClientCorporation?: ClientCorporation;
     workWeekStart?: number;
     workersCompensationRate?: WorkersCompensationRate;
-    customObject1s?: PlacementCustomObjectInstance1[];
-    customObject2s?: PlacementCustomObjectInstance2[];
-    customObject3s?: PlacementCustomObjectInstance3[];
-    customObject4s?: PlacementCustomObjectInstance4[];
-    customObject5s?: PlacementCustomObjectInstance5[];
-    customObject6s?: PlacementCustomObjectInstance6[];
-    customObject7s?: PlacementCustomObjectInstance7[];
-    customObject8s?: PlacementCustomObjectInstance8[];
-    customObject9s?: PlacementCustomObjectInstance9[];
-    customObject10s?: PlacementCustomObjectInstance10[];
 }
 export interface PlacementCertification {
     id?: number;
@@ -10991,7 +13131,9 @@ export interface PlacementCertification {
     documentDeadline?: Date;
     editHistories?: ToMany<PlacementCertificationEditHistory>;
     fileAttachments?: ToMany<CandidateFileAttachment>;
+    isDeleted?: boolean;
     matchingCredentialCount?: number;
+    migrateGUID?: Strings;
     modifyingUser?: CorporateUser;
     owner?: CorporateUser;
     placement?: Placement;
@@ -11022,6 +13164,7 @@ export interface PlacementChangeRequest {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     clientBillRate?: number;
     clientCorporationLine?: ClientCorporationLine;
@@ -11238,7 +13381,9 @@ export interface PlacementChangeRequest {
     housingStatus?: Strings;
     isMultirate?: boolean;
     jobCode?: JobCode;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
@@ -11246,7 +13391,7 @@ export interface PlacementChangeRequest {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
@@ -11311,6 +13456,7 @@ export interface PlacementChangeRequest2 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     clientBillRate?: number;
     clientCorporationLine?: ClientCorporationLine;
@@ -11527,7 +13673,9 @@ export interface PlacementChangeRequest2 {
     housingStatus?: Strings;
     isMultirate?: boolean;
     jobCode?: JobCode;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
@@ -11535,7 +13683,7 @@ export interface PlacementChangeRequest2 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
@@ -11600,6 +13748,7 @@ export interface PlacementChangeRequest3 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     clientBillRate?: number;
     clientCorporationLine?: ClientCorporationLine;
@@ -11816,7 +13965,9 @@ export interface PlacementChangeRequest3 {
     housingStatus?: Strings;
     isMultirate?: boolean;
     jobCode?: JobCode;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
@@ -11824,7 +13975,7 @@ export interface PlacementChangeRequest3 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
@@ -11889,6 +14040,7 @@ export interface PlacementChangeRequest4 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     clientBillRate?: number;
     clientCorporationLine?: ClientCorporationLine;
@@ -12105,7 +14257,9 @@ export interface PlacementChangeRequest4 {
     housingStatus?: Strings;
     isMultirate?: boolean;
     jobCode?: JobCode;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
@@ -12113,7 +14267,7 @@ export interface PlacementChangeRequest4 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
@@ -12178,6 +14332,7 @@ export interface PlacementChangeRequest5 {
     billingClientContact?: ClientContact;
     billingFrequency?: Strings;
     billingProfile?: BillingProfile;
+    billingProfileRoot?: BillingProfileRoot;
     bonusPackage?: Strings;
     clientBillRate?: number;
     clientCorporationLine?: ClientCorporationLine;
@@ -12394,7 +14549,9 @@ export interface PlacementChangeRequest5 {
     housingStatus?: Strings;
     isMultirate?: boolean;
     jobCode?: JobCode;
+    legalBusinessEntity?: LegalBusinessEntity;
     location?: Location;
+    locationRoot?: LocationRoot;
     markUpPercentage?: number;
     migrateGUID?: Strings;
     optionsPackage?: Strings;
@@ -12402,7 +14559,7 @@ export interface PlacementChangeRequest5 {
     otherHourlyFee?: number;
     otherHourlyFeeComments?: Strings;
     overtimeRate?: number;
-    payGroup?: PayGroupLookup;
+    payGroup?: Strings;
     payRate?: number;
     payrollEmployeeType?: PayrollEmployeeTypeLookup;
     placement?: Placement;
@@ -12512,6 +14669,15 @@ export interface PlacementCommissionEditHistoryFieldChange {
     editHistory?: PlacementCommissionEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+}
+export interface PlacementCommissionHistory {
+    id?: number;
+    comments?: Strings;
+    commission?: PlacementCommission;
+    dateAdded?: Date;
+    grossMarginPercentage?: number;
+    modifyingUser?: Person;
+    status?: Strings;
 }
 export interface PlacementCustomObject {
     id?: number;
@@ -12639,12 +14805,10 @@ export interface PlacementFileAttachment {
     departmentsSharedWith?: ToMany<CorporationDepartment>;
     description?: Strings;
     directory?: Strings;
-    distribution?: Strings;
     externalID?: Strings;
     fileExtension?: Strings;
     fileOwner?: CorporateUser;
     fileSize?: number;
-    fileType?: Strings;
     isCopied?: boolean;
     isDeleted?: boolean;
     isEncrypted?: boolean;
@@ -12737,6 +14901,37 @@ export interface PlacementRateCard {
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
 }
+export interface PlacementRateCardEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementRateCardEffectiveDateChange;
+    fieldChanges?: ToMany<PlacementRateCardEditHistoryFieldChange>;
+    lineFieldChanges?: ToMany<PlacementRateCardLineEditHistoryFieldChange>;
+    lineGroupFieldChanges?: ToMany<PlacementRateCardLineGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementRateCard;
+    targetRootEntity?: PlacementRateCardRoot;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementRateCardEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementRateCardEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementRateCardEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementRateCardEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface PlacementRateCardLine {
     id?: number;
     alias?: Strings;
@@ -12745,13 +14940,24 @@ export interface PlacementRateCardLine {
     billRate?: number;
     earnCode?: EarnCode;
     externalID?: Strings;
-    migrateGUID?: Strings;
     markupPercent?: number;
     markupValue?: number;
+    migrateGUID?: Strings;
     payCurrencyUnit?: CurrencyUnit;
     payMultiplier?: number;
     payRate?: number;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
+}
+export interface PlacementRateCardLineEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCode?: EarnCode;
+    editHistory?: PlacementRateCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+    placementRateCardLine?: PlacementRateCardLine;
 }
 export interface PlacementRateCardLineGroup {
     id?: number;
@@ -12763,6 +14969,26 @@ export interface PlacementRateCardLineGroup {
     placementRateCardLines?: ToMany<PlacementRateCardLine>;
     placementRateCardVersion?: PlacementRateCardVersion;
 }
+export interface PlacementRateCardLineGroupEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCodeGroup?: EarnCodeGroup;
+    editHistory?: PlacementRateCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+    placementRateCardLineGroup?: PlacementRateCardLineGroup;
+}
+export interface PlacementRateCardRoot {
+    id?: number;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    placement?: Placement;
+    rootExternalID?: Strings;
+    rootMigrateGUID?: Strings;
+    versions?: ToMany<PlacementRateCardVersion>;
+}
 export interface PlacementRateCardVersion {
     id?: number;
     dateAdded?: Date;
@@ -12770,12 +14996,48 @@ export interface PlacementRateCardVersion {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     isFirst?: boolean;
+    placementRateCard?: PlacementRateCardRoot;
     placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
 }
 export interface PlacementTaxExemptionStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface PlacementTemplate {
+    id?: number;
+    corporationID?: number;
+    dateAdded?: Date;
+    departmentTemplates?: ToMany<DepartmentPlacementTemplate>;
+    description?: Strings;
+    displayType?: Strings;
+    enabled?: boolean;
+    entityList?: Strings;
+    groupName?: Strings;
+    isSearchable?: boolean;
+    migrateStatus?: Strings;
+    name?: Strings;
+    objectEnabled?: boolean;
+    objectNumber?: number;
+    reportID?: number;
+    staticTemplateName?: Strings;
+    tabName?: Strings;
+    templateAttributes?: ToMany<PlacementTemplateAttribute>;
+}
+export interface PlacementTemplateAttribute {
+    id?: number;
+    attributeType?: Strings;
+    columnName?: Strings;
+    description?: Strings;
+    enabled?: boolean;
+    hint?: Strings;
+    isRequired?: boolean;
+    isSearchable?: boolean;
+    name?: Strings;
+    optionList?: Strings;
+    sortOrder?: number;
+    staticFieldName?: Strings;
+    template?: PlacementTemplate;
 }
 export interface PlacementTimeAndExpense {
     id?: number;
@@ -12806,7 +15068,6 @@ export interface PlacementTimeAndExpense {
     noBillExpenseApproverFirstName?: Strings;
     noBillExpenseApproverLastName?: Strings;
     payRules?: Strings;
-    placement?: Placement;
     proxyCPAFlag?: Strings;
     rounding?: Strings;
     timeAndExpenseBranch?: Strings;
@@ -12828,10 +15089,12 @@ export interface PrivateLabel {
     corporateUsers?: ToMany<CorporateUser>;
     corporation?: Corporation;
     corporations?: ToMany<Corporation>;
+    customModules?: ToMany<CustomModule>;
     dateAdded?: Date;
     defaultWebLeadRecruiter?: CorporateUser;
     description?: Strings;
     enabled?: number;
+    fieldMaps?: ToMany<FieldMap>;
     footerHTML?: Strings;
     headerHTML?: Strings;
     keyWords?: Strings;
@@ -12868,6 +15131,37 @@ export interface PulseConfigurationValue {
     name?: Strings;
     pulseConfiguration?: PulseConfiguration;
     valueAddedByUser?: Person;
+}
+export interface RateCard {
+    id?: number;
+    businessSector?: Strings;
+    category?: Category;
+    clientCorporations?: ToMany<ClientCorporation>;
+    corporation?: Corporation;
+    customRate1?: number;
+    customRate10?: number;
+    customRate2?: number;
+    customRate3?: number;
+    customRate4?: number;
+    customRate5?: number;
+    customRate6?: number;
+    customRate7?: number;
+    customRate8?: number;
+    customRate9?: number;
+    dateEffective?: Date;
+    dateLastModified?: Date;
+    isDefault?: boolean;
+    isDeleted?: boolean;
+    lastModifyingUser?: CorporateUser;
+    migrateGUID?: Strings;
+    name?: Strings;
+    overtimeRate?: number;
+    rate?: number;
+    rateCardCategory?: Strings;
+    shift?: Shift;
+    shortName?: Strings;
+    skill?: Skill;
+    type?: Strings;
 }
 export interface RateDetail {
     id?: number;
@@ -12966,10 +15260,59 @@ export interface RateGroupEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface ReadOnlyAppointment {
+    id?: number;
+    appointmentUUID?: Strings;
+    attachments?: ToMany<UserWork>;
+    attendees?: ToMany<AppointmentAttendee>;
+    candidateReference?: Candidate;
+    childAppointments?: ToMany<Appointment>;
+    clientContactReference?: ClientContact;
+    communicationMethod?: Strings;
+    dateAdded?: Date;
+    dateBegin?: Date;
+    dateCompleted?: Date;
+    dateEnd?: Date;
+    dateLastModified?: Date;
+    editHistory?: ToMany<AppointmentEditHistory>;
+    externalIcsSeq?: number;
+    fileAttachments?: ToMany<AppointmentFileAttachment>;
+    guests?: ToMany<Person>;
+    isAllDay?: boolean;
+    isDeleted?: boolean;
+    isPrivate?: boolean;
+    jobOrder?: JobOrder;
+    jobSubmission?: JobSubmission;
+    lead?: Lead;
+    location?: Strings;
+    migrateGUID?: Strings;
+    notificationMinutes?: number;
+    opportunity?: Opportunity;
+    owner?: Person;
+    parentAppointment?: Appointment;
+    placement?: Placement;
+    recurrenceDayBits?: number;
+    recurrenceFrequency?: number;
+    recurrenceMax?: number;
+    recurrenceMonthBits?: number;
+    recurrenceStyle?: Strings;
+    recurrenceType?: Strings;
+    recurringDeletes?: ToMany<RecurringAppointmentDelete>;
+    showTimeAs?: Strings;
+    subject?: Strings;
+    timeZoneID?: Strings;
+    type?: Strings;
+}
+export interface RecurringAppointmentDelete {
+    id?: number;
+    appointment?: Appointment;
+    dateBegin?: Date;
+}
 export interface Report {
     id?: number;
     category?: ReportCategory;
     cognosType?: Strings;
+    criteria?: ToMany<ReportCriteria>;
     dashboard?: boolean;
     dateAdded?: Date;
     dateLastModified?: Date;
@@ -12977,6 +15320,7 @@ export interface Report {
     entitlements?: ToMany<UserType>;
     name?: Strings;
     oldReportID?: number;
+    outputs?: ToMany<ReportOutput>;
     owner?: CorporateUser;
     packageName?: Strings;
     path?: Strings;
@@ -12992,6 +15336,49 @@ export interface ReportCategory {
     name?: Strings;
     reports?: ToMany<Report>;
     sortOrder?: number;
+}
+export interface ReportCriteria {
+    id?: number;
+    allowMultiple?: boolean;
+    columnName?: Strings;
+    dataFormat?: Strings;
+    description?: Strings;
+    display?: Strings;
+    editType?: Strings;
+    hint?: Strings;
+    isHidden?: boolean;
+    isRequired?: boolean;
+    limit?: number;
+    lineDelimiter?: Strings;
+    report?: Report;
+    sortOrder?: number;
+    valueList?: Strings;
+}
+export interface ReportEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    changeReason?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<ReportEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPersonID?: number;
+    oldReportEditHistoryID?: number;
+    requestedBy?: Strings;
+    targetEntity?: Report;
+    transactionID?: Strings;
+}
+export interface ReportEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ReportEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ReportOutput {
+    id?: number;
+    name?: Strings;
+    reports?: ToMany<Report>;
 }
 export interface ReportingCodeTemplate {
     id?: number;
@@ -13072,19 +15459,44 @@ export interface SalesQuota {
 export interface SalesTaxGroup {
     id?: number;
     citySalesTaxRate?: CitySalesTaxRate;
+    citySalesTaxRateRoot?: CitySalesTaxRateRoot;
     countySalesTaxRate?: CountySalesTaxRate;
+    countySalesTaxRateRoot?: CountySalesTaxRateRoot;
+    dateAdded?: Date;
+    dateLastModified?: Date;
     districtSalesTaxRate?: DistrictSalesTaxRate;
+    districtSalesTaxRateRoot?: DistrictSalesTaxRateRoot;
     externalID?: number;
     label?: Strings;
+    otherSalesTaxRateRoots?: ToMany<OtherSalesTaxRateRoot>;
     otherSalesTaxRates?: ToMany<OtherSalesTaxRate>;
     source?: SalesTaxRateSourceLookup;
     stateID?: number;
     stateSalesTaxRate?: StateSalesTaxRate;
+    stateSalesTaxRateRoot?: StateSalesTaxRateRoot;
     status?: TaxStatusLookup;
     totalRate?: number;
     zipPlus4High?: Strings;
     zipPlus4Low?: Strings;
     zipcode?: Strings;
+}
+export interface SalesTaxGroupEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<SalesTaxGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: SalesTaxGroup;
+    transactionID?: Strings;
+}
+export interface SalesTaxGroupEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: SalesTaxGroupEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface SalesTaxRate {
     id?: number;
@@ -13099,6 +15511,7 @@ export interface SalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -13119,10 +15532,12 @@ export interface SalesTaxRateEditHistory {
     auditTrail?: Strings;
     dateAdded?: Date;
     effectiveDateChange?: SalesTaxRateEffectiveDateChange;
+    effectiveOn?: Date;
     fieldChanges?: ToMany<SalesTaxRateEditHistoryFieldChange>;
     migrateGUID?: Strings;
     modifyingPerson?: Person;
     targetEntity?: SalesTaxRate;
+    targetRootEntity?: SalesTaxRateRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -13142,6 +15557,24 @@ export interface SalesTaxRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
+export interface SalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
 export interface SalesTaxRateSourceLookup {
     id?: number;
     isDeleted?: boolean;
@@ -13159,20 +15592,65 @@ export interface SalesTaxRateVersion {
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
     isFirst?: boolean;
     jurisdictionName?: Strings;
     label?: Strings;
     rate?: number;
     reportingCodeName?: Strings;
+    salesTaxRate?: SalesTaxRateRoot;
     source?: SalesTaxRateSourceLookup;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
+}
+export interface SavedSearch {
+    id?: number;
+    data?: Strings;
+    dateAdded?: Date;
+    description?: Strings;
+    name?: Strings;
+    owner?: CorporateUser;
+    query?: Strings;
+}
+export interface SearchBasicField {
+    id?: number;
+    columnName?: Strings;
+    section?: Section;
+}
+export interface SearchExternalField {
+    id?: number;
+    dateLastModified?: Date;
+    description?: Strings;
+    display?: Strings;
+    displayList?: Strings;
+    editType?: Strings;
+    externalSystemId?: number;
+    field?: Strings;
+    hint?: Strings;
+    lastModifyingUser?: CorporateUser;
+    sortOrder?: number;
+    valueList?: Strings;
+}
+export interface Section {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    display?: Strings;
+    enabled?: boolean;
+    entity?: Strings;
+    groupName?: Strings;
+    imageSource?: Strings;
+    name?: Strings;
+    searchBasicFields?: ToMany<SearchBasicField>;
+    sectionAvailabilities?: ToMany<SectionAvailability>;
+    sortOrder?: number;
+}
+export interface SectionFieldMap {
+    id?: number;
+    dateLastModified?: Date;
+    fieldMap?: FieldMap;
+    lastModifyingMasterUserID?: number;
+    section?: Section;
+    sortOrder?: number;
 }
 export interface Sendout {
     id?: number;
@@ -13204,10 +15682,43 @@ export interface Shift {
     startTime?: Date;
     type?: Strings;
 }
+export interface ShiftPosition {
+    id?: number;
+    billRate?: number;
+    category?: Category;
+    certifications?: Strings;
+    clientCorporation?: ClientCorporation;
+    comments?: Strings;
+    customBillRate1?: number;
+    customBillRate10?: number;
+    customBillRate2?: number;
+    customBillRate3?: number;
+    customBillRate4?: number;
+    customBillRate5?: number;
+    customBillRate6?: number;
+    customBillRate7?: number;
+    customBillRate8?: number;
+    customBillRate9?: number;
+    isDeleted?: boolean;
+    isPriorShiftRequired?: boolean;
+    migrateGUID?: Strings;
+    overtimeBillRate?: number;
+    salaryUnit?: Strings;
+    skills?: ToMany<Skill>;
+    specialties?: ToMany<Specialty>;
+    yearsExperience?: number;
+}
+export interface ShiftType {
+    id?: number;
+    endTime?: Strings;
+    icon?: Strings;
+    isDeleted?: boolean;
+    name?: Strings;
+    startTime?: Strings;
+}
 export interface SignatureTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
@@ -13217,6 +15728,15 @@ export interface Skill {
     id?: number;
     categories?: ToMany<Category>;
     enabled?: boolean;
+    name?: Strings;
+}
+export interface SkillList {
+    id?: number;
+    categories?: ToMany<Category>;
+    dateAdded?: Date;
+    description?: Strings;
+    enabled?: boolean;
+    externalID?: Strings;
     name?: Strings;
 }
 export interface SmsTracking {
@@ -13241,6 +15761,13 @@ export interface Specialty {
     parentCategory?: Category;
     privateLabels?: ToMany<PrivateLabel>;
 }
+export interface SpecialtyList {
+    id?: number;
+    dateAdded?: Date;
+    enabled?: boolean;
+    name?: Strings;
+    parentCategory?: CategoryList;
+}
 export interface State {
     id?: number;
     code?: Strings;
@@ -13261,6 +15788,7 @@ export interface StateSalesTaxRate {
     generalLedgerSegment3?: GeneralLedgerSegment3;
     generalLedgerSegment4?: GeneralLedgerSegment4;
     generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
     jurisdictionName?: Strings;
     jurisdictionType?: TaxJurisdictionTypeLookup;
@@ -13276,6 +15804,24 @@ export interface StateSalesTaxRate {
     versionID?: number;
     versions?: ToMany<SalesTaxRateVersion>;
 }
+export interface StateSalesTaxRateRoot {
+    id?: number;
+    allSalesTaxRate_isHibernateGenerated?: boolean;
+    dateAdded?: Date;
+    generalLedgerAccount?: GeneralLedgerAccount;
+    generalLedgerSegment1?: GeneralLedgerSegment1;
+    generalLedgerSegment2?: GeneralLedgerSegment2;
+    generalLedgerSegment3?: GeneralLedgerSegment3;
+    generalLedgerSegment4?: GeneralLedgerSegment4;
+    generalLedgerSegment5?: GeneralLedgerSegment5;
+    generalLedgerServiceCode?: GeneralLedgerServiceCode;
+    isDeleted?: boolean;
+    jurisdictionType?: TaxJurisdictionTypeLookup;
+    owner?: CorporateUser;
+    stateID?: number;
+    type?: SalesTaxRateTypeLookup;
+    versions?: ToMany<SalesTaxRateVersion>;
+}
 export interface StatusLookup {
     id?: number;
     isDeleted?: boolean;
@@ -13289,7 +15835,6 @@ export interface StopWord {
 export interface SubmissionTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
@@ -13362,6 +15907,8 @@ export interface SurchargeRateEditHistory {
     fieldChanges?: ToMany<SurchargeRateEditHistoryFieldChange>;
     migrateGUID?: Strings;
     modifyingPerson?: Person;
+    targetEntity?: SurchargeRateRoot;
+    targetRootEntity?: SurchargeRateRoot;
     transactionID?: Strings;
     versionEditHistoryActionLookup?: EditHistoryActionLookup;
     versionID?: number;
@@ -13381,10 +15928,24 @@ export interface SurchargeRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
+export interface SurchargeRateRoot {
+    id?: number;
+    dateAdded?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    versions?: ToMany<SurchargeRateVersion>;
+}
 export interface SurchargeRateTypeLookup {
     id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
     isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
     label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface SurchargeRateVersion {
     id?: number;
@@ -13404,21 +15965,58 @@ export interface SurchargeRateVersion {
     isFirst?: boolean;
     rate?: number;
     status?: StatusLookup;
+    surchargeRate?: SurchargeRateRoot;
+    surchargeRateID?: number;
     title?: Strings;
     type?: SurchargeRateTypeLookup;
 }
-export interface SurchargeRateVersionEarnCode {
-    id?: number;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    earnCode?: EarnCode;
-    owner?: CorporateUser;
-    surchargeRateVersion?: SurchargeRateVersion;
-}
-
 export interface SurchargeType {
     id?: number;
     label?: Strings;
+}
+export interface Survey {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateCompleted?: Date;
+    jobOrder?: JobOrder;
+    migrateGUID?: Strings;
+    placement?: Placement;
+    placementIDOld?: number;
+    responses?: ToMany<SurveyResponse>;
+    reviewingClientContact?: ClientContact;
+    template?: SurveyTemplate;
+}
+export interface SurveyQuestion {
+    id?: number;
+    defaultScore?: number;
+    displayList?: Strings;
+    editType?: Strings;
+    hint?: Strings;
+    isDeleted?: boolean;
+    isRequired?: boolean;
+    question?: Strings;
+    responses?: ToMany<SurveyResponse>;
+    sortOrder?: number;
+    template?: SurveyTemplate;
+    valueList?: Strings;
+}
+export interface SurveyResponse {
+    id?: number;
+    comments?: Strings;
+    score?: number;
+}
+export interface SurveyTemplate {
+    id?: number;
+    dateAdded?: Date;
+    description?: Strings;
+    migrateGUID?: Strings;
+    name?: Strings;
+    owner?: CorporateUser;
+    publicDescription?: Strings;
+    questions?: ToMany<SurveyQuestion>;
+    surveys?: ToMany<Survey>;
+    type?: Strings;
 }
 export interface Task {
     id?: number;
@@ -13485,7 +16083,6 @@ export interface TaskEditHistoryFieldChange {
 export interface TaskTemplate {
     id?: number;
     dateAdded?: Date;
-    isPublic?: boolean;
     messageText?: Strings;
     name?: Strings;
     owner?: CorporateUser;
@@ -13573,57 +16170,171 @@ export interface TearsheetRecipient {
     person?: Person;
     tearsheet?: Tearsheet;
 }
-export interface TimeLaborCalcTypeLookup {
+export interface TestCategory {
     id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
-}
-export interface TimeLaborEvalRule {
-    id?: number;
-    addedAtUtc?: Date;
-    addedByUser?: CorporateUser;
-    lastModifiedAtUtc?: Date;
-    modifyingUser?: CorporateUser;
+    jobs?: ToMany<TestJob>;
     name?: Strings;
-    parameters?: Strings;
-    states?: ToMany<State>;
-    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
-    timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
-    timeLaborEvalRuleCombineCriteriaLookup?: TimeLaborEvalRuleCombineCriteriaLookup;
-    timeLaborEvalRuleStatusLookup?: TimeLaborEvalRuleStatusLookup;
-    timeLaborEvalRuleTypeLookup?: TimeLaborEvalRuleTypeLookup;
 }
-export interface TimeLaborEvalRuleCategoryLookup {
+export interface TestEntity {
     id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
-    sortOrder?: number;
+    abigDecimal?: number;
+    aboolean?: boolean;
+    aclob?: Strings;
+    address?: Address;
+    adouble?: number;
+    afloat?: number;
+    anInteger?: number;
+    astring?: Strings;
+    astringWithDefault?: Strings;
+    atimestamp?: Date;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isSmallint?: boolean;
+    migrateGUID?: Strings;
 }
-export interface TimeLaborEvalRuleCombineCriteriaLookup {
+export interface TestJob {
     id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
+    address?: Address;
+    categories?: ToMany<TestCategory>;
+    isPublic?: boolean;
+    owner?: TestOwner;
+    title?: Strings;
 }
-export interface TimeLaborEvalRuleStatusLookup {
+export interface TestOwner {
     id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
+    corporation?: Corporation;
+    jobs?: ToMany<TestJob>;
+    name?: Strings;
 }
-export interface TimeLaborEvalRuleTypeLookup {
-    id?: number;
-    description?: Strings;
-    isDeleted?: boolean;
-    label?: Strings;
-    priority?: number;
-    timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
-    timeLaborEvalRuleCombineCriteriaLookup?: TimeLaborEvalRuleCombineCriteriaLookup;
-}
-
 export interface TimeUnit {
     id?: number;
     name?: Strings;
     timeMarker?: number;
     weekDay?: number;
+}
+export interface Timecard {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateBegin?: Date;
+    dateEnd?: Date;
+    expenses?: ToMany<TimecardExpense>;
+    externalID?: number;
+    fileAttachments?: ToMany<TimecardFileAttachment>;
+    invoice?: Invoice;
+    migrateGUID?: Strings;
+    placement?: Placement;
+    status?: Strings;
+    timeCardHistories?: ToMany<TimecardHistory>;
+    timecardBatch?: TimecardBatch;
+    timecardTimes?: ToMany<TimecardTime>;
+    type?: Strings;
+}
+export interface TimecardBatch {
+    id?: number;
+    batchName?: Strings;
+    dateAdded?: Date;
+    fileExports?: ToMany<FileExport>;
+    invoices?: ToMany<Invoice>;
+    isDeleted?: boolean;
+    isInvoiced?: boolean;
+    isLocked?: boolean;
+    isOpen?: boolean;
+    owner?: CorporateUser;
+    status?: Strings;
+    timecards?: ToMany<Timecard>;
+}
+export interface TimecardExpense {
+    id?: number;
+    amount?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateExpensed?: Date;
+    fileExport?: FileExport;
+    invoice?: Invoice;
+    invoiceItem?: InvoiceItem;
+    lastModifyingPerson?: Person;
+    migrateGUID?: Strings;
+    payClass?: TimecardPayClass;
+    placement?: Placement;
+    projectID?: Strings;
+    status?: Strings;
+    timecard?: Timecard;
+}
+export interface TimecardFileAttachment {
+    id?: number;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    departmentsSharedWith?: ToMany<CorporationDepartment>;
+    description?: Strings;
+    directory?: Strings;
+    externalID?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isCopied?: boolean;
+    isDeleted?: boolean;
+    isEncrypted?: boolean;
+    isExternal?: boolean;
+    isOpen?: boolean;
+    isPrivate?: boolean;
+    isSendOut?: boolean;
+    name?: Strings;
+    timecard?: Timecard;
+    type?: Strings;
+    usersSharedWith?: ToMany<CorporateUser>;
+    uuid?: Strings;
+}
+export interface TimecardHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    modifyingUser?: Person;
+    status?: Strings;
+    timecard?: Timecard;
+}
+export interface TimecardPayClass {
+    id?: number;
+    billRateField?: Strings;
+    classType?: Strings;
+    clientMarkupFactor?: number;
+    display?: Strings;
+    enabled?: boolean;
+    excludeFromInvoicing?: number;
+    excludeFromPayrolling?: number;
+    isRegularHoursClass?: boolean;
+    markupFactor?: number;
+    name?: Strings;
+    payRateField?: Strings;
+    privateLabel?: PrivateLabel;
+    sortOrder?: number;
+}
+export interface TimecardTime {
+    id?: number;
+    breakEnd?: Date;
+    breakStart?: Date;
+    clientBillRate?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateWorked?: Date;
+    fileExport?: FileExport;
+    hours?: number;
+    invoice?: Invoice;
+    invoiceItem?: InvoiceItem;
+    lastModifyingPerson?: Person;
+    migrateGUID?: Strings;
+    minutesBreak?: number;
+    payClass?: TimecardPayClass;
+    payRate?: number;
+    placement?: Placement;
+    projectCode?: Strings;
+    projectID?: Strings;
+    status?: Strings;
+    timeIn?: Date;
+    timeOut?: Date;
+    timecard?: Timecard;
+    workersCompensationRate?: number;
 }
 export interface TransactionNote {
     id?: number;
@@ -13666,15 +16377,24 @@ export interface UnbilledRevenueDistributionBatch {
     id?: number;
     accountingDate?: Date;
     batchStatus?: BatchStatusLookup;
+    billableCharges?: ToMany<BillableCharge>;
     canvasReport?: CanvasReport;
     dateAdded?: Date;
     dateLastModified?: Date;
     owner?: CorporateUser;
     unbilledRevenueDistributions?: ToMany<UnbilledRevenueDistribution>;
 }
-export interface UnbilledRevenueDistributionGeneralLedgerExportStatusLookup {
+export interface UnbilledRevenueGeneralLedgerExportStatusLookup {
     id?: number;
-    [propName: string]: any;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
 }
 export interface UnitOfMeasure {
     id?: number;
@@ -13687,6 +16407,17 @@ export interface UnitOfMeasure {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface UserAttribute {
+    id?: number;
+    dateValue?: Date;
+    floatValue?: number;
+    instance?: number;
+    intValue?: number;
+    migrateGUID?: Strings;
+    person?: Person;
+    templateAttribute?: UserTemplateAttribute;
+    value?: Strings;
 }
 export interface UserCustomObject {
     id?: number;
@@ -13703,6 +16434,10 @@ export interface UserCustomObjectAttributeInteraction {
 export interface UserCustomObjectDepartment {
     id?: number;
     [propName: string]: any;
+}
+export interface UserDepartmentGrouping {
+    id?: number;
+    isPrimaryDepartment?: boolean;
 }
 export interface UserEditHistory {
     id?: number;
@@ -13721,6 +16456,12 @@ export interface UserEditHistoryFieldChange {
     editHistory?: UserEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
+}
+export interface UserHit {
+    id?: number;
+    dateAdded?: Date;
+    person?: Person;
+    viewingPerson?: Person;
 }
 export interface UserHousingComplexUnit {
     id?: number;
@@ -13771,6 +16512,25 @@ export interface UserLinkedInUrn {
     linkedInUrn?: Strings;
     person?: Person;
 }
+export interface UserLogin {
+    id?: number;
+    application?: Application;
+    browser?: Strings;
+    browserVersion?: Strings;
+    dateAdded?: Date;
+    ipAddress?: Strings;
+    isLoggedIn?: boolean;
+    platform?: Strings;
+    user?: CorporateUser;
+}
+export interface UserMenu {
+    id?: number;
+    grouped?: boolean;
+    isVisible?: boolean;
+    menu?: Menu;
+    sortOrder?: number;
+    user?: CorporateUser;
+}
 export interface UserMessage {
     id?: number;
     ccRecipients?: ToMany<Person>;
@@ -13793,6 +16553,7 @@ export interface UserMessage {
     migrateGUID?: Strings;
     personRecipients?: ToMany<Person>;
     priority?: number;
+    recipients?: ToMany<MessageRecipient>;
     sender?: Person;
     smtpHeaderData?: Strings;
     smtpReceiveDate?: Date;
@@ -13855,14 +16616,98 @@ export interface UserSurveyOptions {
     question?: Strings;
     userSurvey?: UserSurvey;
 }
+export interface UserTemplate {
+    id?: number;
+    category?: Category;
+    corporationID?: number;
+    dateAdded?: Date;
+    departmentTemplates?: ToMany<DepartmentUserTemplate>;
+    description?: Strings;
+    displayType?: Strings;
+    enabled?: boolean;
+    groupName?: Strings;
+    isPublic?: boolean;
+    isSearchable?: boolean;
+    migrateStatus?: Strings;
+    name?: Strings;
+    objectEnabled?: boolean;
+    objectNumber?: number;
+    reportID?: number;
+    staticTemplateName?: Strings;
+    tabName?: Strings;
+    templateAttributes?: ToMany<UserTemplateAttribute>;
+    type?: Strings;
+}
+export interface UserTemplateAttribute {
+    id?: number;
+    attributeType?: Strings;
+    columnName?: Strings;
+    description?: Strings;
+    enabled?: boolean;
+    hint?: Strings;
+    isRequired?: boolean;
+    isSearchable?: boolean;
+    name?: Strings;
+    optionList?: Strings;
+    sortOrder?: number;
+    staticFieldName?: Strings;
+    template?: UserTemplate;
+}
 export interface UserType {
     id?: number;
+    actionEntitlements?: ToMany<Action>;
     dateAdded?: Date;
     description?: Strings;
+    desktopModules?: ToMany<DesktopModule>;
     enabled?: boolean;
     isHidden?: boolean;
     menus?: ToMany<Menu>;
     name?: Strings;
+}
+export interface UserWork {
+    id?: number;
+    appointment?: Appointment;
+    assessment?: CandidateAssessment;
+    client?: Strings;
+    dateAdded?: Date;
+    description?: Strings;
+    externalID?: Strings;
+    isAuction?: boolean;
+    isDeleted?: boolean;
+    isOpen?: boolean;
+    isSendOut?: boolean;
+    jobOrder?: JobOrder;
+    migrateGUID?: Strings;
+    name?: Strings;
+    owner?: Person;
+    placement?: Placement;
+    price?: number;
+    published?: Strings;
+    quantity?: number;
+    saleTerms?: Strings;
+    saleType?: Strings;
+    sortOrder?: number;
+    timecard?: Timecard;
+    type?: Strings;
+    workFiles?: ToMany<UserWorkFile>;
+}
+export interface UserWorkFile {
+    id?: number;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    dateAdded?: Date;
+    description?: Strings;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileSize?: number;
+    fileType?: Strings;
+    isCopied?: boolean;
+    isDeleted?: boolean;
+    isExternal?: boolean;
+    isPrivate?: boolean;
+    migrateGUID?: Strings;
+    name?: Strings;
+    userWork?: UserWork;
 }
 export interface WorkersCompensation {
     id?: number;
