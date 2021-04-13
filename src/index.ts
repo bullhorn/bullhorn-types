@@ -6026,8 +6026,10 @@ export interface InvoiceStatementNumberFormat {
     dateLastModified?: Date;
     description?: Strings;
     name?: Strings;
+    nextInSequence?: number;
     prefix?: Strings;
     sequenceLength?: number;
+    sequenceStart?: number;
 }
 export interface InvoiceStatementSalesTaxRate {
     id?: number;
@@ -6343,6 +6345,7 @@ export interface JobBoardPost {
     approvedPlacements?: ToMany<Placement>;
     assignedUsers?: ToMany<CorporateUser>;
     benefits?: Strings;
+    bhTimestamp?: Strings;
     billRateCategoryID?: number;
     billingProfile?: BillingProfile;
     billingProfileRoot?: BillingProfileRoot;
@@ -8564,6 +8567,7 @@ export interface NPSUserInfo {
 export interface Note {
     id?: number;
     action?: Strings;
+    bhTimeStamp?: Strings;
     candidates?: ToMany<Candidate>;
     clientContacts?: ToMany<ClientContact>;
     commentingPerson?: Person;
@@ -14121,6 +14125,7 @@ export interface Report {
     owner?: CorporateUser;
     packageName?: Strings;
     path?: Strings;
+    reportJar?: Strings;
     reportRTF?: Strings;
     reportXML?: Strings;
     sqlData?: Strings;
@@ -14955,6 +14960,7 @@ export interface UserMessage {
     id?: number;
     ccRecipients?: ToMany<Person>;
     comments?: Strings;
+    commentsCompressed?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
     distributionLists?: ToMany<DistributionList>;
