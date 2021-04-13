@@ -25,6 +25,7 @@ const getEntityModels = () => {
     .then((result) => {
       return Object.values(result)
         .filter(Boolean)
+        .filter(entity => entity.bullhornEntitySchema && entity.bullhornEntitySchema.restAccess && entity.bullhornEntitySchema.restAccess.indexOf("READ") > -1)
         .sort(sortByField("entityName"));
     });
 };
@@ -97,6 +98,7 @@ const parseModelData = (model) => {
           case "Double":
           case "Float":
           case "BigDecimal":
+          case "Long":
             data.properties.push({
               name: field.fieldName,
               type: "number",
@@ -110,6 +112,7 @@ const parseModelData = (model) => {
             });
             break;
           case "String":
+          case "byte[]":
             data.properties.push({
               name: field.fieldName,
               type: "Strings",

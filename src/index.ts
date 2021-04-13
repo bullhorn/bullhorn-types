@@ -1,23 +1,17 @@
 // Generated with @bullhorn/bullhorn-cli
 // Utility Classes
 export class EntityTypes {
-    static Action: 'Action' = 'Action';
-    static ActivityCenterIgnore: 'ActivityCenterIgnore' = 'ActivityCenterIgnore';
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
     static AllSalesTaxGroup: 'AllSalesTaxGroup' = 'AllSalesTaxGroup';
     static AllSalesTaxRate: 'AllSalesTaxRate' = 'AllSalesTaxRate';
     static Application: 'Application' = 'Application';
-    static ApplicationServer: 'ApplicationServer' = 'ApplicationServer';
-    static ApplicationServerSetting: 'ApplicationServerSetting' = 'ApplicationServerSetting';
     static Appointment: 'Appointment' = 'Appointment';
     static AppointmentAttendee: 'AppointmentAttendee' = 'AppointmentAttendee';
     static AppointmentEditHistory: 'AppointmentEditHistory' = 'AppointmentEditHistory';
     static AppointmentEditHistoryFieldChange: 'AppointmentEditHistoryFieldChange' = 'AppointmentEditHistoryFieldChange';
-    static AppointmentFileAttachment: 'AppointmentFileAttachment' = 'AppointmentFileAttachment';
     static AppointmentTemplate: 'AppointmentTemplate' = 'AppointmentTemplate';
-    static Article: 'Article' = 'Article';
     static AutoAddBlacklistDomain: 'AutoAddBlacklistDomain' = 'AutoAddBlacklistDomain';
     static BatchGroup: 'BatchGroup' = 'BatchGroup';
     static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
@@ -26,7 +20,9 @@ export class EntityTypes {
     static BillMasterEditHistory: 'BillMasterEditHistory' = 'BillMasterEditHistory';
     static BillMasterEditHistoryAssociationChange: 'BillMasterEditHistoryAssociationChange' = 'BillMasterEditHistoryAssociationChange';
     static BillMasterEditHistoryFieldChange: 'BillMasterEditHistoryFieldChange' = 'BillMasterEditHistoryFieldChange';
+    static BillMasterStatusLookup: 'BillMasterStatusLookup' = 'BillMasterStatusLookup';
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
+    static BillMasterSyncBatch: 'BillMasterSyncBatch' = 'BillMasterSyncBatch';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillMasterTransactionDiscountDetail: 'BillMasterTransactionDiscountDetail' = 'BillMasterTransactionDiscountDetail';
     static BillMasterTransactionDiscountRate: 'BillMasterTransactionDiscountRate' = 'BillMasterTransactionDiscountRate';
@@ -48,14 +44,11 @@ export class EntityTypes {
     static BillingProfileEditHistory: 'BillingProfileEditHistory' = 'BillingProfileEditHistory';
     static BillingProfileEditHistoryFieldChange: 'BillingProfileEditHistoryFieldChange' = 'BillingProfileEditHistoryFieldChange';
     static BillingProfileEffectiveDateChange: 'BillingProfileEffectiveDateChange' = 'BillingProfileEffectiveDateChange';
-    static BillingProfileRoot: 'BillingProfileRoot' = 'BillingProfileRoot';
     static BillingProfileVersion: 'BillingProfileVersion' = 'BillingProfileVersion';
     static BillingSyncBatch: 'BillingSyncBatch' = 'BillingSyncBatch';
     static BillingSyncBatchFileAttachment: 'BillingSyncBatchFileAttachment' = 'BillingSyncBatchFileAttachment';
     static BillingSyncBatchFileTypeLookup: 'BillingSyncBatchFileTypeLookup' = 'BillingSyncBatchFileTypeLookup';
     static BillingSyncError: 'BillingSyncError' = 'BillingSyncError';
-    static BillingSyncErrorStatus: 'BillingSyncErrorStatus' = 'BillingSyncErrorStatus';
-    static BillingSyncErrorType: 'BillingSyncErrorType' = 'BillingSyncErrorType';
     static Bot: 'Bot' = 'Bot';
     static BotCondition: 'BotCondition' = 'BotCondition';
     static BotExecutionHistory: 'BotExecutionHistory' = 'BotExecutionHistory';
@@ -66,11 +59,7 @@ export class EntityTypes {
     static CalendarFrequencyLookup: 'CalendarFrequencyLookup' = 'CalendarFrequencyLookup';
     static CalendarInstance: 'CalendarInstance' = 'CalendarInstance';
     static Candidate: 'Candidate' = 'Candidate';
-    static CandidateAssessment: 'CandidateAssessment' = 'CandidateAssessment';
-    static CandidateAssessmentFileAttachment: 'CandidateAssessmentFileAttachment' = 'CandidateAssessmentFileAttachment';
-    static CandidateAssessmentSystem: 'CandidateAssessmentSystem' = 'CandidateAssessmentSystem';
     static CandidateAvailability: 'CandidateAvailability' = 'CandidateAvailability';
-    static CandidateAvailabilityMask: 'CandidateAvailabilityMask' = 'CandidateAvailabilityMask';
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
     static CandidateCertificationEditHistoryFieldChange: 'CandidateCertificationEditHistoryFieldChange' = 'CandidateCertificationEditHistoryFieldChange';
@@ -92,7 +81,6 @@ export class EntityTypes {
     static Card: 'Card' = 'Card';
     static CardCategory: 'CardCategory' = 'CardCategory';
     static Category: 'Category' = 'Category';
-    static CategoryList: 'CategoryList' = 'CategoryList';
     static Certification: 'Certification' = 'Certification';
     static CertificationFileAttachment: 'CertificationFileAttachment' = 'CertificationFileAttachment';
     static CertificationGroup: 'CertificationGroup' = 'CertificationGroup';
@@ -100,7 +88,6 @@ export class EntityTypes {
     static CertificationRequirementStatusLookup: 'CertificationRequirementStatusLookup' = 'CertificationRequirementStatusLookup';
     static ChargeTypeLookup: 'ChargeTypeLookup' = 'ChargeTypeLookup';
     static CitySalesTaxRate: 'CitySalesTaxRate' = 'CitySalesTaxRate';
-    static CitySalesTaxRateRoot: 'CitySalesTaxRateRoot' = 'CitySalesTaxRateRoot';
     static ClientContact: 'ClientContact' = 'ClientContact';
     static ClientContact1: 'ClientContact1' = 'ClientContact1';
     static ClientContact2: 'ClientContact2' = 'ClientContact2';
@@ -117,7 +104,6 @@ export class EntityTypes {
     static ClientCorporation4: 'ClientCorporation4' = 'ClientCorporation4';
     static ClientCorporation5: 'ClientCorporation5' = 'ClientCorporation5';
     static ClientCorporationAppointment: 'ClientCorporationAppointment' = 'ClientCorporationAppointment';
-    static ClientCorporationAttribute: 'ClientCorporationAttribute' = 'ClientCorporationAttribute';
     static ClientCorporationCertification: 'ClientCorporationCertification' = 'ClientCorporationCertification';
     static ClientCorporationCustomObject: 'ClientCorporationCustomObject' = 'ClientCorporationCustomObject';
     static ClientCorporationCustomObject10EditHistory: 'ClientCorporationCustomObject10EditHistory' = 'ClientCorporationCustomObject10EditHistory';
@@ -199,7 +185,6 @@ export class EntityTypes {
     static ClientCorporationFile: 'ClientCorporationFile' = 'ClientCorporationFile';
     static ClientCorporationFileAttachment: 'ClientCorporationFileAttachment' = 'ClientCorporationFileAttachment';
     static ClientCorporationHistory: 'ClientCorporationHistory' = 'ClientCorporationHistory';
-    static ClientCorporationInvoiceGroup: 'ClientCorporationInvoiceGroup' = 'ClientCorporationInvoiceGroup';
     static ClientCorporationLine: 'ClientCorporationLine' = 'ClientCorporationLine';
     static ClientCorporationLineEditHistory: 'ClientCorporationLineEditHistory' = 'ClientCorporationLineEditHistory';
     static ClientCorporationLineEditHistoryFieldChange: 'ClientCorporationLineEditHistoryFieldChange' = 'ClientCorporationLineEditHistoryFieldChange';
@@ -207,32 +192,19 @@ export class EntityTypes {
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
-    static ClientCorporationTemplate: 'ClientCorporationTemplate' = 'ClientCorporationTemplate';
-    static ClientCorporationTemplateAttribute: 'ClientCorporationTemplateAttribute' = 'ClientCorporationTemplateAttribute';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
     static CorporationDepartment: 'CorporationDepartment' = 'CorporationDepartment';
     static CorporationGDPRCompliance: 'CorporationGDPRCompliance' = 'CorporationGDPRCompliance';
-    static CostCenter: 'CostCenter' = 'CostCenter';
     static Country: 'Country' = 'Country';
     static CountySalesTaxRate: 'CountySalesTaxRate' = 'CountySalesTaxRate';
-    static CountySalesTaxRateRoot: 'CountySalesTaxRateRoot' = 'CountySalesTaxRateRoot';
     static CurrencyUnit: 'CurrencyUnit' = 'CurrencyUnit';
     static CustomAction: 'CustomAction' = 'CustomAction';
-    static CustomEntity: 'CustomEntity' = 'CustomEntity';
-    static CustomEntityType: 'CustomEntityType' = 'CustomEntityType';
     static CustomListButton: 'CustomListButton' = 'CustomListButton';
-    static CustomModule: 'CustomModule' = 'CustomModule';
-    static CustomModuleRevision: 'CustomModuleRevision' = 'CustomModuleRevision';
     static Dashboard: 'Dashboard' = 'Dashboard';
     static DefaultEarnCode: 'DefaultEarnCode' = 'DefaultEarnCode';
     static DeliveryMethodLookup: 'DeliveryMethodLookup' = 'DeliveryMethodLookup';
     static Department: 'Department' = 'Department';
-    static DepartmentClientCorporationTemplate: 'DepartmentClientCorporationTemplate' = 'DepartmentClientCorporationTemplate';
-    static DepartmentJobOrderTemplate: 'DepartmentJobOrderTemplate' = 'DepartmentJobOrderTemplate';
-    static DepartmentPlacementTemplate: 'DepartmentPlacementTemplate' = 'DepartmentPlacementTemplate';
-    static DepartmentUserTemplate: 'DepartmentUserTemplate' = 'DepartmentUserTemplate';
-    static DesktopModule: 'DesktopModule' = 'DesktopModule';
     static DirectDepositAccount: 'DirectDepositAccount' = 'DirectDepositAccount';
     static DirectDepositAccountTypeLookup: 'DirectDepositAccountTypeLookup' = 'DirectDepositAccountTypeLookup';
     static Discount: 'Discount' = 'Discount';
@@ -243,13 +215,11 @@ export class EntityTypes {
     static DiscountRateEditHistory: 'DiscountRateEditHistory' = 'DiscountRateEditHistory';
     static DiscountRateEditHistoryFieldChange: 'DiscountRateEditHistoryFieldChange' = 'DiscountRateEditHistoryFieldChange';
     static DiscountRateEffectiveDateChange: 'DiscountRateEffectiveDateChange' = 'DiscountRateEffectiveDateChange';
-    static DiscountRateRoot: 'DiscountRateRoot' = 'DiscountRateRoot';
     static DiscountRateVersion: 'DiscountRateVersion' = 'DiscountRateVersion';
     static DiscountType: 'DiscountType' = 'DiscountType';
     static DiscountTypeLookup: 'DiscountTypeLookup' = 'DiscountTypeLookup';
     static DistributionList: 'DistributionList' = 'DistributionList';
     static DistrictSalesTaxRate: 'DistrictSalesTaxRate' = 'DistrictSalesTaxRate';
-    static DistrictSalesTaxRateRoot: 'DistrictSalesTaxRateRoot' = 'DistrictSalesTaxRateRoot';
     static DoubleTimeEarnCode: 'DoubleTimeEarnCode' = 'DoubleTimeEarnCode';
     static EarnCode: 'EarnCode' = 'EarnCode';
     static EarnCodeEditHistoryFieldChange: 'EarnCodeEditHistoryFieldChange' = 'EarnCodeEditHistoryFieldChange';
@@ -265,28 +235,20 @@ export class EntityTypes {
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
     static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
-    static Extension: 'Extension' = 'Extension';
-    static ExtensionPoint: 'ExtensionPoint' = 'ExtensionPoint';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
-    static ExternalResume: 'ExternalResume' = 'ExternalResume';
     static ExternalSalesTaxGroup: 'ExternalSalesTaxGroup' = 'ExternalSalesTaxGroup';
     static ExternalSalesTaxRate: 'ExternalSalesTaxRate' = 'ExternalSalesTaxRate';
-    static ExternalSalesTaxRateRoot: 'ExternalSalesTaxRateRoot' = 'ExternalSalesTaxRateRoot';
     static ExternalSalesTaxRateVersion: 'ExternalSalesTaxRateVersion' = 'ExternalSalesTaxRateVersion';
     static ExternalSystem: 'ExternalSystem' = 'ExternalSystem';
-    static FieldMap: 'FieldMap' = 'FieldMap';
-    static FieldMapInstance: 'FieldMapInstance' = 'FieldMapInstance';
     static FieldMapInteraction: 'FieldMapInteraction' = 'FieldMapInteraction';
     static File: 'File' = 'File';
-    static FileExport: 'FileExport' = 'FileExport';
     static FormTrigger: 'FormTrigger' = 'FormTrigger';
     static FormTriggerEvent: 'FormTriggerEvent' = 'FormTriggerEvent';
     static FormTriggerFull: 'FormTriggerFull' = 'FormTriggerFull';
     static FormTriggerInstance: 'FormTriggerInstance' = 'FormTriggerInstance';
     static FormTriggerMessage: 'FormTriggerMessage' = 'FormTriggerMessage';
-    static FrontPageArticle: 'FrontPageArticle' = 'FrontPageArticle';
     static GDPRDeletionRequest: 'GDPRDeletionRequest' = 'GDPRDeletionRequest';
     static GeneralLedgerAccount: 'GeneralLedgerAccount' = 'GeneralLedgerAccount';
     static GeneralLedgerExportStatusLookup: 'GeneralLedgerExportStatusLookup' = 'GeneralLedgerExportStatusLookup';
@@ -299,17 +261,12 @@ export class EntityTypes {
     static GeneralLedgerSegmentType: 'GeneralLedgerSegmentType' = 'GeneralLedgerSegmentType';
     static GeneralLedgerServiceCode: 'GeneralLedgerServiceCode' = 'GeneralLedgerServiceCode';
     static GoalTarget: 'GoalTarget' = 'GoalTarget';
-    static HideFromSearch: 'HideFromSearch' = 'HideFromSearch';
     static HitWord: 'HitWord' = 'HitWord';
     static HousingComplex: 'HousingComplex' = 'HousingComplex';
     static HousingComplexAmenity: 'HousingComplexAmenity' = 'HousingComplexAmenity';
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: 'HousingComplexUnit' = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
-    static Invoice: 'Invoice' = 'Invoice';
-    static InvoiceBatch: 'InvoiceBatch' = 'InvoiceBatch';
-    static InvoiceGroup: 'InvoiceGroup' = 'InvoiceGroup';
-    static InvoiceItem: 'InvoiceItem' = 'InvoiceItem';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementDeliveryStatusLookup: 'InvoiceStatementDeliveryStatusLookup' = 'InvoiceStatementDeliveryStatusLookup';
@@ -347,23 +304,12 @@ export class EntityTypes {
     static InvoiceTermEditHistory: 'InvoiceTermEditHistory' = 'InvoiceTermEditHistory';
     static InvoiceTermEditHistoryFieldChange: 'InvoiceTermEditHistoryFieldChange' = 'InvoiceTermEditHistoryFieldChange';
     static InvoiceTermEffectiveDateChange: 'InvoiceTermEffectiveDateChange' = 'InvoiceTermEffectiveDateChange';
-    static InvoiceTermRoot: 'InvoiceTermRoot' = 'InvoiceTermRoot';
     static InvoiceTermVersion: 'InvoiceTermVersion' = 'InvoiceTermVersion';
     static Issue: 'Issue' = 'Issue';
     static IssueItems: 'IssueItems' = 'IssueItems';
     static IssueResolutionStatusLookup: 'IssueResolutionStatusLookup' = 'IssueResolutionStatusLookup';
-    static JobAgent: 'JobAgent' = 'JobAgent';
-    static JobAgentCriteria: 'JobAgentCriteria' = 'JobAgentCriteria';
-    static JobAgentExternalAccount: 'JobAgentExternalAccount' = 'JobAgentExternalAccount';
-    static JobAgentExternalAccountSuppliment: 'JobAgentExternalAccountSuppliment' = 'JobAgentExternalAccountSuppliment';
-    static JobAgentNotification: 'JobAgentNotification' = 'JobAgentNotification';
-    static JobAgentResult: 'JobAgentResult' = 'JobAgentResult';
-    static JobAgentResultProcessing: 'JobAgentResultProcessing' = 'JobAgentResultProcessing';
-    static JobAgentSearchException: 'JobAgentSearchException' = 'JobAgentSearchException';
-    static JobAgentSearchRequest: 'JobAgentSearchRequest' = 'JobAgentSearchRequest';
     static JobBoardHistory: 'JobBoardHistory' = 'JobBoardHistory';
     static JobBoardJobOrder: 'JobBoardJobOrder' = 'JobBoardJobOrder';
-    static JobBoardMetaData: 'JobBoardMetaData' = 'JobBoardMetaData';
     static JobBoardPost: 'JobBoardPost' = 'JobBoardPost';
     static JobCode: 'JobCode' = 'JobCode';
     static JobCodeEditHistory: 'JobCodeEditHistory' = 'JobCodeEditHistory';
@@ -374,7 +320,6 @@ export class EntityTypes {
     static JobOrder3: 'JobOrder3' = 'JobOrder3';
     static JobOrder4: 'JobOrder4' = 'JobOrder4';
     static JobOrder5: 'JobOrder5' = 'JobOrder5';
-    static JobOrderAttribute: 'JobOrderAttribute' = 'JobOrderAttribute';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
@@ -406,7 +351,6 @@ export class EntityTypes {
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
-    static JobOrderTemplateAttribute: 'JobOrderTemplateAttribute' = 'JobOrderTemplateAttribute';
     static JobShift: 'JobShift' = 'JobShift';
     static JobShiftAssignment: 'JobShiftAssignment' = 'JobShiftAssignment';
     static JobShiftSubmission: 'JobShiftSubmission' = 'JobShiftSubmission';
@@ -425,25 +369,15 @@ export class EntityTypes {
     static LocationEditHistory: 'LocationEditHistory' = 'LocationEditHistory';
     static LocationEditHistoryFieldChange: 'LocationEditHistoryFieldChange' = 'LocationEditHistoryFieldChange';
     static LocationEffectiveDateChange: 'LocationEffectiveDateChange' = 'LocationEffectiveDateChange';
-    static LocationRoot: 'LocationRoot' = 'LocationRoot';
     static LocationVersion: 'LocationVersion' = 'LocationVersion';
     static MailListPushHistory: 'MailListPushHistory' = 'MailListPushHistory';
     static MailListPushHistoryDetail: 'MailListPushHistoryDetail' = 'MailListPushHistoryDetail';
     static MappedEntityConfiguration: 'MappedEntityConfiguration' = 'MappedEntityConfiguration';
     static MappedEntityConfigurationEditHistory: 'MappedEntityConfigurationEditHistory' = 'MappedEntityConfigurationEditHistory';
     static MappedEntityConfigurationEditHistoryFieldChange: 'MappedEntityConfigurationEditHistoryFieldChange' = 'MappedEntityConfigurationEditHistoryFieldChange';
-    static MasterApplication: 'MasterApplication' = 'MasterApplication';
-    static MasterCertification: 'MasterCertification' = 'MasterCertification';
-    static MasterCorporateUser: 'MasterCorporateUser' = 'MasterCorporateUser';
-    static MasterCorporation: 'MasterCorporation' = 'MasterCorporation';
     static MasterOAuthRegistry: 'MasterOAuthRegistry' = 'MasterOAuthRegistry';
     static MasterOAuthRegistryCorpAssociation: 'MasterOAuthRegistryCorpAssociation' = 'MasterOAuthRegistryCorpAssociation';
-    static MasterPrivateLabel: 'MasterPrivateLabel' = 'MasterPrivateLabel';
-    static MasterUserType: 'MasterUserType' = 'MasterUserType';
     static Menu: 'Menu' = 'Menu';
-    static MenuLocalization: 'MenuLocalization' = 'MenuLocalization';
-    static MessageFolder: 'MessageFolder' = 'MessageFolder';
-    static MessageRecipient: 'MessageRecipient' = 'MessageRecipient';
     static MessageTemplate: 'MessageTemplate' = 'MessageTemplate';
     static MessageTemplateFileAttachment: 'MessageTemplateFileAttachment' = 'MessageTemplateFileAttachment';
     static NPSResponse: 'NPSResponse' = 'NPSResponse';
@@ -484,7 +418,6 @@ export class EntityTypes {
     static OpportunityFileAttachment: 'OpportunityFileAttachment' = 'OpportunityFileAttachment';
     static OpportunityHistory: 'OpportunityHistory' = 'OpportunityHistory';
     static OtherSalesTaxRate: 'OtherSalesTaxRate' = 'OtherSalesTaxRate';
-    static OtherSalesTaxRateRoot: 'OtherSalesTaxRateRoot' = 'OtherSalesTaxRateRoot';
     static OvertimeEarnCode: 'OvertimeEarnCode' = 'OvertimeEarnCode';
     static PageInteraction: 'PageInteraction' = 'PageInteraction';
     static PayBillCycle: 'PayBillCycle' = 'PayBillCycle';
@@ -554,7 +487,6 @@ export class EntityTypes {
     static PlacementCommission: 'PlacementCommission' = 'PlacementCommission';
     static PlacementCommissionEditHistory: 'PlacementCommissionEditHistory' = 'PlacementCommissionEditHistory';
     static PlacementCommissionEditHistoryFieldChange: 'PlacementCommissionEditHistoryFieldChange' = 'PlacementCommissionEditHistoryFieldChange';
-    static PlacementCommissionHistory: 'PlacementCommissionHistory' = 'PlacementCommissionHistory';
     static PlacementCustomObject: 'PlacementCustomObject' = 'PlacementCustomObject';
     static PlacementCustomObject10EditHistory: 'PlacementCustomObject10EditHistory' = 'PlacementCustomObject10EditHistory';
     static PlacementCustomObject1EditHistory: 'PlacementCustomObject1EditHistory' = 'PlacementCustomObject1EditHistory';
@@ -592,31 +524,21 @@ export class EntityTypes {
     static PlacementRateCardLineEditHistoryFieldChange: 'PlacementRateCardLineEditHistoryFieldChange' = 'PlacementRateCardLineEditHistoryFieldChange';
     static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
     static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange';
-    static PlacementRateCardRoot: 'PlacementRateCardRoot' = 'PlacementRateCardRoot';
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
-    static PlacementTemplate: 'PlacementTemplate' = 'PlacementTemplate';
-    static PlacementTemplateAttribute: 'PlacementTemplateAttribute' = 'PlacementTemplateAttribute';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
     static PrivateLabel: 'PrivateLabel' = 'PrivateLabel';
     static PrivateLabelAttribute: 'PrivateLabelAttribute' = 'PrivateLabelAttribute';
     static PulseConfiguration: 'PulseConfiguration' = 'PulseConfiguration';
     static PulseConfigurationValue: 'PulseConfigurationValue' = 'PulseConfigurationValue';
-    static RateCard: 'RateCard' = 'RateCard';
     static RateDetail: 'RateDetail' = 'RateDetail';
     static RateDetailEditHistory: 'RateDetailEditHistory' = 'RateDetailEditHistory';
     static RateDetailEditHistoryFieldChange: 'RateDetailEditHistoryFieldChange' = 'RateDetailEditHistoryFieldChange';
     static RateGroup: 'RateGroup' = 'RateGroup';
     static RateGroupEditHistory: 'RateGroupEditHistory' = 'RateGroupEditHistory';
     static RateGroupEditHistoryFieldChange: 'RateGroupEditHistoryFieldChange' = 'RateGroupEditHistoryFieldChange';
-    static ReadOnlyAppointment: 'ReadOnlyAppointment' = 'ReadOnlyAppointment';
-    static RecurringAppointmentDelete: 'RecurringAppointmentDelete' = 'RecurringAppointmentDelete';
     static Report: 'Report' = 'Report';
     static ReportCategory: 'ReportCategory' = 'ReportCategory';
-    static ReportCriteria: 'ReportCriteria' = 'ReportCriteria';
-    static ReportEditHistory: 'ReportEditHistory' = 'ReportEditHistory';
-    static ReportEditHistoryFieldChange: 'ReportEditHistoryFieldChange' = 'ReportEditHistoryFieldChange';
-    static ReportOutput: 'ReportOutput' = 'ReportOutput';
     static ReportingCodeTemplate: 'ReportingCodeTemplate' = 'ReportingCodeTemplate';
     static ReportingCodeTemplateEditHistory: 'ReportingCodeTemplateEditHistory' = 'ReportingCodeTemplateEditHistory';
     static ReportingCodeTemplateEditHistoryFieldChange: 'ReportingCodeTemplateEditHistoryFieldChange' = 'ReportingCodeTemplateEditHistoryFieldChange';
@@ -628,28 +550,18 @@ export class EntityTypes {
     static SalesTaxRateEditHistory: 'SalesTaxRateEditHistory' = 'SalesTaxRateEditHistory';
     static SalesTaxRateEditHistoryFieldChange: 'SalesTaxRateEditHistoryFieldChange' = 'SalesTaxRateEditHistoryFieldChange';
     static SalesTaxRateEffectiveDateChange: 'SalesTaxRateEffectiveDateChange' = 'SalesTaxRateEffectiveDateChange';
-    static SalesTaxRateRoot: 'SalesTaxRateRoot' = 'SalesTaxRateRoot';
     static SalesTaxRateSourceLookup: 'SalesTaxRateSourceLookup' = 'SalesTaxRateSourceLookup';
     static SalesTaxRateTypeLookup: 'SalesTaxRateTypeLookup' = 'SalesTaxRateTypeLookup';
     static SalesTaxRateVersion: 'SalesTaxRateVersion' = 'SalesTaxRateVersion';
-    static SavedSearch: 'SavedSearch' = 'SavedSearch';
-    static SearchBasicField: 'SearchBasicField' = 'SearchBasicField';
-    static SearchExternalField: 'SearchExternalField' = 'SearchExternalField';
-    static Section: 'Section' = 'Section';
-    static SectionFieldMap: 'SectionFieldMap' = 'SectionFieldMap';
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
-    static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
     static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
     static Skill: 'Skill' = 'Skill';
-    static SkillList: 'SkillList' = 'SkillList';
     static SmsTracking: 'SmsTracking' = 'SmsTracking';
     static Specialty: 'Specialty' = 'Specialty';
-    static SpecialtyList: 'SpecialtyList' = 'SpecialtyList';
     static State: 'State' = 'State';
     static StateSalesTaxRate: 'StateSalesTaxRate' = 'StateSalesTaxRate';
-    static StateSalesTaxRateRoot: 'StateSalesTaxRateRoot' = 'StateSalesTaxRateRoot';
     static StatusLookup: 'StatusLookup' = 'StatusLookup';
     static StopWord: 'StopWord' = 'StopWord';
     static SubmissionTemplate: 'SubmissionTemplate' = 'SubmissionTemplate';
@@ -661,14 +573,9 @@ export class EntityTypes {
     static SurchargeRateEditHistory: 'SurchargeRateEditHistory' = 'SurchargeRateEditHistory';
     static SurchargeRateEditHistoryFieldChange: 'SurchargeRateEditHistoryFieldChange' = 'SurchargeRateEditHistoryFieldChange';
     static SurchargeRateEffectiveDateChange: 'SurchargeRateEffectiveDateChange' = 'SurchargeRateEffectiveDateChange';
-    static SurchargeRateRoot: 'SurchargeRateRoot' = 'SurchargeRateRoot';
     static SurchargeRateTypeLookup: 'SurchargeRateTypeLookup' = 'SurchargeRateTypeLookup';
     static SurchargeRateVersion: 'SurchargeRateVersion' = 'SurchargeRateVersion';
     static SurchargeType: 'SurchargeType' = 'SurchargeType';
-    static Survey: 'Survey' = 'Survey';
-    static SurveyQuestion: 'SurveyQuestion' = 'SurveyQuestion';
-    static SurveyResponse: 'SurveyResponse' = 'SurveyResponse';
-    static SurveyTemplate: 'SurveyTemplate' = 'SurveyTemplate';
     static Task: 'Task' = 'Task';
     static TaskEditHistory: 'TaskEditHistory' = 'TaskEditHistory';
     static TaskEditHistoryFieldChange: 'TaskEditHistoryFieldChange' = 'TaskEditHistoryFieldChange';
@@ -683,18 +590,13 @@ export class EntityTypes {
     static Tearsheet: 'Tearsheet' = 'Tearsheet';
     static TearsheetMember: 'TearsheetMember' = 'TearsheetMember';
     static TearsheetRecipient: 'TearsheetRecipient' = 'TearsheetRecipient';
-    static TestCategory: 'TestCategory' = 'TestCategory';
-    static TestEntity: 'TestEntity' = 'TestEntity';
-    static TestJob: 'TestJob' = 'TestJob';
-    static TestOwner: 'TestOwner' = 'TestOwner';
+    static TimeLaborCalcTypeLookup: 'TimeLaborCalcTypeLookup' = 'TimeLaborCalcTypeLookup';
+    static TimeLaborEvalRule: 'TimeLaborEvalRule' = 'TimeLaborEvalRule';
+    static TimeLaborEvalRuleCategoryLookup: 'TimeLaborEvalRuleCategoryLookup' = 'TimeLaborEvalRuleCategoryLookup';
+    static TimeLaborEvalRuleCombineCriteriaLookup: 'TimeLaborEvalRuleCombineCriteriaLookup' = 'TimeLaborEvalRuleCombineCriteriaLookup';
+    static TimeLaborEvalRuleStatusLookup: 'TimeLaborEvalRuleStatusLookup' = 'TimeLaborEvalRuleStatusLookup';
+    static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
-    static Timecard: 'Timecard' = 'Timecard';
-    static TimecardBatch: 'TimecardBatch' = 'TimecardBatch';
-    static TimecardExpense: 'TimecardExpense' = 'TimecardExpense';
-    static TimecardFileAttachment: 'TimecardFileAttachment' = 'TimecardFileAttachment';
-    static TimecardHistory: 'TimecardHistory' = 'TimecardHistory';
-    static TimecardPayClass: 'TimecardPayClass' = 'TimecardPayClass';
-    static TimecardTime: 'TimecardTime' = 'TimecardTime';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
@@ -704,20 +606,15 @@ export class EntityTypes {
     static UnbilledRevenueDistributionBatch: 'UnbilledRevenueDistributionBatch' = 'UnbilledRevenueDistributionBatch';
     static UnbilledRevenueGeneralLedgerExportStatusLookup: 'UnbilledRevenueGeneralLedgerExportStatusLookup' = 'UnbilledRevenueGeneralLedgerExportStatusLookup';
     static UnitOfMeasure: 'UnitOfMeasure' = 'UnitOfMeasure';
-    static UserAttribute: 'UserAttribute' = 'UserAttribute';
     static UserCustomObject: 'UserCustomObject' = 'UserCustomObject';
     static UserCustomObjectAttribute: 'UserCustomObjectAttribute' = 'UserCustomObjectAttribute';
     static UserCustomObjectAttributeInteraction: 'UserCustomObjectAttributeInteraction' = 'UserCustomObjectAttributeInteraction';
     static UserCustomObjectDepartment: 'UserCustomObjectDepartment' = 'UserCustomObjectDepartment';
-    static UserDepartmentGrouping: 'UserDepartmentGrouping' = 'UserDepartmentGrouping';
     static UserEditHistory: 'UserEditHistory' = 'UserEditHistory';
     static UserEditHistoryFieldChange: 'UserEditHistoryFieldChange' = 'UserEditHistoryFieldChange';
-    static UserHit: 'UserHit' = 'UserHit';
     static UserHousingComplexUnit: 'UserHousingComplexUnit' = 'UserHousingComplexUnit';
     static UserIntegration: 'UserIntegration' = 'UserIntegration';
     static UserLinkedInUrn: 'UserLinkedInUrn' = 'UserLinkedInUrn';
-    static UserLogin: 'UserLogin' = 'UserLogin';
-    static UserMenu: 'UserMenu' = 'UserMenu';
     static UserMessage: 'UserMessage' = 'UserMessage';
     static UserMessageFile: 'UserMessageFile' = 'UserMessageFile';
     static UserPulseCallLog: 'UserPulseCallLog' = 'UserPulseCallLog';
@@ -725,11 +622,7 @@ export class EntityTypes {
     static UserSetting: 'UserSetting' = 'UserSetting';
     static UserSurvey: 'UserSurvey' = 'UserSurvey';
     static UserSurveyOptions: 'UserSurveyOptions' = 'UserSurveyOptions';
-    static UserTemplate: 'UserTemplate' = 'UserTemplate';
-    static UserTemplateAttribute: 'UserTemplateAttribute' = 'UserTemplateAttribute';
     static UserType: 'UserType' = 'UserType';
-    static UserWork: 'UserWork' = 'UserWork';
-    static UserWorkFile: 'UserWorkFile' = 'UserWorkFile';
     static WorkersCompensation: 'WorkersCompensation' = 'WorkersCompensation';
     static WorkersCompensationRate: 'WorkersCompensationRate' = 'WorkersCompensationRate';
     static ZipCodeGis: 'ZipCodeGis' = 'ZipCodeGis';
@@ -737,7 +630,7 @@ export class EntityTypes {
         return ['Candidate', 'ClientContact', 'ClientCorporation', 'JobOrder', 'Opportunity', 'JobSubmission', 'Placement', 'Note', 'Task', 'Appointment'].indexOf(entity) >= 0
     }
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'AllSalesTaxGroup', 'AllSalesTaxRate', 'Appointment', 'AppointmentFileAttachment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingProfileRoot', 'BillingSyncBatchFileAttachment', 'BillingSyncBatchFileTypeLookup', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'CalendarFrequencyLookup', 'Candidate', 'CandidateAssessment', 'CandidateAssessmentFileAttachment', 'CandidateCertification', 'CandidateCertificationRequirement', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirement', 'CertificationRequirementStatusLookup', 'ChargeTypeLookup', 'CitySalesTaxRate', 'CitySalesTaxRateRoot', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'CountySalesTaxRateRoot', 'DefaultEarnCode', 'DeliveryMethodLookup', 'DirectDepositAccountTypeLookup', 'DiscountRate', 'DiscountRateRoot', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DistrictSalesTaxRateRoot', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'EntryTypeLookup', 'ExternalAccount', 'ExternalSalesTaxGroup', 'ExternalSalesTaxRateRoot', 'FileExport', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'Invoice', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermRoot', 'IssueResolutionStatusLookup', 'JobAgent', 'JobAgentResult', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'JobSubmissionCertificationRequirement', 'Lead', 'LegalBusinessEntity', 'Location', 'LocationRoot', 'MessageFolder', 'MessageRecipient', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OtherSalesTaxRateRoot', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementCertification', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementRateCardRoot', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateCard', 'RateDetail', 'RateGroup', 'ReadOnlyAppointment', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateRoot', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StateSalesTaxRateRoot', 'StatusLookup', 'SurchargeRate', 'SurchargeRateRoot', 'SurchargeRateTypeLookup', 'SurveyQuestion', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimecardBatch', 'TimecardFileAttachment', 'UnbilledRevenueGeneralLedgerExportStatusLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'UserWork', 'UserWorkFile', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'AllSalesTaxGroup', 'AllSalesTaxRate', 'Appointment', 'BatchStatusLookup', 'BillMasterStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'BillingSyncBatchFileTypeLookup', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'CalendarFrequencyLookup', 'Candidate', 'CandidateCertification', 'CandidateCertificationRequirement', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirement', 'CertificationRequirementStatusLookup', 'ChargeTypeLookup', 'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DeliveryMethodLookup', 'DirectDepositAccountTypeLookup', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup', 'EntryTypeLookup', 'ExternalAccount', 'ExternalSalesTaxGroup', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'IssueResolutionStatusLookup', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'JobSubmissionCertificationRequirement', 'Lead', 'LegalBusinessEntity', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementCertification', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup', 'UnbilledRevenueGeneralLedgerExportStatusLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 export type EntityName = Exclude<keyof typeof EntityTypes, 'prototype'>;
@@ -747,8 +640,8 @@ export type Scalar = number | string | string[] | Date;
 export type Strings = string | string[];
 export type ToMany<T> = ToManyRef<T> | T[];
 export interface ToManyRef<T> {
-  total: number;
-  data: T[];
+    total: number;
+    data: T[];
 }
 export interface Address {
     address1?: string;
@@ -762,20 +655,6 @@ export interface Address {
     timezone?: string;
     latitude?: number;
     longitude?: number;
-}
-export interface Action {
-    id?: number;
-    description?: Strings;
-    name?: Strings;
-    userTypes?: ToMany<UserType>;
-}
-export interface ActivityCenterIgnore {
-    id?: number;
-    contactID?: number;
-    dateAdded?: Date;
-    email?: Strings;
-    emailName?: Strings;
-    userID?: number;
 }
 export interface ActivityGoal {
     id?: number;
@@ -867,22 +746,6 @@ export interface Application {
     serverSettings?: ToMany<ApplicationServerSetting>;
     userLogins?: ToMany<UserLogin>;
 }
-export interface ApplicationServer {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    fileStorageDirectory?: Strings;
-    ipAddress?: Strings;
-    name?: Strings;
-    serverSettings?: ToMany<ApplicationServerSetting>;
-}
-export interface ApplicationServerSetting {
-    id?: number;
-    application?: Application;
-    server?: ApplicationServer;
-    setting?: Strings;
-    value?: Strings;
-}
 export interface Appointment {
     id?: number;
     appointmentUUID?: Strings;
@@ -948,31 +811,6 @@ export interface AppointmentEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
-export interface AppointmentFileAttachment {
-    id?: number;
-    appointment?: Appointment;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    departmentsSharedWith?: ToMany<CorporationDepartment>;
-    description?: Strings;
-    directory?: Strings;
-    externalID?: Strings;
-    fileExtension?: Strings;
-    fileOwner?: CorporateUser;
-    fileSize?: number;
-    isCopied?: boolean;
-    isDeleted?: boolean;
-    isEncrypted?: boolean;
-    isExternal?: boolean;
-    isOpen?: boolean;
-    isPrivate?: boolean;
-    isSendOut?: boolean;
-    name?: Strings;
-    type?: Strings;
-    usersSharedWith?: ToMany<CorporateUser>;
-    uuid?: Strings;
-}
 export interface AppointmentTemplate {
     id?: number;
     dateAdded?: Date;
@@ -980,21 +818,6 @@ export interface AppointmentTemplate {
     name?: Strings;
     owner?: CorporateUser;
     templateType?: Strings;
-}
-export interface Article {
-    id?: number;
-    author?: Strings;
-    bodyText?: Strings;
-    copyright?: Strings;
-    dateAdded?: Date;
-    datePublished?: Date;
-    filter?: Strings;
-    frontPageArticle?: FrontPageArticle;
-    headline?: Strings;
-    puclicCategories?: ToMany<Category>;
-    shortHeadline?: Strings;
-    source?: Strings;
-    time?: number;
 }
 export interface AutoAddBlacklistDomain {
     id?: number;
@@ -1013,6 +836,7 @@ export interface BatchStatusLookup {
 }
 export interface BillMaster {
     id?: number;
+    billMasterStatusLookup?: BillMasterStatusLookup;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
     billableCharge?: BillableCharge;
     billingCalendarInstance?: CalendarInstance;
@@ -1022,6 +846,7 @@ export interface BillMaster {
     chargeTypeLookup?: ChargeTypeLookup;
     dateAdded?: Date;
     dateLastModified?: Date;
+    discountRates?: ToMany<DiscountRateRoot>;
     earnCode?: EarnCode;
     externalID?: Strings;
     isEligible?: boolean;
@@ -1064,6 +889,11 @@ export interface BillMasterEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface BillMasterStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface BillMasterSurchargeRate {
     id?: number;
     billMaster?: BillMaster;
@@ -1071,6 +901,12 @@ export interface BillMasterSurchargeRate {
     owner?: CorporateUser;
     surchargeRate?: SurchargeRate;
     surchargeRateRoot?: SurchargeRateRoot;
+}
+export interface BillMasterSyncBatch {
+    id?: number;
+    batchStatus?: BatchStatusLookup;
+    dateAdded?: Date;
+    dateLastModified?: Date;
 }
 export interface BillMasterTransaction {
     id?: number;
@@ -1429,13 +1265,6 @@ export interface BillingProfileEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface BillingProfileRoot {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    versions?: ToMany<BillingProfileVersion>;
-}
 export interface BillingProfileVersion {
     id?: number;
     bccRecipients?: ToMany<Person>;
@@ -1560,14 +1389,6 @@ export interface BillingSyncError {
     tokens?: Strings;
     transactionDate?: Date;
     transactionOrigin?: TransactionOrigin;
-}
-export interface BillingSyncErrorStatus {
-    id?: number;
-    name?: Strings;
-}
-export interface BillingSyncErrorType {
-    id?: number;
-    name?: Strings;
 }
 export interface Bot {
     id?: number;
@@ -1977,66 +1798,12 @@ export interface Candidate {
     workHistories?: ToMany<CandidateWorkHistory>;
     workPhone?: Strings;
 }
-export interface CandidateAssessment {
-    id?: number;
-    addingUser?: CorporateUser;
-    assessmentCode?: Strings;
-    assessmentName?: Strings;
-    assessmentSystem?: CandidateAssessmentSystem;
-    candidate?: Candidate;
-    comments?: Strings;
-    dateAdded?: Date;
-    fileAttachments?: ToMany<CandidateAssessmentFileAttachment>;
-    isDeleted?: boolean;
-    migrateGUID?: Strings;
-    resultCode?: Strings;
-    resultDate?: Date;
-    scoreValue?: Strings;
-    sessionCode?: Strings;
-}
-export interface CandidateAssessmentFileAttachment {
-    id?: number;
-    candidateAssessment?: CandidateAssessment;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    departmentsSharedWith?: ToMany<CorporationDepartment>;
-    description?: Strings;
-    directory?: Strings;
-    externalID?: Strings;
-    fileExtension?: Strings;
-    fileOwner?: CorporateUser;
-    fileSize?: number;
-    isCopied?: boolean;
-    isDeleted?: boolean;
-    isEncrypted?: boolean;
-    isExternal?: boolean;
-    isOpen?: boolean;
-    isPrivate?: boolean;
-    isSendOut?: boolean;
-    name?: Strings;
-    type?: Strings;
-    usersSharedWith?: ToMany<CorporateUser>;
-    uuid?: Strings;
-}
-export interface CandidateAssessmentSystem {
-    id?: number;
-    assessments?: ToMany<CandidateAssessment>;
-    name?: Strings;
-}
 export interface CandidateAvailability {
     id?: number;
     candidate?: Candidate;
     dateAdded?: Date;
     isAvailable?: boolean;
     type?: Strings;
-}
-export interface CandidateAvailabilityMask {
-    id?: number;
-    availabilityBitMask?: number;
-    candidate?: Candidate;
-    candidateAvailability?: ToMany<CandidateAvailability>;
-    utcDateAvailable?: Date;
 }
 export interface CandidateCertification {
     id?: number;
@@ -2463,17 +2230,6 @@ export interface Category {
     type?: Strings;
     userTemplates?: ToMany<UserTemplate>;
 }
-export interface CategoryList {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    enabled?: boolean;
-    externalID?: number;
-    name?: Strings;
-    occupation?: Strings;
-    privateLabels?: ToMany<PrivateLabel>;
-    type?: Strings;
-}
 export interface Certification {
     id?: number;
     category?: Category;
@@ -2644,24 +2400,6 @@ export interface CitySalesTaxRate {
     versionID?: number;
     versions?: ToMany<SalesTaxRateVersion>;
 }
-export interface CitySalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
 export interface ClientContact {
     id?: number;
     activePlacements?: ToMany<Placement>;
@@ -2674,6 +2412,8 @@ export interface ClientContact {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2809,6 +2549,8 @@ export interface ClientContact1 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -2944,6 +2686,8 @@ export interface ClientContact2 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -3079,6 +2823,8 @@ export interface ClientContact3 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -3214,6 +2960,8 @@ export interface ClientContact4 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -3349,6 +3097,8 @@ export interface ClientContact5 {
     certifications?: Strings;
     clientContactID?: number;
     clientCorporation?: ClientCorporation;
+    clientLocationRoots?: ToMany<LocationRoot>;
+    clientLocations?: ToMany<Location>;
     comments?: Strings;
     companyName?: Strings;
     customDate1?: Date;
@@ -4309,17 +4059,6 @@ export interface ClientCorporationAppointment {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
 }
-export interface ClientCorporationAttribute {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    dateValue?: Date;
-    floatValue?: number;
-    instance?: number;
-    intValue?: number;
-    migrateGUID?: Strings;
-    templateAttribute?: ClientCorporationTemplateAttribute;
-    value?: Strings;
-}
 export interface ClientCorporationCertification {
     id?: number;
     alternateCertifications?: ToMany<Certification>;
@@ -4702,11 +4441,6 @@ export interface ClientCorporationHistory {
     modifyingUser?: Person;
     status?: Strings;
 }
-export interface ClientCorporationInvoiceGroup {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    invoiceGroup?: InvoiceGroup;
-}
 export interface ClientCorporationLine {
     id?: number;
     businessSectors?: ToMany<BusinessSector>;
@@ -4805,41 +4539,6 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
-}
-export interface ClientCorporationTemplate {
-    id?: number;
-    category?: Category;
-    corporationID?: number;
-    dateAdded?: Date;
-    departmentTemplates?: ToMany<DepartmentClientCorporationTemplate>;
-    description?: Strings;
-    displayType?: Strings;
-    enabled?: boolean;
-    groupName?: Strings;
-    isSearchable?: boolean;
-    migrateStatus?: Strings;
-    name?: Strings;
-    objectEnabled?: boolean;
-    objectNumber?: number;
-    reportID?: number;
-    staticTemplateName?: Strings;
-    tabName?: Strings;
-    templateAttributes?: ToMany<ClientCorporationTemplateAttribute>;
-}
-export interface ClientCorporationTemplateAttribute {
-    id?: number;
-    attributeType?: Strings;
-    columnName?: Strings;
-    description?: Strings;
-    enabled?: boolean;
-    hint?: Strings;
-    isRequired?: boolean;
-    isSearchable?: boolean;
-    name?: Strings;
-    optionList?: Strings;
-    sortOrder?: number;
-    staticFieldName?: Strings;
-    template?: ClientCorporationTemplate;
 }
 export interface CorporateUser {
     id?: number;
@@ -4977,15 +4676,6 @@ export interface CorporationGDPRCompliance {
     dateOfAcceptance?: Date;
     dateOfNotification?: Date;
 }
-export interface CostCenter {
-    id?: number;
-    corporation?: Corporation;
-    dateAdded?: Date;
-    departments?: ToMany<CorporationDepartment>;
-    description?: Strings;
-    enabled?: boolean;
-    name?: Strings;
-}
 export interface Country {
     id?: number;
     code?: Strings;
@@ -5021,24 +4711,6 @@ export interface CountySalesTaxRate {
     versionID?: number;
     versions?: ToMany<SalesTaxRateVersion>;
 }
-export interface CountySalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
 export interface CurrencyUnit {
     id?: number;
     alphabeticCode?: Strings;
@@ -5057,143 +4729,6 @@ export interface CustomAction {
     name?: Strings;
     privateLabel?: PrivateLabel;
 }
-export interface CustomEntity {
-    id?: number;
-    clientCorporation1?: ClientCorporation;
-    clientCorporation2?: ClientCorporation;
-    clientCorporation3?: ClientCorporation;
-    clientCorporation4?: ClientCorporation;
-    clientCorporation5?: ClientCorporation;
-    customEntity1?: CustomEntity;
-    customEntity2?: CustomEntity;
-    customEntity3?: CustomEntity;
-    customEntity4?: CustomEntity;
-    customEntity5?: CustomEntity;
-    customEntityType?: CustomEntityType;
-    date1?: Date;
-    date10?: Date;
-    date11?: Date;
-    date12?: Date;
-    date13?: Date;
-    date14?: Date;
-    date15?: Date;
-    date2?: Date;
-    date3?: Date;
-    date4?: Date;
-    date5?: Date;
-    date6?: Date;
-    date7?: Date;
-    date8?: Date;
-    date9?: Date;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    float1?: number;
-    float10?: number;
-    float11?: number;
-    float12?: number;
-    float13?: number;
-    float14?: number;
-    float15?: number;
-    float2?: number;
-    float3?: number;
-    float4?: number;
-    float5?: number;
-    float6?: number;
-    float7?: number;
-    float8?: number;
-    float9?: number;
-    int1?: number;
-    int10?: number;
-    int11?: number;
-    int12?: number;
-    int13?: number;
-    int14?: number;
-    int15?: number;
-    int2?: number;
-    int3?: number;
-    int4?: number;
-    int5?: number;
-    int6?: number;
-    int7?: number;
-    int8?: number;
-    int9?: number;
-    jobOrder1?: JobOrder;
-    jobOrder2?: JobOrder;
-    jobOrder3?: JobOrder;
-    jobOrder4?: JobOrder;
-    jobOrder5?: JobOrder;
-    migrateGUID?: Strings;
-    opportunity1?: Opportunity;
-    opportunity2?: Opportunity;
-    opportunity3?: Opportunity;
-    opportunity4?: Opportunity;
-    opportunity5?: Opportunity;
-    person1?: Person;
-    person2?: Person;
-    person3?: Person;
-    person4?: Person;
-    person5?: Person;
-    placement1?: Placement;
-    placement2?: Placement;
-    placement3?: Placement;
-    placement4?: Placement;
-    placement5?: Placement;
-    text1?: Strings;
-    text10?: Strings;
-    text11?: Strings;
-    text12?: Strings;
-    text13?: Strings;
-    text14?: Strings;
-    text15?: Strings;
-    text16?: Strings;
-    text17?: Strings;
-    text18?: Strings;
-    text19?: Strings;
-    text2?: Strings;
-    text20?: Strings;
-    text21?: Strings;
-    text22?: Strings;
-    text23?: Strings;
-    text24?: Strings;
-    text25?: Strings;
-    text26?: Strings;
-    text27?: Strings;
-    text28?: Strings;
-    text29?: Strings;
-    text3?: Strings;
-    text30?: Strings;
-    text31?: Strings;
-    text32?: Strings;
-    text33?: Strings;
-    text34?: Strings;
-    text35?: Strings;
-    text36?: Strings;
-    text37?: Strings;
-    text38?: Strings;
-    text39?: Strings;
-    text4?: Strings;
-    text40?: Strings;
-    text5?: Strings;
-    text6?: Strings;
-    text7?: Strings;
-    text8?: Strings;
-    text9?: Strings;
-    textBlock1?: Strings;
-    textBlock10?: Strings;
-    textBlock2?: Strings;
-    textBlock3?: Strings;
-    textBlock4?: Strings;
-    textBlock5?: Strings;
-    textBlock6?: Strings;
-    textBlock7?: Strings;
-    textBlock8?: Strings;
-    textBlock9?: Strings;
-}
-export interface CustomEntityType {
-    id?: number;
-    dateAdded?: Date;
-    name?: Strings;
-}
 export interface CustomListButton {
     id?: number;
     componentURL?: Strings;
@@ -5203,27 +4738,6 @@ export interface CustomListButton {
     privateLabel?: PrivateLabel;
     sortOrder?: number;
     userTypes?: ToMany<UserType>;
-}
-export interface CustomModule {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    enabled?: boolean;
-    inParameters?: Strings;
-    name?: Strings;
-    outParameters?: Strings;
-    privateLabel?: PrivateLabel;
-    revisions?: ToMany<CustomModuleRevision>;
-}
-export interface CustomModuleRevision {
-    id?: number;
-    comments?: Strings;
-    customModule?: CustomModule;
-    dateAdded?: Date;
-    isActive?: boolean;
-    modifyingUser?: CorporateUser;
-    moduleCode?: Strings;
-    version?: number;
 }
 export interface Dashboard {
     id?: number;
@@ -5304,36 +4818,6 @@ export interface Department {
     description?: Strings;
     enabled?: boolean;
     name?: Strings;
-}
-export interface DepartmentClientCorporationTemplate {
-    id?: number;
-    isEditable?: boolean;
-}
-export interface DepartmentJobOrderTemplate {
-    id?: number;
-    isEditable?: boolean;
-}
-export interface DepartmentPlacementTemplate {
-    id?: number;
-    isEditable?: boolean;
-}
-export interface DepartmentUserTemplate {
-    id?: number;
-    isEditable?: boolean;
-}
-export interface DesktopModule {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    detailStyle?: Strings;
-    displayName?: Strings;
-    enabled?: boolean;
-    entitlements?: ToMany<UserType>;
-    moduleName?: Strings;
-    moduleType?: Strings;
-    name?: Strings;
-    sectionStyle?: Strings;
-    sortOrder?: number;
 }
 export interface DirectDepositAccount {
     id?: number;
@@ -5449,14 +4933,6 @@ export interface DiscountRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface DiscountRateRoot {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    dateAdded?: Date;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    versions?: ToMany<DiscountRateVersion>;
-}
 export interface DiscountRateVersion {
     id?: number;
     amount?: number;
@@ -5542,24 +5018,6 @@ export interface DistrictSalesTaxRate {
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
     versionID?: number;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
-export interface DistrictSalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
     versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface DoubleTimeEarnCode {
@@ -5772,18 +5230,6 @@ export interface EstaffMappableFlowback {
     estaffFieldType?: Strings;
     estaffRecordType?: Strings;
 }
-export interface Extension {
-    id?: number;
-    description?: Strings;
-    extensionPoints?: ToMany<ExtensionPoint>;
-    name?: Strings;
-}
-export interface ExtensionPoint {
-    id?: number;
-    extension?: Extension;
-    extensionPointEntityID?: number;
-    extensionPointEntityType?: Strings;
-}
 export interface ExternalAccount {
     id?: number;
     customText1?: Strings;
@@ -5812,13 +5258,6 @@ export interface ExternalBatchStatusRequest {
     rawErrors?: Strings;
     rawPayload?: Strings;
     retrySequenceNumber?: number;
-}
-export interface ExternalResume {
-    id?: number;
-    dateLastModified?: Date;
-    externalAccount?: ExternalAccount;
-    jobboardResumeID?: Strings;
-    numViews?: number;
 }
 export interface ExternalSalesTaxGroup {
     id?: number;
@@ -5853,15 +5292,6 @@ export interface ExternalSalesTaxRate {
     versionID?: number;
     versions?: ToMany<ExternalSalesTaxRateVersion>;
 }
-export interface ExternalSalesTaxRateRoot {
-    id?: number;
-    dateAdded?: Date;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    versions?: ToMany<ExternalSalesTaxRateVersion>;
-}
 export interface ExternalSalesTaxRateVersion {
     id?: number;
     dateAdded?: Date;
@@ -5879,51 +5309,6 @@ export interface ExternalSystem {
     enabled?: boolean;
     name?: Strings;
     webServiceURL?: Strings;
-}
-export interface FieldMap {
-    id?: number;
-    allowMultiple?: boolean;
-    columnName?: Strings;
-    dateLastModified?: Date;
-    defaultValue?: Strings;
-    description?: Strings;
-    display?: Strings;
-    displayList?: Strings;
-    editType?: Strings;
-    entity?: Strings;
-    hideFromSearch?: boolean;
-    hint?: Strings;
-    isDescending?: boolean;
-    isHidden?: boolean;
-    isRequired?: boolean;
-    lastModifyingMasterUserID?: number;
-    limit?: number;
-    privateLabel?: PrivateLabel;
-    sectionFieldMaps?: ToMany<SectionFieldMap>;
-    someField?: number;
-    sortOrder?: number;
-    valueList?: Strings;
-}
-export interface FieldMapInstance {
-    id?: number;
-    allowMultiple?: boolean;
-    columnName?: Strings;
-    dateLastModified?: Date;
-    defaultValue?: Strings;
-    description?: Strings;
-    display?: Strings;
-    displayList?: Strings;
-    editType?: Strings;
-    entity?: Strings;
-    hint?: Strings;
-    isDescending?: boolean;
-    isHidden?: boolean;
-    isRequired?: boolean;
-    lastModifyingMasterUserID?: number;
-    limit?: number;
-    privateLabel?: number;
-    sortOrder?: number;
-    valueList?: Strings;
 }
 export interface FieldMapInteraction {
     id?: number;
@@ -5956,18 +5341,6 @@ export interface File {
     title?: Strings;
     type?: Strings;
     userType?: Strings;
-}
-export interface FileExport {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    fileName?: Strings;
-    isDeleted?: boolean;
-    name?: Strings;
-    reportID?: number;
-    timecardBatches?: ToMany<TimecardBatch>;
-    type?: Strings;
-    user?: CorporateUser;
 }
 export interface FormTrigger {
     id?: number;
@@ -6015,10 +5388,6 @@ export interface FormTriggerMessage {
     modifyingUserID?: CorporateUser;
     restError?: Strings;
     timeoutError?: Strings;
-}
-export interface FrontPageArticle {
-    id?: number;
-    sortOrder?: number;
 }
 export interface GDPRDeletionRequest {
     id?: number;
@@ -6137,12 +5506,6 @@ export interface GoalTarget {
     startDate?: Date;
     target?: number;
     userId?: number;
-}
-export interface HideFromSearch {
-    id?: number;
-    columnName?: Strings;
-    entity?: Strings;
-    privateLabel?: PrivateLabel;
 }
 export interface HitWord {
     id?: number;
@@ -6345,72 +5708,6 @@ export interface HousingComplexUtilityAccount {
     type?: Strings;
     unit?: HousingComplexUnit;
 }
-export interface Invoice {
-    id?: number;
-    amountPaid?: number;
-    clientCorporation?: ClientCorporation;
-    comments?: Strings;
-    costCenter?: Strings;
-    dateAdded?: Date;
-    dateBegin?: Date;
-    dateDue?: Date;
-    dateEnd?: Date;
-    dateExported?: Date;
-    dateInvoice?: Date;
-    dateLastModified?: Date;
-    fileExport?: FileExport;
-    invoiceBatch?: InvoiceBatch;
-    invoiceItems?: ToMany<InvoiceItem>;
-    isDeleted?: boolean;
-    isExported?: boolean;
-    migrateGUID?: Strings;
-    outstandingBalance?: number;
-    placements?: ToMany<Placement>;
-    recipientUserID?: number;
-    status?: Strings;
-    terms?: Strings;
-    timecardBatches?: ToMany<TimecardBatch>;
-    timecardExpenses?: ToMany<TimecardExpense>;
-    timecardTimes?: ToMany<TimecardTime>;
-    timecards?: ToMany<Timecard>;
-    user?: CorporateUser;
-}
-export interface InvoiceBatch {
-    id?: number;
-    dateAdded?: Date;
-    invoices?: ToMany<Invoice>;
-    migrateGUID?: Strings;
-    user?: CorporateUser;
-}
-export interface InvoiceGroup {
-    id?: number;
-    clientCorporationInvoiceGroups?: ToMany<ClientCorporationInvoiceGroup>;
-    corporation?: Corporation;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    description?: Strings;
-    lastModifyingUser?: CorporateUser;
-    migrateGUID?: Strings;
-    name?: Strings;
-    placements?: ToMany<Placement>;
-}
-export interface InvoiceItem {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    invoice?: Invoice;
-    migrateGUID?: Strings;
-    payPeriod?: Strings;
-    placement?: Placement;
-    quantity?: number;
-    rate?: number;
-    taxRate?: number;
-    timecardExpenses?: ToMany<TimecardExpense>;
-    timecardTimes?: ToMany<TimecardTime>;
-    unit?: Strings;
-    unitOld?: Strings;
-    wasManuallyCreated?: boolean;
-}
 export interface InvoiceStatement {
     id?: number;
     billingAddress?: Address;
@@ -6457,6 +5754,10 @@ export interface InvoiceStatement {
     paymentTerms?: Strings;
     previousBalance?: number;
     purchaseOrderNumber?: Strings;
+    rebillFromInvoices?: ToMany<InvoiceStatement>;
+    rebillNumberFromInvoiceStatement?: InvoiceStatement;
+    rebillSuffix?: Strings;
+    rebillToInvoices?: ToMany<InvoiceStatement>;
     remitInstructions?: Strings;
     splitBys?: ToMany<InvoiceStatementSplitBy>;
     status?: InvoiceStatementStatusLookup;
@@ -6915,14 +6216,6 @@ export interface InvoiceTermEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface InvoiceTermRoot {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    dateAdded?: Date;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    versions?: ToMany<InvoiceTermVersion>;
-}
 export interface InvoiceTermVersion {
     id?: number;
     approvalRequired?: boolean;
@@ -7026,114 +6319,6 @@ export interface IssueResolutionStatusLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
-export interface JobAgent {
-    id?: number;
-    candidate?: Candidate;
-    criterias?: ToMany<JobAgentCriteria>;
-    dateAdded?: Date;
-    dateBegin?: Date;
-    dateEnd?: Date;
-    dateLastModified?: Date;
-    description?: Strings;
-    externalAccounts?: ToMany<JobAgentExternalAccount>;
-    frequencyHours?: number;
-    isAutomaticParse?: boolean;
-    isDeleted?: boolean;
-    jobAgentNotifications?: ToMany<JobAgentNotification>;
-    jobOrder?: JobOrder;
-    lastModifyingUser?: CorporateUser;
-    maxResults?: number;
-    maxResultsPerAccount?: number;
-    maxResultsPerSearch?: number;
-    notificationUser?: CorporateUser;
-    positionId?: Strings;
-    priority?: number;
-    results?: ToMany<JobAgentResult>;
-    searchRequests?: ToMany<JobAgentSearchRequest>;
-    status?: Strings;
-    title?: Strings;
-}
-export interface JobAgentCriteria {
-    id?: number;
-    jobAgent?: JobAgent;
-    searchTerms?: Strings;
-    type?: Strings;
-}
-export interface JobAgentExternalAccount {
-    id?: number;
-    externalAccount?: ExternalAccount;
-    jobAgent?: JobAgent;
-    suppliments?: ToMany<JobAgentExternalAccountSuppliment>;
-}
-export interface JobAgentExternalAccountSuppliment {
-    id?: number;
-    externalAccount?: JobAgentExternalAccount;
-    name?: Strings;
-    value?: Strings;
-}
-export interface JobAgentNotification {
-    id?: number;
-    jobAgent?: JobAgent;
-    user?: CorporateUser;
-}
-export interface JobAgentResult {
-    id?: number;
-    candidate?: Candidate;
-    city?: Strings;
-    conceptScore?: number;
-    country?: Strings;
-    dateAdded?: Date;
-    datePosted?: Date;
-    email?: Strings;
-    externalSystem?: ExternalSystem;
-    firstName?: Strings;
-    isDeleted?: boolean;
-    isNotified?: boolean;
-    jobAgent?: JobAgent;
-    jobSubmission?: JobSubmission;
-    lastName?: Strings;
-    parseStatus?: Strings;
-    ranking?: number;
-    resultProcessing?: JobAgentResultProcessing;
-    resumeBody?: Strings;
-    resumeID?: Strings;
-    searchRequest?: JobAgentSearchRequest;
-    source?: Strings;
-    state?: Strings;
-    status?: Strings;
-    title?: Strings;
-}
-export interface JobAgentResultProcessing {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    results?: ToMany<JobAgentResult>;
-    searchRequest?: JobAgentSearchRequest;
-    status?: Strings;
-    xmlData?: Strings;
-}
-export interface JobAgentSearchException {
-    id?: number;
-    dateAdded?: Date;
-    exceptionText?: Strings;
-    notified?: boolean;
-    searchDateTime?: Date;
-    searchId?: Strings;
-    seatSourceId?: Strings;
-    sourceId?: Strings;
-}
-export interface JobAgentSearchRequest {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    externalAccount?: ExternalAccount;
-    externalSystemSearchRequestID?: Strings;
-    jobAgent?: JobAgent;
-    resultProcessings?: ToMany<JobAgentResultProcessing>;
-    results?: ToMany<JobAgentResult>;
-    status?: Strings;
-    xmlData?: Strings;
-}
 export interface JobBoardHistory {
     id?: number;
     dateAdded?: Date;
@@ -7150,12 +6335,6 @@ export interface JobBoardJobOrder {
     jobCastModule?: Strings;
     jobOrder?: JobOrder;
     metaDatas?: ToMany<JobBoardMetaData>;
-}
-export interface JobBoardMetaData {
-    id?: number;
-    columnName?: Strings;
-    defaultValue?: Strings;
-    jobBoardJobOrder?: JobBoardJobOrder;
 }
 export interface JobBoardPost {
     id?: number;
@@ -8554,17 +7733,6 @@ export interface JobOrder5 {
     workersCompRate?: WorkersCompensationRate;
     yearsRequired?: number;
 }
-export interface JobOrderAttribute {
-    id?: number;
-    dateValue?: Date;
-    floatValue?: number;
-    instance?: number;
-    intValue?: number;
-    jobOrder?: JobOrder;
-    migrateGUID?: Strings;
-    templateAttribute?: JobOrderTemplateAttribute;
-    value?: Strings;
-}
 export interface JobOrderCustomObject {
     id?: number;
     [propName: string]: any;
@@ -8758,26 +7926,12 @@ export interface JobOrderTemplate {
     templateAttributes?: ToMany<JobOrderTemplateAttribute>;
     type?: Strings;
 }
-export interface JobOrderTemplateAttribute {
-    id?: number;
-    attributeType?: Strings;
-    columnName?: Strings;
-    description?: Strings;
-    enabled?: boolean;
-    hint?: Strings;
-    isRequired?: boolean;
-    isSearchable?: boolean;
-    name?: Strings;
-    optionList?: Strings;
-    sortOrder?: number;
-    staticFieldName?: Strings;
-    template?: JobOrderTemplate;
-}
 export interface JobShift {
     id?: number;
     dateAdded?: Date;
     dateLastModified?: Date;
     fillRatio?: number;
+    isClosed?: boolean;
     isOpen?: boolean;
     jobOrder?: JobOrder;
     jobShiftAssignments?: ToMany<JobShiftAssignment>;
@@ -9225,14 +8379,6 @@ export interface LocationEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface LocationRoot {
-    id?: number;
-    candidate?: Candidate;
-    clientCorporation?: ClientCorporation;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    versions?: ToMany<LocationVersion>;
-}
 export interface LocationVersion {
     id?: number;
     address?: Address;
@@ -9328,130 +8474,6 @@ export interface MappedEntityConfigurationEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
-export interface MasterApplication {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    name?: Strings;
-}
-export interface MasterCertification {
-    id?: number;
-    description?: Strings;
-    name?: Strings;
-    privateLabels?: ToMany<MasterPrivateLabel>;
-}
-export interface MasterCorporateUser {
-    id?: number;
-    address?: Address;
-    application?: MasterApplication;
-    certifications?: Strings;
-    checkPayableTo?: Strings;
-    companyDescription?: Strings;
-    companyName?: Strings;
-    companyURL?: Strings;
-    contactDateAdded?: Date;
-    corporation?: MasterCorporation;
-    dateAvailable?: Date;
-    dateAvailableEnd?: Date;
-    dateLastAlerted?: Date;
-    dateLastComment?: Date;
-    dateOfBirth?: Date;
-    dayRate?: number;
-    degreeList?: Strings;
-    delegates?: ToMany<MasterCorporateUser>;
-    delegations?: ToMany<MasterCorporateUser>;
-    description?: Strings;
-    desiredLocations?: Strings;
-    educationDegree?: Strings;
-    email?: Strings;
-    email2?: Strings;
-    email3?: Strings;
-    emailDefaultText?: Strings;
-    emailNotify?: boolean;
-    emailOld?: Strings;
-    emailSignature?: Strings;
-    employmentPreference?: Strings;
-    enabled?: boolean;
-    experience?: number;
-    externalEmail?: Strings;
-    externalID?: Strings;
-    fax?: Strings;
-    fax2?: Strings;
-    fax3?: Strings;
-    firstName?: Strings;
-    getClientNewsLetter?: boolean;
-    getNewsLetter?: boolean;
-    hourlyRate?: number;
-    inboundEmailEnabled?: boolean;
-    internationalMailingAddress?: Strings;
-    isBuySide?: boolean;
-    isCreditCardValid?: boolean;
-    isDayLightSavings?: boolean;
-    isLockedOut?: boolean;
-    isOutboundFaxEnabled?: boolean;
-    isPasswordCaseSensitive?: boolean;
-    isPublic?: boolean;
-    isSellSide?: boolean;
-    isValidEmail?: boolean;
-    lastName?: Strings;
-    middleName?: Strings;
-    mobile?: Strings;
-    name?: Strings;
-    namePrefix?: Strings;
-    nameSuffix?: Strings;
-    numEmployees?: number;
-    occupation?: Strings;
-    pager?: Strings;
-    password?: Strings;
-    phone?: Strings;
-    phone2?: Strings;
-    phone3?: Strings;
-    privateLabel?: MasterPrivateLabel;
-    projectMinimum?: number;
-    recentAwardList?: Strings;
-    recentClientList?: Strings;
-    referredBy?: Strings;
-    registrationType?: Strings;
-    salary?: number;
-    secondaryAddress?: Address;
-    skillSet?: Strings;
-    source?: Strings;
-    ssn?: Strings;
-    taxID?: Strings;
-    timeZoneOffsetEST?: number;
-    travelLimit?: number;
-    userDateAdded?: Date;
-    userType?: MasterUserType;
-    userUUID?: Strings;
-    username?: Strings;
-    willRelocate?: boolean;
-    willTravel?: boolean;
-    workAuthorized?: boolean;
-    workPhone?: Strings;
-}
-export interface MasterCorporation {
-    id?: number;
-    activityTrackingEmail?: Strings;
-    address?: Address;
-    companyURL?: Strings;
-    dateAdded?: Date;
-    dateBillingBegin?: Date;
-    dateBillingEnd?: Date;
-    enabled?: boolean;
-    externalID?: Strings;
-    fax?: Strings;
-    flatMonthlyFee?: number;
-    flatStorageLimitMB?: number;
-    inboundListenerEmail?: Strings;
-    minimumMonthlyFee?: number;
-    name?: Strings;
-    newLeadEmail?: Strings;
-    perUserStorageLimitMB?: number;
-    phone?: Strings;
-    privateLabel?: MasterPrivateLabel;
-    privateLabels?: ToMany<MasterPrivateLabel>;
-    storageFee?: number;
-}
 export interface MasterOAuthRegistry {
     id?: number;
     clientId?: Strings;
@@ -9468,43 +8490,6 @@ export interface MasterOAuthRegistryCorpAssociation {
     corporationID?: number;
     masterOAuthRegistry?: MasterOAuthRegistry;
     password?: Strings;
-}
-export interface MasterPrivateLabel {
-    id?: number;
-    application?: MasterApplication;
-    attributeList?: Strings;
-    certifications?: ToMany<MasterCertification>;
-    coBrandedTitle?: Strings;
-    coBrandedURL?: Strings;
-    dateAdded?: Date;
-    defaultRecruiterUser?: MasterCorporateUser;
-    description?: Strings;
-    enabled?: boolean;
-    footerHTML?: Strings;
-    headerHTML?: Strings;
-    keyWords?: Strings;
-    name?: Strings;
-    noLookAndFeel?: number;
-    onLoadScript?: Strings;
-    parentPrivateLabel?: MasterPrivateLabel;
-    splashPage?: Strings;
-    styleHTML?: Strings;
-    title?: Strings;
-    type?: Strings;
-    updateCanvas?: boolean;
-    url?: Strings;
-    userType?: MasterUserType;
-}
-export interface MasterUserType {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    enabled?: boolean;
-    isAdministrator?: boolean;
-    isHidden?: boolean;
-    maxActiveUsers?: number;
-    monthlyFee?: number;
-    name?: Strings;
 }
 export interface Menu {
     id?: number;
@@ -9527,49 +8512,6 @@ export interface Menu {
     splatformParentMenuID?: number;
     templateName?: Strings;
     windowType?: Strings;
-}
-export interface MenuLocalization {
-    id?: number;
-    locale?: Strings;
-    menu?: Menu;
-    name?: Strings;
-}
-export interface MessageFolder {
-    id?: number;
-    groupBy?: Strings;
-    isDeleted?: boolean;
-    isExpanded?: boolean;
-    migrateGUID?: Strings;
-    name?: Strings;
-    owner?: Person;
-    parentMessageFolder?: MessageFolder;
-    selectedColumns?: Strings;
-}
-export interface MessageRecipient {
-    id?: number;
-    dateForward?: Date;
-    dateLastModified?: Date;
-    dateReply?: Date;
-    email?: Strings;
-    externalFrom?: Strings;
-    flagColor?: Strings;
-    folder?: Strings;
-    isDeleted?: boolean;
-    isPrivate?: boolean;
-    isRead?: boolean;
-    isSpam?: boolean;
-    messageFolder?: MessageFolder;
-    migrateGUID?: Strings;
-    numAttachments?: number;
-    priority?: number;
-    recipientSort?: Strings;
-    recipientType?: Strings;
-    scheduleID?: number;
-    sender?: Person;
-    smtpReceiveDate?: Date;
-    subject?: Strings;
-    subjectSort?: Strings;
-    threadID?: Strings;
 }
 export interface MessageTemplate {
     id?: number;
@@ -10699,24 +9641,6 @@ export interface OtherSalesTaxRate {
     versionID?: number;
     versions?: ToMany<SalesTaxRateVersion>;
 }
-export interface OtherSalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
 export interface OvertimeEarnCode {
     id?: number;
     code?: Strings;
@@ -11506,6 +10430,7 @@ export interface Placement {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -11815,6 +10740,7 @@ export interface Placement1 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -12124,6 +11050,7 @@ export interface Placement2 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -12433,6 +11360,7 @@ export interface Placement3 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -12742,6 +11670,7 @@ export interface Placement4 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -13051,6 +11980,7 @@ export interface Placement5 {
     pendingChangeRequests?: number;
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
+    placementRateCardID?: number;
     placementRateCardRoot?: PlacementRateCardRoot;
     positionCode?: Strings;
     projectCodeList?: Strings;
@@ -14669,15 +13599,6 @@ export interface PlacementCommissionEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
-export interface PlacementCommissionHistory {
-    id?: number;
-    comments?: Strings;
-    commission?: PlacementCommission;
-    dateAdded?: Date;
-    grossMarginPercentage?: number;
-    modifyingUser?: Person;
-    status?: Strings;
-}
 export interface PlacementCustomObject {
     id?: number;
     [propName: string]: any;
@@ -14979,15 +13900,6 @@ export interface PlacementRateCardLineGroupEditHistoryFieldChange {
     parentFieldName?: Strings;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
-export interface PlacementRateCardRoot {
-    id?: number;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    placement?: Placement;
-    rootExternalID?: Strings;
-    rootMigrateGUID?: Strings;
-    versions?: ToMany<PlacementRateCardVersion>;
-}
 export interface PlacementRateCardVersion {
     id?: number;
     dateAdded?: Date;
@@ -15002,41 +13914,6 @@ export interface PlacementTaxExemptionStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
-}
-export interface PlacementTemplate {
-    id?: number;
-    corporationID?: number;
-    dateAdded?: Date;
-    departmentTemplates?: ToMany<DepartmentPlacementTemplate>;
-    description?: Strings;
-    displayType?: Strings;
-    enabled?: boolean;
-    entityList?: Strings;
-    groupName?: Strings;
-    isSearchable?: boolean;
-    migrateStatus?: Strings;
-    name?: Strings;
-    objectEnabled?: boolean;
-    objectNumber?: number;
-    reportID?: number;
-    staticTemplateName?: Strings;
-    tabName?: Strings;
-    templateAttributes?: ToMany<PlacementTemplateAttribute>;
-}
-export interface PlacementTemplateAttribute {
-    id?: number;
-    attributeType?: Strings;
-    columnName?: Strings;
-    description?: Strings;
-    enabled?: boolean;
-    hint?: Strings;
-    isRequired?: boolean;
-    isSearchable?: boolean;
-    name?: Strings;
-    optionList?: Strings;
-    sortOrder?: number;
-    staticFieldName?: Strings;
-    template?: PlacementTemplate;
 }
 export interface PlacementTimeAndExpense {
     id?: number;
@@ -15130,37 +14007,6 @@ export interface PulseConfigurationValue {
     name?: Strings;
     pulseConfiguration?: PulseConfiguration;
     valueAddedByUser?: Person;
-}
-export interface RateCard {
-    id?: number;
-    businessSector?: Strings;
-    category?: Category;
-    clientCorporations?: ToMany<ClientCorporation>;
-    corporation?: Corporation;
-    customRate1?: number;
-    customRate10?: number;
-    customRate2?: number;
-    customRate3?: number;
-    customRate4?: number;
-    customRate5?: number;
-    customRate6?: number;
-    customRate7?: number;
-    customRate8?: number;
-    customRate9?: number;
-    dateEffective?: Date;
-    dateLastModified?: Date;
-    isDefault?: boolean;
-    isDeleted?: boolean;
-    lastModifyingUser?: CorporateUser;
-    migrateGUID?: Strings;
-    name?: Strings;
-    overtimeRate?: number;
-    rate?: number;
-    rateCardCategory?: Strings;
-    shift?: Shift;
-    shortName?: Strings;
-    skill?: Skill;
-    type?: Strings;
 }
 export interface RateDetail {
     id?: number;
@@ -15259,54 +14105,6 @@ export interface RateGroupEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
-export interface ReadOnlyAppointment {
-    id?: number;
-    appointmentUUID?: Strings;
-    attachments?: ToMany<UserWork>;
-    attendees?: ToMany<AppointmentAttendee>;
-    candidateReference?: Candidate;
-    childAppointments?: ToMany<Appointment>;
-    clientContactReference?: ClientContact;
-    communicationMethod?: Strings;
-    dateAdded?: Date;
-    dateBegin?: Date;
-    dateCompleted?: Date;
-    dateEnd?: Date;
-    dateLastModified?: Date;
-    editHistory?: ToMany<AppointmentEditHistory>;
-    externalIcsSeq?: number;
-    fileAttachments?: ToMany<AppointmentFileAttachment>;
-    guests?: ToMany<Person>;
-    isAllDay?: boolean;
-    isDeleted?: boolean;
-    isPrivate?: boolean;
-    jobOrder?: JobOrder;
-    jobSubmission?: JobSubmission;
-    lead?: Lead;
-    location?: Strings;
-    migrateGUID?: Strings;
-    notificationMinutes?: number;
-    opportunity?: Opportunity;
-    owner?: Person;
-    parentAppointment?: Appointment;
-    placement?: Placement;
-    recurrenceDayBits?: number;
-    recurrenceFrequency?: number;
-    recurrenceMax?: number;
-    recurrenceMonthBits?: number;
-    recurrenceStyle?: Strings;
-    recurrenceType?: Strings;
-    recurringDeletes?: ToMany<RecurringAppointmentDelete>;
-    showTimeAs?: Strings;
-    subject?: Strings;
-    timeZoneID?: Strings;
-    type?: Strings;
-}
-export interface RecurringAppointmentDelete {
-    id?: number;
-    appointment?: Appointment;
-    dateBegin?: Date;
-}
 export interface Report {
     id?: number;
     category?: ReportCategory;
@@ -15335,49 +14133,6 @@ export interface ReportCategory {
     name?: Strings;
     reports?: ToMany<Report>;
     sortOrder?: number;
-}
-export interface ReportCriteria {
-    id?: number;
-    allowMultiple?: boolean;
-    columnName?: Strings;
-    dataFormat?: Strings;
-    description?: Strings;
-    display?: Strings;
-    editType?: Strings;
-    hint?: Strings;
-    isHidden?: boolean;
-    isRequired?: boolean;
-    limit?: number;
-    lineDelimiter?: Strings;
-    report?: Report;
-    sortOrder?: number;
-    valueList?: Strings;
-}
-export interface ReportEditHistory {
-    id?: number;
-    auditTrail?: Strings;
-    changeReason?: Strings;
-    dateAdded?: Date;
-    fieldChanges?: ToMany<ReportEditHistoryFieldChange>;
-    migrateGUID?: Strings;
-    modifyingPersonID?: number;
-    oldReportEditHistoryID?: number;
-    requestedBy?: Strings;
-    targetEntity?: Report;
-    transactionID?: Strings;
-}
-export interface ReportEditHistoryFieldChange {
-    id?: number;
-    columnName?: Strings;
-    display?: Strings;
-    editHistory?: ReportEditHistory;
-    newValue?: Strings;
-    oldValue?: Strings;
-}
-export interface ReportOutput {
-    id?: number;
-    name?: Strings;
-    reports?: ToMany<Report>;
 }
 export interface ReportingCodeTemplate {
     id?: number;
@@ -15556,24 +14311,6 @@ export interface SalesTaxRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface SalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
 export interface SalesTaxRateSourceLookup {
     id?: number;
     isDeleted?: boolean;
@@ -15600,56 +14337,6 @@ export interface SalesTaxRateVersion {
     source?: SalesTaxRateSourceLookup;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
-}
-export interface SavedSearch {
-    id?: number;
-    data?: Strings;
-    dateAdded?: Date;
-    description?: Strings;
-    name?: Strings;
-    owner?: CorporateUser;
-    query?: Strings;
-}
-export interface SearchBasicField {
-    id?: number;
-    columnName?: Strings;
-    section?: Section;
-}
-export interface SearchExternalField {
-    id?: number;
-    dateLastModified?: Date;
-    description?: Strings;
-    display?: Strings;
-    displayList?: Strings;
-    editType?: Strings;
-    externalSystemId?: number;
-    field?: Strings;
-    hint?: Strings;
-    lastModifyingUser?: CorporateUser;
-    sortOrder?: number;
-    valueList?: Strings;
-}
-export interface Section {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    display?: Strings;
-    enabled?: boolean;
-    entity?: Strings;
-    groupName?: Strings;
-    imageSource?: Strings;
-    name?: Strings;
-    searchBasicFields?: ToMany<SearchBasicField>;
-    sectionAvailabilities?: ToMany<SectionAvailability>;
-    sortOrder?: number;
-}
-export interface SectionFieldMap {
-    id?: number;
-    dateLastModified?: Date;
-    fieldMap?: FieldMap;
-    lastModifyingMasterUserID?: number;
-    section?: Section;
-    sortOrder?: number;
 }
 export interface Sendout {
     id?: number;
@@ -15681,32 +14368,6 @@ export interface Shift {
     startTime?: Date;
     type?: Strings;
 }
-export interface ShiftPosition {
-    id?: number;
-    billRate?: number;
-    category?: Category;
-    certifications?: Strings;
-    clientCorporation?: ClientCorporation;
-    comments?: Strings;
-    customBillRate1?: number;
-    customBillRate10?: number;
-    customBillRate2?: number;
-    customBillRate3?: number;
-    customBillRate4?: number;
-    customBillRate5?: number;
-    customBillRate6?: number;
-    customBillRate7?: number;
-    customBillRate8?: number;
-    customBillRate9?: number;
-    isDeleted?: boolean;
-    isPriorShiftRequired?: boolean;
-    migrateGUID?: Strings;
-    overtimeBillRate?: number;
-    salaryUnit?: Strings;
-    skills?: ToMany<Skill>;
-    specialties?: ToMany<Specialty>;
-    yearsExperience?: number;
-}
 export interface ShiftType {
     id?: number;
     endTime?: Strings;
@@ -15727,15 +14388,6 @@ export interface Skill {
     id?: number;
     categories?: ToMany<Category>;
     enabled?: boolean;
-    name?: Strings;
-}
-export interface SkillList {
-    id?: number;
-    categories?: ToMany<Category>;
-    dateAdded?: Date;
-    description?: Strings;
-    enabled?: boolean;
-    externalID?: Strings;
     name?: Strings;
 }
 export interface SmsTracking {
@@ -15759,13 +14411,6 @@ export interface Specialty {
     name?: Strings;
     parentCategory?: Category;
     privateLabels?: ToMany<PrivateLabel>;
-}
-export interface SpecialtyList {
-    id?: number;
-    dateAdded?: Date;
-    enabled?: boolean;
-    name?: Strings;
-    parentCategory?: CategoryList;
 }
 export interface State {
     id?: number;
@@ -15801,24 +14446,6 @@ export interface StateSalesTaxRate {
     taxType?: TaxTypeLookup;
     type?: SalesTaxRateTypeLookup;
     versionID?: number;
-    versions?: ToMany<SalesTaxRateVersion>;
-}
-export interface StateSalesTaxRateRoot {
-    id?: number;
-    allSalesTaxRate_isHibernateGenerated?: boolean;
-    dateAdded?: Date;
-    generalLedgerAccount?: GeneralLedgerAccount;
-    generalLedgerSegment1?: GeneralLedgerSegment1;
-    generalLedgerSegment2?: GeneralLedgerSegment2;
-    generalLedgerSegment3?: GeneralLedgerSegment3;
-    generalLedgerSegment4?: GeneralLedgerSegment4;
-    generalLedgerSegment5?: GeneralLedgerSegment5;
-    generalLedgerServiceCode?: GeneralLedgerServiceCode;
-    isDeleted?: boolean;
-    jurisdictionType?: TaxJurisdictionTypeLookup;
-    owner?: CorporateUser;
-    stateID?: number;
-    type?: SalesTaxRateTypeLookup;
     versions?: ToMany<SalesTaxRateVersion>;
 }
 export interface StatusLookup {
@@ -15927,13 +14554,6 @@ export interface SurchargeRateEffectiveDateChange {
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
 }
-export interface SurchargeRateRoot {
-    id?: number;
-    dateAdded?: Date;
-    isDeleted?: boolean;
-    owner?: CorporateUser;
-    versions?: ToMany<SurchargeRateVersion>;
-}
 export interface SurchargeRateTypeLookup {
     id?: number;
     dateAdded?: Date;
@@ -15972,50 +14592,6 @@ export interface SurchargeRateVersion {
 export interface SurchargeType {
     id?: number;
     label?: Strings;
-}
-export interface Survey {
-    id?: number;
-    comments?: Strings;
-    dateAdded?: Date;
-    dateCompleted?: Date;
-    jobOrder?: JobOrder;
-    migrateGUID?: Strings;
-    placement?: Placement;
-    placementIDOld?: number;
-    responses?: ToMany<SurveyResponse>;
-    reviewingClientContact?: ClientContact;
-    template?: SurveyTemplate;
-}
-export interface SurveyQuestion {
-    id?: number;
-    defaultScore?: number;
-    displayList?: Strings;
-    editType?: Strings;
-    hint?: Strings;
-    isDeleted?: boolean;
-    isRequired?: boolean;
-    question?: Strings;
-    responses?: ToMany<SurveyResponse>;
-    sortOrder?: number;
-    template?: SurveyTemplate;
-    valueList?: Strings;
-}
-export interface SurveyResponse {
-    id?: number;
-    comments?: Strings;
-    score?: number;
-}
-export interface SurveyTemplate {
-    id?: number;
-    dateAdded?: Date;
-    description?: Strings;
-    migrateGUID?: Strings;
-    name?: Strings;
-    owner?: CorporateUser;
-    publicDescription?: Strings;
-    questions?: ToMany<SurveyQuestion>;
-    surveys?: ToMany<Survey>;
-    type?: Strings;
 }
 export interface Task {
     id?: number;
@@ -16169,171 +14745,56 @@ export interface TearsheetRecipient {
     person?: Person;
     tearsheet?: Tearsheet;
 }
-export interface TestCategory {
+export interface TimeLaborCalcTypeLookup {
     id?: number;
-    jobs?: ToMany<TestJob>;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface TimeLaborEvalRule {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    lastModifiedAtUtc?: Date;
+    modifyingUser?: CorporateUser;
     name?: Strings;
+    parameters?: Strings;
+    states?: ToMany<State>;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
+    timeLaborEvalRuleCombineCriteriaLookup?: TimeLaborEvalRuleCombineCriteriaLookup;
+    timeLaborEvalRuleStatusLookup?: TimeLaborEvalRuleStatusLookup;
+    timeLaborEvalRuleTypeLookup?: TimeLaborEvalRuleTypeLookup;
 }
-export interface TestEntity {
+export interface TimeLaborEvalRuleCategoryLookup {
     id?: number;
-    abigDecimal?: number;
-    aboolean?: boolean;
-    aclob?: Strings;
-    address?: Address;
-    adouble?: number;
-    afloat?: number;
-    anInteger?: number;
-    astring?: Strings;
-    astringWithDefault?: Strings;
-    atimestamp?: Date;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    isSmallint?: boolean;
-    migrateGUID?: Strings;
+    isDeleted?: boolean;
+    label?: Strings;
+    sortOrder?: number;
 }
-export interface TestJob {
+export interface TimeLaborEvalRuleCombineCriteriaLookup {
     id?: number;
-    address?: Address;
-    categories?: ToMany<TestCategory>;
-    isPublic?: boolean;
-    owner?: TestOwner;
-    title?: Strings;
+    isDeleted?: boolean;
+    label?: Strings;
 }
-export interface TestOwner {
+export interface TimeLaborEvalRuleStatusLookup {
     id?: number;
-    corporation?: Corporation;
-    jobs?: ToMany<TestJob>;
-    name?: Strings;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface TimeLaborEvalRuleTypeLookup {
+    id?: number;
+    description?: Strings;
+    isDeleted?: boolean;
+    label?: Strings;
+    priority?: number;
+    timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
+    timeLaborEvalRuleCombineCriteriaLookup?: TimeLaborEvalRuleCombineCriteriaLookup;
 }
 export interface TimeUnit {
     id?: number;
     name?: Strings;
     timeMarker?: number;
     weekDay?: number;
-}
-export interface Timecard {
-    id?: number;
-    comments?: Strings;
-    dateAdded?: Date;
-    dateBegin?: Date;
-    dateEnd?: Date;
-    expenses?: ToMany<TimecardExpense>;
-    externalID?: number;
-    fileAttachments?: ToMany<TimecardFileAttachment>;
-    invoice?: Invoice;
-    migrateGUID?: Strings;
-    placement?: Placement;
-    status?: Strings;
-    timeCardHistories?: ToMany<TimecardHistory>;
-    timecardBatch?: TimecardBatch;
-    timecardTimes?: ToMany<TimecardTime>;
-    type?: Strings;
-}
-export interface TimecardBatch {
-    id?: number;
-    batchName?: Strings;
-    dateAdded?: Date;
-    fileExports?: ToMany<FileExport>;
-    invoices?: ToMany<Invoice>;
-    isDeleted?: boolean;
-    isInvoiced?: boolean;
-    isLocked?: boolean;
-    isOpen?: boolean;
-    owner?: CorporateUser;
-    status?: Strings;
-    timecards?: ToMany<Timecard>;
-}
-export interface TimecardExpense {
-    id?: number;
-    amount?: number;
-    comments?: Strings;
-    dateAdded?: Date;
-    dateExpensed?: Date;
-    fileExport?: FileExport;
-    invoice?: Invoice;
-    invoiceItem?: InvoiceItem;
-    lastModifyingPerson?: Person;
-    migrateGUID?: Strings;
-    payClass?: TimecardPayClass;
-    placement?: Placement;
-    projectID?: Strings;
-    status?: Strings;
-    timecard?: Timecard;
-}
-export interface TimecardFileAttachment {
-    id?: number;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    departmentsSharedWith?: ToMany<CorporationDepartment>;
-    description?: Strings;
-    directory?: Strings;
-    externalID?: Strings;
-    fileExtension?: Strings;
-    fileOwner?: CorporateUser;
-    fileSize?: number;
-    isCopied?: boolean;
-    isDeleted?: boolean;
-    isEncrypted?: boolean;
-    isExternal?: boolean;
-    isOpen?: boolean;
-    isPrivate?: boolean;
-    isSendOut?: boolean;
-    name?: Strings;
-    timecard?: Timecard;
-    type?: Strings;
-    usersSharedWith?: ToMany<CorporateUser>;
-    uuid?: Strings;
-}
-export interface TimecardHistory {
-    id?: number;
-    auditTrail?: Strings;
-    dateAdded?: Date;
-    modifyingUser?: Person;
-    status?: Strings;
-    timecard?: Timecard;
-}
-export interface TimecardPayClass {
-    id?: number;
-    billRateField?: Strings;
-    classType?: Strings;
-    clientMarkupFactor?: number;
-    display?: Strings;
-    enabled?: boolean;
-    excludeFromInvoicing?: number;
-    excludeFromPayrolling?: number;
-    isRegularHoursClass?: boolean;
-    markupFactor?: number;
-    name?: Strings;
-    payRateField?: Strings;
-    privateLabel?: PrivateLabel;
-    sortOrder?: number;
-}
-export interface TimecardTime {
-    id?: number;
-    breakEnd?: Date;
-    breakStart?: Date;
-    clientBillRate?: number;
-    comments?: Strings;
-    dateAdded?: Date;
-    dateWorked?: Date;
-    fileExport?: FileExport;
-    hours?: number;
-    invoice?: Invoice;
-    invoiceItem?: InvoiceItem;
-    lastModifyingPerson?: Person;
-    migrateGUID?: Strings;
-    minutesBreak?: number;
-    payClass?: TimecardPayClass;
-    payRate?: number;
-    placement?: Placement;
-    projectCode?: Strings;
-    projectID?: Strings;
-    status?: Strings;
-    timeIn?: Date;
-    timeOut?: Date;
-    timecard?: Timecard;
-    workersCompensationRate?: number;
 }
 export interface TransactionNote {
     id?: number;
@@ -16407,17 +14868,6 @@ export interface UnitOfMeasure {
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
 }
-export interface UserAttribute {
-    id?: number;
-    dateValue?: Date;
-    floatValue?: number;
-    instance?: number;
-    intValue?: number;
-    migrateGUID?: Strings;
-    person?: Person;
-    templateAttribute?: UserTemplateAttribute;
-    value?: Strings;
-}
 export interface UserCustomObject {
     id?: number;
     [propName: string]: any;
@@ -16433,10 +14883,6 @@ export interface UserCustomObjectAttributeInteraction {
 export interface UserCustomObjectDepartment {
     id?: number;
     [propName: string]: any;
-}
-export interface UserDepartmentGrouping {
-    id?: number;
-    isPrimaryDepartment?: boolean;
 }
 export interface UserEditHistory {
     id?: number;
@@ -16455,12 +14901,6 @@ export interface UserEditHistoryFieldChange {
     editHistory?: UserEditHistory;
     newValue?: Strings;
     oldValue?: Strings;
-}
-export interface UserHit {
-    id?: number;
-    dateAdded?: Date;
-    person?: Person;
-    viewingPerson?: Person;
 }
 export interface UserHousingComplexUnit {
     id?: number;
@@ -16510,25 +14950,6 @@ export interface UserLinkedInUrn {
     isManualMatch?: boolean;
     linkedInUrn?: Strings;
     person?: Person;
-}
-export interface UserLogin {
-    id?: number;
-    application?: Application;
-    browser?: Strings;
-    browserVersion?: Strings;
-    dateAdded?: Date;
-    ipAddress?: Strings;
-    isLoggedIn?: boolean;
-    platform?: Strings;
-    user?: CorporateUser;
-}
-export interface UserMenu {
-    id?: number;
-    grouped?: boolean;
-    isVisible?: boolean;
-    menu?: Menu;
-    sortOrder?: number;
-    user?: CorporateUser;
 }
 export interface UserMessage {
     id?: number;
@@ -16615,43 +15036,6 @@ export interface UserSurveyOptions {
     question?: Strings;
     userSurvey?: UserSurvey;
 }
-export interface UserTemplate {
-    id?: number;
-    category?: Category;
-    corporationID?: number;
-    dateAdded?: Date;
-    departmentTemplates?: ToMany<DepartmentUserTemplate>;
-    description?: Strings;
-    displayType?: Strings;
-    enabled?: boolean;
-    groupName?: Strings;
-    isPublic?: boolean;
-    isSearchable?: boolean;
-    migrateStatus?: Strings;
-    name?: Strings;
-    objectEnabled?: boolean;
-    objectNumber?: number;
-    reportID?: number;
-    staticTemplateName?: Strings;
-    tabName?: Strings;
-    templateAttributes?: ToMany<UserTemplateAttribute>;
-    type?: Strings;
-}
-export interface UserTemplateAttribute {
-    id?: number;
-    attributeType?: Strings;
-    columnName?: Strings;
-    description?: Strings;
-    enabled?: boolean;
-    hint?: Strings;
-    isRequired?: boolean;
-    isSearchable?: boolean;
-    name?: Strings;
-    optionList?: Strings;
-    sortOrder?: number;
-    staticFieldName?: Strings;
-    template?: UserTemplate;
-}
 export interface UserType {
     id?: number;
     actionEntitlements?: ToMany<Action>;
@@ -16662,51 +15046,6 @@ export interface UserType {
     isHidden?: boolean;
     menus?: ToMany<Menu>;
     name?: Strings;
-}
-export interface UserWork {
-    id?: number;
-    appointment?: Appointment;
-    assessment?: CandidateAssessment;
-    client?: Strings;
-    dateAdded?: Date;
-    description?: Strings;
-    externalID?: Strings;
-    isAuction?: boolean;
-    isDeleted?: boolean;
-    isOpen?: boolean;
-    isSendOut?: boolean;
-    jobOrder?: JobOrder;
-    migrateGUID?: Strings;
-    name?: Strings;
-    owner?: Person;
-    placement?: Placement;
-    price?: number;
-    published?: Strings;
-    quantity?: number;
-    saleTerms?: Strings;
-    saleType?: Strings;
-    sortOrder?: number;
-    timecard?: Timecard;
-    type?: Strings;
-    workFiles?: ToMany<UserWorkFile>;
-}
-export interface UserWorkFile {
-    id?: number;
-    contentSubType?: Strings;
-    contentType?: Strings;
-    dateAdded?: Date;
-    description?: Strings;
-    directory?: Strings;
-    fileExtension?: Strings;
-    fileSize?: number;
-    fileType?: Strings;
-    isCopied?: boolean;
-    isDeleted?: boolean;
-    isExternal?: boolean;
-    isPrivate?: boolean;
-    migrateGUID?: Strings;
-    name?: Strings;
-    userWork?: UserWork;
 }
 export interface WorkersCompensation {
     id?: number;

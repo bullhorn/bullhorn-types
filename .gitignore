@@ -65,3 +65,6 @@ typings/
 build
 lib
 .bullhornrc
+
+#Mac
+.DS_Store
