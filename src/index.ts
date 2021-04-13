@@ -51,6 +51,7 @@ export class EntityTypes {
     static CalendarFrequencyLookup: 'CalendarFrequencyLookup' = 'CalendarFrequencyLookup';
     static CalendarInstance: 'CalendarInstance' = 'CalendarInstance';
     static Candidate: 'Candidate' = 'Candidate';
+    static CandidateAvailability: 'CandidateAvailability' = 'CandidateAvailability';
     static CandidateCertification: 'CandidateCertification' = 'CandidateCertification';
     static CandidateCertificationEditHistory: 'CandidateCertificationEditHistory' = 'CandidateCertificationEditHistory';
     static CandidateCertificationEditHistoryFieldChange: 'CandidateCertificationEditHistoryFieldChange' = 'CandidateCertificationEditHistoryFieldChange';
@@ -64,6 +65,7 @@ export class EntityTypes {
     static CandidateReference: 'CandidateReference' = 'CandidateReference';
     static CandidateReferenceQuestion: 'CandidateReferenceQuestion' = 'CandidateReferenceQuestion';
     static CandidateReferenceResponse: 'CandidateReferenceResponse' = 'CandidateReferenceResponse';
+    static CandidateShiftPreference: 'CandidateShiftPreference' = 'CandidateShiftPreference';
     static CandidateSource: 'CandidateSource' = 'CandidateSource';
     static CandidateWorkHistory: 'CandidateWorkHistory' = 'CandidateWorkHistory';
     static CanvasReport: 'CanvasReport' = 'CanvasReport';
@@ -328,6 +330,9 @@ export class EntityTypes {
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
+    static JobShift: 'JobShift' = 'JobShift';
+    static JobShiftAssignment: 'JobShiftAssignment' = 'JobShiftAssignment';
+    static JobShiftSubmission: 'JobShiftSubmission' = 'JobShiftSubmission';
     static JobSubmission: 'JobSubmission' = 'JobSubmission';
     static JobSubmissionCertificationRequirement: 'JobSubmissionCertificationRequirement' = 'JobSubmissionCertificationRequirement';
     static JobSubmissionCertificationRequirementEditHistory: 'JobSubmissionCertificationRequirementEditHistory' = 'JobSubmissionCertificationRequirementEditHistory';
@@ -513,6 +518,8 @@ export class EntityTypes {
     static SalesTaxRateVersion: 'SalesTaxRateVersion' = 'SalesTaxRateVersion';
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
+    static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
+    static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
     static Skill: 'Skill' = 'Skill';
     static SmsTracking: 'SmsTracking' = 'SmsTracking';
@@ -590,7 +597,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person', 'PlacementFileAttachment', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup', 'UnitOfMeasure', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -1339,6 +1346,7 @@ export interface Candidate {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    availability?: ToMany<CandidateAvailability>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
     canEnterTime?: boolean;
@@ -1516,6 +1524,7 @@ export interface Candidate {
     isEditable?: boolean;
     isExempt?: boolean;
     isLockedOut?: boolean;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
     lastName?: Strings;
     latestComment?: ToMany<CandidateComment>;
     leads?: ToMany<Lead>;
@@ -1570,6 +1579,7 @@ export interface Candidate {
     secondaryOwners?: ToMany<CorporateUser>;
     secondarySkills?: ToMany<Skill>;
     sendouts?: ToMany<Sendout>;
+    shiftPreferences?: ToMany<CandidateShiftPreference>;
     shifts?: ToMany<Shift>;
     skillSet?: Strings;
     smsOptIn?: boolean;
@@ -1612,6 +1622,13 @@ export interface Candidate {
     customObject8s?: PersonCustomObjectInstance8[];
     customObject9s?: PersonCustomObjectInstance9[];
     customObject10s?: PersonCustomObjectInstance10[];
+}
+export interface CandidateAvailability {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    isAvailable?: boolean;
+    type?: Strings;
 }
 export interface CandidateCertification {
     id?: number;
@@ -1904,6 +1921,15 @@ export interface CandidateReferenceResponse {
     question?: CandidateReferenceQuestion;
     reference?: CandidateReference;
     responseText?: Strings;
+}
+export interface CandidateShiftPreference {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dayNumber?: number;
+    dayOfWeek?: Strings;
+    isAvailable?: boolean;
+    shiftType?: ShiftType;
 }
 export interface CandidateSource {
     id?: number;
@@ -3140,6 +3166,7 @@ export interface ClientCorporation {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3240,6 +3267,7 @@ export interface ClientCorporation1 {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3340,6 +3368,7 @@ export interface ClientCorporation2 {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3440,6 +3469,7 @@ export interface ClientCorporation3 {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3540,6 +3570,7 @@ export interface ClientCorporation4 {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -3640,6 +3671,7 @@ export interface ClientCorporation5 {
     phone?: Strings;
     requirements?: ToMany<Certification>;
     revenue?: Strings;
+    shiftPositions?: ToMany<ShiftPosition>;
     stats?: ClientCorporationRatios;
     status?: Strings;
     taxRate?: number;
@@ -5849,6 +5881,7 @@ export interface JobBoardPost {
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
     jobOrderUUID?: Strings;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     migrateGUID?: Strings;
@@ -6067,6 +6100,7 @@ export interface JobOrder {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6227,6 +6261,7 @@ export interface JobOrder1 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6387,6 +6422,7 @@ export interface JobOrder2 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6547,6 +6583,7 @@ export interface JobOrder3 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6707,6 +6744,7 @@ export interface JobOrder4 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -6867,6 +6905,7 @@ export interface JobOrder5 {
     jobBoardList?: Strings;
     jobCode?: JobCode;
     jobOrderIntegrations?: ToMany<JobOrderIntegration>;
+    jobShifts?: ToMany<JobShift>;
     location?: Location;
     markUpPercentage?: number;
     notes?: ToMany<Note>;
@@ -7114,6 +7153,48 @@ export interface JobOrderTemplate {
     staticTemplateName?: Strings;
     tabName?: Strings;
     type?: Strings;
+}
+export interface JobShift {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    fillRatio?: number;
+    isClosed?: boolean;
+    isOpen?: boolean;
+    jobOrder?: JobOrder;
+    jobShiftAssignments?: ToMany<JobShiftAssignment>;
+    jobShiftSubmissions?: ToMany<JobShiftSubmission>;
+    location?: Location;
+    name?: Strings;
+    numAssigned?: number;
+    openings?: number;
+    reasonClosed?: Strings;
+    sequenceID?: Strings;
+    shift?: Shift;
+    shiftTypes?: ToMany<ShiftType>;
+}
+export interface JobShiftAssignment {
+    id?: number;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isCancelled?: boolean;
+    jobShift?: JobShift;
+    linkedJobShiftSubmission?: JobShiftSubmission;
+    owner?: CorporateUser;
+    placement?: Placement;
+    reasonCancelled?: Strings;
+    status?: Strings;
+}
+export interface JobShiftSubmission {
+    id?: number;
+    candidate?: Candidate;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isPublished?: boolean;
+    jobShift?: JobShift;
+    status?: Strings;
 }
 export interface JobSubmission {
     id?: number;
@@ -13203,6 +13284,44 @@ export interface Shift {
     shortName?: Strings;
     startTime?: Date;
     type?: Strings;
+}
+export interface ShiftPosition {
+    id?: number;
+    billRate?: number;
+    category?: Category;
+    certifications?: Strings;
+    clientCorporation?: ClientCorporation;
+    comments?: Strings;
+    customBillRate1?: number;
+    customBillRate10?: number;
+    customBillRate2?: number;
+    customBillRate3?: number;
+    customBillRate4?: number;
+    customBillRate5?: number;
+    customBillRate6?: number;
+    customBillRate7?: number;
+    customBillRate8?: number;
+    customBillRate9?: number;
+    dateLastModified?: Date;
+    isDeleted?: boolean;
+    isPriorShiftRequired?: boolean;
+    jobOrder?: JobOrder;
+    migrateGUID?: Strings;
+    name?: Strings;
+    overtimeBillRate?: number;
+    payRate?: number;
+    salaryUnit?: Strings;
+    skills?: ToMany<Skill>;
+    specialties?: ToMany<Specialty>;
+    yearsExperience?: number;
+}
+export interface ShiftType {
+    id?: number;
+    endTime?: Strings;
+    icon?: Strings;
+    isDeleted?: boolean;
+    name?: Strings;
+    startTime?: Strings;
 }
 export interface SignatureTemplate {
     id?: number;
