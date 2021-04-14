@@ -5295,6 +5295,10 @@ export interface InvoiceStatement {
     paymentTerms?: Strings;
     previousBalance?: number;
     purchaseOrderNumber?: Strings;
+    rebillFromInvoices?: ToMany<InvoiceStatement>;
+    rebillNumberFromInvoiceStatement?: InvoiceStatement;
+    rebillSuffix?: Strings;
+    rebillToInvoices?: ToMany<InvoiceStatement>;
     remitInstructions?: Strings;
     splitBys?: ToMany<InvoiceStatementSplitBy>;
     status?: InvoiceStatementStatusLookup;
