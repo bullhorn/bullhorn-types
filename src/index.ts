@@ -19,6 +19,7 @@ export class EntityTypes {
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterDiscountRate: 'BillMasterDiscountRate' = 'BillMasterDiscountRate';
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
+    static BillMasterSyncBatch: 'BillMasterSyncBatch' = 'BillMasterSyncBatch';
     static BillMasterTransaction: 'BillMasterTransaction' = 'BillMasterTransaction';
     static BillMasterTransactionDiscountRate: 'BillMasterTransactionDiscountRate' = 'BillMasterTransactionDiscountRate';
     static BillMasterTransactionDistributionBatch: 'BillMasterTransactionDistributionBatch' = 'BillMasterTransactionDistributionBatch';
@@ -806,6 +807,7 @@ export interface BillMaster {
     location?: Location;
     owner?: CorporateUser;
     transactionDate?: Date;
+    billMasterSyncBatches?: ToMany<BillMasterSyncBatch>;
 }
 export interface BillMasterDiscountRate {
     id?: number;
@@ -820,6 +822,13 @@ export interface BillMasterSurchargeRate {
     dateAdded?: Date;
     owner?: CorporateUser;
     surchargeRate?: SurchargeRate;
+}
+export interface BillMasterSyncBatch {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    batchStatus?: BatchStatusLookup;
+    billMasters: ToMany<BillMaster>;
 }
 export interface BillMasterTransaction {
     id?: number;
