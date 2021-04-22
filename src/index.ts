@@ -488,8 +488,13 @@ export class EntityTypes {
     static PlacementFileAttachment: 'PlacementFileAttachment' = 'PlacementFileAttachment';
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
+    static PlacementRateCardEditHistory: 'PlacementRateCardEditHistory' = 'PlacementRateCardEditHistory';
+    static PlacementRateCardEditHistoryFieldChange: 'PlacementRateCardEditHistoryFieldChange' = 'PlacementRateCardEditHistoryFieldChange';
+    static PlacementRateCardEffectiveDateChange: 'PlacementRateCardEffectiveDateChange' = 'PlacementRateCardEffectiveDateChange';
     static PlacementRateCardLine: 'PlacementRateCardLine' = 'PlacementRateCardLine';
+    static PlacementRateCardLineEditHistoryFieldChange: 'PlacementRateCardLineEditHistoryFieldChange' = 'PlacementRateCardLineEditHistoryFieldChange';
     static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
+    static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange'
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
@@ -12831,6 +12836,37 @@ export interface PlacementRateCard {
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
 }
+export interface PlacementRateCardEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementRateCardEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<PlacementRateCardEditHistoryFieldChange>;
+    lineFieldChanges?: ToMany<PlacementRateCardLineEditHistoryFieldChange>;
+    lineGroupFieldChanges?: ToMany<PlacementRateCardLineGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementRateCard;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementRateCardEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementRateCardEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementRateCardEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementRateCardEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface PlacementRateCardLine {
     id?: number;
     alias?: Strings;
@@ -12847,6 +12883,17 @@ export interface PlacementRateCardLine {
     payRate?: number;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
+export interface PlacementRateCardLineEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCode?: EarnCode;
+    editHistory?: PlacementRateCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+    placementRateCardLine?: PlacementRateCardLine;
+}
 export interface PlacementRateCardLineGroup {
     id?: number;
     earnCodeGroup?: EarnCodeGroup;
@@ -12856,6 +12903,17 @@ export interface PlacementRateCardLineGroup {
     placementRateCard?: PlacementRateCard;
     placementRateCardLines?: ToMany<PlacementRateCardLine>;
     placementRateCardVersion?: PlacementRateCardVersion;
+}
+export interface PlacementRateCardLineGroupEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCodeGroup?: EarnCodeGroup;
+    editHistory?: PlacementRateCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+    placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
 export interface PlacementRateCardVersion {
     id?: number;
