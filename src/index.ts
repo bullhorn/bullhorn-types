@@ -553,7 +553,6 @@ export class EntityTypes {
     static TimeLaborEvalRuleCategory: 'TimeLaborEvalRuleCategory' = 'TimeLaborEvalRuleCategory';
     static TimeLaborEvalRuleCombineCriteria: 'TimeLaborEvalRuleCombineCriteria' = 'TimeLaborEvalRuleCombineCriteria';
     static TimeLaborEvalRuleStatus: 'TimeLaborEvalRuleStatus' = 'TimeLaborEvalRuleStatus';
-    static TimeLaborEvalRuleTemplate: 'TimeLaborEvalRuleTemplate' = 'TimeLaborEvalRuleTemplate';
     static TimeLaborEvalRuleType: 'TimeLaborEvalRuleType' = 'TimeLaborEvalRuleType';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
@@ -13594,18 +13593,6 @@ export interface TimeLaborEvalRuleCombineCriteria {
 export interface TimeLaborEvalRuleStatus {
     id?: number;
     name?: Strings;
-}
-export interface TimeLaborEvalRuleTemplate {
-    id?: number;
-    addedAtUtc?: Date;
-    addedByUser?: CorporateUser;
-    description?: Strings;
-    isDefault?: boolean;
-    lastModifiedAtUtc?: Date;
-    modifyingUser?: CorporateUser;
-    name?: Strings;
-    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
-    timestamp?: Date;
 }
 export interface TimeLaborEvalRuleType {
     id?: number;
