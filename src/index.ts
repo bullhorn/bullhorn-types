@@ -566,6 +566,7 @@ export class EntityTypes {
     static TimeLaborEvalRuleCategoryLookup: 'TimeLaborEvalRuleCategoryLookup' = 'TimeLaborEvalRuleCategoryLookup';
     static TimeLaborEvalRuleCombineCriteriaLookup: 'TimeLaborEvalRuleCombineCriteriaLookup' = 'TimeLaborEvalRuleCombineCriteriaLookup';
     static TimeLaborEvalRuleStatusLookup: 'TimeLaborEvalRuleStatusLookup' = 'TimeLaborEvalRuleStatusLookup';
+    static TimeLaborEvalRuleTemplate: 'TimeLaborEvalRuleTemplate' = 'TimeLaborEvalRuleTemplate';
     static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';    
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
@@ -13798,6 +13799,18 @@ export interface TimeLaborEvalRuleStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface TimeLaborEvalRuleTemplate {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    description?: Strings;
+    isDefault?: boolean;
+    lastModifiedAtUtc?: Date;
+    modifyingUser?: CorporateUser;
+    name?: Strings;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    timestamp?: Date;
 }
 export interface TimeLaborEvalRuleTypeLookup {
     id?: number;
