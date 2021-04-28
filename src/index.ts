@@ -567,7 +567,7 @@ export class EntityTypes {
     static TimeLaborEvalRuleCombineCriteriaLookup: 'TimeLaborEvalRuleCombineCriteriaLookup' = 'TimeLaborEvalRuleCombineCriteriaLookup';
     static TimeLaborEvalRuleStatusLookup: 'TimeLaborEvalRuleStatusLookup' = 'TimeLaborEvalRuleStatusLookup';
     static TimeLaborEvalRuleTemplate: 'TimeLaborEvalRuleTemplate' = 'TimeLaborEvalRuleTemplate';
-    static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';    
+    static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
@@ -4925,6 +4925,7 @@ export interface FormTriggerFull {
     httpMethod?: Strings;
     name?: Strings;
     proceedOnError?: boolean;
+    maxErrorsBeforeDisable?: number;
     reasonForDisable?: Strings;
     timeoutMSec?: number;
     triggerName?: Strings;
@@ -4938,6 +4939,7 @@ export interface FormTriggerInstance {
     executionOrder?: number;
     formTrigger?: FormTrigger;
     isEnabled?: boolean;
+    maxErrorsBeforeDisable?: number;
     reasonForDisable?: Strings;
 }
 export interface FormTriggerMessage {
