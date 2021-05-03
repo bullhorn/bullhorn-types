@@ -281,6 +281,8 @@ export class EntityTypes {
     static InvoiceStatementTemplate: 'InvoiceStatementTemplate' = 'InvoiceStatementTemplate';
     static InvoiceStatementTypeLookup: 'InvoiceStatementTypeLookup' = 'InvoiceStatementTypeLookup';
     static InvoiceTerm: 'InvoiceTerm' = 'InvoiceTerm';
+    static InvoiceTermConfiguration: 'InvoiceTermConfiguration' = 'InvoiceTermConfiguration';
+    static InvoiceTermConfigurationOptInField: 'InvoiceTermConfigurationOptInField' = 'InvoiceTermConfigurationOptInField';
     static InvoiceTermEditHistory: 'InvoiceTermEditHistory' = 'InvoiceTermEditHistory';
     static InvoiceTermEditHistoryFieldChange: 'InvoiceTermEditHistoryFieldChange' = 'InvoiceTermEditHistoryFieldChange';
     static InvoiceTermEffectiveDateChange: 'InvoiceTermEffectiveDateChange' = 'InvoiceTermEffectiveDateChange';
@@ -5648,6 +5650,18 @@ export interface InvoiceTerm {
     versionID?: number;
     versions?: ToMany<InvoiceTermVersion>;
     waitForTimecards?: boolean;
+}
+export interface InvoiceTermConfiguration {
+    id?: number;
+    dateAdded?: Date;
+    entityName?: Strings;
+    invoiceTermConfigurationOptInFields?: ToMany<InvoiceTermConfigurationOptInField>;
+}
+export interface InvoiceTermConfigurationOptInField {
+    id?: number;
+    dateAdded?: Date;
+    fieldName?: Strings;
+    invoiceTermConfiguration?: InvoiceTermConfiguration;
 }
 export interface InvoiceTermEditHistory {
     id?: number;
