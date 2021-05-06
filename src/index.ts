@@ -13832,6 +13832,7 @@ export interface TimeLaborEvalRuleTypeLookup {
     id?: number;
     description?: Strings;
     isDeleted?: boolean;
+    isSystem?: boolean;
     label?: Strings;
     priority?: number;
     timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
