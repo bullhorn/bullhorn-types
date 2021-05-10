@@ -13826,7 +13826,8 @@ export interface TimeLaborEvalRuleTemplate {
     modifyingUser?: CorporateUser;
     name?: Strings;
     timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
-    timestamp?: Date;
+    timeLaborEvalRulesCalcTypes?: ToMany<TimeLaborCalcTypeLookup>;
+    timeLaborEvalRulesCategories?: ToMany<TimeLaborEvalRuleCategoryLookup>;
 }
 export interface TimeLaborEvalRuleTypeLookup {
     id?: number;
