@@ -1,6 +1,7 @@
 
 on:
   pull_request:
+name: Pull Request
 
 
 jobs:
