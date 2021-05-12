@@ -4772,6 +4772,7 @@ export interface EarnCodeGroup {
     overtimeEarnCode?: OvertimeEarnCode;
     payBillOptionsLookup?: PayBillOptionsLookup;
     unitOfMeasure?: UnitOfMeasure;
+    isRateRequired?: boolean;
 }
 export interface EarnCodeGroupStatusLookup {
     id?: number;
