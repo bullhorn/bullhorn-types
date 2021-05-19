@@ -68,6 +68,7 @@ export class EntityTypes {
     static CandidateReferenceResponse: 'CandidateReferenceResponse' = 'CandidateReferenceResponse';
     static CandidateShiftPreference: 'CandidateShiftPreference' = 'CandidateShiftPreference';
     static CandidateSource: 'CandidateSource' = 'CandidateSource';
+    static CandidateTaxInfo: 'CandidateTaxInfo' = 'CandidateTaxInfo';
     static CandidateWorkHistory: 'CandidateWorkHistory' = 'CandidateWorkHistory';
     static CanvasReport: 'CanvasReport' = 'CanvasReport';
     static CanvasScheduledReport: 'CanvasScheduledReport' = 'CanvasScheduledReport';
@@ -1612,6 +1613,7 @@ export interface Candidate {
     submissions?: ToMany<JobSubmission>;
     tasks?: ToMany<Task>;
     taxID?: Strings;
+    taxInfo?: CandidateTaxInfo;
     taxState?: Strings;
     tearsheets?: ToMany<Tearsheet>;
     timeZoneOffsetEST?: number;
@@ -1963,6 +1965,15 @@ export interface CandidateSource {
     name?: Strings;
     phone?: Strings;
     type?: Strings;
+}
+export interface CandidateTaxInfo {
+    id?: number;
+    candidate?: Candidate;
+    dateI9Expiration?: Date;
+    dateOfBirth?: Date;
+    i9OnFile?: number;
+    ssn?: Strings;
+    taxID?: Strings;
 }
 export interface CandidateWorkHistory {
     id?: number;
