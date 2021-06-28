@@ -577,7 +577,12 @@ export class EntityTypes {
     static TimeLaborEvalRuleStatusLookup: 'TimeLaborEvalRuleStatusLookup' = 'TimeLaborEvalRuleStatusLookup';
     static TimeLaborEvalRuleTemplate: 'TimeLaborEvalRuleTemplate' = 'TimeLaborEvalRuleTemplate';
     static TimeLaborEvalRuleTypeLookup: 'TimeLaborEvalRuleTypeLookup' = 'TimeLaborEvalRuleTypeLookup';
+    static TimeLaborEvalSheetEntryTypeLookup: 'TimeLaborEvalSheetEntryTypeLookup' = 'TimeLaborEvalSheetEntryTypeLookup';
+    static TimeLaborEvalSheetStatusLookup: 'TimeLaborEvalSheetStatusLookup' = 'TimeLaborEvalSheetStatusLookup';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
+    static Timesheet: 'Timesheet' = 'Timesheet';
+    static TimesheetEntry: 'TimesheetEntry' = 'TimesheetEntry';
+    static TimesheetEntryApprovalStatusLookup: 'TimesheetEntryApprovalStatusLookup' = 'TimesheetEntryApprovalStatusLookup';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
@@ -615,7 +620,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -13937,12 +13942,70 @@ export interface TimeLaborEvalRuleTypeLookup {
     timeLaborEvalRuleCategoryLookup?: TimeLaborEvalRuleCategoryLookup;
     timeLaborEvalRuleCombineCriteriaLookup?: TimeLaborEvalRuleCombineCriteriaLookup;
 }
+export interface TimeLaborEvalSheetEntryTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
+export interface TimeLaborEvalSheetStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 
 export interface TimeUnit {
     id?: number;
     name?: Strings;
     timeMarker?: number;
     weekDay?: number;
+}
+export interface Timesheet {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: Person;
+    billCalendar?: Calendar;
+    calendarInstance?: CalendarInstance;
+    candidateUser?: Candidate;
+    clientCorporation?: ClientCorporation;
+    jobPosting?: JobOrder;
+    lastModifiedAtUtc?: Date;
+    lastVersion?: number;
+    modifyingUser?: Person;
+    payCalendar?: Calendar;
+    payPeriodEndDate?: Date;
+    placement?: Placement;
+    timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
+}
+export interface TimesheetEntry {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    applicableFrom?: Date;
+    applicableTo?: Date;
+    billEvalDate?: Date;
+    comment?: Strings;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    endedAt?: Date;
+    externalTimesheetEntryID?: Strings;
+    externalTimesheetID?: Strings;
+    lastModifiedAtUtc?: Date;
+    modifyingUser?: CorporateUser;
+    payEvalDate?: Date;
+    quantity?: number;
+    startedAt?: Date;
+    timeLaborEvalSheetTypeLookup?: TimeLaborEvalSheetEntryTypeLookup;
+    timesheet?: Timesheet;
+    timesheetDay?: Date;
+    timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
+    timesheetVersion?: number;
+    unitOfMeasure?: UnitOfMeasure;
+    voidingTimesheetEntry?: TimesheetEntry;
+}
+export interface TimesheetEntryApprovalStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface TransactionNote {
     id?: number;
