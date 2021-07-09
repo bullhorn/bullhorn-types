@@ -4896,6 +4896,47 @@ export interface ExternalSystem {
     name?: Strings;
     webServiceURL?: Strings;
 }
+export interface FederalTaxForm {
+    id?: number;
+    candidate?: Candidate;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customDate4?: Date;
+    customDate5?: Date;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customMoney1?: number;
+    customMoney2?: number;
+    customMoney3?: number;
+    customMoney4?: number;
+    customMoney5?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    federalAdditionalWithholdingsAmount?: number;
+    federalExemptions?: number;
+    federalExtraWithholdingAmount?: number;
+    federalFilingStatus?: Strings;
+    isDeleted?: boolean;
+    isExempt?: boolean;
+    otherDeductionsAmount?: number;
+    otherIncomeAmount?: number;
+    totalDependentClaimAmount?: number;
+    twoJobs?: boolean;
+}
 export interface FieldMapInteraction {
     id?: number;
     dateLastModified?: Date;
@@ -7619,6 +7660,44 @@ export interface LegalBusinessEntity {
     legalName?: Strings;
     shortName?: Strings;
     statusLookup?: StatusLookup;
+}
+export interface LocalTaxForm {
+    id?: number;
+    candidate?: Candidate;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customDate4?: Date;
+    customDate5?: Date;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customMoney1?: number;
+    customMoney2?: number;
+    customMoney3?: number;
+    customMoney4?: number;
+    customMoney5?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isDeleted?: boolean;
+    isExempt?: boolean;
+    localAdditionalWithholdingsAmount?: number;
+    localExemptions?: number;
+    localFilingStatus?: Strings;
+    localTaxCode?: Strings;
+    localTaxStateID?: number;
 }
 export interface Location {
     id?: number;
@@ -13594,6 +13673,43 @@ export interface StatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface StateTaxForm {
+    id?: number;
+    candidate?: Candidate;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customDate4?: Date;
+    customDate5?: Date;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customMoney1?: number;
+    customMoney2?: number;
+    customMoney3?: number;
+    customMoney4?: number;
+    customMoney5?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    isDeleted?: boolean;
+    isExempt?: boolean;
+    stateAdditionalWithholdingsAmount?: number;
+    stateExemptions?: number;
+    stateFilingStatus?: Strings;
+    taxStateID?: number;
 }
 export interface StopWord {
     id?: number;
