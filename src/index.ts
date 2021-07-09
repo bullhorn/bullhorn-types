@@ -230,6 +230,7 @@ export class EntityTypes {
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
     static ExternalSystem: 'ExternalSystem' = 'ExternalSystem';
+    static FederalTaxForm: 'FederalTaxForm' = 'FederalTaxForm';
     static FieldMapInteraction: 'FieldMapInteraction' = 'FieldMapInteraction';
     static File: 'File' = 'File';
     static FormTrigger: 'FormTrigger' = 'FormTrigger';
@@ -353,6 +354,7 @@ export class EntityTypes {
     static Lead: 'Lead' = 'Lead';
     static LeadHistory: 'LeadHistory' = 'LeadHistory';
     static LegalBusinessEntity: 'LegalBusinessEntity' = 'LegalBusinessEntity';
+    static LocalTaxForm: 'LocalTaxForm' = 'LocalTaxForm';
     static Location: 'Location' = 'Location';
     static LocationEditHistory: 'LocationEditHistory' = 'LocationEditHistory';
     static LocationEditHistoryFieldChange: 'LocationEditHistoryFieldChange' = 'LocationEditHistoryFieldChange';
@@ -542,6 +544,7 @@ export class EntityTypes {
     static Specialty: 'Specialty' = 'Specialty';
     static State: 'State' = 'State';
     static StateSalesTaxRate: 'StateSalesTaxRate' = 'StateSalesTaxRate';
+    static StateTaxForm: 'StateTaxForm' = 'StateTaxForm';
     static StatusLookup: 'StatusLookup' = 'StatusLookup';
     static StopWord: 'StopWord' = 'StopWord';
     static SubmissionTemplate: 'SubmissionTemplate' = 'SubmissionTemplate';
