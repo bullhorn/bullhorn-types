@@ -186,6 +186,7 @@ export class EntityTypes {
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
+    static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
     static CorporationDepartment: 'CorporationDepartment' = 'CorporationDepartment';
