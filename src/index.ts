@@ -5,6 +5,7 @@ export class EntityTypes {
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
+    static AddressSource: 'AddressSource' = 'AddressSource';
     static AllSalesTaxGroup: 'AllSalesTaxGroup' = 'AllSalesTaxGroup';
     static AllSalesTaxRate: 'AllSalesTaxRate' = 'AllSalesTaxRate';
     static Application: 'Application' = 'Application';
@@ -653,6 +654,10 @@ export interface Address {
     countryCode?: string;
 }
 
+export interface AddressSource {
+    id?: number;
+    source?: string;
+}
 export interface ActivityGoal {
     id?: number;
     activityType?: Strings;
@@ -2259,6 +2264,7 @@ export interface ClientContact {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -2397,6 +2403,7 @@ export interface ClientContact1 {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -2535,6 +2542,7 @@ export interface ClientContact2 {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -2673,6 +2681,7 @@ export interface ClientContact3 {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -2811,6 +2820,7 @@ export interface ClientContact4 {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
@@ -2949,6 +2959,7 @@ export interface ClientContact5 {
     id?: number;
     activePlacements?: ToMany<Placement>;
     address?: Address;
+    addressSource?: AddressSource;
     appointments?: ToMany<Appointment>;
     branch?: Branch;
     businessSectors?: ToMany<BusinessSector>;
