@@ -14023,6 +14023,7 @@ export interface TimeLaborEvalRule {
     id?: number;
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
+    description?: Strings;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
     name?: Strings;
@@ -14093,19 +14094,26 @@ export interface TimeUnit {
 export interface Timesheet {
     id?: number;
     addedAtUtc?: Date;
-    addedByUser?: Person;
+    addedByUser?: CorporateUser;
+    additionalBillAmount?: number;
+    additionalPayAmount?: number;
     billCalendar?: Calendar;
+    billed?: number;
     calendarInstance?: CalendarInstance;
-    candidateUser?: Candidate;
+    candidate?: Candidate;
     clientCorporation?: ClientCorporation;
-    jobPosting?: JobOrder;
+    hoursWorked?: number;
+    jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
     lastVersion?: number;
-    modifyingUser?: Person;
+    modifyingUser?: CorporateUser;
+    paid?: number;
     payCalendar?: Calendar;
     payPeriodEndDate?: Date;
     placement?: Placement;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
+    timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
+    units?: boolean;
 }
 export interface TimesheetEntry {
     id?: number;
