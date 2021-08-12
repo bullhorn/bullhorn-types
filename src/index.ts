@@ -4775,6 +4775,7 @@ export interface EarnCode {
     generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     isDeleted?: boolean;
+    isDiscountable?: boolean;
     owner?: CorporateUser;
     status?: Strings;
     title?: Strings;
