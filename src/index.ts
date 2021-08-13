@@ -5368,7 +5368,7 @@ export interface InvoiceStatement {
     dateAdded?: Date;
     dateLastModified?: Date;
     deliveryMethod?: Strings;
-    deliveryMethodLookupID?: number;
+    deliveryMethodLookup?: DeliveryMethodLookup;
     deliveryStatus?: InvoiceStatementDeliveryStatusLookup;
     discountAmount?: number;
     discountTotal?: number;
