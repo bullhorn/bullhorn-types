@@ -508,6 +508,7 @@ export class EntityTypes {
     static PlacementRateCardLineEditHistoryFieldChange: 'PlacementRateCardLineEditHistoryFieldChange' = 'PlacementRateCardLineEditHistoryFieldChange';
     static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
     static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange'
+    static PlacementRateCardStatusLookup: 'PlacementRateCardStatusLookup' = 'PlacementRateCardStatusLookup';
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
@@ -13051,6 +13052,7 @@ export interface PlacementRateCard {
     rootMigrateGUID?: Strings;
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
+    placementRateCardStatusLookup?: PlacementRateCardStatusLookup;
 }
 export interface PlacementRateCardEditHistory {
     id?: number;
@@ -13130,6 +13132,23 @@ export interface PlacementRateCardLineGroupEditHistoryFieldChange {
     oldValue?: Strings;
     parentFieldName?: Strings;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
+}
+
+export interface PlacementRateCardStatusLookup {
+    id?: number;
+    canBypass?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isDownstreamOnly?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
+    workflowOrder?: number;
+    shouldRunValidationOnSave: boolean;
 }
 export interface PlacementRateCardVersion {
     id?: number;
