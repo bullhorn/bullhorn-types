@@ -5440,7 +5440,7 @@ export interface InvoiceStatementDiscount {
     finalizedValue?: number;
     invoiceStatement?: InvoiceStatement;
 }
-export interface InvoiceStatementDistributionBatch {""
+export interface InvoiceStatementDistributionBatch {
     id?: number;
     accountingDate?: Date;
     batchStatus?: BatchStatusLookup;
