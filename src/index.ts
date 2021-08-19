@@ -5440,7 +5440,7 @@ export interface InvoiceStatementDiscount {
     finalizedValue?: number;
     invoiceStatement?: InvoiceStatement;
 }
-export interface InvoiceStatementDistributionBatch {
+export interface InvoiceStatementDistributionBatch {""
     id?: number;
     accountingDate?: Date;
     batchStatus?: BatchStatusLookup;
@@ -13052,7 +13052,7 @@ export interface PlacementRateCard {
     rootMigrateGUID?: Strings;
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
-    placementRateCardStatusLookup: PlacementRateCardStatusLookup;
+    placementRateCardStatusLookup?: PlacementRateCardStatusLookup;
 }
 export interface PlacementRateCardEditHistory {
     id?: number;
