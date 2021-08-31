@@ -14045,6 +14045,7 @@ export interface TimeLaborEvalRule {
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
     description?: Strings;
+    isRun?: boolean;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
     name?: Strings;
