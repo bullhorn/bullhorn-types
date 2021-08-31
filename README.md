@@ -33,6 +33,9 @@ git clone git@github.com:bullhorn/bullhorn-types.git
 cd bullhorn-types
 npm install
 
+# create directory where tool will generate file
+mkdir typings 
+
 # Login into the Bullhorn Environment
 npx bullhorn config set environment http://<qabox>-backend.bh-bos2.bullhorn.com:8182
 npx bullhorn auth login
