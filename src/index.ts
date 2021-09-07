@@ -186,6 +186,8 @@ export class EntityTypes {
     static ClientCorporationNote: 'ClientCorporationNote' = 'ClientCorporationNote';
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
+    static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
+    static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
     static CorpFile: 'CorpFile' = 'CorpFile';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
@@ -4228,6 +4230,11 @@ export interface ClientCorporationTask {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
     task?: Task;
+}
+export interface ClientCorporationTaxExemptionStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface CorpFile {
     id?: number;
