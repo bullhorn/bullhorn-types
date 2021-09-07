@@ -5356,12 +5356,14 @@ export interface HousingComplexUtilityAccount {
 }
 export interface InvoiceStatement {
     id?: number;
+    bccRecipients?: ToMany<Person>;
     billingAttention?: Strings;
     billingClientContact?: ClientContact;
     billingCorporateUser?: CorporateUser;
     billingPeriodEndDate?: Date;
     billingProfile?: BillingProfile;
     billingScheduleID?: number;
+    ccRecipients?: ToMany<Person>;
     clientCorporation?: ClientCorporation;
     creditOfInvoiceStatement?: InvoiceStatement;
     creditedByInvoiceStatement?: InvoiceStatement;
@@ -5411,6 +5413,7 @@ export interface InvoiceStatement {
     taxAmount?: number;
     taxTotal?: number;
     taxes?: ToMany<InvoiceStatementTax>;
+    toRecipients?: ToMany<Person>;
     total?: number;
 }
 export interface InvoiceStatementBatch {
