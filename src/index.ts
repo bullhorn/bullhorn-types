@@ -186,8 +186,7 @@ export class EntityTypes {
     static ClientCorporationNote: 'ClientCorporationNote' = 'ClientCorporationNote';
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
-    static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
-    static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
+    static CorpFile: 'CorpFile' = 'CorpFile';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
     static CorporationDepartment: 'CorporationDepartment' = 'CorporationDepartment';
@@ -539,6 +538,7 @@ export class EntityTypes {
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
     static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
+    static ShiftSetting: 'ShiftSetting' = 'ShiftSetting';
     static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
     static Skill: 'Skill' = 'Skill';
@@ -4229,10 +4229,32 @@ export interface ClientCorporationTask {
     clientCorporation?: ClientCorporation;
     task?: Task;
 }
-export interface ClientCorporationTaxExemptionStatusLookup {
+export interface CorpFile {
     id?: number;
-    isDeleted?: boolean;
-    label?: Strings;
+    contentSubType?: Strings;
+    contentType?: Strings;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    directory?: Strings;
+    fileExtension?: Strings;
+    fileOwner?: CorporateUser;
+    fileSize?: number;
+    isExternal?: boolean;
+    isPrivate?: boolean;
+    keyVersionEncryptedWith?: Strings;
+    name?: Strings;
+    owner?: CorporateUser;
+    type?: Strings;
 }
 export interface CorporateUser {
     id?: number;
@@ -13623,6 +13645,12 @@ export interface ShiftPosition {
     skills?: ToMany<Skill>;
     specialties?: ToMany<Specialty>;
     yearsExperience?: number;
+}
+export interface ShiftSetting {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    shiftLogoCorpFile?: CorpFile;
 }
 export interface ShiftType {
     id?: number;
