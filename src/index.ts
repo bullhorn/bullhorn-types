@@ -13658,6 +13658,8 @@ export interface ShiftSetting {
     dateAdded?: Date;
     dateLastModified?: Date;
     shiftLogoCorpFile?: CorpFile;
+    preferredSender?: string;
+    defaultSender?: string;
 }
 export interface ShiftType {
     id?: number;
