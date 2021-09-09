@@ -13660,6 +13660,7 @@ export interface ShiftSetting {
     shiftLogoCorpFile?: CorpFile;
     preferredSender?: string;
     defaultSender?: string;
+
 }
 export interface ShiftType {
     id?: number;
