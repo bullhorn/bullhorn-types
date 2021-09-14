@@ -13715,7 +13715,7 @@ export interface ShiftSetting {
     id?: number;
     dateAdded?: Date;
     dateLastModified?: Date;
-    shiftLogoCorpFile?: CorpFile;
+    shiftLogoUrl?: String;
     preferredSender?: string;
     defaultSender?: string;
 
