@@ -505,13 +505,15 @@ export class EntityTypes {
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
     static PlacementPayRuleset: 'PlacementPayRuleset' = 'PlacementPayRuleset';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
+    static PlacementRateCardChangeRequest: 'PlacementRateCardChangeRequest' = 'PlacementRateCardChangeRequest';
+    static PlacementRateCardChangeRequestStatusLookup: 'PlacementRateCardChangeRequestStatusLookup' = 'PlacementRateCardChangeRequestStatusLookup';
     static PlacementRateCardEditHistory: 'PlacementRateCardEditHistory' = 'PlacementRateCardEditHistory';
     static PlacementRateCardEditHistoryFieldChange: 'PlacementRateCardEditHistoryFieldChange' = 'PlacementRateCardEditHistoryFieldChange';
     static PlacementRateCardEffectiveDateChange: 'PlacementRateCardEffectiveDateChange' = 'PlacementRateCardEffectiveDateChange';
     static PlacementRateCardLine: 'PlacementRateCardLine' = 'PlacementRateCardLine';
     static PlacementRateCardLineEditHistoryFieldChange: 'PlacementRateCardLineEditHistoryFieldChange' = 'PlacementRateCardLineEditHistoryFieldChange';
     static PlacementRateCardLineGroup: 'PlacementRateCardLineGroup' = 'PlacementRateCardLineGroup';
-    static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange'
+    static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange';
     static PlacementRateCardStatusLookup: 'PlacementRateCardStatusLookup' = 'PlacementRateCardStatusLookup';
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
@@ -13172,11 +13174,69 @@ export interface PlacementRateCard {
     owner?: CorporateUser;
     placement?: Placement;
     placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
+    placementRateCardStatusLookup?: PlacementRateCardStatusLookup;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
     versionID?: number;
     versions?: ToMany<PlacementRateCardVersion>;
-    placementRateCardStatusLookup?: PlacementRateCardStatusLookup;
+}
+export interface PlacementRateCardChangeRequest {
+    id?: number;
+    approverComment?: Strings;
+    approvingUser?: Person;
+    changes?: Strings;
+    dateAdded?: Date;
+    dateApproved?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    historicalChanges?: Strings;
+    placementRateCard?: PlacementRateCard;
+    placementRateCardChangeRequestStatusLookup?: PlacementRateCardChangeRequestStatusLookup;
+    requestingCustomDate1?: Date;
+    requestingCustomDate2?: Date;
+    requestingCustomDate3?: Date;
+    requestingCustomFloat1?: number;
+    requestingCustomFloat2?: number;
+    requestingCustomFloat3?: number;
+    requestingCustomInt1?: number;
+    requestingCustomInt2?: number;
+    requestingCustomInt3?: number;
+    requestingCustomText1?: Strings;
+    requestingCustomText10?: Strings;
+    requestingCustomText11?: Strings;
+    requestingCustomText12?: Strings;
+    requestingCustomText13?: Strings;
+    requestingCustomText14?: Strings;
+    requestingCustomText15?: Strings;
+    requestingCustomText16?: Strings;
+    requestingCustomText17?: Strings;
+    requestingCustomText18?: Strings;
+    requestingCustomText19?: Strings;
+    requestingCustomText2?: Strings;
+    requestingCustomText20?: Strings;
+    requestingCustomText3?: Strings;
+    requestingCustomText4?: Strings;
+    requestingCustomText5?: Strings;
+    requestingCustomText6?: Strings;
+    requestingCustomText7?: Strings;
+    requestingCustomText8?: Strings;
+    requestingCustomText9?: Strings;
+    requestingUser?: Person;
+}
+export interface PlacementRateCardChangeRequestStatusLookup {
+    id?: number;
+    canBypass?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isDownStreamOnly?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: Person;
+    shouldShowInPicker?: boolean;
+    workFlow?: number;
 }
 export interface PlacementRateCardEditHistory {
     id?: number;
