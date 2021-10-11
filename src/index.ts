@@ -254,6 +254,10 @@ export class EntityTypes {
     static GeneralLedgerServiceCode: 'GeneralLedgerServiceCode' = 'GeneralLedgerServiceCode';
     static GoalTarget: 'GoalTarget' = 'GoalTarget';
     static HitWord: 'HitWord' = 'HitWord';
+    static Holiday: 'Holiday' = 'Holiday';
+    static HolidayCategoryLookup: 'HolidayCategoryLookup' = 'HolidayCategoryLookup';
+    static HolidayInstance: 'HolidayInstance' = 'HolidayInstance';
+    static HolidayStatusLookup: 'HolidayStatusLookup' = 'HolidayStatusLookup';
     static HousingComplex: 'HousingComplex' = 'HousingComplex';
     static HousingComplexAmenity: 'HousingComplexAmenity' = 'HousingComplexAmenity';
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
@@ -636,7 +640,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -5213,6 +5217,48 @@ export interface HitWord {
     isDeleted?: boolean;
     user?: CorporateUser;
     word?: Strings;
+}
+export interface Holiday {
+    id?: number;
+    cronExpression?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    duration?: number;
+    holidayCategoryLookup?: HolidayCategoryLookup;
+    holidayInstances?: ToMany<HolidayInstance>;
+    holidayStatusLookup?: HolidayStatusLookup;
+    isDeleted?: boolean;
+    label?: Strings;
+    modifyingUser?: CorporateUser;
+}
+export interface HolidayCategoryLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    holidays?: ToMany<Holiday>;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
+}
+export interface HolidayInstance {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    endAt?: Date;
+    holiday?: Holiday;
+    modifyingUser?: CorporateUser;
+    startAt?: Date;
+}
+export interface HolidayStatusLookup {
+    id?: number;
+    holidays?: ToMany<Holiday>;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface HousingComplex {
     id?: number;
