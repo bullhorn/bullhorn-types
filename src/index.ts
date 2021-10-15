@@ -5229,8 +5229,10 @@ export interface Holiday {
     holidayInstances?: ToMany<HolidayInstance>;
     holidayStatusLookup?: HolidayStatusLookup;
     isDeleted?: boolean;
+    isRun?: boolean;
     label?: Strings;
     modifyingUser?: CorporateUser;
+    nextOccurrence?: Date;
 }
 export interface HolidayCategoryLookup {
     id?: number;
