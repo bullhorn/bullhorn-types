@@ -26,6 +26,7 @@ export class EntityTypes {
     static BillMasterTransactionDistributionBatch: 'BillMasterTransactionDistributionBatch' = 'BillMasterTransactionDistributionBatch';
     static BillMasterTransactionSalesTaxRate: 'BillMasterTransactionSalesTaxRate' = 'BillMasterTransactionSalesTaxRate';
     static BillMasterTransactionSurchargeRate: 'BillMasterTransactionSurchargeRate' = 'BillMasterTransactionSurchargeRate';
+    static BillTransaction: 'BillTransaction' = 'BillTransaction';
     static BillableCharge: 'BillableCharge' = 'BillableCharge';
     static BillableChargeBillableTransaction: 'BillableChargeBillableTransaction' = 'BillableChargeBillableTransaction';
     static BillableChargeEditHistory: 'BillableChargeEditHistory' = 'BillableChargeEditHistory';
@@ -35,7 +36,6 @@ export class EntityTypes {
     static BillableChargeStatusLookup: 'BillableChargeStatusLookup' = 'BillableChargeStatusLookup';
     static BillableChargeSummaryTransaction: 'BillableChargeSummaryTransaction' = 'BillableChargeSummaryTransaction';
     static BillableChargeUnbillableTransaction: 'BillableChargeUnbillableTransaction' = 'BillableChargeUnbillableTransaction';
-    static BillableTransaction: 'BillableTransaction' = 'BillableTransaction';
     static BillingProfile: 'BillingProfile' = 'BillingProfile';
     static BillingProfileEditHistory: 'BillingProfileEditHistory' = 'BillingProfileEditHistory';
     static BillingProfileEditHistoryFieldChange: 'BillingProfileEditHistoryFieldChange' = 'BillingProfileEditHistoryFieldChange';
@@ -427,13 +427,13 @@ export class EntityTypes {
     static PayMasterTransaction: 'PayMasterTransaction' = 'PayMasterTransaction';
     static PayMasterTransactionPayExportBatch: 'PayMasterTransactionPayExportBatch' = 'PayMasterTransactionPayExportBatch';
     static PayMasterTransactionPayExportBatchIssues: 'PayMasterTransactionPayExportBatchIssues' = 'PayMasterTransactionPayExportBatchIssues';
+    static PayTransaction: 'PayTransaction' = 'PayTransaction';
     static PayableCharge: 'PayableCharge' = 'PayableCharge';
     static PayableChargeEditHistory: 'PayableChargeEditHistory' = 'PayableChargeEditHistory';
     static PayableChargeEditHistoryFieldChange: 'PayableChargeEditHistoryFieldChange' = 'PayableChargeEditHistoryFieldChange';
     static PayableChargeExportedTransaction: 'PayableChargeExportedTransaction' = 'PayableChargeExportedTransaction';
     static PayableChargePayableTransaction: 'PayableChargePayableTransaction' = 'PayableChargePayableTransaction';
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
-    static PayableTransaction: 'PayableTransaction' = 'PayableTransaction';
     static PayrollEmployeeTypeLookup: 'PayrollEmployeeTypeLookup' = 'PayrollEmployeeTypeLookup';
     static PayrollExportConfig: 'PayrollExportConfig' = 'PayrollExportConfig';
     static PayrollExportTargetLookup: 'PayrollExportTargetLookup' = 'PayrollExportTargetLookup';
@@ -945,6 +945,23 @@ export interface BillMasterTransactionSurchargeRate {
     surchargeRate?: SurchargeRate;
     surchargeRateVersionID?: number;
 }
+export interface BillTransaction {
+    id?: number;
+    amount?: number;
+    billMaster?: BillMaster;
+    billableCharge?: BillableCharge;
+    billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    invoiceStatement?: InvoiceStatement;
+    isEligible?: boolean;
+    quantity?: number;
+    rate?: number;
+    timesheet?: Timesheet;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
+}
 export interface BillableCharge {
     id?: number;
     addedByUser?: CorporateUser;
@@ -1080,23 +1097,6 @@ export interface BillableChargeUnbillableTransaction {
     earnCode?: EarnCode;
     quantity?: number;
     rate?: number;
-    transactionDate?: Date;
-    unitOfMeasure?: UnitOfMeasure;
-}
-export interface BillableTransaction {
-    id?: number;
-    amount?: number;
-    billMaster?: BillMaster;
-    billableCharge?: BillableCharge;
-    billingSyncBatch?: BillingSyncBatch;
-    chargeTypeLookup?: ChargeTypeLookup;
-    currencyUnit?: CurrencyUnit;
-    earnCode?: EarnCode;
-    invoiceStatement?: InvoiceStatement;
-    isEligible?: boolean;
-    quantity?: number;
-    rate?: number;
-    timesheet?: Timesheet;
     transactionDate?: Date;
     unitOfMeasure?: UnitOfMeasure;
 }
@@ -9363,6 +9363,22 @@ export interface PayMasterTransactionPayExportBatchIssues {
     issue?: Issue;
     payMasterTransactionPayExportBatch?: PayMasterTransactionPayExportBatch;
 }
+export interface PayTransaction {
+    id?: number;
+    amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    payExportBatch?: PayExportBatch;
+    payMaster?: PayMaster;
+    payableCharge?: PayableCharge;
+    quantity?: number;
+    rate?: number;
+    timesheet?: Timesheet;
+    transactionDate?: Date;
+    unitOfMeasure?: UnitOfMeasure;
+}
 export interface PayableCharge {
     id?: number;
     addedByUser?: CorporateUser;
@@ -9450,21 +9466,6 @@ export interface PayableChargeStatusLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
-}
-export interface PayableTransaction {
-    id?: number;
-    amount?: number;
-    billingSyncBatch?: BillingSyncBatch;
-    chargeTypeLookup?: ChargeTypeLookup;
-    currencyUnit?: CurrencyUnit;
-    earnCode?: EarnCode;
-    payExportBatch?: PayExportBatch;
-    payMaster?: PayMaster;
-    payableCharge?: PayableCharge;
-    quantity?: number;
-    rate?: number;
-    transactionDate?: Date;
-    unitOfMeasure?: UnitOfMeasure;
 }
 export interface PayrollEmployeeTypeLookup {
     id?: number;
