@@ -14318,6 +14318,7 @@ export interface TimeLaborEvalRule {
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
     description?: Strings;
+    holidays?: ToMany<Holiday>;
     isRun?: boolean;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
