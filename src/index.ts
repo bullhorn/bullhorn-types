@@ -13887,12 +13887,12 @@ export interface ShiftPosition {
 }
 export interface ShiftSetting {
     id?: number;
+    candidateCommunicationDefault?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
-    shiftLogoUrl?: string;
-    preferredSender?: string;
-    defaultSender?: string;
-
+    defaultSender?: Strings;
+    preferredSender?: Strings;
+    shiftLogoUrl?: Strings;
 }
 export interface ShiftType {
     id?: number;
