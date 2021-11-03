@@ -4972,6 +4972,11 @@ export interface ExpenseSheetEntry {
     unitOfMeasure?: UnitOfMeasure;
     voidingExpenseSheetEntry?: ExpenseSheetEntry;
 }
+export interface ExpenseSheetEntryApprovalStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface ExternalAccount {
     id?: number;
     customText1?: Strings;
@@ -14458,7 +14463,6 @@ export interface TimesheetEntry {
     addedByUser?: CorporateUser;
     applicableFrom?: Date;
     applicableTo?: Date;
-    approvalDate?: Date;
     billEvalDate?: Date;
     comment?: Strings;
     currencyUnit?: CurrencyUnit;
@@ -14472,7 +14476,6 @@ export interface TimesheetEntry {
     quantity?: number;
     startedAt?: Date;
     timeLaborEvalSheetTypeLookup?: TimeLaborEvalSheetEntryTypeLookup;
-    timeLaborSystemTypeLookupID?: TimeLaborSystemTypeLookup;
     timesheet?: Timesheet;
     timesheetDay?: Date;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
