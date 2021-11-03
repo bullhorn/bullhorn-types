@@ -231,6 +231,7 @@ export class EntityTypes {
     static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
     static ExpenseSheet: 'ExpenseSheet' = 'ExpenseSheet';
     static ExpenseSheetEntry: 'ExpenseSheetEntry' = 'ExpenseSheetEntry';
+    static ExpenseSheetEntryApprovalStatusLookup: 'ExpenseSheetEntryApprovalStatusLookup' = 'ExpenseSheetEntryApprovalStatusLookup';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
