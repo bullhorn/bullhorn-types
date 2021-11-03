@@ -8204,6 +8204,7 @@ export interface Note {
     placements?: ToMany<Placement>;
     primaryDepartmentName?: Strings;
     truestDateAdded?: Date;
+    jobShifts?: ToMany<JobShift>;
 }
 export interface NoteEntity {
     id?: number;
