@@ -229,6 +229,9 @@ export class EntityTypes {
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
     static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
+    static ExpenseSheet: 'ExpenseSheet' = 'ExpenseSheet';
+    static ExpenseSheetEntry: 'ExpenseSheetEntry' = 'ExpenseSheetEntry';
+    static ExpenseSheetEntryApprovalStatusLookup: 'ExpenseSheetEntryApprovalStatusLookup' = 'ExpenseSheetEntryApprovalStatusLookup';
     static ExternalAccount: 'ExternalAccount' = 'ExternalAccount';
     static ExternalAccountProfile: 'ExternalAccountProfile' = 'ExternalAccountProfile';
     static ExternalBatchStatusRequest: 'ExternalBatchStatusRequest' = 'ExternalBatchStatusRequest';
@@ -4930,6 +4933,50 @@ export interface EstaffMappableFlowback {
     atsEntity?: Strings;
     alwaysOverwrite?: boolean;
     conversion?: Strings;
+}
+export interface ExpenseSheet {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    billed?: number;
+    calendarInstance?: CalendarInstance;
+    candidate?: Candidate;
+    clientCorporation?: ClientCorporation;
+    expenseSheetEntryApprovalStatusLookup?: ExpenseSheetEntryApprovalStatusLookup;
+    jobOrder?: JobOrder;
+    lastModifiedAtUtc?: Date;
+    lastVersion?: number;
+    modifyingUser?: CorporateUser;
+    paid?: number;
+    payPeriodEndDate?: Date;
+    placement?: Placement;
+    timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
+}
+export interface ExpenseSheetEntry {
+    id?: number;
+    addedAtUtc?: Date;
+    addedByUser?: CorporateUser;
+    billEvalDate?: Date;
+    comment?: Strings;
+    currencyUnit?: CurrencyUnit;
+    earnCode?: EarnCode;
+    expenseSheet?: ExpenseSheet;
+    expenseSheetDay?: Date;
+    expenseSheetEntryApprovalStatusLookup?: ExpenseSheetEntryApprovalStatusLookup;
+    expenseSheetVersion?: number;
+    externalExpenseSheetEntryID?: Strings;
+    externalExpenseSheetID?: Strings;
+    lastModifiedAtUtc?: Date;
+    modifyingUser?: CorporateUser;
+    payEvalDate?: Date;
+    quantity?: number;
+    unitOfMeasure?: UnitOfMeasure;
+    voidingExpenseSheetEntry?: ExpenseSheetEntry;
+}
+export interface ExpenseSheetEntryApprovalStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface ExternalAccount {
     id?: number;
