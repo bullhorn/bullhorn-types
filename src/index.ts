@@ -347,8 +347,13 @@ export class EntityTypes {
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
     static JobOrderRateCard: 'JobOrderRateCard' = 'JobOrderRateCard';
+    static JobOrderRateCardEditHistory: 'JobOrderRateCardEditHistory' = 'JobOrderRateCardEditHistory';
+    static JobOrderRateCardEditHistoryFieldChange: 'JobOrderRateCardEditHistoryFieldChange' = 'JobOrderRateCardEditHistoryFieldChange';
+    static JobOrderRateCardEffectiveDateChange: 'JobOrderRateCardEffectiveDateChange' = 'JobOrderRateCardEffectiveDateChange';
     static JobOrderRateCardLine: 'JobOrderRateCardLine' = 'JobOrderRateCardLine';
+    static JobOrderRateCardLineEditHistoryFieldChange: 'JobOrderRateCardLineEditHistoryFieldChange' = 'JobOrderRateCardLineEditHistoryFieldChange';
     static JobOrderRateCardLineGroup: 'JobOrderRateCardLineGroup' = 'JobOrderRateCardLineGroup';
+    static JobOrderRateCardLineGroupEditHistoryFieldChange: 'JobOrderRateCardLineGroupEditHistoryFieldChange' = 'JobOrderRateCardLineGroupEditHistoryFieldChange';
     static JobOrderRateCardVersion: 'JobOrderRateCardVersion' = 'JobOrderRateCardVersion';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
     static JobShift: 'JobShift' = 'JobShift';
@@ -516,6 +521,7 @@ export class EntityTypes {
     static PlacementPayRuleset: 'PlacementPayRuleset' = 'PlacementPayRuleset';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
     static PlacementRateCardChangeRequest: 'PlacementRateCardChangeRequest' = 'PlacementRateCardChangeRequest';
+    static PlacementRateCardChangeRequestSnapshot: 'PlacementRateCardChangeRequestSnapshot' = 'PlacementRateCardChangeRequestSnapshot';
     static PlacementRateCardChangeRequestStatusLookup: 'PlacementRateCardChangeRequestStatusLookup' = 'PlacementRateCardChangeRequestStatusLookup';
     static PlacementRateCardEditHistory: 'PlacementRateCardEditHistory' = 'PlacementRateCardEditHistory';
     static PlacementRateCardEditHistoryFieldChange: 'PlacementRateCardEditHistoryFieldChange' = 'PlacementRateCardEditHistoryFieldChange';
@@ -7477,6 +7483,37 @@ export interface JobOrderRateCard {
     versionID?: number;
     versions?: ToMany<JobOrderRateCardVersion>;
 }
+export interface JobOrderRateCardEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: JobOrderRateCardEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<JobOrderRateCardEditHistoryFieldChange>;
+    lineFieldChanges?: ToMany<JobOrderRateCardLineEditHistoryFieldChange>;
+    lineGroupFieldChanges?: ToMany<JobOrderRateCardLineGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobOrderRateCard;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface JobOrderRateCardEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobOrderRateCardEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface JobOrderRateCardEffectiveDateChange {
+    id?: number;
+    editHistory?: JobOrderRateCardEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface JobOrderRateCardLine {
     id?: number;
     alias?: Strings;
@@ -7493,6 +7530,17 @@ export interface JobOrderRateCardLine {
     payMultiplier?: number;
     payRate?: number;
 }
+export interface JobOrderRateCardLineEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCode?: EarnCode;
+    editHistory?: JobOrderRateCardEditHistory;
+    jobOrderRateCardLine?: JobOrderRateCardLine;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+}
 export interface JobOrderRateCardLineGroup {
     id?: number;
     earnCodeGroup?: EarnCodeGroup;
@@ -7503,6 +7551,17 @@ export interface JobOrderRateCardLineGroup {
     jobOrderRateCardVersion?: JobOrderRateCardVersion;
     migrateGUID?: Strings;
 }
+export interface JobOrderRateCardLineGroupEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    earnCodeGroup?: EarnCodeGroup;
+    editHistory?: JobOrderRateCardEditHistory;
+    jobOrderRateCardLineGroup?: JobOrderRateCardLineGroup;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+}
 export interface JobOrderRateCardVersion {
     id?: number;
     dateAdded?: Date;
@@ -7512,7 +7571,6 @@ export interface JobOrderRateCardVersion {
     isFirst?: boolean;
     jobOrderRateCardLineGroups?: ToMany<JobOrderRateCardLineGroup>;
 }
-
 export interface JobOrderTemplate {
     id?: number;
     corporationID?: number;
@@ -13311,13 +13369,14 @@ export interface PlacementRateCard {
 export interface PlacementRateCardChangeRequest {
     id?: number;
     approverComment?: Strings;
-    approvingUser?: Person;
-    changes?: Strings;
+    approvingUser?: CorporateUser;
     dateAdded?: Date;
     dateApproved?: Date;
     dateLastModified?: Date;
     description?: Strings;
-    historicalChanges?: Strings;
+    firstSnapshot?: PlacementRateCardChangeRequestSnapshot;
+    isApproved?: boolean;
+    latestSnapshot?: PlacementRateCardChangeRequestSnapshot;
     placementRateCard?: PlacementRateCard;
     placementRateCardChangeRequestStatusLookup?: PlacementRateCardChangeRequestStatusLookup;
     requestingCustomDate1?: Date;
@@ -13349,7 +13408,18 @@ export interface PlacementRateCardChangeRequest {
     requestingCustomText7?: Strings;
     requestingCustomText8?: Strings;
     requestingCustomText9?: Strings;
-    requestingUser?: Person;
+    requestingUser?: CorporateUser;
+    snapshots?: ToMany<PlacementRateCardChangeRequestSnapshot>;
+}
+export interface PlacementRateCardChangeRequestSnapshot {
+    id?: number;
+    addedByUser?: Person;
+    dateAdded?: Date;
+    diff?: Strings;
+    originalEntityDateLastModified?: Date;
+    placementRateCardChangeRequest?: PlacementRateCardChangeRequest;
+    snapshot?: Strings;
+    snapshotInstanceID?: number;
 }
 export interface PlacementRateCardChangeRequestStatusLookup {
     id?: number;
@@ -13358,13 +13428,13 @@ export interface PlacementRateCardChangeRequestStatusLookup {
     dateLastModified?: Date;
     description?: Strings;
     isDeleted?: boolean;
-    isDownStreamOnly?: boolean;
+    isDownstreamOnly?: boolean;
     isHidden?: boolean;
     isSystem?: boolean;
     label?: Strings;
-    modifiedByUser?: Person;
+    modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
-    workFlow?: number;
+    workflowOrder?: number;
 }
 export interface PlacementRateCardEditHistory {
     id?: number;
@@ -13399,18 +13469,44 @@ export interface PlacementRateCardEffectiveDateChange {
 }
 export interface PlacementRateCardLine {
     id?: number;
-    alias?: Strings;
-    billCurrencyUnit?: CurrencyUnit;
-    billMultiplier?: number;
     billRate?: number;
-    earnCode?: EarnCode;
-    externalID?: Strings;
-    migrateGUID?: Strings;
+    payRate?: number;
+    payMultiplier?: number;
+    billMultiplier?: number;
     markupPercent?: number;
     markupValue?: number;
+    billCurrencyUnit?: CurrencyUnit;
     payCurrencyUnit?: CurrencyUnit;
-    payMultiplier?: number;
-    payRate?: number;
+    earnCode?: EarnCode;
+    alias?: Strings;
+    taxableMargin?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    customText10?: Strings;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customFloat4?: number;
+    customFloat5?: number;
+    customRate1?: number;
+    customRate2?: number;
+    customRate3?: number;
+    customRate4?: number;
+    customRate5?: number;
+    externalID?: Strings;
+    migrateGUID?: Strings;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
 export interface PlacementRateCardLineEditHistoryFieldChange {
@@ -13426,12 +13522,12 @@ export interface PlacementRateCardLineEditHistoryFieldChange {
 }
 export interface PlacementRateCardLineGroup {
     id?: number;
-    earnCodeGroup?: EarnCodeGroup;
-    externalID?: Strings;
     isBase?: boolean;
+    earnCodeGroup?: EarnCodeGroup;
+    placementRateCardLines?: ToMany<PlacementRateCardLine>;
+    externalID?: Strings;
     migrateGUID?: Strings;
     placementRateCard?: PlacementRateCard;
-    placementRateCardLines?: ToMany<PlacementRateCardLine>;
     placementRateCardVersion?: PlacementRateCardVersion;
 }
 export interface PlacementRateCardLineGroupEditHistoryFieldChange {
@@ -13445,7 +13541,6 @@ export interface PlacementRateCardLineGroupEditHistoryFieldChange {
     parentFieldName?: Strings;
     placementRateCardLineGroup?: PlacementRateCardLineGroup;
 }
-
 export interface PlacementRateCardStatusLookup {
     id?: number;
     canBypass?: boolean;
@@ -13458,9 +13553,9 @@ export interface PlacementRateCardStatusLookup {
     isSystem?: boolean;
     label?: Strings;
     modifiedByUser?: CorporateUser;
+    shouldRunValidationOnSave?: boolean;
     shouldShowInPicker?: boolean;
     workflowOrder?: number;
-    shouldRunValidationOnSave: boolean;
 }
 export interface PlacementRateCardVersion {
     id?: number;
