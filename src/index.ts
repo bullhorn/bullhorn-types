@@ -14036,6 +14036,7 @@ export interface ShiftSetting {
     defaultSender?: Strings;
     preferredSender?: Strings;
     shiftLogoUrl?: Strings;
+    showCandidatePhoneNumberOnSchedule?: boolean;
 }
 export interface ShiftType {
     id?: number;
