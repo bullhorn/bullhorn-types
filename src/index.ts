@@ -14578,7 +14578,6 @@ export interface TimesheetEntry {
     quantity?: number;
     startedAt?: Date;
     timeLaborEvalSheetTypeLookup?: TimeLaborEvalSheetEntryTypeLookup;
-    timeLaborSystemTypeLookupID?: TimeLaborSystemTypeLookup;
     timesheet?: Timesheet;
     timesheetDay?: Date;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
