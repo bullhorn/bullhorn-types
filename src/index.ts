@@ -963,6 +963,7 @@ export interface BillTransaction {
     chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
+    expensesheet?: ExpenseSheet;
     invoiceStatement?: InvoiceStatement;
     isEligible?: boolean;
     quantity?: number;
@@ -4944,6 +4945,7 @@ export interface ExpenseSheet {
     id?: number;
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
+    approvalDate?: Date;
     billed?: number;
     calendarInstance?: CalendarInstance;
     candidate?: Candidate;
@@ -4954,7 +4956,6 @@ export interface ExpenseSheet {
     lastVersion?: number;
     modifyingUser?: CorporateUser;
     paid?: number;
-    payPeriodEndDate?: Date;
     placement?: Placement;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
 }
@@ -4963,6 +4964,7 @@ export interface ExpenseSheetEntry {
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
     billEvalDate?: Date;
+    billed?: number;
     comment?: Strings;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
@@ -4974,6 +4976,7 @@ export interface ExpenseSheetEntry {
     externalExpenseSheetID?: Strings;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
+    paid?: number;
     payEvalDate?: Date;
     quantity?: number;
     unitOfMeasure?: UnitOfMeasure;
@@ -9476,6 +9479,7 @@ export interface PayTransaction {
     chargeTypeLookup?: ChargeTypeLookup;
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
+    expensesheet?: ExpenseSheet;
     payExportBatch?: PayExportBatch;
     payMaster?: PayMaster;
     payableCharge?: PayableCharge;
@@ -14549,7 +14553,6 @@ export interface Timesheet {
     modifyingUser?: CorporateUser;
     paid?: number;
     payCalendar?: Calendar;
-    payPeriodEndDate?: Date;
     placement?: Placement;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
@@ -14561,6 +14564,7 @@ export interface TimesheetEntry {
     addedByUser?: CorporateUser;
     applicableFrom?: Date;
     applicableTo?: Date;
+    approvalDate?: Date;
     billEvalDate?: Date;
     comment?: Strings;
     currencyUnit?: CurrencyUnit;
@@ -14574,6 +14578,7 @@ export interface TimesheetEntry {
     quantity?: number;
     startedAt?: Date;
     timeLaborEvalSheetTypeLookup?: TimeLaborEvalSheetEntryTypeLookup;
+    timeLaborSystemTypeLookupID?: TimeLaborSystemTypeLookup;
     timesheet?: Timesheet;
     timesheetDay?: Date;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
