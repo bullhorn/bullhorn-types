@@ -1405,7 +1405,10 @@ export interface Calendar {
     calendarFrequencyLookup?: CalendarFrequencyLookup;
     dateAdded?: Date;
     dateLastModified?: Date;
+    isCustom?: boolean;
     label?: Strings;
+    offset?: number;
+    startDate?: Date;
 }
 export interface CalendarFrequencyLookup {
     id?: number;
@@ -9379,11 +9382,15 @@ export interface PageInteraction {
 }
 export interface PayBillCycle {
     id?: number;
+    billEvalEnabled?: boolean;
     billingCalendar?: Calendar;
     billingCalendarFrequencyLookup?: CalendarFrequencyLookup;
     dateAdded?: Date;
     dateLastModified?: Date;
+    invoiceCycleEnabled?: boolean;
     label?: Strings;
+    payEvalEnabled?: boolean;
+    timesheetEnabled?: boolean;
 }
 export interface PayBillOptionsLookup {
     id?: number;
