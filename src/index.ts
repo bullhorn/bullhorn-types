@@ -266,6 +266,7 @@ export class EntityTypes {
     static HousingComplexFurnitureDelivery: 'HousingComplexFurnitureDelivery' = 'HousingComplexFurnitureDelivery';
     static HousingComplexUnit: 'HousingComplexUnit' = 'HousingComplexUnit';
     static HousingComplexUtilityAccount: 'HousingComplexUtilityAccount' = 'HousingComplexUtilityAccount';
+    static InvoicePayment: 'InvoicePayment' = 'InvoicePayment';
     static InvoiceStatement: 'InvoiceStatement' = 'InvoiceStatement';
     static InvoiceStatementBatch: 'InvoiceStatementBatch' = 'InvoiceStatementBatch';
     static InvoiceStatementDeliveryStatusLookup: 'InvoiceStatementDeliveryStatusLookup' = 'InvoiceStatementDeliveryStatusLookup';
@@ -5508,6 +5509,28 @@ export interface HousingComplexUtilityAccount {
     phone?: Strings;
     type?: Strings;
     unit?: HousingComplexUnit;
+}
+export interface InvoicePayment {
+    id?: number;
+    amount?: number;
+    checkNumber?: Strings;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    datePaid?: Date;
+    invoiceStatementID?: number;
 }
 export interface InvoiceStatement {
     id?: number;
