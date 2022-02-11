@@ -221,6 +221,7 @@ export class EntityTypes {
     static EarnCodeEditHistoryFieldChange: 'EarnCodeEditHistoryFieldChange' = 'EarnCodeEditHistoryFieldChange';
     static EarnCodeGroup: 'EarnCodeGroup' = 'EarnCodeGroup';
     static EarnCodeGroupStatusLookup: 'EarnCodeGroupStatusLookup' = 'EarnCodeGroupStatusLookup';
+    static EarnCodeTemplate: 'EarnCodeTemplate' = 'EarnCodeTemplate';
     static EarnCodeTypeLookup: 'EarnCodeTypeLookup' = 'EarnCodeTypeLookup';
     static EditHistoryActionLookup: 'EditHistoryActionLookup' = 'EditHistoryActionLookup';
     static EmailHitWordMatch: 'EmailHitWordMatch' = 'EmailHitWordMatch';
@@ -4888,6 +4889,27 @@ export interface EarnCodeGroupStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface EarnCodeTemplate {
+    id?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    earnCodes?: ToMany<EarnCode>;
+    title?: Strings;
 }
 export interface EarnCodeTypeLookup {
     id?: number;
