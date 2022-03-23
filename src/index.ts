@@ -463,8 +463,33 @@ export class EntityTypes {
     static PersonCustomObjectEditHistoryFieldChange: 'PersonCustomObjectEditHistoryFieldChange' = 'PersonCustomObjectEditHistoryFieldChange';
     static PersonCustomObjectInstance1: 'PersonCustomObjectInstance1' = 'PersonCustomObjectInstance1';
     static PersonCustomObjectInstance10: 'PersonCustomObjectInstance10' = 'PersonCustomObjectInstance10';
+    static PersonCustomObjectInstance11: 'PersonCustomObjectInstance11' = 'PersonCustomObjectInstance11';
+    static PersonCustomObjectInstance12: 'PersonCustomObjectInstance12' = 'PersonCustomObjectInstance12';
+    static PersonCustomObjectInstance13: 'PersonCustomObjectInstance13' = 'PersonCustomObjectInstance13';
+    static PersonCustomObjectInstance14: 'PersonCustomObjectInstance14' = 'PersonCustomObjectInstance14';
+    static PersonCustomObjectInstance15: 'PersonCustomObjectInstance15' = 'PersonCustomObjectInstance15';
+    static PersonCustomObjectInstance16: 'PersonCustomObjectInstance16' = 'PersonCustomObjectInstance16';
+    static PersonCustomObjectInstance17: 'PersonCustomObjectInstance17' = 'PersonCustomObjectInstance17';
+    static PersonCustomObjectInstance18: 'PersonCustomObjectInstance18' = 'PersonCustomObjectInstance18';
+    static PersonCustomObjectInstance19: 'PersonCustomObjectInstance19' = 'PersonCustomObjectInstance19';
     static PersonCustomObjectInstance2: 'PersonCustomObjectInstance2' = 'PersonCustomObjectInstance2';
+    static PersonCustomObjectInstance20: 'PersonCustomObjectInstance20' = 'PersonCustomObjectInstance20';
+    static PersonCustomObjectInstance21: 'PersonCustomObjectInstance21' = 'PersonCustomObjectInstance21';
+    static PersonCustomObjectInstance22: 'PersonCustomObjectInstance22' = 'PersonCustomObjectInstance22';
+    static PersonCustomObjectInstance23: 'PersonCustomObjectInstance23' = 'PersonCustomObjectInstance23';
+    static PersonCustomObjectInstance24: 'PersonCustomObjectInstance24' = 'PersonCustomObjectInstance24';
+    static PersonCustomObjectInstance25: 'PersonCustomObjectInstance25' = 'PersonCustomObjectInstance25';
+    static PersonCustomObjectInstance26: 'PersonCustomObjectInstance26' = 'PersonCustomObjectInstance26';
+    static PersonCustomObjectInstance27: 'PersonCustomObjectInstance27' = 'PersonCustomObjectInstance27';
+    static PersonCustomObjectInstance28: 'PersonCustomObjectInstance28' = 'PersonCustomObjectInstance28';
+    static PersonCustomObjectInstance29: 'PersonCustomObjectInstance29' = 'PersonCustomObjectInstance29';
     static PersonCustomObjectInstance3: 'PersonCustomObjectInstance3' = 'PersonCustomObjectInstance3';
+    static PersonCustomObjectInstance30: 'PersonCustomObjectInstance30' = 'PersonCustomObjectInstance30';
+    static PersonCustomObjectInstance31: 'PersonCustomObjectInstance31' = 'PersonCustomObjectInstance31';
+    static PersonCustomObjectInstance32: 'PersonCustomObjectInstance32' = 'PersonCustomObjectInstance32';
+    static PersonCustomObjectInstance33: 'PersonCustomObjectInstance33' = 'PersonCustomObjectInstance33';
+    static PersonCustomObjectInstance34: 'PersonCustomObjectInstance34' = 'PersonCustomObjectInstance34';
+    static PersonCustomObjectInstance35: 'PersonCustomObjectInstance35' = 'PersonCustomObjectInstance35';
     static PersonCustomObjectInstance4: 'PersonCustomObjectInstance4' = 'PersonCustomObjectInstance4';
     static PersonCustomObjectInstance5: 'PersonCustomObjectInstance5' = 'PersonCustomObjectInstance5';
     static PersonCustomObjectInstance6: 'PersonCustomObjectInstance6' = 'PersonCustomObjectInstance6';
@@ -9780,11 +9805,111 @@ export interface PersonCustomObjectInstance10 {
     id?: number;
     [propName: string]: any;
 }
+export interface PersonCustomObjectInstance11 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance12 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance13 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance14 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance15 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance16 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance17 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance18 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance19 {
+    id?: number;
+    [propName: string]: any;
+}
 export interface PersonCustomObjectInstance2 {
     id?: number;
     [propName: string]: any;
 }
+export interface PersonCustomObjectInstance20 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance21 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance22 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance23 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance24 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance25 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance26 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance27 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance28 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance29 {
+    id?: number;
+    [propName: string]: any;
+}
 export interface PersonCustomObjectInstance3 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance30 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance31 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance32 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance33 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance34 {
+    id?: number;
+    [propName: string]: any;
+}
+export interface PersonCustomObjectInstance35 {
     id?: number;
     [propName: string]: any;
 }
