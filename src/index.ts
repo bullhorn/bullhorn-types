@@ -9477,6 +9477,7 @@ export interface PayBillSetting {
     doubletimeBillMultiplier? : number;
     overtimePayMultiplier? : number;
     doubletimePayMultiplier? : number;
+    useJobRateCardEffectiveDate?: boolean;
 }
 export interface PayExportBatch {
     id?: number;
