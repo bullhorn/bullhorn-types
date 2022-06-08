@@ -9479,6 +9479,7 @@ export interface PayBillSetting {
     doubletimePayMultiplier? : number;
     editPayRateCalculatesBillRate?: boolean;
     editBillRateCalculatesPayRate?: boolean
+    editMarkupCalculatesPayRate?: boolean
     useJobRateCardEffectiveDate?: boolean;
 }
 export interface PayExportBatch {
