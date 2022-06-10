@@ -13737,6 +13737,7 @@ export interface PlacementRateCardStatusLookup {
     shouldRunValidationOnSave?: boolean;
     shouldShowInPicker?: boolean;
     workflowOrder?: number;
+    isActive?: boolean;
 }
 export interface PlacementRateCardVersion {
     id?: number;
