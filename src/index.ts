@@ -4995,18 +4995,22 @@ export interface ExpenseSheet {
     id?: number;
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
+    approvalDate?: Date;
+    approvedBy?: Strings;
     billed?: number;
     calendarInstance?: CalendarInstance;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     expenseSheetEntryApprovalStatusLookup?: ExpenseSheetEntryApprovalStatusLookup;
+    externalID?: Strings;
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
+    lastProcessedOn?: Date;
     lastVersion?: number;
     modifyingUser?: CorporateUser;
     paid?: number;
-    payPeriodEndDate?: Date;
     placement?: Placement;
+    processingStatus?: TimeAndExpenseSheetProcessingStatusLookup;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
 }
 export interface ExpenseSheetEntry {
@@ -5021,8 +5025,8 @@ export interface ExpenseSheetEntry {
     expenseSheetDay?: Date;
     expenseSheetEntryApprovalStatusLookup?: ExpenseSheetEntryApprovalStatusLookup;
     expenseSheetVersion?: number;
-    externalExpenseSheetEntryID?: Strings;
-    externalExpenseSheetID?: Strings;
+    externalID?: Strings;
+    fileID?: Strings;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
     payEvalDate?: Date;
@@ -14634,6 +14638,18 @@ export interface TearsheetRecipient {
     person?: Person;
     tearsheet?: Tearsheet;
 }
+export interface TimeAndExpenseSheetProcessingStatusLookup {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    isDeleted?: boolean;
+    isHidden?: boolean;
+    isSystem?: boolean;
+    label?: Strings;
+    modifiedByUser?: CorporateUser;
+    shouldShowInPicker?: boolean;
+}
 export interface TimeLaborCalcTypeLookup {
     id?: number;
     isDeleted?: boolean;
@@ -14719,20 +14735,22 @@ export interface Timesheet {
     addedByUser?: CorporateUser;
     additionalBillAmount?: number;
     additionalPayAmount?: number;
-    billCalendar?: Calendar;
+    approvedBy?: Strings;
+    approvedDate?: Date;
     billed?: number;
     calendarInstance?: CalendarInstance;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
+    externalID?: Strings;
     hoursWorked?: number;
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
+    lastProcessedOn?: Date;
     lastVersion?: number;
     modifyingUser?: CorporateUser;
     paid?: number;
-    payCalendar?: Calendar;
-    payPeriodEndDate?: Date;
     placement?: Placement;
+    processingStatus?: TimeAndExpenseSheetProcessingStatusLookup;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
     units?: boolean;
@@ -14748,8 +14766,7 @@ export interface TimesheetEntry {
     currencyUnit?: CurrencyUnit;
     earnCode?: EarnCode;
     endedAt?: Date;
-    externalTimesheetEntryID?: Strings;
-    externalTimesheetID?: Strings;
+    externalID?: Strings;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
     payEvalDate?: Date;
