@@ -5005,8 +5005,7 @@ export interface ExpenseSheet {
     externalID?: Strings;
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
-    lastProcessedOn?: Date;
-    lastVersion?: number;
+    lastProcessedOn?: Date; 
     modifyingUser?: CorporateUser;
     paid?: number;
     placement?: Placement;
@@ -14746,7 +14745,6 @@ export interface Timesheet {
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
     lastProcessedOn?: Date;
-    lastVersion?: number;
     modifyingUser?: CorporateUser;
     paid?: number;
     placement?: Placement;
