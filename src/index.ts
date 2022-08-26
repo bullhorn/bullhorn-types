@@ -14662,6 +14662,7 @@ export interface TimeLaborEvalRule {
     description?: Strings;
     holidays?: ToMany<Holiday>;
     isRun?: boolean;
+    hasAssociations?: boolean;
     lastModifiedAtUtc?: Date;
     modifyingUser?: CorporateUser;
     name?: Strings;
