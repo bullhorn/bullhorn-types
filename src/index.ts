@@ -4988,7 +4988,7 @@ export interface EstaffMappableFlowback {
     estaffRecordType?: Strings;
     atsField?: Strings;
     atsEntity?: Strings;
-    alwaysOverwrite?: boolean;
+    alwaysOverwrite?: number;
     conversion?: Strings;
 }
 export interface ExpenseSheet {
