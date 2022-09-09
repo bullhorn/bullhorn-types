@@ -185,15 +185,6 @@ export class EntityTypes {
     static ClientCorporationLineEditHistory: 'ClientCorporationLineEditHistory' = 'ClientCorporationLineEditHistory';
     static ClientCorporationLineEditHistoryFieldChange: 'ClientCorporationLineEditHistoryFieldChange' = 'ClientCorporationLineEditHistoryFieldChange';
     static ClientCorporationNote: 'ClientCorporationNote' = 'ClientCorporationNote';
-    static ClientCorporationRateAgreementCard: 'ClientCorporationRateAgreementCard' = 'ClientCorporationRateAgreementCard';
-    static ClientCorporationRateAgreementCardEditHistory: 'ClientCorporationRateAgreementCardEditHistory' = 'ClientCorporationRateAgreementCardEditHistory';
-    static ClientCorporationRateAgreementCardEditHistoryFieldChange: 'ClientCorporationRateAgreementCardEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardEditHistoryFieldChange';
-    static ClientCorporationRateAgreementCardEffectiveDateChange: 'ClientCorporationRateAgreementCardEffectiveDateChange' = 'ClientCorporationRateAgreementCardEffectiveDateChange';
-    static ClientCorporationRateAgreementCardLine: 'ClientCorporationRateAgreementCardLine' = 'ClientCorporationRateAgreementCardLine';
-    static ClientCorporationRateAgreementCardLineEditHistoryFieldChange: 'ClientCorporationRateAgreementCardLineEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardLineEditHistoryFieldChange';
-    static ClientCorporationRateAgreementCardLineGroup: 'ClientCorporationRateAgreementCardLineGroup' = 'ClientCorporationRateAgreementCardLineGroup';
-    static ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange: 'ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange';
-    static ClientCorporationRateAgreementCardVersion: 'ClientCorporationRateAgreementCardVersion' = 'ClientCorporationRateAgreementCardVersion';
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
@@ -685,7 +676,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationRateAgreementCard', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -4291,153 +4282,6 @@ export interface ClientCorporationNote {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
     note?: Note;
-}
-export interface ClientCorporationRateAgreementCard {
-    id?: number;
-    clientCorporation?: ClientCorporation;
-    clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    effectiveDate?: Date;
-    effectiveEndDate?: Date;
-    isDeleted?: boolean;
-    name?: Strings;
-    rootExternalID?: Strings;
-    rootMigrateGUID?: Strings;
-    versionID?: number;
-    versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
-}
-export interface ClientCorporationRateAgreementCardEditHistory {
-    id?: number;
-    auditTrail?: Strings;
-    dateAdded?: Date;
-    effectiveDateChange?: ClientCorporationRateAgreementCardEffectiveDateChange;
-    effectiveOn?: Date;
-    fieldChanges?: ToMany<ClientCorporationRateAgreementCardEditHistoryFieldChange>;
-    lineFieldChanges?: ToMany<ClientCorporationRateAgreementCardLineEditHistoryFieldChange>;
-    lineGroupFieldChanges?: ToMany<ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange>;
-    migrateGUID?: Strings;
-    modifyingPerson?: Person;
-    targetEntity?: ClientCorporationRateAgreementCard;
-    transactionID?: Strings;
-    versionEditHistoryActionLookup?: EditHistoryActionLookup;
-    versionID?: number;
-}
-export interface ClientCorporationRateAgreementCardEditHistoryFieldChange {
-    id?: number;
-    columnName?: Strings;
-    display?: Strings;
-    editHistory?: ClientCorporationRateAgreementCardEditHistory;
-    entityFieldTypeLookup?: EntityFieldTypeLookup;
-    newValue?: Strings;
-    oldValue?: Strings;
-}
-export interface ClientCorporationRateAgreementCardEffectiveDateChange {
-    id?: number;
-    editHistory?: ClientCorporationRateAgreementCardEditHistory;
-    newEffectiveDate?: Date;
-    previousEffectiveDate?: Date;
-}
-export interface ClientCorporationRateAgreementCardLine {
-    id?: number;
-    alias?: Strings;
-    billCurrencyUnit?: CurrencyUnit;
-    billMultiplier?: number;
-    billRate?: number;
-    clientCorporationRateAgreementCardLineGroup?: ClientCorporationRateAgreementCardLineGroup;
-    customFloat1?: number;
-    customFloat2?: number;
-    customFloat3?: number;
-    customFloat4?: number;
-    customFloat5?: number;
-    customInt1?: number;
-    customInt2?: number;
-    customInt3?: number;
-    customInt4?: number;
-    customInt5?: number;
-    customRate1?: number;
-    customRate2?: number;
-    customRate3?: number;
-    customRate4?: number;
-    customRate5?: number;
-    customText1?: Strings;
-    customText10?: Strings;
-    customText2?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
-    customText6?: Strings;
-    customText7?: Strings;
-    customText8?: Strings;
-    customText9?: Strings;
-    earnCode?: EarnCode;
-    externalID?: Strings;
-    markupPercent?: number;
-    markupValue?: number;
-    migrateGUID?: Strings;
-    payCurrencyUnit?: CurrencyUnit;
-    payMultiplier?: number;
-    payRate?: number;
-}
-export interface ClientCorporationRateAgreementCardLineEditHistoryFieldChange {
-    id?: number;
-    clientCorporationRateAgreementCardLine?: ClientCorporationRateAgreementCardLine;
-    columnName?: Strings;
-    display?: Strings;
-    earnCode?: EarnCode;
-    editHistory?: ClientCorporationRateAgreementCardEditHistory;
-    newValue?: Strings;
-    oldValue?: Strings;
-    parentFieldName?: Strings;
-}
-export interface ClientCorporationRateAgreementCardLineGroup {
-    id?: number;
-    clientCorporationRateAgreementCard?: ClientCorporationRateAgreementCard;
-    clientCorporationRateAgreementCardLines?: ToMany<ClientCorporationRateAgreementCardLine>;
-    clientCorporationRateAgreementCardVersion?: ClientCorporationRateAgreementCardVersion;
-    earnCodeGroup?: EarnCodeGroup;
-    externalID?: Strings;
-    isBase?: boolean;
-    migrateGUID?: Strings;
-}
-export interface ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange {
-    id?: number;
-    clientCorporationRateAgreementCardLineGroup?: ClientCorporationRateAgreementCardLineGroup;
-    columnName?: Strings;
-    display?: Strings;
-    earnCodeGroup?: EarnCodeGroup;
-    editHistory?: ClientCorporationRateAgreementCardEditHistory;
-    newValue?: Strings;
-    oldValue?: Strings;
-    parentFieldName?: Strings;
-}
-export interface ClientCorporationRateAgreementCardVersion {
-    id?: number;
-    clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
-    customDate1?: Date;
-    customDate2?: Date;
-    customDate3?: Date;
-    customFloat1?: number;
-    customFloat2?: number;
-    customFloat3?: number;
-    customInt1?: number;
-    customInt2?: number;
-    customInt3?: number;
-    customText1?: Strings;
-    customText10?: Strings;
-    customText2?: Strings;
-    customText3?: Strings;
-    customText4?: Strings;
-    customText5?: Strings;
-    customText6?: Strings;
-    customText7?: Strings;
-    customText8?: Strings;
-    customText9?: Strings;
-    dateAdded?: Date;
-    dateLastModified?: Date;
-    effectiveDate?: Date;
-    effectiveEndDate?: Date;
-    isFirst?: boolean;
 }
 export interface ClientCorporationRatios {
     id?: number;
