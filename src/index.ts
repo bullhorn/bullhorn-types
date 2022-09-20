@@ -4988,8 +4988,13 @@ export interface EstaffMappableFlowback {
     estaffRecordType?: Strings;
     atsField?: Strings;
     atsEntity?: Strings;
-    alwaysOverwrite?: number;
+    alwaysOverwrite?: EstaffMappableFlowbackOverride;
     conversion?: Strings;
+}
+export interface EstaffMappableFlowbackOverride {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface ExpenseSheet {
     id?: number;
