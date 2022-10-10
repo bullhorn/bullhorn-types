@@ -4294,16 +4294,21 @@ export interface ClientCorporationNote {
 }
 export interface ClientCorporationRateAgreementCard {
     id?: number;
+    category?: Category;
     clientCorporation?: ClientCorporation;
     clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
     dateAdded?: Date;
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
+    employmentType?: Strings;
     isDeleted?: boolean;
+    jobCode?: JobCode;
+    location?: Location;
     name?: Strings;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
+    state?: Strings;
     versionID?: number;
     versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
 }
