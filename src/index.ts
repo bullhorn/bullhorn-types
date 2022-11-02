@@ -100,6 +100,11 @@ export class EntityTypes {
     static ClientCorporation4: 'ClientCorporation4' = 'ClientCorporation4';
     static ClientCorporation5: 'ClientCorporation5' = 'ClientCorporation5';
     static ClientCorporationAppointment: 'ClientCorporationAppointment' = 'ClientCorporationAppointment';
+    static ClientCorporationBillRuleset: 'ClientCorporationBillRuleset' = 'ClientCorporationBillRuleset';
+    static ClientCorporationBillRulesetAssociationChangeHistory: 'ClientCorporationBillRulesetAssociationChangeHistory' = 'ClientCorporationBillRulesetAssociationChangeHistory';
+    static ClientCorporationBillRulesetEditHistory: 'ClientCorporationBillRulesetEditHistory' = 'ClientCorporationBillRulesetEditHistory';
+    static ClientCorporationBillRulesetEditHistoryFieldChange: 'ClientCorporationBillRulesetEditHistoryFieldChange' = 'ClientCorporationBillRulesetEditHistoryFieldChange';
+    static ClientCorporationBillRulesetEffectiveDateChange: 'ClientCorporationBillRulesetEffectiveDateChange' = 'ClientCorporationBillRulesetEffectiveDateChange';
     static ClientCorporationCertification: 'ClientCorporationCertification' = 'ClientCorporationCertification';
     static ClientCorporationCustomObject: 'ClientCorporationCustomObject' = 'ClientCorporationCustomObject';
     static ClientCorporationCustomObject10EditHistory: 'ClientCorporationCustomObject10EditHistory' = 'ClientCorporationCustomObject10EditHistory';
@@ -185,6 +190,11 @@ export class EntityTypes {
     static ClientCorporationLineEditHistory: 'ClientCorporationLineEditHistory' = 'ClientCorporationLineEditHistory';
     static ClientCorporationLineEditHistoryFieldChange: 'ClientCorporationLineEditHistoryFieldChange' = 'ClientCorporationLineEditHistoryFieldChange';
     static ClientCorporationNote: 'ClientCorporationNote' = 'ClientCorporationNote';
+    static ClientCorporationPayRuleset: 'ClientCorporationPayRuleset' = 'ClientCorporationPayRuleset';
+    static ClientCorporationPayRulesetAssociationChangeHistory: 'ClientCorporationPayRulesetAssociationChangeHistory' = 'ClientCorporationPayRulesetAssociationChangeHistory';
+    static ClientCorporationPayRulesetEditHistory: 'ClientCorporationPayRulesetEditHistory' = 'ClientCorporationPayRulesetEditHistory';
+    static ClientCorporationPayRulesetEditHistoryFieldChange: 'ClientCorporationPayRulesetEditHistoryFieldChange' = 'ClientCorporationPayRulesetEditHistoryFieldChange';
+    static ClientCorporationPayRulesetEffectiveDateChange: 'ClientCorporationPayRulesetEffectiveDateChange' = 'ClientCorporationPayRulesetEffectiveDateChange';
     static ClientCorporationRateAgreementCard: 'ClientCorporationRateAgreementCard' = 'ClientCorporationRateAgreementCard';
     static ClientCorporationRateAgreementCardEditHistory: 'ClientCorporationRateAgreementCardEditHistory' = 'ClientCorporationRateAgreementCardEditHistory';
     static ClientCorporationRateAgreementCardEditHistoryFieldChange: 'ClientCorporationRateAgreementCardEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardEditHistoryFieldChange';
@@ -329,6 +339,11 @@ export class EntityTypes {
     static JobOrder3: 'JobOrder3' = 'JobOrder3';
     static JobOrder4: 'JobOrder4' = 'JobOrder4';
     static JobOrder5: 'JobOrder5' = 'JobOrder5';
+    static JobOrderBillRuleset: 'JobOrderBillRuleset' = 'JobOrderBillRuleset';
+    static JobOrderBillRulesetAssociationChangeHistory: 'JobOrderBillRulesetAssociationChangeHistory' = 'JobOrderBillRulesetAssociationChangeHistory';
+    static JobOrderBillRulesetEditHistory: 'JobOrderBillRulesetEditHistory' = 'JobOrderBillRulesetEditHistory';
+    static JobOrderBillRulesetEditHistoryFieldChange: 'JobOrderBillRulesetEditHistoryFieldChange' = 'JobOrderBillRulesetEditHistoryFieldChange';
+    static JobOrderBillRulesetEffectiveDateChange: 'JobOrderBillRulesetEffectiveDateChange' = 'JobOrderBillRulesetEffectiveDateChange';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
@@ -359,6 +374,11 @@ export class EntityTypes {
     static JobOrderFileAttachment: 'JobOrderFileAttachment' = 'JobOrderFileAttachment';
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
+    static JobOrderPayRuleset: 'JobOrderPayRuleset' = 'JobOrderPayRuleset';
+    static JobOrderPayRulesetAssociationChangeHistory: 'JobOrderPayRulesetAssociationChangeHistory' = 'JobOrderPayRulesetAssociationChangeHistory';
+    static JobOrderPayRulesetEditHistory: 'JobOrderPayRulesetEditHistory' = 'JobOrderPayRulesetEditHistory';
+    static JobOrderPayRulesetEditHistoryFieldChange: 'JobOrderPayRulesetEditHistoryFieldChange' = 'JobOrderPayRulesetEditHistoryFieldChange';
+    static JobOrderPayRulesetEffectiveDateChange: 'JobOrderPayRulesetEffectiveDateChange' = 'JobOrderPayRulesetEffectiveDateChange';
     static JobOrderRateCard: 'JobOrderRateCard' = 'JobOrderRateCard';
     static JobOrderRateCardEditHistory: 'JobOrderRateCardEditHistory' = 'JobOrderRateCardEditHistory';
     static JobOrderRateCardEditHistoryFieldChange: 'JobOrderRateCardEditHistoryFieldChange' = 'JobOrderRateCardEditHistoryFieldChange';
@@ -514,6 +534,10 @@ export class EntityTypes {
     static Placement4: 'Placement4' = 'Placement4';
     static Placement5: 'Placement5' = 'Placement5';
     static PlacementBillRuleset: 'PlacementBillRuleset' = 'PlacementBillRuleset';
+    static PlacementBillRulesetAssociationChangeHistory: 'PlacementBillRulesetAssociationChangeHistory' = 'PlacementBillRulesetAssociationChangeHistory';
+    static PlacementBillRulesetEditHistory: 'PlacementBillRulesetEditHistory' = 'PlacementBillRulesetEditHistory';
+    static PlacementBillRulesetEditHistoryFieldChange: 'PlacementBillRulesetEditHistoryFieldChange' = 'PlacementBillRulesetEditHistoryFieldChange';
+    static PlacementBillRulesetEffectiveDateChange: 'PlacementBillRulesetEffectiveDateChange' = 'PlacementBillRulesetEffectiveDateChange';
     static PlacementCertification: 'PlacementCertification' = 'PlacementCertification';
     static PlacementCertificationEditHistory: 'PlacementCertificationEditHistory' = 'PlacementCertificationEditHistory';
     static PlacementCertificationEditHistoryFieldChange: 'PlacementCertificationEditHistoryFieldChange' = 'PlacementCertificationEditHistoryFieldChange';
@@ -557,6 +581,10 @@ export class EntityTypes {
     static PlacementFileAttachment: 'PlacementFileAttachment' = 'PlacementFileAttachment';
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
     static PlacementPayRuleset: 'PlacementPayRuleset' = 'PlacementPayRuleset';
+    static PlacementPayRulesetAssociationChangeHistory: 'PlacementPayRulesetAssociationChangeHistory' = 'PlacementPayRulesetAssociationChangeHistory';
+    static PlacementPayRulesetEditHistory: 'PlacementPayRulesetEditHistory' = 'PlacementPayRulesetEditHistory';
+    static PlacementPayRulesetEditHistoryFieldChange: 'PlacementPayRulesetEditHistoryFieldChange' = 'PlacementPayRulesetEditHistoryFieldChange';
+    static PlacementPayRulesetEffectiveDateChange: 'PlacementPayRulesetEffectiveDateChange' = 'PlacementPayRulesetEffectiveDateChange';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
     static PlacementRateCardChangeRequest: 'PlacementRateCardChangeRequest' = 'PlacementRateCardChangeRequest';
     static PlacementRateCardChangeRequestSnapshot: 'PlacementRateCardChangeRequestSnapshot' = 'PlacementRateCardChangeRequestSnapshot';
@@ -3835,6 +3863,56 @@ export interface ClientCorporationAppointment {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
 }
+export interface ClientCorporationBillRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    clientCorporation?: ClientCorporation;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface ClientCorporationBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: ClientCorporationBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface ClientCorporationBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: ClientCorporationBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<ClientCorporationBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ClientCorporationBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface ClientCorporationBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<ClientCorporationBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ClientCorporationBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ClientCorporationBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: ClientCorporationBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface ClientCorporationCertification {
     id?: number;
     alternateCertifications?: ToMany<Certification>;
@@ -4293,6 +4371,56 @@ export interface ClientCorporationNote {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
     note?: Note;
+}
+export interface ClientCorporationPayRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    clientCorporation?: ClientCorporation;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface ClientCorporationPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: ClientCorporationPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface ClientCorporationPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: ClientCorporationPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<ClientCorporationPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ClientCorporationPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface ClientCorporationPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<ClientCorporationPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ClientCorporationPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ClientCorporationPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: ClientCorporationPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface ClientCorporationRateAgreementCard {
     id?: number;
@@ -7553,6 +7681,56 @@ export interface JobOrder5 {
     customObject9s?: JobOrderCustomObjectInstance9[];
     customObject10s?: JobOrderCustomObjectInstance10[];
 }
+export interface JobOrderBillRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    jobOrder?: JobOrder;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface JobOrderBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: JobOrderBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface JobOrderBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: JobOrderBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<JobOrderBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobOrderBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface JobOrderBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<JobOrderBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobOrderBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface JobOrderBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: JobOrderBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface JobOrderCustomObject {
     id?: number;
     [propName: string]: any;
@@ -7726,6 +7904,56 @@ export interface JobOrderIntegration {
     id?: number;
     externalSystem?: ExternalSystem;
     jobOrder?: JobOrder;
+}
+export interface JobOrderPayRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    jobOrder?: JobOrder;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface JobOrderPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: JobOrderPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface JobOrderPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: JobOrderPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<JobOrderPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobOrderPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface JobOrderPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<JobOrderPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobOrderPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface JobOrderPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: JobOrderPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface JobOrderRateCard {
     id?: number;
@@ -11922,6 +12150,42 @@ export interface PlacementBillRuleset {
     versionID?: number;
     viewableStartDate?: Date;
 }
+export interface PlacementBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: PlacementBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface PlacementBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<PlacementBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<PlacementBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface PlacementCertification {
     id?: number;
     candidateCertification?: CandidateCertification;
@@ -13715,6 +13979,42 @@ export interface PlacementPayRuleset {
     timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
     versionID?: number;
     viewableStartDate?: Date;
+}
+export interface PlacementPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: PlacementPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface PlacementPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<PlacementPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<PlacementPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface PlacementRateCard {
     id?: number;
