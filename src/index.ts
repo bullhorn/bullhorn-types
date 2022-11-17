@@ -4435,6 +4435,7 @@ export interface ClientCorporationRateAgreementCard {
     isDeleted?: boolean;
     jobCode?: JobCode;
     location?: Location;
+    matchingCriteria?: ClientCorporationRateAgreementCardVersionMatchingCriteria;
     name?: Strings;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
@@ -4573,6 +4574,15 @@ export interface ClientCorporationRateAgreementCardVersion {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     isFirst?: boolean;
+}
+export interface ClientCorporationRateAgreementCardVersionMatchingCriteria {
+    id?: number;
+    clientCorporationRateAgreementCardVersionId?: number;
+    jobCodes?: ToMany<JobCode>;
+    categories?: ToMany<Category>;
+    employmentTypes?: Strings;
+    locations?: ToMany<Location>;
+    states?: Strings;
 }
 export interface ClientCorporationRatios {
     id?: number;
