@@ -4424,22 +4424,21 @@ export interface ClientCorporationPayRulesetEffectiveDateChange {
 }
 export interface ClientCorporationRateAgreementCard {
     id?: number;
-    category?: Category;
+    categories?: ToMany<Category>;
     clientCorporation?: ClientCorporation;
     clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
     dateAdded?: Date;
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
-    employmentType?: Strings;
+    employmentTypes?: Strings;
     isDeleted?: boolean;
-    jobCode?: JobCode;
-    location?: Location;
-    matchingCriteria?: ClientCorporationRateAgreementCardVersionMatchingCriteria;
+    jobCodes?: ToMany<JobCode>;
+    locations?: ToMany<Location>;
     name?: Strings;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
-    state?: Strings;
+    states?: Strings;
     versionID?: number;
     versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
 }
@@ -4574,15 +4573,6 @@ export interface ClientCorporationRateAgreementCardVersion {
     effectiveDate?: Date;
     effectiveEndDate?: Date;
     isFirst?: boolean;
-}
-export interface ClientCorporationRateAgreementCardVersionMatchingCriteria {
-    id?: number;
-    clientCorporationRateAgreementCardVersionId?: number;
-    jobCodes?: ToMany<JobCode>;
-    categories?: ToMany<Category>;
-    employmentTypes?: Strings;
-    locations?: ToMany<Location>;
-    states?: Strings;
 }
 export interface ClientCorporationRatios {
     id?: number;
