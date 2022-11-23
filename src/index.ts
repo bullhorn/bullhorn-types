@@ -4424,21 +4424,21 @@ export interface ClientCorporationPayRulesetEffectiveDateChange {
 }
 export interface ClientCorporationRateAgreementCard {
     id?: number;
-    category?: Category;
+    categories?: ToMany<Category>;
     clientCorporation?: ClientCorporation;
     clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
     dateAdded?: Date;
     dateLastModified?: Date;
     effectiveDate?: Date;
     effectiveEndDate?: Date;
-    employmentType?: Strings;
+    employmentTypes?: Strings;
     isDeleted?: boolean;
-    jobCode?: JobCode;
-    location?: Location;
+    jobCodes?: ToMany<JobCode>;
+    locations?: ToMany<Location>;
     name?: Strings;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
-    state?: Strings;
+    states?: Strings;
     versionID?: number;
     versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
 }
