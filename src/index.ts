@@ -248,6 +248,9 @@ export class EntityTypes {
     static EmailHitWordMatch: 'EmailHitWordMatch' = 'EmailHitWordMatch';
     static EmailHitWordMatchDetail: 'EmailHitWordMatchDetail' = 'EmailHitWordMatchDetail';
     static EmailTemplate: 'EmailTemplate' = 'EmailTemplate';
+    static EmployeePay: 'EmployeePay' = 'EmployeePay';
+    static EmployeeTaxDeduction: 'EmployeeTaxDeduction' = 'EmployeeTaxDeduction';
+    static EmployerContribution: 'EmployerContribution' = 'EmployerContribution';
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
     static EstaffMappableFlowback: 'EstaffMappableFlowback' = 'EstaffMappableFlowback';
@@ -460,6 +463,7 @@ export class EntityTypes {
     static PayBillOptionsLookup: 'PayBillOptionsLookup' = 'PayBillOptionsLookup';
     static PayBillCycle: 'PayBillCycle' = 'PayBillCycle';
     static PayBillSetting: 'PayBillSetting' = 'PayBillSetting';
+    static PayCheck: 'PayCheck' = 'PayCheck';
     static PayExportBatch: 'PayExportBatch' = 'PayExportBatch';
     static PayExportBatchExternal: 'PayExportBatchExternal' = 'PayExportBatchExternal';
     static PayExportTypeLookup: 'PayExportTypeLookup' = 'PayExportTypeLookup';
@@ -5281,6 +5285,40 @@ export interface EmailTemplate {
     owner?: CorporateUser;
     templateType?: Strings;
 }
+export interface EmployeePay {
+    id?: number;
+    amount?: number;
+    chargeDate?: Date;
+    department?: Strings;
+    earnCodeName?: Strings;
+    glCode?: Strings;
+    hoursUnits?: number;
+    hoursWorked?: number;
+    jobCode?: Strings;
+    location?: Location;
+    payCheck?: PayCheck;
+    projPhase?: Strings;
+    projWork?: Strings;
+    shift?: Strings;
+    unitRate?: number;
+    workCompID?: Strings;
+}
+export interface EmployeeTaxDeduction {
+    id?: number;
+    code?: Strings;
+    description?: Strings;
+    overLimitAmount?: number;
+    payCheck?: PayCheck;
+    taxAmount?: number;
+    taxableAmount?: number;
+}
+export interface EmployerContribution {
+    id?: number;
+    amount?: number;
+    code?: Strings;
+    description?: Strings;
+    payCheck?: PayCheck;
+}
 export interface EntityFieldTypeLookup {
     id?: number;
     isDeleted?: boolean;
@@ -9894,6 +9932,33 @@ export interface PayBillSetting {
     editBillRateCalculatesPayRate?: boolean
     editMarkupCalculatesPayRate?: boolean
     useJobRateCardEffectiveDate?: boolean;
+}
+export interface PayCheck {
+    id?: number;
+    candidate?: Candidate;
+    checkDate?: Date;
+    checkNumber?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    earnAmount?: number;
+    employeePays?: ToMany<EmployeePay>;
+    employeeTaxDeductions?: ToMany<EmployeeTaxDeduction>;
+    employerContributions?: ToMany<EmployerContribution>;
+    externalPayrollEmployeeID?: Strings;
+    fitTaxableAmount?: number;
+    grossPay?: number;
+    hoursWorked?: number;
+    isVoid?: boolean;
+    netPay?: number;
+    otherEarnAmount?: number;
+    payDate?: Date;
+    payExportBatchExternal?: PayExportBatchExternal;
+    payPeriod?: Strings;
+    periodEndDate?: Date;
+    periodStartDate?: Date;
+    taxAmount?: number;
+    type?: Strings;
+    voucherID?: Strings;
 }
 export interface PayExportBatch {
     id?: number;
