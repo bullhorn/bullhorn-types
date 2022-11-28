@@ -100,6 +100,11 @@ export class EntityTypes {
     static ClientCorporation4: 'ClientCorporation4' = 'ClientCorporation4';
     static ClientCorporation5: 'ClientCorporation5' = 'ClientCorporation5';
     static ClientCorporationAppointment: 'ClientCorporationAppointment' = 'ClientCorporationAppointment';
+    static ClientCorporationBillRuleset: 'ClientCorporationBillRuleset' = 'ClientCorporationBillRuleset';
+    static ClientCorporationBillRulesetAssociationChangeHistory: 'ClientCorporationBillRulesetAssociationChangeHistory' = 'ClientCorporationBillRulesetAssociationChangeHistory';
+    static ClientCorporationBillRulesetEditHistory: 'ClientCorporationBillRulesetEditHistory' = 'ClientCorporationBillRulesetEditHistory';
+    static ClientCorporationBillRulesetEditHistoryFieldChange: 'ClientCorporationBillRulesetEditHistoryFieldChange' = 'ClientCorporationBillRulesetEditHistoryFieldChange';
+    static ClientCorporationBillRulesetEffectiveDateChange: 'ClientCorporationBillRulesetEffectiveDateChange' = 'ClientCorporationBillRulesetEffectiveDateChange';
     static ClientCorporationCertification: 'ClientCorporationCertification' = 'ClientCorporationCertification';
     static ClientCorporationCustomObject: 'ClientCorporationCustomObject' = 'ClientCorporationCustomObject';
     static ClientCorporationCustomObject10EditHistory: 'ClientCorporationCustomObject10EditHistory' = 'ClientCorporationCustomObject10EditHistory';
@@ -185,6 +190,20 @@ export class EntityTypes {
     static ClientCorporationLineEditHistory: 'ClientCorporationLineEditHistory' = 'ClientCorporationLineEditHistory';
     static ClientCorporationLineEditHistoryFieldChange: 'ClientCorporationLineEditHistoryFieldChange' = 'ClientCorporationLineEditHistoryFieldChange';
     static ClientCorporationNote: 'ClientCorporationNote' = 'ClientCorporationNote';
+    static ClientCorporationPayRuleset: 'ClientCorporationPayRuleset' = 'ClientCorporationPayRuleset';
+    static ClientCorporationPayRulesetAssociationChangeHistory: 'ClientCorporationPayRulesetAssociationChangeHistory' = 'ClientCorporationPayRulesetAssociationChangeHistory';
+    static ClientCorporationPayRulesetEditHistory: 'ClientCorporationPayRulesetEditHistory' = 'ClientCorporationPayRulesetEditHistory';
+    static ClientCorporationPayRulesetEditHistoryFieldChange: 'ClientCorporationPayRulesetEditHistoryFieldChange' = 'ClientCorporationPayRulesetEditHistoryFieldChange';
+    static ClientCorporationPayRulesetEffectiveDateChange: 'ClientCorporationPayRulesetEffectiveDateChange' = 'ClientCorporationPayRulesetEffectiveDateChange';
+    static ClientCorporationRateAgreementCard: 'ClientCorporationRateAgreementCard' = 'ClientCorporationRateAgreementCard';
+    static ClientCorporationRateAgreementCardEditHistory: 'ClientCorporationRateAgreementCardEditHistory' = 'ClientCorporationRateAgreementCardEditHistory';
+    static ClientCorporationRateAgreementCardEditHistoryFieldChange: 'ClientCorporationRateAgreementCardEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardEditHistoryFieldChange';
+    static ClientCorporationRateAgreementCardEffectiveDateChange: 'ClientCorporationRateAgreementCardEffectiveDateChange' = 'ClientCorporationRateAgreementCardEffectiveDateChange';
+    static ClientCorporationRateAgreementCardLine: 'ClientCorporationRateAgreementCardLine' = 'ClientCorporationRateAgreementCardLine';
+    static ClientCorporationRateAgreementCardLineEditHistoryFieldChange: 'ClientCorporationRateAgreementCardLineEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardLineEditHistoryFieldChange';
+    static ClientCorporationRateAgreementCardLineGroup: 'ClientCorporationRateAgreementCardLineGroup' = 'ClientCorporationRateAgreementCardLineGroup';
+    static ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange: 'ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange' = 'ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange';
+    static ClientCorporationRateAgreementCardVersion: 'ClientCorporationRateAgreementCardVersion' = 'ClientCorporationRateAgreementCardVersion';
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
@@ -199,6 +218,8 @@ export class EntityTypes {
     static CurrencyUnit: 'CurrencyUnit' = 'CurrencyUnit';
     static CustomAction: 'CustomAction' = 'CustomAction';
     static CustomListButton: 'CustomListButton' = 'CustomListButton';
+    static CustomerRequiredFieldMeta: 'CustomerRequiredFieldMeta' = 'CustomerRequiredFieldMeta';
+    static CustomerRequiredFieldValueTypeLookup: 'CustomerRequiredFieldValueTypeLookup' = 'CustomerRequiredFieldValueTypeLookup';
     static Dashboard: 'Dashboard' = 'Dashboard';
     static DefaultEarnCode: 'DefaultEarnCode' = 'DefaultEarnCode';
     static Department: 'Department' = 'Department';
@@ -318,6 +339,11 @@ export class EntityTypes {
     static JobOrder3: 'JobOrder3' = 'JobOrder3';
     static JobOrder4: 'JobOrder4' = 'JobOrder4';
     static JobOrder5: 'JobOrder5' = 'JobOrder5';
+    static JobOrderBillRuleset: 'JobOrderBillRuleset' = 'JobOrderBillRuleset';
+    static JobOrderBillRulesetAssociationChangeHistory: 'JobOrderBillRulesetAssociationChangeHistory' = 'JobOrderBillRulesetAssociationChangeHistory';
+    static JobOrderBillRulesetEditHistory: 'JobOrderBillRulesetEditHistory' = 'JobOrderBillRulesetEditHistory';
+    static JobOrderBillRulesetEditHistoryFieldChange: 'JobOrderBillRulesetEditHistoryFieldChange' = 'JobOrderBillRulesetEditHistoryFieldChange';
+    static JobOrderBillRulesetEffectiveDateChange: 'JobOrderBillRulesetEffectiveDateChange' = 'JobOrderBillRulesetEffectiveDateChange';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
@@ -348,6 +374,11 @@ export class EntityTypes {
     static JobOrderFileAttachment: 'JobOrderFileAttachment' = 'JobOrderFileAttachment';
     static JobOrderHistory: 'JobOrderHistory' = 'JobOrderHistory';
     static JobOrderIntegration: 'JobOrderIntegration' = 'JobOrderIntegration';
+    static JobOrderPayRuleset: 'JobOrderPayRuleset' = 'JobOrderPayRuleset';
+    static JobOrderPayRulesetAssociationChangeHistory: 'JobOrderPayRulesetAssociationChangeHistory' = 'JobOrderPayRulesetAssociationChangeHistory';
+    static JobOrderPayRulesetEditHistory: 'JobOrderPayRulesetEditHistory' = 'JobOrderPayRulesetEditHistory';
+    static JobOrderPayRulesetEditHistoryFieldChange: 'JobOrderPayRulesetEditHistoryFieldChange' = 'JobOrderPayRulesetEditHistoryFieldChange';
+    static JobOrderPayRulesetEffectiveDateChange: 'JobOrderPayRulesetEffectiveDateChange' = 'JobOrderPayRulesetEffectiveDateChange';
     static JobOrderRateCard: 'JobOrderRateCard' = 'JobOrderRateCard';
     static JobOrderRateCardEditHistory: 'JobOrderRateCardEditHistory' = 'JobOrderRateCardEditHistory';
     static JobOrderRateCardEditHistoryFieldChange: 'JobOrderRateCardEditHistoryFieldChange' = 'JobOrderRateCardEditHistoryFieldChange';
@@ -503,6 +534,10 @@ export class EntityTypes {
     static Placement4: 'Placement4' = 'Placement4';
     static Placement5: 'Placement5' = 'Placement5';
     static PlacementBillRuleset: 'PlacementBillRuleset' = 'PlacementBillRuleset';
+    static PlacementBillRulesetAssociationChangeHistory: 'PlacementBillRulesetAssociationChangeHistory' = 'PlacementBillRulesetAssociationChangeHistory';
+    static PlacementBillRulesetEditHistory: 'PlacementBillRulesetEditHistory' = 'PlacementBillRulesetEditHistory';
+    static PlacementBillRulesetEditHistoryFieldChange: 'PlacementBillRulesetEditHistoryFieldChange' = 'PlacementBillRulesetEditHistoryFieldChange';
+    static PlacementBillRulesetEffectiveDateChange: 'PlacementBillRulesetEffectiveDateChange' = 'PlacementBillRulesetEffectiveDateChange';
     static PlacementCertification: 'PlacementCertification' = 'PlacementCertification';
     static PlacementCertificationEditHistory: 'PlacementCertificationEditHistory' = 'PlacementCertificationEditHistory';
     static PlacementCertificationEditHistoryFieldChange: 'PlacementCertificationEditHistoryFieldChange' = 'PlacementCertificationEditHistoryFieldChange';
@@ -546,6 +581,10 @@ export class EntityTypes {
     static PlacementFileAttachment: 'PlacementFileAttachment' = 'PlacementFileAttachment';
     static PlacementHistory: 'PlacementHistory' = 'PlacementHistory';
     static PlacementPayRuleset: 'PlacementPayRuleset' = 'PlacementPayRuleset';
+    static PlacementPayRulesetAssociationChangeHistory: 'PlacementPayRulesetAssociationChangeHistory' = 'PlacementPayRulesetAssociationChangeHistory';
+    static PlacementPayRulesetEditHistory: 'PlacementPayRulesetEditHistory' = 'PlacementPayRulesetEditHistory';
+    static PlacementPayRulesetEditHistoryFieldChange: 'PlacementPayRulesetEditHistoryFieldChange' = 'PlacementPayRulesetEditHistoryFieldChange';
+    static PlacementPayRulesetEffectiveDateChange: 'PlacementPayRulesetEffectiveDateChange' = 'PlacementPayRulesetEffectiveDateChange';
     static PlacementRateCard: 'PlacementRateCard' = 'PlacementRateCard';
     static PlacementRateCardChangeRequest: 'PlacementRateCardChangeRequest' = 'PlacementRateCardChangeRequest';
     static PlacementRateCardChangeRequestSnapshot: 'PlacementRateCardChangeRequestSnapshot' = 'PlacementRateCardChangeRequestSnapshot';
@@ -676,7 +715,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationRateAgreementCard', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'CustomerRequiredFieldValueTypeLookup', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -3824,6 +3863,56 @@ export interface ClientCorporationAppointment {
     clientContact?: ClientContact;
     clientCorporation?: ClientCorporation;
 }
+export interface ClientCorporationBillRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    clientCorporation?: ClientCorporation;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface ClientCorporationBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: ClientCorporationBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface ClientCorporationBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: ClientCorporationBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<ClientCorporationBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ClientCorporationBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface ClientCorporationBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<ClientCorporationBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ClientCorporationBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ClientCorporationBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: ClientCorporationBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface ClientCorporationCertification {
     id?: number;
     alternateCertifications?: ToMany<Certification>;
@@ -4283,6 +4372,208 @@ export interface ClientCorporationNote {
     clientCorporation?: ClientCorporation;
     note?: Note;
 }
+export interface ClientCorporationPayRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    clientCorporation?: ClientCorporation;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface ClientCorporationPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: ClientCorporationPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface ClientCorporationPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: ClientCorporationPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<ClientCorporationPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ClientCorporationPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface ClientCorporationPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<ClientCorporationPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ClientCorporationPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ClientCorporationPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: ClientCorporationPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
+export interface ClientCorporationRateAgreementCard {
+    id?: number;
+    categories?: ToMany<Category>;
+    clientCorporation?: ClientCorporation;
+    clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    employmentTypes?: Strings;
+    isDeleted?: boolean;
+    jobCodes?: ToMany<JobCode>;
+    locations?: ToMany<Location>;
+    name?: Strings;
+    rootExternalID?: Strings;
+    rootMigrateGUID?: Strings;
+    states?: Strings;
+    versionID?: number;
+    versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
+}
+export interface ClientCorporationRateAgreementCardEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: ClientCorporationRateAgreementCardEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<ClientCorporationRateAgreementCardEditHistoryFieldChange>;
+    lineFieldChanges?: ToMany<ClientCorporationRateAgreementCardLineEditHistoryFieldChange>;
+    lineGroupFieldChanges?: ToMany<ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: ClientCorporationRateAgreementCard;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface ClientCorporationRateAgreementCardEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: ClientCorporationRateAgreementCardEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface ClientCorporationRateAgreementCardEffectiveDateChange {
+    id?: number;
+    editHistory?: ClientCorporationRateAgreementCardEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
+export interface ClientCorporationRateAgreementCardLine {
+    id?: number;
+    alias?: Strings;
+    billCurrencyUnit?: CurrencyUnit;
+    billMultiplier?: number;
+    billRate?: number;
+    clientCorporationRateAgreementCardLineGroup?: ClientCorporationRateAgreementCardLineGroup;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customFloat4?: number;
+    customFloat5?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customRate1?: number;
+    customRate2?: number;
+    customRate3?: number;
+    customRate4?: number;
+    customRate5?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    earnCode?: EarnCode;
+    externalID?: Strings;
+    markupPercent?: number;
+    markupValue?: number;
+    migrateGUID?: Strings;
+    payCurrencyUnit?: CurrencyUnit;
+    payMultiplier?: number;
+    payRate?: number;
+}
+export interface ClientCorporationRateAgreementCardLineEditHistoryFieldChange {
+    id?: number;
+    clientCorporationRateAgreementCardLine?: ClientCorporationRateAgreementCardLine;
+    columnName?: Strings;
+    display?: Strings;
+    earnCode?: EarnCode;
+    editHistory?: ClientCorporationRateAgreementCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+}
+export interface ClientCorporationRateAgreementCardLineGroup {
+    id?: number;
+    clientCorporationRateAgreementCard?: ClientCorporationRateAgreementCard;
+    clientCorporationRateAgreementCardLines?: ToMany<ClientCorporationRateAgreementCardLine>;
+    clientCorporationRateAgreementCardVersion?: ClientCorporationRateAgreementCardVersion;
+    earnCodeGroup?: EarnCodeGroup;
+    externalID?: Strings;
+    isBase?: boolean;
+    migrateGUID?: Strings;
+}
+export interface ClientCorporationRateAgreementCardLineGroupEditHistoryFieldChange {
+    id?: number;
+    clientCorporationRateAgreementCardLineGroup?: ClientCorporationRateAgreementCardLineGroup;
+    columnName?: Strings;
+    display?: Strings;
+    earnCodeGroup?: EarnCodeGroup;
+    editHistory?: ClientCorporationRateAgreementCardEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+    parentFieldName?: Strings;
+}
+export interface ClientCorporationRateAgreementCardVersion {
+    id?: number;
+    clientCorporationRateAgreementCardLineGroups?: ToMany<ClientCorporationRateAgreementCardLineGroup>;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customText1?: Strings;
+    customText10?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    customText6?: Strings;
+    customText7?: Strings;
+    customText8?: Strings;
+    customText9?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isFirst?: boolean;
+}
 export interface ClientCorporationRatios {
     id?: number;
     clientCorporation?: ClientCorporation;
@@ -4519,6 +4810,24 @@ export interface CustomListButton {
     privateLabel?: PrivateLabel;
     sortOrder?: number;
     userTypes?: ToMany<UserType>;
+}
+export interface CustomerRequiredFieldMeta {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    doesFlowToNewJobs?: boolean;
+    isRequiredOnTimesheet?: boolean;
+    isVisibleOnTimesheet?: boolean;
+    label?: Strings;
+    valueType?: CustomerRequiredFieldValueTypeLookup;
+    viewableEndDate?: Date;
+    viewableStartDate?: Date;
+}
+export interface CustomerRequiredFieldValueTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface Dashboard {
     id?: number;
@@ -7377,6 +7686,56 @@ export interface JobOrder5 {
     customObject9s?: JobOrderCustomObjectInstance9[];
     customObject10s?: JobOrderCustomObjectInstance10[];
 }
+export interface JobOrderBillRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    jobOrder?: JobOrder;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface JobOrderBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: JobOrderBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface JobOrderBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: JobOrderBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<JobOrderBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobOrderBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface JobOrderBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<JobOrderBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobOrderBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface JobOrderBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: JobOrderBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface JobOrderCustomObject {
     id?: number;
     [propName: string]: any;
@@ -7550,6 +7909,56 @@ export interface JobOrderIntegration {
     id?: number;
     externalSystem?: ExternalSystem;
     jobOrder?: JobOrder;
+}
+export interface JobOrderPayRuleset {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    jobOrder?: JobOrder;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
+    timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
+    versionID?: number;
+    viewableStartDate?: Date;
+}
+export interface JobOrderPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: JobOrderPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface JobOrderPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: JobOrderPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<JobOrderPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: JobOrderPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface JobOrderPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<JobOrderPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: JobOrderPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface JobOrderPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: JobOrderPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface JobOrderRateCard {
     id?: number;
@@ -11746,6 +12155,42 @@ export interface PlacementBillRuleset {
     versionID?: number;
     viewableStartDate?: Date;
 }
+export interface PlacementBillRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: PlacementBillRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface PlacementBillRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementBillRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<PlacementBillRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementBillRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementBillRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<PlacementBillRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementBillRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementBillRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementBillRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
+}
 export interface PlacementCertification {
     id?: number;
     candidateCertification?: CandidateCertification;
@@ -13539,6 +13984,42 @@ export interface PlacementPayRuleset {
     timeLaborEvalRules?: ToMany<TimeLaborEvalRule>;
     versionID?: number;
     viewableStartDate?: Date;
+}
+export interface PlacementPayRulesetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: PlacementPayRulesetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface PlacementPayRulesetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementPayRulesetEffectiveDateChange;
+    effectiveOn?: Date;
+    fieldChanges?: ToMany<PlacementPayRulesetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementPayRuleset;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementPayRulesetEditHistoryFieldChange {
+    id?: number;
+    associationChanges?:ToMany<PlacementPayRulesetAssociationChangeHistory>;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementPayRulesetEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementPayRulesetEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementPayRulesetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface PlacementRateCard {
     id?: number;
