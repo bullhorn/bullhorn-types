@@ -221,6 +221,8 @@ export class EntityTypes {
     static CustomerRequiredFieldMeta: 'CustomerRequiredFieldMeta' = 'CustomerRequiredFieldMeta';
     static CustomerRequiredFieldValueTypeLookup: 'CustomerRequiredFieldValueTypeLookup' = 'CustomerRequiredFieldValueTypeLookup';
     static Dashboard: 'Dashboard' = 'Dashboard';
+    static Deduction: 'Deduction' = 'Deduction';
+    static DeductionCategoryLookup: 'DeductionCategoryLookup' = 'DeductionCategoryLookup';
     static DefaultEarnCode: 'DefaultEarnCode' = 'DefaultEarnCode';
     static Department: 'Department' = 'Department';
     static Discount: 'Discount' = 'Discount';
@@ -249,7 +251,6 @@ export class EntityTypes {
     static EmailHitWordMatchDetail: 'EmailHitWordMatchDetail' = 'EmailHitWordMatchDetail';
     static EmailTemplate: 'EmailTemplate' = 'EmailTemplate';
     static EmployeePay: 'EmployeePay' = 'EmployeePay';
-    static EmployeeTaxDeduction: 'EmployeeTaxDeduction' = 'EmployeeTaxDeduction';
     static EmployerContribution: 'EmployerContribution' = 'EmployerContribution';
     static EntityFieldTypeLookup: 'EntityFieldTypeLookup' = 'EntityFieldTypeLookup';
     static EntryTypeLookup: 'EntryTypeLookup' = 'EntryTypeLookup';
@@ -4841,6 +4842,24 @@ export interface Dashboard {
     entitledCorporations?: ToMany<Corporation>;
     name?: Strings;
 }
+export interface Deduction {
+    id?: number;
+    code?: Strings;
+    deductionCategoryLookup?: DeductionCategoryLookup;
+    description?: Strings;
+    oneTimeSwitch?: Strings;
+    overLimitAmount?: number;
+    payCheck?: PayCheck;
+    taxAmount?: number;
+    taxableAmount?: number;
+    type?: Strings;
+    unionID?: Strings;
+}
+export interface DeductionCategoryLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface DefaultEarnCode {
     id?: number;
     code?: Strings;
@@ -5295,22 +5314,13 @@ export interface EmployeePay {
     hoursUnits?: number;
     hoursWorked?: number;
     jobCode?: Strings;
-    location?: Location;
+    location?: Strings;
     payCheck?: PayCheck;
     projPhase?: Strings;
     projWork?: Strings;
     shift?: Strings;
     unitRate?: number;
     workCompID?: Strings;
-}
-export interface EmployeeTaxDeduction {
-    id?: number;
-    code?: Strings;
-    description?: Strings;
-    overLimitAmount?: number;
-    payCheck?: PayCheck;
-    taxAmount?: number;
-    taxableAmount?: number;
 }
 export interface EmployerContribution {
     id?: number;
@@ -9947,7 +9957,8 @@ export interface PayCheck {
     dateLastModified?: Date;
     earnAmount?: number;
     employeePays?: ToMany<EmployeePay>;
-    employeeTaxDeductions?: ToMany<EmployeeTaxDeduction>;
+    employeeTaxDeductions?: ToMany<Deduction>;
+    employeeTotalDeduction?: number;
     employerContributions?: ToMany<EmployerContribution>;
     externalPayrollEmployeeID?: Strings;
     fitTaxableAmount?: number;
