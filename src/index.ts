@@ -218,7 +218,14 @@ export class EntityTypes {
     static CurrencyUnit: 'CurrencyUnit' = 'CurrencyUnit';
     static CustomAction: 'CustomAction' = 'CustomAction';
     static CustomListButton: 'CustomListButton' = 'CustomListButton';
+    static CustomerRequiredFieldConfiguration: 'CustomerRequiredFieldConfiguration' = 'CustomerRequiredFieldConfiguration';
+    static CustomerRequiredFieldConfigurationVersion: 'CustomerRequiredFieldConfigurationVersion' = 'CustomerRequiredFieldConfigurationVersion';
     static CustomerRequiredFieldMeta: 'CustomerRequiredFieldMeta' = 'CustomerRequiredFieldMeta';
+    static CustomerRequiredFieldMetaEditHistory: 'CustomerRequiredFieldMetaEditHistory' = 'CustomerRequiredFieldMetaEditHistory';
+    static CustomerRequiredFieldMetaEditHistoryFieldChange: 'CustomerRequiredFieldMetaEditHistoryFieldChange' = 'CustomerRequiredFieldMetaEditHistoryFieldChange';
+    static CustomerRequiredFieldOption: 'CustomerRequiredFieldOption' = 'CustomerRequiredFieldOption';
+    static CustomerRequiredFieldOptionEditHistory: 'CustomerRequiredFieldOptionEditHistory' = 'CustomerRequiredFieldOptionEditHistory';
+    static CustomerRequiredFieldOptionEditHistoryFieldChange: 'CustomerRequiredFieldOptionEditHistoryFieldChange' = 'CustomerRequiredFieldOptionEditHistoryFieldChange';
     static CustomerRequiredFieldValueTypeLookup: 'CustomerRequiredFieldValueTypeLookup' = 'CustomerRequiredFieldValueTypeLookup';
     static Dashboard: 'Dashboard' = 'Dashboard';
     static Deduction: 'Deduction' = 'Deduction';
@@ -720,7 +727,7 @@ export class EntityTypes {
     }
 
     static isSoftDelete(entity: string): boolean {
-        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationRateAgreementCard', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'CustomerRequiredFieldValueTypeLookup', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
+        return ['ActivityGoalConfiguration', 'Appointment', 'BatchStatusLookup', 'BillableChargeStatusLookup', 'BillingProfile', 'BillingSyncBatchFileAttachment', 'Bot', 'BotCondition', 'BotOutcome', 'Branch', 'Candidate', 'CandidateCertification', 'CandidateEducation', 'CandidateFileAttachment', 'CandidateReference', 'CandidateWorkHistory', 'CanvasReport', 'CertificationRequirementStatusLookup','ChargeTypeLookup',  'CitySalesTaxRate', 'ClientContact', 'ClientContact1', 'ClientContact2', 'ClientContact3', 'ClientContact4', 'ClientContact5', 'ClientContactFileAttachment', 'ClientCorporationCertification', 'ClientCorporationFile', 'ClientCorporationFileAttachment', 'ClientCorporationLine', 'ClientCorporationRateAgreementCard', 'ClientCorporationTaxExemptionStatusLookup', 'CorporateUser', 'CountySalesTaxRate', 'CustomerRequiredFieldConfiguration', 'CustomerRequiredFieldValueTypeLookup', 'DefaultEarnCode', 'DiscountRate', 'DiscountTypeLookup', 'DistrictSalesTaxRate', 'DoubleTimeEarnCode', 'EarnCode', 'EarnCodeGroupStatusLookup', 'EarnCodeTypeLookup', 'EditHistoryActionLookup', 'EntityFieldTypeLookup','EntryTypeLookup',  'ExternalAccount', 'GeneralLedgerAccount', 'GeneralLedgerExportStatusLookup', 'GeneralLedgerSegment', 'GeneralLedgerSegment1', 'GeneralLedgerSegment2', 'GeneralLedgerSegment3', 'GeneralLedgerSegment4', 'GeneralLedgerSegment5', 'GeneralLedgerServiceCode', 'HitWord', 'Holiday', 'HolidayCategoryLookup', 'HolidayStatusLookup', 'HousingComplex', 'HousingComplexAmenity', 'HousingComplexFurnitureDelivery', 'HousingComplexUnit', 'HousingComplexUtilityAccount', 'InvoiceStatementDeliveryStatusLookup', 'InvoiceStatementLineDistributionTypeLookup', 'InvoiceStatementStatusLookup', 'InvoiceStatementTax', 'InvoiceStatementTypeLookup', 'InvoiceTerm', 'InvoiceTermTemplate', 'JobBoardPost', 'JobCode', 'JobOrder', 'JobOrder1', 'JobOrder2', 'JobOrder3', 'JobOrder4', 'JobOrder5', 'JobOrderFileAttachment', 'JobOrderRateCard','JobSubmission', 'Lead', 'Location', 'MassActionTypeLookup', 'Note', 'Opportunity', 'Opportunity1', 'Opportunity2', 'Opportunity3', 'Opportunity4', 'Opportunity5', 'OpportunityFileAttachment', 'OtherSalesTaxRate', 'OvertimeEarnCode', 'PayBillOptionsLookup', 'PayExportTypeLookup', 'PayGroupLookup', 'PayableChargeStatusLookup', 'PayrollEmployeeTypeLookup', 'PayrollExportTargetLookup', 'PayrollExportTypeLookup', 'PayrollSyncStatusLookup', 'Person','PlacementBillRuleset', 'PlacementFileAttachment','PlacementPayRuleset', 'PlacementRateCard', 'PlacementTaxExemptionStatusLookup', 'PulseConfigurationValue', 'RateDetail', 'RateGroup', 'ReportingCodeTemplate', 'SalesTaxRate', 'SalesTaxRateSourceLookup', 'SalesTaxRateTypeLookup', 'ShiftPosition', 'ShiftType', 'StateSalesTaxRate', 'StatusLookup', 'SurchargeRate', 'SurchargeRateTypeLookup', 'Task', 'TaxJurisdictionTypeLookup', 'TaxStatusLookup', 'TaxTypeLookup', 'Tearsheet', 'TimeLaborCalcTypeLookup','TimeLaborEvalDiffStatusLookup', 'TimeLaborEvalRuleCategoryLookup', 'TimeLaborEvalRuleCombineCriteriaLookup', 'TimeLaborEvalRuleStatusLookup', 'TimeLaborEvalRuleTypeLookup','TimeLaborEvalSheetEntryTypeLookup', 'TimeLaborEvalSheetStatusLookup', 'TimesheetEntryApprovalStatusLookup', 'UnitOfMeasure', 'UserConnectIntegrationStatusLookup', 'UserHousingComplexUnit', 'PlaceHolder'].indexOf(entity) >= 0
     }
 }
 
@@ -4816,18 +4823,107 @@ export interface CustomListButton {
     sortOrder?: number;
     userTypes?: ToMany<UserType>;
 }
+export interface CustomerRequiredFieldConfiguration {
+    id?: number;
+    customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    defaultCustomerRequiredFieldOption?: CustomerRequiredFieldOption;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isActive?: boolean;
+    isDeleted?: boolean;
+    isFirst?: boolean;
+    owner?: CorporateUser;
+    versionID?: number;
+    versions?: ToMany<CustomerRequiredFieldConfigurationVersion>;
+    viewableStartDate?: Date;
+}
+export interface CustomerRequiredFieldConfigurationVersion {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    defaultCustomerRequiredFieldOption?: CustomerRequiredFieldOption;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isActive?: boolean;
+    isFirst?: boolean;
+}
 export interface CustomerRequiredFieldMeta {
     id?: number;
     clientCorporation?: ClientCorporation;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
     dateAdded?: Date;
     dateLastModified?: Date;
     doesFlowToNewJobs?: boolean;
+    editHistories?: ToMany<CustomerRequiredFieldMetaEditHistory>;
     isRequiredOnTimesheet?: boolean;
     isVisibleOnTimesheet?: boolean;
     label?: Strings;
+    options?: ToMany<CustomerRequiredFieldOption>;
     valueType?: CustomerRequiredFieldValueTypeLookup;
     viewableEndDate?: Date;
     viewableStartDate?: Date;
+}
+export interface CustomerRequiredFieldMetaEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<CustomerRequiredFieldMetaEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: CustomerRequiredFieldMeta;
+    transactionID?: Strings;
+}
+export interface CustomerRequiredFieldMetaEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: CustomerRequiredFieldMetaEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface CustomerRequiredFieldOption {
+    id?: number;
+    customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    displayLabel?: Strings;
+    editHistories?: ToMany<CustomerRequiredFieldOptionEditHistory>;
+    isClientDefault?: boolean;
+    value?: Strings;
+    viewableEndDate?: Date;
+    viewableStartDate?: Date;
+}
+export interface CustomerRequiredFieldOptionEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<CustomerRequiredFieldOptionEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: CustomerRequiredFieldOption;
+    transactionID?: Strings;
+}
+export interface CustomerRequiredFieldOptionEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: CustomerRequiredFieldOptionEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
 }
 export interface CustomerRequiredFieldValueTypeLookup {
     id?: number;
