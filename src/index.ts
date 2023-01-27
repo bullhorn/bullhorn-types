@@ -19,6 +19,7 @@ export class EntityTypes {
     static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
     static BillMaster: 'BillMaster' = 'BillMaster';
     static BillMasterCustomerRequiredField = 'BillMasterCustomerRequiredField';
+    static BillMasterCustomerRequiredFields = 'BillMasterCustomerRequiredFields';
     static BillMasterDiscountRate: 'BillMasterDiscountRate' = 'BillMasterDiscountRate';
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
     static BillMasterSyncBatch: 'BillMasterSyncBatch' = 'BillMasterSyncBatch';
