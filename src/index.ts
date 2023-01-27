@@ -947,6 +947,9 @@ export interface BillMasterCustomerRequiredField {
     customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
     customerRequiredFieldOption?: CustomerRequiredFieldOption;
 }
+export interface BillMasterCustomerRequiredFields {
+    data?: BillMasterCustomerRequiredField[];
+}
 export interface BillMasterDiscountRate {
     id?: number;
     billMaster?: BillMaster;
