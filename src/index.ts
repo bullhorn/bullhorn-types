@@ -18,6 +18,8 @@ export class EntityTypes {
     static BatchGroup: 'BatchGroup' = 'BatchGroup';
     static BatchStatusLookup: 'BatchStatusLookup' = 'BatchStatusLookup';
     static BillMaster: 'BillMaster' = 'BillMaster';
+    static BillMasterCustomerRequiredField = 'BillMasterCustomerRequiredField';
+    static BillMasterCustomerRequiredFields = 'BillMasterCustomerRequiredFields';
     static BillMasterDiscountRate: 'BillMasterDiscountRate' = 'BillMasterDiscountRate';
     static BillMasterSurchargeRate: 'BillMasterSurchargeRate' = 'BillMasterSurchargeRate';
     static BillMasterSyncBatch: 'BillMasterSyncBatch' = 'BillMasterSyncBatch';
@@ -942,6 +944,13 @@ export interface BillMaster {
     transactionDate?: Date;
     billMasterSyncBatches?: ToMany<BillMasterSyncBatch>;
 }
+export interface BillMasterCustomerRequiredField {
+    customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
+    customerRequiredFieldOption?: CustomerRequiredFieldOption;
+}
+export interface BillMasterCustomerRequiredFields {
+    data?: BillMasterCustomerRequiredField[];
+}
 export interface BillMasterDiscountRate {
     id?: number;
     billMaster?: BillMaster;
@@ -1165,6 +1174,7 @@ export interface BillableChargeSummaryTransaction {
     billableCharge?: BillableCharge;
     billingSyncBatch?: BillingSyncBatch;
     currencyUnit?: CurrencyUnit;
+    customerRequiredFields?: ToMany<BillMasterCustomerRequiredField>;
     discountRates?: ToMany<DiscountRate>;
     earnCode?: EarnCode;
     location?: Location;
