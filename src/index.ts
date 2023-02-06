@@ -612,6 +612,12 @@ export class EntityTypes {
     static PlacementRateCardLineGroupEditHistoryFieldChange: 'PlacementRateCardLineGroupEditHistoryFieldChange' = 'PlacementRateCardLineGroupEditHistoryFieldChange';
     static PlacementRateCardStatusLookup: 'PlacementRateCardStatusLookup' = 'PlacementRateCardStatusLookup';
     static PlacementRateCardVersion: 'PlacementRateCardVersion' = 'PlacementRateCardVersion';
+    static PlacementShiftSet: 'PlacementShiftSet' = 'PlacementShiftSet';
+    static PlacementShiftSetAssociationChangeHistory: 'PlacementShiftSetAssociationChangeHistory' = 'PlacementShiftSetAssociationChangeHistory';
+    static PlacementShiftSetEditHistory: 'PlacementShiftSetEditHistory' = 'PlacementShiftSetEditHistory';
+    static PlacementShiftSetEditHistoryFieldChange: 'PlacementShiftSetEditHistoryFieldChange' = 'PlacementShiftSetEditHistoryFieldChange';
+    static PlacementShiftSetEffectiveDateChange: 'PlacementShiftSetEffectiveDateChange' = 'PlacementShiftSetEffectiveDateChange';
+    static PlacementShiftSetVersion: 'PlacementShiftSetVersion' = 'PlacementShiftSetVersion';
     static PlacementTaxExemptionStatusLookup: 'PlacementTaxExemptionStatusLookup' = 'PlacementTaxExemptionStatusLookup';
     static PlacementTimeAndExpense: 'PlacementTimeAndExpense' = 'PlacementTimeAndExpense';
     static PrivateLabel: 'PrivateLabel' = 'PrivateLabel';
@@ -14419,6 +14425,67 @@ export interface PlacementRateCardVersion {
     effectiveEndDate?: Date;
     isFirst?: boolean;
     placementRateCardLineGroups?: ToMany<PlacementRateCardLineGroup>;
+}
+export interface PlacementShiftSet {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isDeleted?: boolean;
+    owner?: CorporateUser;
+    placement?: Placement;
+    placementShiftSetVersions?: ToMany<PlacementShiftSetVersion>;
+    rootMigrateGUID?: Strings;
+    shifts?: ToMany<Shift>;
+    versionID?: number;
+    versionMigrateGUID: Strings;
+    versions?: ToMany<PlacementShiftSetVersion>;
+}
+export interface PlacementShiftSetVersion {
+    id?: number;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isFirst?: boolean;
+    shifts?: ToMany<Shift>;
+    versionMigrateGUID: Strings;
+}
+export interface PlacementShiftSetAssociationChangeHistory {
+    id?: number;
+    editHistoryActionLookup?: EditHistoryActionLookup;
+    editHistoryFieldChange?: PlacementShiftSetEditHistoryFieldChange;
+    entityID?: number;
+    entityName?: Strings;
+}
+export interface PlacementShiftSetEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    effectiveDateChange?: PlacementShiftSetEffectiveDateChange;
+    fieldChanges?: ToMany<PlacementShiftSetEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: PlacementShiftSet;
+    transactionID?: Strings;
+    versionEditHistoryActionLookup?: EditHistoryActionLookup;
+    versionID?: number;
+}
+export interface PlacementShiftSetEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: PlacementShiftSetEditHistory;
+    entityFieldTypeLookup?: EntityFieldTypeLookup;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface PlacementShiftSetEffectiveDateChange {
+    id?: number;
+    editHistory?: PlacementShiftSetEditHistory;
+    newEffectiveDate?: Date;
+    previousEffectiveDate?: Date;
 }
 export interface PlacementTaxExemptionStatusLookup {
     id?: number;
