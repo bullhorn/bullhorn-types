@@ -222,6 +222,7 @@ export class EntityTypes {
     static CustomListButton: 'CustomListButton' = 'CustomListButton';
     static CustomerRequiredFieldConfiguration: 'CustomerRequiredFieldConfiguration' = 'CustomerRequiredFieldConfiguration';
     static CustomerRequiredFieldConfigurationVersion: 'CustomerRequiredFieldConfigurationVersion' = 'CustomerRequiredFieldConfigurationVersion';
+    static CustomerRequiredFieldConfigurationVersionOption: 'CustomerRequiredFieldConfigurationVersionOption' = 'CustomerRequiredFieldConfigurationVersionOption';
     static CustomerRequiredFieldMeta: 'CustomerRequiredFieldMeta' = 'CustomerRequiredFieldMeta';
     static CustomerRequiredFieldMetaEditHistory: 'CustomerRequiredFieldMetaEditHistory' = 'CustomerRequiredFieldMetaEditHistory';
     static CustomerRequiredFieldMetaEditHistoryFieldChange: 'CustomerRequiredFieldMetaEditHistoryFieldChange' = 'CustomerRequiredFieldMetaEditHistoryFieldChange';
