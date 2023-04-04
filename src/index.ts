@@ -13959,7 +13959,7 @@ export interface PlacementCredentialDetail {
     documentDeadline?: Date;
     expiringRequirements?: Date;
     placement?: Placement;
-    rejected?: number;
+    incomplete?: number;
     requirementCompleted?: number;
     totalRequirements?: number;
     updated?: number;
