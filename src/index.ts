@@ -566,6 +566,7 @@ export class EntityTypes {
     static PlacementCommission: 'PlacementCommission' = 'PlacementCommission';
     static PlacementCommissionEditHistory: 'PlacementCommissionEditHistory' = 'PlacementCommissionEditHistory';
     static PlacementCommissionEditHistoryFieldChange: 'PlacementCommissionEditHistoryFieldChange' = 'PlacementCommissionEditHistoryFieldChange';
+    static PlacementCredentialDetail: 'PlacementCredentialDetail' = 'PlacementCredentialDetail';
     static PlacementCustomObject: 'PlacementCustomObject' = 'PlacementCustomObject';
     static PlacementCustomObject10EditHistory: 'PlacementCustomObject10EditHistory' = 'PlacementCustomObject10EditHistory';
     static PlacementCustomObject1EditHistory: 'PlacementCustomObject1EditHistory' = 'PlacementCustomObject1EditHistory';
@@ -13951,6 +13952,19 @@ export interface PlacementCommissionEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+
+export interface PlacementCredentialDetail {
+    id?: number;
+    credentialSpecialistUser?: CorporateUser;
+    documentDeadline?: Date;
+    expiringRequirements?: Date;
+    placement?: Placement;
+    rejected?: number;
+    requirementCompleted?: number;
+    totalRequirements?: number;
+    updated?: number;
+}
+
 export interface PlacementCustomObject {
     id?: number;
     [propName: string]: any;
