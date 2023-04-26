@@ -626,6 +626,7 @@ export class EntityTypes {
     static PrivateLabelAttribute: 'PrivateLabelAttribute' = 'PrivateLabelAttribute';
     static PulseConfiguration: 'PulseConfiguration' = 'PulseConfiguration';
     static PulseConfigurationValue: 'PulseConfigurationValue' = 'PulseConfigurationValue';
+    static PurchaseOrder: 'PurchaseOrder' = 'PurchaseOrder';
     static RateDetail: 'RateDetail' = 'RateDetail';
     static RateDetailEditHistory: 'RateDetailEditHistory' = 'RateDetailEditHistory';
     static RateDetailEditHistoryFieldChange: 'RateDetailEditHistoryFieldChange' = 'RateDetailEditHistoryFieldChange';
@@ -14598,6 +14599,39 @@ export interface PulseConfigurationValue {
     name?: Strings;
     pulseConfiguration?: PulseConfiguration;
     valueAddedByUser?: Person;
+}
+export interface PurchaseOrder {
+    id?: number;
+    clientCorporation?: ClientCorporation;
+    customDate1?: Date;
+    customDate2?: Date;
+    customDate3?: Date;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customFloat4?: number;
+    customFloat5?: number;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customText1?: Strings;
+    customText2?: Strings;
+    customText3?: Strings;
+    customText4?: Strings;
+    customText5?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    description?: Strings;
+    endDate?: Date;
+    externalAmount?: number;
+    name?: Strings;
+    startDate?: Date;
+    totalBudget?: number;
+    totalHours?: number;
+    warningBalance?: number;
+    warningDate?: Date;
 }
 export interface RateDetail {
     id?: number;
