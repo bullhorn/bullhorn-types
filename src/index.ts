@@ -14542,6 +14542,7 @@ export interface PlacementTimeAndExpense {
     rounding?: Strings;
     timeAndExpenseBranch?: Strings;
     timeAndExpenseSource?: Strings;
+    timeAndLaborEnabledDate?: Date;
     vmsAssignmentNumber?: Strings;
     vmsCostCenter?: Strings;
     vmsEmployeeID?: Strings;
