@@ -4469,6 +4469,7 @@ export interface ClientCorporationRateAgreementCard {
     name?: Strings;
     rootExternalID?: Strings;
     rootMigrateGUID?: Strings;
+    specialties?: ToMany<Specialty>;
     states?: Strings;
     versionID?: number;
     versions?: ToMany<ClientCorporationRateAgreementCardVersion>;
