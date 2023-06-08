@@ -8918,6 +8918,8 @@ export interface Note {
     primaryDepartmentName?: Strings;
     truestDateAdded?: Date;
     jobShifts?: ToMany<JobShift>;
+    placementCertifications?: ToMany<PlacementCertification>;
+    candidateCertifications?: ToMany<CandidateCertification>;
 }
 export interface NoteEntity {
     id?: number;
