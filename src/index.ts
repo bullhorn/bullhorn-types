@@ -13961,7 +13961,7 @@ export interface PlacementCredentialDetail {
     id?: number;
     credentialSpecialistUser?: CorporateUser;
     documentDeadline?: Date;
-    expiringRequirements?: Date;
+    expiringRequirements?: number;
     placement?: Placement;
     incomplete?: number;
     requirementCompleted?: number;
