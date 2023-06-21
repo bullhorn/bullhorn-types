@@ -13967,8 +13967,6 @@ export interface PlacementCredentialDetail {
     requirementCompleted?: number;
     totalRequirements?: number;
     updated?: number;
-    inProgress?: number;
-    completed?: number;
 }
 
 export interface PlacementCustomObject {
