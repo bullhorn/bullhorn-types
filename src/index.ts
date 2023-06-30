@@ -700,7 +700,9 @@ export class EntityTypes {
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static Timesheet: 'Timesheet' = 'Timesheet';
     static TimesheetEntry: 'TimesheetEntry' = 'TimesheetEntry';
+    static TimesheetEntryApprovalStatusLogEntry: 'TimesheetEntryApprovalStatusLogEntry' = 'TimesheetEntryApprovalStatusLogEntry';
     static TimesheetEntryApprovalStatusLookup: 'TimesheetEntryApprovalStatusLookup' = 'TimesheetEntryApprovalStatusLookup';
+    static TimesheetVersion: 'TimesheetVersion' = 'TimesheetVersion';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
@@ -15525,23 +15527,27 @@ export interface Timesheet {
     addedByUser?: CorporateUser;
     additionalBillAmount?: number;
     additionalPayAmount?: number;
-    approvedBy?: Strings;
+    approvedBy?: Person;
     approvedDate?: Date;
+    approvingClientContact?: ClientContact;
+    backupApprovingClientContact?: ClientContact;
     billed?: number;
     calendarInstance?: CalendarInstance;
     candidate?: Candidate;
     clientCorporation?: ClientCorporation;
     externalID?: Strings;
+    externalSource?: Strings;
     hoursWorked?: number;
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
     lastProcessedOn?: Date;
-    lastVersion?: number;
+    lastTimeSheetVersion?: TimesheetVersion;
     modifyingUser?: CorporateUser;
     paid?: number;
     placement?: Placement;
     processingStatus?: TimeAndExpenseSheetProcessingStatusLookup;
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
+    timeSheetEntryApprovalStatusLogID?: number;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
     units?: boolean;
 }
@@ -15570,10 +15576,26 @@ export interface TimesheetEntry {
     unitOfMeasure?: UnitOfMeasure;
     voidingTimesheetEntry?: TimesheetEntry;
 }
+export interface TimesheetEntryApprovalStatusLogEntry {
+    id?: number;
+    agentID?: Person;
+    comment?: Strings;
+    obtainedAt?: Date;
+    timesheetEntryApprovalStatusLogID?: number;
+    timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
+    timesheetVersion?: number;
+}
 export interface TimesheetEntryApprovalStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface TimesheetVersion {
+    id?: number;
+    timesheetEntryApprovalStatusLogEntry?: TimesheetEntryApprovalStatusLogEntry;
+    timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
+    timesheetID?: number;
+    versionNumber?: number;
 }
 export interface TransactionNote {
     id?: number;
