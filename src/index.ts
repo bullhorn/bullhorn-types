@@ -4845,6 +4845,7 @@ export interface CustomListButton {
 }
 export interface CustomerRequiredFieldConfiguration {
     id?: number;
+    customerRequiredFieldConfigurationVersionOptions?: ToMany<CustomerRequiredFieldConfigurationVersionOption>;
     customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
     dateAdded?: Date;
     dateLastModified?: Date;
@@ -4855,12 +4856,14 @@ export interface CustomerRequiredFieldConfiguration {
     isDeleted?: boolean;
     isFirst?: boolean;
     owner?: CorporateUser;
+    placement?: Placement;
     versionID?: number;
     versions?: ToMany<CustomerRequiredFieldConfigurationVersion>;
     viewableStartDate?: Date;
 }
 export interface CustomerRequiredFieldConfigurationVersion {
     id?: number;
+    customerRequiredFieldConfigurationVersionOptions?: ToMany<CustomerRequiredFieldConfigurationVersionOption>;
     dateAdded?: Date;
     dateLastModified?: Date;
     defaultCustomerRequiredFieldOption?: CustomerRequiredFieldOption;
@@ -4868,6 +4871,14 @@ export interface CustomerRequiredFieldConfigurationVersion {
     effectiveEndDate?: Date;
     isActive?: boolean;
     isFirst?: boolean;
+}
+export interface CustomerRequiredFieldConfigurationVersionOption {
+    id?: number;
+    customerRequiredFieldConfigurationVersion?: CustomerRequiredFieldConfigurationVersion;
+    customerRequiredFieldOption?: CustomerRequiredFieldOption;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    sortOrder?: number;
 }
 export interface CustomerRequiredFieldMeta {
     id?: number;
