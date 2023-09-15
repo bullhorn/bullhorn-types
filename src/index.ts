@@ -4937,6 +4937,7 @@ export interface CustomerRequiredFieldOption {
     value?: Strings;
     viewableEndDate?: Date;
     viewableStartDate?: Date;
+    associatedEntityID?: number;
 }
 export interface CustomerRequiredFieldOptionEditHistory {
     id?: number;
