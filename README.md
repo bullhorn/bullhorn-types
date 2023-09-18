@@ -21,7 +21,7 @@ console.log(EntityTypes.Candidate === "Candidate"); // outputs: true
 
 let person: Candidate = {
   firstName: "John",
-  lastName: "smith",
+  lastName: "smith", 
 };
 ```
 
