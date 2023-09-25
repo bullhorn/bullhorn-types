@@ -699,6 +699,8 @@ export class EntityTypes {
     static TimeLaborEvalSheetStatusLookup: 'TimeLaborEvalSheetStatusLookup' = 'TimeLaborEvalSheetStatusLookup';
     static TimeUnit: 'TimeUnit' = 'TimeUnit';
     static Timesheet: 'Timesheet' = 'Timesheet';
+    static TimesheetActivity: 'TimesheetActivity' = 'TimesheetActivity';
+    static TimesheetActivityType: 'TimesheetActivityType' = 'TimesheetActivityType';
     static TimesheetEntry: 'TimesheetEntry' = 'TimesheetEntry';
     static TimesheetEntryApprovalStatusLookup: 'TimesheetEntryApprovalStatusLookup' = 'TimesheetEntryApprovalStatusLookup';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
@@ -15556,6 +15558,33 @@ export interface Timesheet {
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
     units?: boolean;
+}
+export interface TimesheetActivity {
+    id?: number;
+    activityExternalId?: number;
+    timesheetActivityType?: TimesheetActivityType;
+    timesheet?: Timesheet;
+    transactionOriginId?: number;
+    user?: CorporateUser;
+    activityDateTime?: Date;
+    description?: string;
+    metadata?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    dateAdded?: Date;
+}
+export interface TimesheetActivityType {
+    id?: number;
+    label?: string;
+    description?: string;
+    deleted?: boolean;
+    system?: boolean;
+    hidden?: boolean;
+    shouldShowInPicker?: boolean;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    modifiedByUser?: CorporateUser;
 }
 export interface TimesheetEntry {
     id?: number;
