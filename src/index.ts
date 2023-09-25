@@ -15564,7 +15564,7 @@ export interface TimesheetActivity {
     activityExternalId?: number;
     timesheetActivityType?: TimesheetActivityType;
     timesheet?: Timesheet;
-    transactionOriginId?: number;
+    transactionOrigin?: TransactionOrigin;
     user?: CorporateUser;
     activityDateTime?: Date;
     description?: string;
@@ -15578,9 +15578,9 @@ export interface TimesheetActivityType {
     id?: number;
     label?: string;
     description?: string;
-    deleted?: boolean;
-    system?: boolean;
-    hidden?: boolean;
+    isDeleted?: boolean;
+    isSystem?: boolean;
+    isHidden?: boolean;
     shouldShowInPicker?: boolean;
     dateAdded?: Date;
     dateLastModified?: Date;
