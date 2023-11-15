@@ -5395,8 +5395,12 @@ export interface EarnCodeTemplate {
     dateAdded?: Date;
     dateLastModified?: Date;
     description?: Strings;
-    earnCodes?: ToMany<EarnCode>;
+    earnCodeTemplateEarnCodes?: ToMany<EarnCodeTemplateEarnCodes>;
     title?: Strings;
+}
+export interface EarnCodeTemplateEarnCodes {
+    earnCodes?: ToMany<EarnCode>;
+    earnCodesTemplates?: ToMany<EarnCodeTemplate>;
 }
 export interface EarnCodeTypeLookup {
     id?: number;
