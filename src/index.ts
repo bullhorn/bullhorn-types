@@ -2093,7 +2093,7 @@ export interface CandidateReferenceQuestion {
     id?: number;
     category?: Category;
     corporation?: Corporation;
-    enabled?: number;
+    enabled?: boolean;
     migrateGUID?: Strings;
     questionText?: Strings;
     responses?: ToMany<CandidateReferenceResponse>;
