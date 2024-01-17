@@ -958,6 +958,7 @@ export interface BillMaster {
 export interface BillMasterCustomerRequiredField {
     customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
     customerRequiredFieldOption?: CustomerRequiredFieldOption;
+    textValue?: string;
 }
 export interface BillMasterCustomerRequiredFields {
     data?: BillMasterCustomerRequiredField[];
