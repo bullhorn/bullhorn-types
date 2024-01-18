@@ -956,8 +956,11 @@ export interface BillMaster {
     billMasterSyncBatches?: ToMany<BillMasterSyncBatch>;
 }
 export interface BillMasterCustomerRequiredField {
+    id?: number;
+    billMaster?: BillMaster;
     customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
     customerRequiredFieldOption?: CustomerRequiredFieldOption;
+    textValue?: Strings;
 }
 export interface BillMasterCustomerRequiredFields {
     data?: BillMasterCustomerRequiredField[];
