@@ -1071,6 +1071,9 @@ export interface BillTransaction {
     timesheet?: Timesheet;
     transactionDate?: Date;
     unitOfMeasure?: UnitOfMeasure;
+    user?: CorporateUser;
+    dateLastModified?: Date;
+    transactionOrigin?: TransactionOrigin;
 }
 export interface BillableCharge {
     id?: number;
@@ -10194,6 +10197,9 @@ export interface PayTransaction {
     timesheet?: Timesheet;
     transactionDate?: Date;
     unitOfMeasure?: UnitOfMeasure;
+    addedByUser?: CorporateUser;
+    dateLastModified?: Date;
+    transactionOrigin?: TransactionOrigin;
 }
 export interface PayableCharge {
     id?: number;
