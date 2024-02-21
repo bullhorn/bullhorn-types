@@ -2,6 +2,7 @@
 
 // Utility Classes
 export class EntityTypes {
+    static AccountingPeriod: 'AccountingPeriod' = 'AccountingPeriod';
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
@@ -758,6 +759,11 @@ export interface ToManyRef<T> {
   data: T[];
 }
 
+export interface AccountingPeriod {
+    id?: number;
+    accountingPeriodDate?: Date;
+}
+
 export interface Address {
     address1?: string;
     address2?: string;
@@ -1104,6 +1110,8 @@ export interface BillableCharge {
     invoicedTransactions?: ToMany<BillableChargeInvoicedTransaction>;
     isInvoiced?: boolean;
     jobOrder?: JobOrder;
+    maxAccountingPeriod?: AccountingPeriod;
+    minAccountingPeriod?: AccountingPeriod;
     periodEndDate?: Date;
     placement?: Placement;
     readyToBillOverride?: boolean;
