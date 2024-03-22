@@ -491,6 +491,7 @@ export class EntityTypes {
     static PayableChargeExportedTransaction: 'PayableChargeExportedTransaction' = 'PayableChargeExportedTransaction';
     static PayableChargePayableTransaction: 'PayableChargePayableTransaction' = 'PayableChargePayableTransaction';
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
+    static PayableChargeSummaryTransaction: 'PayableChargeSummaryTransaction' = 'PayableChargeSummaryTransaction';
     static PayrollEmployeeTypeLookup: 'PayrollEmployeeTypeLookup' = 'PayrollEmployeeTypeLookup';
     static PayrollExportConfig: 'PayrollExportConfig' = 'PayrollExportConfig';
     static PayrollExportTargetLookup: 'PayrollExportTargetLookup' = 'PayrollExportTargetLookup';
@@ -10296,6 +10297,25 @@ export interface PayableChargeStatusLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface PayableChargeSummaryTransaction {
+    id?: number;
+    addedByUser?: Person;
+    amount?: number;
+    billingSyncBatch?: BillingSyncBatch;
+    chargeTypeLookup?: ChargeTypeLookup;
+    currencyUnit?: CurrencyUnit;
+    dateLastModified?: Date;
+    earnCode?: EarnCode;
+    payExportBatch?: PayExportBatch;
+    payMaster?: PayMaster;
+    payableCharge?: PayableCharge;
+    quantity?: number;
+    rate?: number;
+    shift?: Shift;
+    transactionDate?: Date;
+    transactionOrigin?: TransactionOrigin;
+    unitOfMeasure?: UnitOfMeasure;
 }
 export interface PayrollEmployeeTypeLookup {
     id?: number;
