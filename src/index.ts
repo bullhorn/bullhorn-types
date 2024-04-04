@@ -8213,6 +8213,31 @@ export interface JobOrderRateCardLine {
     payCurrencyUnit?: CurrencyUnit;
     payMultiplier?: number;
     payRate?: number;
+    customText1?: string;
+    customText2?: string;
+    customText3?: string;
+    customText4?: string;
+    customText5?: string;
+    customText6?: string;
+    customText7?: string;
+    customText8?: string;
+    customText9?: string;
+    customText10?: string;
+    customInt1?: number;
+    customInt2?: number;
+    customInt3?: number;
+    customInt4?: number;
+    customInt5?: number;
+    customFloat1?: number;
+    customFloat2?: number;
+    customFloat3?: number;
+    customFloat4?: number;
+    customFloat5?: number;
+    customRate1?: number;
+    customRate2?: number;
+    customRate3?: number;
+    customRate4?: number;
+    customRate5?: number;
 }
 export interface JobOrderRateCardLineEditHistoryFieldChange {
     id?: number;
