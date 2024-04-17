@@ -10254,6 +10254,8 @@ export interface PayableCharge {
     generalLedgerSegment5?: GeneralLedgerSegment5;
     generalLedgerServiceCode?: GeneralLedgerServiceCode;
     jobOrder?: JobOrder;
+    maxAccountingPeriod?: AccountingPeriod;
+    minAccountingPeriod?: AccountingPeriod;
     payMasters?: ToMany<PayMaster>;
     payableTransactions?: ToMany<PayableChargePayableTransaction>;
     periodEndDate?: Date;
