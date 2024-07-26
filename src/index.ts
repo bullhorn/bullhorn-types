@@ -15667,6 +15667,7 @@ export interface TimesheetEntry {
     payEvalDate?: Date;
     quantity?: number;
     startedAt?: Date;
+    timeLaborCalcTypeLookup?: TimeLaborCalcTypeLookup;
     timeLaborEvalSheetTypeLookup?: TimeLaborEvalSheetEntryTypeLookup;
     timesheet?: Timesheet;
     timesheetDay?: Date;
