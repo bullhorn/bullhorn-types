@@ -705,6 +705,7 @@ export class EntityTypes {
     static TimesheetActivityType: 'TimesheetActivityType' = 'TimesheetActivityType';
     static TimesheetEntry: 'TimesheetEntry' = 'TimesheetEntry';
     static TimesheetEntryApprovalStatusLookup: 'TimesheetEntryApprovalStatusLookup' = 'TimesheetEntryApprovalStatusLookup';
+    static TimesheetVersion: 'TimesheetVersion' = 'TimesheetVersion';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
@@ -15614,7 +15615,7 @@ export interface Timesheet {
     jobOrder?: JobOrder;
     lastModifiedAtUtc?: Date;
     lastProcessedOn?: Date;
-    lastVersion?: number;
+    lastVersion?: TimesheetVersion;
     modifyingUser?: CorporateUser;
     paid?: number;
     placement?: Placement;
@@ -15622,6 +15623,12 @@ export interface Timesheet {
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
     units?: boolean;
+}
+export interface TimesheetVersion {
+    versionHash?: string;
+    versionNumber?: number;
+    timesheetVersionId?: number;
+    timesheetId?: number;
 }
 export interface TimesheetActivity {
     id?: number;
