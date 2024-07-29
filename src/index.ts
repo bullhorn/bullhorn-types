@@ -705,6 +705,7 @@ export class EntityTypes {
     static TimesheetActivityType: 'TimesheetActivityType' = 'TimesheetActivityType';
     static TimesheetEntry: 'TimesheetEntry' = 'TimesheetEntry';
     static TimesheetEntryApprovalStatusLookup: 'TimesheetEntryApprovalStatusLookup' = 'TimesheetEntryApprovalStatusLookup';
+    static TimesheetVersion: 'TimesheetVersion' = 'TimesheetVersion';
     static TransactionNote: 'TransactionNote' = 'TransactionNote';
     static TransactionNoteType: 'TransactionNoteType' = 'TransactionNoteType';
     static TransactionOrigin: 'TransactionOrigin' = 'TransactionOrigin';
