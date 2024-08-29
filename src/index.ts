@@ -236,6 +236,8 @@ export class EntityTypes {
     static DeductionCategoryLookup: 'DeductionCategoryLookup' = 'DeductionCategoryLookup';
     static DefaultEarnCode: 'DefaultEarnCode' = 'DefaultEarnCode';
     static Department: 'Department' = 'Department';
+    static DirectDepositAccount: 'DirectDepositAccount' = 'DirectDepositAccount';
+    static DirectDepositAccountTypeLookup: 'DirectDepositAccountTypeLookup' = 'DirectDepositAccountTypeLookup';
     static Discount: 'Discount' = 'Discount';
     static DiscountEditHistory: 'DiscountEditHistory' = 'DiscountEditHistory';
     static DiscountEditHistoryFieldChange: 'DiscountEditHistoryFieldChange' = 'DiscountEditHistoryFieldChange';
@@ -5077,6 +5079,29 @@ export interface DeliveryMethodLookup {
     label?: Strings;
     modifiedByUser?: CorporateUser;
     shouldShowInPicker?: boolean;
+}
+export interface DirectDepositAccount {
+    id?: number;
+    accountNumber?: string;
+    amount?: number;
+    bankName?: string;
+    candidate?: Candidate;
+    currencyUnit?: CurrencyUnit;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    deletedByUser?: CorporateUser;
+    directDepositAccountTypeLookup?: DirectDepositAccountTypeLookup;
+    institutionNumber?: string;
+    isDeleted?: boolean;
+    paymentOrder?: number;
+    percentValue?: number;
+    remainder?: boolean;
+    transitNumber?: string;
+}
+export interface DirectDepositAccountTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface Discount {
     id?: number;
