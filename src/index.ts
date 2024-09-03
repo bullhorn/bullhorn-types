@@ -4646,23 +4646,6 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     label?: Strings;
 }
 
-export interface CopilotPrompt {
-    id?: number;
-    privateLabelID?: number;
-    label?: Strings;
-    copilotRoleID?: number;
-    copilotTaskID?: number;
-    copilotToneID?: number;
-    copilotLengthID?: number;
-    copilotLanguageID?: number;
-    isSecondaryEntityRequired?: boolean;
-    customAction?: Strings;
-    isEnabled?: boolean;
-    copilotPromptLocationID?: number;
-    copilotPrimaryEntityTypeID?: number;
-    copilotSecondaryEntityTypeID?: number;
-}
-
 export interface CorpFile {
     id?: number;
     contentSubType?: Strings;
