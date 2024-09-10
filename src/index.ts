@@ -211,6 +211,19 @@ export class EntityTypes {
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
     static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
+    static CopilotEntityType: 'CopilotEntityType' = 'CopilotEntityType';
+    static CopilotFilteredFieldMaps: 'CopilotFilteredFieldMaps' = 'CopilotFilteredFieldMaps';
+    static CopilotGenerativeConfig: 'CopilotGenerativeConfig' = 'CopilotGenerativeConfig';
+    static CopilotGenerativeModel: 'CopilotGenerativeModel' = 'CopilotGenerativeModel';
+    static CopilotLanguage: 'CopilotLanguage' = 'CopilotLanguage';
+    static CopilotLength: 'CopilotLength' = 'CopilotLength';
+    static CopilotPrompt: 'CopilotPrompt' = 'CopilotPrompt';
+    static CopilotPromptDataPoint: 'CopilotPromptDataPoint' = 'CopilotPromptDataPoint';
+    static CopilotPromptLocation: 'CopilotPromptLocation' = 'CopilotPromptLocation';
+    static CopilotProvider: 'CopilotProvider' = 'CopilotProvider';
+    static CopilotRole: 'CopilotRole' = 'CopilotRole';
+    static CopilotTask: 'CopilotTask' = 'CopilotTask';
+    static CopilotTone: 'CopilotTone' = 'CopilotTone';
     static CorpFile: 'CorpFile' = 'CorpFile';
     static CorporateUser: 'CorporateUser' = 'CorporateUser';
     static Corporation: 'Corporation' = 'Corporation';
@@ -4647,24 +4660,91 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
-
+export interface CopilotEntityType {
+    id?: number;
+    entityTypeLookupID?: {
+        id?: number;
+        label?: Strings;
+        schemaName?: Strings;
+        tableName?: Strings;
+    };
+}
+export interface CopilotFilteredFieldMaps {
+    fieldMaps?: [{
+        name?: Strings;
+        label?: Strings;
+    }];
+}
+export interface CopilotGenerativeConfig {
+    copilotGenerativeProviderLookup?: CopilotProvider;
+    apiKey?: Strings;
+    defaultCopilotGenerativeModel?: CopilotGenerativeModel;
+}
+export interface CopilotGenerativeModel {
+    modelName?: Strings;
+    tokenLimit?: number;
+    instanceName?: Strings;
+    apiVersion?: Strings;
+}
+export interface CopilotLanguage {
+    id?: number;
+    abbreviation?: Strings;
+    label?: Strings;
+    languageCodeWithLocale?: Strings;
+}
+export interface CopilotLength {
+    id?: number;
+    label?: Strings;
+    prompt?: Strings;
+}
 export interface CopilotPrompt {
     id?: number;
     privateLabelID?: number;
     label?: Strings;
-    copilotRoleID?: number;
-    copilotTaskID?: number;
-    copilotToneID?: number;
-    copilotLengthID?: number;
-    copilotLanguageID?: number;
+    labelTranslationKey?: Strings;
+    copilotRole?: CopilotRole;
+    copilotTask?: CopilotTask;
+    copilotTone?: CopilotTone;
+    copilotLength?: CopilotLength;
+    copilotLanguage?: CopilotLanguage;
     isSecondaryEntityRequired?: boolean;
     customAction?: Strings;
     isEnabled?: boolean;
-    copilotPromptLocationID?: number;
-    copilotPrimaryEntityTypeID?: number;
-    copilotSecondaryEntityTypeID?: number;
+    copilotPromptLocation?: CopilotPromptLocation;
+    copilotPrimaryEntityType?: CopilotEntityType;
+    copilotSecondaryEntityType?: CopilotEntityType;
+    copilotPromptDataPoints?: CopilotPromptDataPoint[];
 }
-
+export interface CopilotPromptDataPoint {
+    id?: number;
+    copilotEntityType?: CopilotEntityType;
+    field?: Strings;
+}
+export interface CopilotPromptLocation {
+    id?: number;
+    label?: Strings;
+    value?: Strings;
+}
+export interface CopilotProvider {
+    copilotGenerativeProviderLookupID?: number;
+    label?: Strings;
+}
+export interface CopilotRole {
+    id?: number;
+    label?: Strings;
+    prompt?: Strings;
+    isHidden?: boolean;
+}
+export interface CopilotTask {
+    id?: number;
+    label?: Strings;
+    prompt?: any;
+}
+export interface CopilotTone {
+    id?: number;
+    label?: Strings;
+    prompt?: Strings;
+}
 export interface CorpFile {
     id?: number;
     contentSubType?: Strings;
