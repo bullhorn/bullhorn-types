@@ -4664,51 +4664,55 @@ export interface CopilotEntityType {
     id?: number;
     entityTypeLookupID?: {
         id?: number;
-        label?: Strings;
-        schemaName?: Strings;
-        tableName?: Strings;
+        label?: string;
+        schemaName?: string;
+        tableName?: string;
     };
 }
 export interface CopilotFilteredFieldMaps {
     fieldMaps?: [{
-        name?: Strings;
-        label?: Strings;
+        name?: string;
+        label?: string;
     }];
 }
 export interface CopilotGenerativeConfig {
     copilotGenerativeProviderLookup?: CopilotGenerativeProvider;
-    apiKey?: Strings;
+    apiKey?: string;
     defaultCopilotGenerativeModel?: CopilotGenerativeModel;
 }
 export interface CopilotGenerativeModel {
-    modelName?: Strings;
+    modelName?: string;
     tokenLimit?: number;
-    instanceName?: Strings;
-    apiVersion?: Strings;
+    instanceName?: string;
+    apiVersion?: string;
+}
+export interface CopilotGenerativeProvider {
+    id?: number;
+    label?: string;
 }
 export interface CopilotLanguage {
     id?: number;
-    abbreviation?: Strings;
-    label?: Strings;
-    languageCodeWithLocale?: Strings;
+    abbreviation?: string;
+    label?: string;
+    languageCodeWithLocale?: string;
 }
 export interface CopilotLength {
     id?: number;
-    label?: Strings;
-    prompt?: Strings;
+    label?: string;
+    prompt?: string;
 }
 export interface CopilotPrompt {
     id?: number;
     privateLabelID?: number;
-    label?: Strings;
-    labelTranslationKey?: Strings;
+    label?: string;
+    labelTranslationKey?: string;
     copilotRole?: CopilotRole;
     copilotTask?: CopilotTask;
     copilotTone?: CopilotTone;
     copilotLength?: CopilotLength;
     copilotLanguage?: CopilotLanguage;
     isSecondaryEntityRequired?: boolean;
-    customAction?: Strings;
+    customAction?: string;
     isEnabled?: boolean;
     copilotPromptLocation?: CopilotPromptLocation;
     copilotPrimaryEntityType?: CopilotEntityType;
@@ -4718,32 +4722,28 @@ export interface CopilotPrompt {
 export interface CopilotPromptDataPoint {
     id?: number;
     copilotEntityType?: CopilotEntityType;
-    field?: Strings;
+    field?: string;
 }
 export interface CopilotPromptLocation {
     id?: number;
-    label?: Strings;
-    value?: Strings;
-}
-export interface CopilotGenerativeProvider {
-    id?: number;
-    label?: Strings;
+    label?: string;
+    value?: string;
 }
 export interface CopilotRole {
     id?: number;
-    label?: Strings;
-    prompt?: Strings;
+    label?: string;
+    prompt?: string;
     isHidden?: boolean;
 }
 export interface CopilotTask {
     id?: number;
-    label?: Strings;
+    label?: string;
     prompt?: any;
 }
 export interface CopilotTone {
     id?: number;
-    label?: Strings;
-    prompt?: Strings;
+    label?: string;
+    prompt?: string;
 }
 export interface CorpFile {
     id?: number;
