@@ -4676,7 +4676,7 @@ export interface CopilotFilteredFieldMaps {
     }];
 }
 export interface CopilotGenerativeConfig {
-    copilotGenerativeProviderLookup?: CopilotProvider;
+    copilotGenerativeProviderLookup?: CopilotGenerativeProvider;
     apiKey?: Strings;
     defaultCopilotGenerativeModel?: CopilotGenerativeModel;
 }
@@ -4725,8 +4725,8 @@ export interface CopilotPromptLocation {
     label?: Strings;
     value?: Strings;
 }
-export interface CopilotProvider {
-    copilotGenerativeProviderLookupID?: number;
+export interface CopilotGenerativeProvider {
+    id?: number;
     label?: Strings;
 }
 export interface CopilotRole {
