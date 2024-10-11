@@ -374,6 +374,8 @@ export class EntityTypes {
     static JobOrderBillRulesetEditHistory: 'JobOrderBillRulesetEditHistory' = 'JobOrderBillRulesetEditHistory';
     static JobOrderBillRulesetEditHistoryFieldChange: 'JobOrderBillRulesetEditHistoryFieldChange' = 'JobOrderBillRulesetEditHistoryFieldChange';
     static JobOrderBillRulesetEffectiveDateChange: 'JobOrderBillRulesetEffectiveDateChange' = 'JobOrderBillRulesetEffectiveDateChange';
+    static JobOrderCustomerRequiredFieldConfiguration: 'JobOrderCustomerRequiredFieldConfiguration' = 'JobOrderCustomerRequiredFieldConfiguration';
+    static JobOrderCustomerRequiredFieldConfigurationVersion: 'JobOrderCustomerRequiredFieldConfigurationVersion' = 'JobOrderCustomerRequiredFieldConfigurationVersion';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
@@ -8052,6 +8054,35 @@ export interface JobOrderBillRulesetEffectiveDateChange {
     editHistory?: JobOrderBillRulesetEditHistory;
     newEffectiveDate?: Date;
     previousEffectiveDate?: Date;
+}
+export interface JobOrderCustomerRequiredFieldConfiguration {
+    id?: number;
+    customerRequiredFieldConfigurationVersionOptions?: ToMany<CustomerRequiredFieldConfigurationVersionOption>;
+    customerRequiredFieldMeta?: CustomerRequiredFieldMeta;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    defaultCustomerRequiredFieldOption?: CustomerRequiredFieldOption;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isActive?: boolean;
+    isDeleted?: boolean;
+    isFirst?: boolean;
+    owner?: CorporateUser;
+    jobOrder?: JobOrder;
+    versionID?: number;
+    versions?: ToMany<JobOrderCustomerRequiredFieldConfigurationVersion>;
+    viewableStartDate?: Date;
+}
+export interface JobOrderCustomerRequiredFieldConfigurationVersion {
+    id?: number;
+    customerRequiredFieldConfigurationVersionOptions?: ToMany<CustomerRequiredFieldConfigurationVersionOption>;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    defaultCustomerRequiredFieldOption?: CustomerRequiredFieldOption;
+    effectiveDate?: Date;
+    effectiveEndDate?: Date;
+    isActive?: boolean;
+    isFirst?: boolean;
 }
 export interface JobOrderCustomObject {
     id?: number;
