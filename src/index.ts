@@ -374,6 +374,7 @@ export class EntityTypes {
     static JobOrderBillRulesetEditHistory: 'JobOrderBillRulesetEditHistory' = 'JobOrderBillRulesetEditHistory';
     static JobOrderBillRulesetEditHistoryFieldChange: 'JobOrderBillRulesetEditHistoryFieldChange' = 'JobOrderBillRulesetEditHistoryFieldChange';
     static JobOrderBillRulesetEffectiveDateChange: 'JobOrderBillRulesetEffectiveDateChange' = 'JobOrderBillRulesetEffectiveDateChange';
+    static JobOrderCustomerRequiredFieldConfiguration: 'JobOrderCustomerRequiredFieldConfiguration' = 'JobOrderCustomerRequiredFieldConfiguration';
     static JobOrderCustomObject: 'JobOrderCustomObject' = 'JobOrderCustomObject';
     static JobOrderCustomObject10EditHistory: 'JobOrderCustomObject10EditHistory' = 'JobOrderCustomObject10EditHistory';
     static JobOrderCustomObject1EditHistory: 'JobOrderCustomObject1EditHistory' = 'JobOrderCustomObject1EditHistory';
