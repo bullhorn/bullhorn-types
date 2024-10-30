@@ -15682,6 +15682,7 @@ export interface TimeLaborEvalRule {
     id?: number;
     addedAtUtc?: Date;
     addedByUser?: CorporateUser;
+    country?: Country;
     description?: Strings;
     holidays?: ToMany<Holiday>;
     isRun?: boolean;
