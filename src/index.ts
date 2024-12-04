@@ -666,6 +666,7 @@ export class EntityTypes {
     static SalesTaxRateSourceLookup: 'SalesTaxRateSourceLookup' = 'SalesTaxRateSourceLookup';
     static SalesTaxRateTypeLookup: 'SalesTaxRateTypeLookup' = 'SalesTaxRateTypeLookup';
     static SalesTaxRateVersion: 'SalesTaxRateVersion' = 'SalesTaxRateVersion';
+    static SearchAdminSetting: 'SearchAdminSetting' = 'SearchAdminSetting';
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
     static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
@@ -15176,6 +15177,11 @@ export interface SalesTaxRateVersion {
     source?: SalesTaxRateSourceLookup;
     status?: TaxStatusLookup;
     taxType?: TaxTypeLookup;
+}
+export interface SearchAdminSetting {
+    id: number;
+    enableAutobuild?: boolean;
+    filters?: {enabled: boolean, field: string, operator?: any, value?: any}[],
 }
 export interface Sendout {
     id?: number;
