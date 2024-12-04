@@ -15179,8 +15179,10 @@ export interface SalesTaxRateVersion {
     taxType?: TaxTypeLookup;
 }
 export interface SearchAdminSetting {
-    id: number;
-    enableAutobuild?: boolean;
+    id?: number;
+    enableAutobuildAddress?: boolean;
+    enableDynamicRadiusValues?: boolean;
+    autobuildRadiusValue?: number;
     filters?: {enabled: boolean, field: string, operator?: any, value?: any}[],
 }
 export interface Sendout {
