@@ -4725,6 +4725,7 @@ export interface CopilotPromptDataPoint {
     id?: number;
     copilotEntityType?: CopilotEntityType;
     field?: string;
+    isDefault: boolean;
 }
 export interface CopilotPromptLocation {
     id?: number;
