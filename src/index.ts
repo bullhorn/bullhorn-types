@@ -4691,6 +4691,7 @@ export interface CopilotGenerativeModel {
 export interface CopilotGenerativeProvider {
     id?: number;
     label?: string;
+    isHidden: boolean;
 }
 export interface CopilotLanguage {
     id?: number;
