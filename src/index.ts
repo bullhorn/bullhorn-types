@@ -669,6 +669,7 @@ export class EntityTypes {
     static Sendout: 'Sendout' = 'Sendout';
     static Shift: 'Shift' = 'Shift';
     static ShiftPosition: 'ShiftPosition' = 'ShiftPosition';
+    static ShiftRateTypeLookup: 'ShiftRateTypeLookup' = 'ShiftRateTypeLookup';
     static ShiftSetting: 'ShiftSetting' = 'ShiftSetting';
     static ShiftType: 'ShiftType' = 'ShiftType';
     static SignatureTemplate: 'SignatureTemplate' = 'SignatureTemplate';
