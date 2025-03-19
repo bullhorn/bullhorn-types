@@ -15206,9 +15206,15 @@ export interface Shift {
     lastModifyingUser?: CorporateUser;
     migrateGUID?: Strings;
     name?: Strings;
+    shiftRateTypeLookup?: ShiftRateTypeLookup;
     shortName?: Strings;
     startTime?: Date;
     type?: Strings;
+}
+export interface ShiftRateTypeLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
 }
 export interface ShiftPosition {
     id?: number;
