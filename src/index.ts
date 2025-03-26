@@ -211,6 +211,7 @@ export class EntityTypes {
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
     static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
+    static CopilotAction: 'CopilotAction' = 'CopilotAction';
     static CopilotEntityType: 'CopilotEntityType' = 'CopilotEntityType';
     static CopilotFilteredFieldMaps: 'CopilotFilteredFieldMaps' = 'CopilotFilteredFieldMaps';
     static CopilotGenerativeConfig: 'CopilotGenerativeConfig' = 'CopilotGenerativeConfig';
@@ -4663,6 +4664,10 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
+export interface CopilotAction {
+    label?: string;
+    prompt?: string;
+}
 export interface CopilotEntityType {
     id?: number;
     entityTypeLookupID?: {
@@ -4700,10 +4705,8 @@ export interface CopilotLanguage {
     label?: string;
     languageCodeWithLocale?: string;
 }
-export interface CopilotLength {
+export interface CopilotLength extends CopilotAction {
     id?: number;
-    label?: string;
-    prompt?: string;
 }
 export interface CopilotPrompt {
     id?: number;
@@ -4734,21 +4737,15 @@ export interface CopilotPromptLocation {
     label?: string;
     value?: string;
 }
-export interface CopilotRole {
+export interface CopilotRole extends CopilotAction {
     id?: number;
-    label?: string;
-    prompt?: string;
     isHidden?: boolean;
 }
-export interface CopilotTask {
+export interface CopilotTask extends CopilotAction {
     id?: number;
-    label?: string;
-    prompt?: any;
 }
-export interface CopilotTone {
+export interface CopilotTone extends CopilotAction {
     id?: number;
-    label?: string;
-    prompt?: string;
 }
 export interface CorpFile {
     id?: number;
