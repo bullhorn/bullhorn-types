@@ -210,6 +210,7 @@ export class EntityTypes {
     static ClientCorporationRatios: 'ClientCorporationRatios' = 'ClientCorporationRatios';
     static ClientCorporationTask: 'ClientCorporationTask' = 'ClientCorporationTask';
     static ClientCorporationTaxExemptionStatusLookup: 'ClientCorporationTaxExemptionStatusLookup' = 'ClientCorporationTaxExemptionStatusLookup';
+    static ClientEarnCodeMap: 'ClientEarnCodeMap' = 'ClientEarnCodeMap';
     static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
     static CopilotAction: 'CopilotAction' = 'CopilotAction';
     static CopilotEntityType: 'CopilotEntityType' = 'CopilotEntityType';
@@ -4663,6 +4664,12 @@ export interface ClientCorporationTaxExemptionStatusLookup {
     id?: number;
     isDeleted?: boolean;
     label?: Strings;
+}
+export interface ClientEarnCodeMap {
+    id?: number;
+    shift?: Shift;
+    sourceEarnCode?: EarnCode;
+    targetEarnCode?: EarnCode;
 }
 export interface CopilotAction {
     label?: string;
