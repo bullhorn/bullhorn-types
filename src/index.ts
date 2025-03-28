@@ -1109,6 +1109,7 @@ export interface BillableCharge {
     addedByUser?: CorporateUser;
     billMasterTransactionDistributionBatches?: ToMany<BillMasterTransactionDistributionBatch>;
     billMasters?: ToMany<BillMaster>;
+    billableChargeHoldStatusLookup?: BillableChargeHoldStatusLookup;
     billableTransactions?: ToMany<BillableChargeBillableTransaction>;
     billingClientContact?: ClientContact;
     billingClientCorporation?: ClientCorporation;
@@ -1135,6 +1136,7 @@ export interface BillableCharge {
     jobOrder?: JobOrder;
     maxAccountingPeriod?: AccountingPeriod;
     minAccountingPeriod?: AccountingPeriod;
+    onHoldComment?: Strings;
     periodEndDate?: Date;
     placement?: Placement;
     readyToBillOverride?: boolean;
@@ -6557,6 +6559,7 @@ export interface InvoiceStatementTypeLookup {
 export interface InvoiceTerm {
     id?: number;
     approvalRequired?: boolean;
+    billableChargeHoldStatusLookup?: BillableChargeHoldStatusLookup;
     clientCorporation?: ClientCorporation;
     currencyUnit?: CurrencyUnit;
     customDate1?: Date;
