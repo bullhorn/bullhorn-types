@@ -6614,6 +6614,7 @@ export interface InvoiceTerm {
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
+    reports?: ToMany<Report>;
     status?: Strings;
     surchargeRates?: ToMany<SurchargeRate>;
     title?: Strings;
@@ -6773,6 +6774,7 @@ export interface InvoiceTermVersion {
     paymentTerms?: Strings;
     purchaseOrderRequired?: boolean;
     remitInstructions?: Strings;
+    reports?: ToMany<Report>;
     status?: Strings;
     surchargeRates?: ToMany<SurchargeRate>;
     title?: Strings;
