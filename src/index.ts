@@ -4753,7 +4753,6 @@ export interface CopilotPromptDataPoint {
     field?: string;
     isDefault?: boolean;
 }
-
 export interface CopilotPromptRelatedEntity {
     id?: number;
     copilotEntityType?: CopilotEntityType;
@@ -4763,7 +4762,6 @@ export interface CopilotPromptRelatedEntity {
     maxRecords?: number;
     isDefault?: boolean;
 }
-
 export interface CopilotPromptLocation {
     id?: number;
     label?: string;
