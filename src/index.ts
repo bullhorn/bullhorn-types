@@ -4755,13 +4755,15 @@ export interface CopilotPromptDataPoint {
 }
 
 export interface CopilotPromptRelatedEntity {
-    promptID?: number;
+    id?: number;
     copilotEntityType?: CopilotEntityType;
     copilotParentEntityType?: CopilotEntityType;
     whereParam?: string;
     orderByParam?: string;
-    max?: number;
+    maxRecords?: number;
+    isDefault?: boolean;
 }
+
 export interface CopilotPromptLocation {
     id?: number;
     label?: string;
