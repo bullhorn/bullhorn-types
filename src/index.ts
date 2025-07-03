@@ -4697,7 +4697,6 @@ export interface CopilotEntityType {
     isCore?: boolean;
     isRelatedEntity?: boolean;
 }
-
 export interface CopilotFilteredFieldMaps {
     fieldMaps?: [{
         name?: string;
