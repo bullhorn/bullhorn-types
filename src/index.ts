@@ -4694,8 +4694,8 @@ export interface CopilotEntityType {
         schemaName?: string;
         tableName?: string;
     };
-    isCore: boolean;
-    isRelatedEntity: boolean;
+    isCore?: boolean;
+    isRelatedEntity?: boolean;
 }
 export interface CopilotFilteredFieldMaps {
     fieldMaps?: [{
@@ -4745,7 +4745,7 @@ export interface CopilotPrompt {
     copilotPrimaryEntityType?: CopilotEntityType;
     copilotSecondaryEntityType?: CopilotEntityType;
     copilotPromptDataPoints?: CopilotPromptDataPoint[];
-    copilotPromptAdditionalData?: CopilotPromptRelatedEntity[];
+    copilotPromptRelatedEntities?: CopilotPromptRelatedEntity[];
 }
 export interface CopilotPromptDataPoint {
     id?: number;
@@ -4756,11 +4756,11 @@ export interface CopilotPromptDataPoint {
 
 export interface CopilotPromptRelatedEntity {
     promptID?: number;
-    copilotEntityType: CopilotEntityType;
-    copilotParentEntityType: CopilotEntityType;
+    copilotEntityType?: CopilotEntityType;
+    copilotParentEntityType?: CopilotEntityType;
     whereParam?: string;
     orderByParam?: string;
-    max: number;
+    max?: number;
 }
 export interface CopilotPromptLocation {
     id?: number;
