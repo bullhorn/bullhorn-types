@@ -222,6 +222,7 @@ export class EntityTypes {
     static CopilotLength: 'CopilotLength' = 'CopilotLength';
     static CopilotPrompt: 'CopilotPrompt' = 'CopilotPrompt';
     static CopilotPromptDataPoint: 'CopilotPromptDataPoint' = 'CopilotPromptDataPoint';
+    static CopilotPromptRelatedEntity: 'CopilotPromptRelatedEntity' = 'CopilotPromptRelatedEntity';
     static CopilotPromptLocation: 'CopilotPromptLocation' = 'CopilotPromptLocation';
     static CopilotProvider: 'CopilotProvider' = 'CopilotProvider';
     static CopilotRole: 'CopilotRole' = 'CopilotRole';
@@ -4693,6 +4694,8 @@ export interface CopilotEntityType {
         schemaName?: string;
         tableName?: string;
     };
+    isCore: boolean;
+    isRelatedEntity: boolean;
 }
 export interface CopilotFilteredFieldMaps {
     fieldMaps?: [{
@@ -4742,12 +4745,22 @@ export interface CopilotPrompt {
     copilotPrimaryEntityType?: CopilotEntityType;
     copilotSecondaryEntityType?: CopilotEntityType;
     copilotPromptDataPoints?: CopilotPromptDataPoint[];
+    copilotPromptAdditionalData?: CopilotPromptRelatedEntity[];
 }
 export interface CopilotPromptDataPoint {
     id?: number;
     copilotEntityType?: CopilotEntityType;
     field?: string;
     isDefault?: boolean;
+}
+
+export interface CopilotPromptRelatedEntity {
+    promptID?: number;
+    copilotEntityType: CopilotEntityType;
+    copilotParentEntityType: CopilotEntityType;
+    whereParam?: string;
+    orderByParam?: string;
+    max: number;
 }
 export interface CopilotPromptLocation {
     id?: number;
