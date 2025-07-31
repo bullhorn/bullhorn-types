@@ -10338,6 +10338,7 @@ export interface PayExportBatch {
     id?: number;
     batchStatusLookup?: BatchStatusLookup;
     canvasReport?: CanvasReport;
+    comment?: Strings;
     dateAdded?: Date;
     payExportTypeLookup?: PayExportTypeLookup;
     payMasterTransactions?: ToMany<PayMasterTransaction>;
