@@ -1833,6 +1833,7 @@ export interface Candidate {
     travelMethod?: Strings;
     twoJobs?: boolean;
     type?: Strings;
+    unifiedSearchId?: String;
     userDateAdded?: Date;
     userIntegrations?: ToMany<UserIntegration>;
     userType?: UserType;
