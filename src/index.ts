@@ -7196,6 +7196,7 @@ export interface JobOrder {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -7357,6 +7358,7 @@ export interface JobOrder1 {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -7518,6 +7520,7 @@ export interface JobOrder2 {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -7679,6 +7682,7 @@ export interface JobOrder3 {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -7840,6 +7844,7 @@ export interface JobOrder4 {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -8001,6 +8006,7 @@ export interface JobOrder5 {
     responseUser?: CorporateUser;
     salary?: number;
     salaryUnit?: Strings;
+    screenerQuestionsStatus?: number;
     sendouts?: ToMany<Sendout>;
     shift?: Shift;
     shifts?: ToMany<Shift>;
@@ -8593,6 +8599,13 @@ export interface JobSubmission {
     owners?: ToMany<CorporateUser>;
     payRate?: number;
     salary?: number;
+    screeningDuration?: number;
+    screeningScore?: number;
+    screeningStatus?: Strings;
+    screeningSummary?: Strings;
+    screeningFeedbackRating?: number;
+    screeningFeedbackComment?: Strings;
+    screeningCompletedDateTime?: Date;
     sendingUser?: Person;
     source?: Strings;
     status?: Strings;
