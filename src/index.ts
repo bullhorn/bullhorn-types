@@ -424,6 +424,7 @@ export class EntityTypes {
     static JobOrderRateCardLineGroup: 'JobOrderRateCardLineGroup' = 'JobOrderRateCardLineGroup';
     static JobOrderRateCardLineGroupEditHistoryFieldChange: 'JobOrderRateCardLineGroupEditHistoryFieldChange' = 'JobOrderRateCardLineGroupEditHistoryFieldChange';
     static JobOrderRateCardVersion: 'JobOrderRateCardVersion' = 'JobOrderRateCardVersion';
+    static JobOrderScreenerQuestion: 'JobOrderScreenerQuestion' = 'JobOrderScreenerQuestion';
     static JobOrderTemplate: 'JobOrderTemplate' = 'JobOrderTemplate';
     static JobShift: 'JobShift' = 'JobShift';
     static JobShiftAssignment: 'JobShiftAssignment' = 'JobShiftAssignment';
@@ -8474,6 +8475,12 @@ export interface JobOrderRateCardVersion {
     isFirst?: boolean;
     jobOrderRateCardLineGroups?: ToMany<JobOrderRateCardLineGroup>;
 }
+export interface JobOrderScreenerQuestion {
+    id?: number;
+    screenerQuestionID?: number;
+    jobOrderID?: number;
+    sortOrder?: number;
+}
 export interface JobOrderTemplate {
     id?: number;
     corporationID?: number;
@@ -15233,6 +15240,8 @@ export interface ScreenerQuestion {
     isDeleted?: boolean;
     dateAdded?: Date;
     dateLastModified?: Date;
+    addedByUserID?: number;
+    comments: Strings;
 }
 export interface Sendout {
     id?: number;
