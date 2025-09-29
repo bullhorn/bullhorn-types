@@ -8477,8 +8477,8 @@ export interface JobOrderRateCardVersion {
 }
 export interface JobOrderScreenerQuestion {
     id?: number;
-    screenerQuestionID?: number;
-    jobOrderID?: number;
+    screenerQuestion?: ScreenerQuestion;
+    jobOrder?: JobOrder;
     sortOrder?: number;
 }
 export interface JobOrderTemplate {
@@ -15235,13 +15235,13 @@ export interface ScreenerQuestion {
     id?: number;
     questionText?: Strings;
     answerEntityTypeID?: number;
-    answerFieldName: Strings;
+    answerFieldName?: Strings;
     required?: boolean;
     isDeleted?: boolean;
     dateAdded?: Date;
     dateLastModified?: Date;
-    addedByUserID?: number;
-    comments: Strings;
+    addedByUser?: CorporateUser;
+    comments?: Strings;
 }
 export interface Sendout {
     id?: number;
