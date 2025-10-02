@@ -4751,6 +4751,7 @@ export interface CopilotPrompt {
     isSecondaryEntityRequired?: boolean;
     customAction?: string;
     isEnabled?: boolean;
+    copilotCreativity?: CopilotCreativity;
     copilotPromptLocation?: CopilotPromptLocation;
     copilotPrimaryEntityType?: CopilotEntityType;
     copilotSecondaryEntityType?: CopilotEntityType;
