@@ -214,6 +214,7 @@ export class EntityTypes {
     static ClientEarnCodeMap: 'ClientEarnCodeMap' = 'ClientEarnCodeMap';
     static ComposeMessage: 'ComposeMessage' = 'ComposeMessage';
     static CopilotAction: 'CopilotAction' = 'CopilotAction';
+    static CopilotCreativity: 'CopilotCreativity' = 'CopilotCreativity';
     static CopilotEntityType: 'CopilotEntityType' = 'CopilotEntityType';
     static CopilotFilteredFieldMaps: 'CopilotFilteredFieldMaps' = 'CopilotFilteredFieldMaps';
     static CopilotGenerativeConfig: 'CopilotGenerativeConfig' = 'CopilotGenerativeConfig';
@@ -4689,6 +4690,12 @@ export interface CopilotAction {
     label?: string;
     prompt?: string;
 }
+export interface CopilotCreativity {
+    id?: number;
+    label?: string;
+    temperature?: number;
+    topP?: number;
+}
 export interface CopilotEntityType {
     id?: number;
     entityTypeLookupID?: {
@@ -4744,6 +4751,7 @@ export interface CopilotPrompt {
     isSecondaryEntityRequired?: boolean;
     customAction?: string;
     isEnabled?: boolean;
+    copilotCreativity?: CopilotCreativity;
     copilotPromptLocation?: CopilotPromptLocation;
     copilotPrimaryEntityType?: CopilotEntityType;
     copilotSecondaryEntityType?: CopilotEntityType;
