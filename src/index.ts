@@ -11111,7 +11111,8 @@ export interface Placement {
     placementCertifications?: ToMany<PlacementCertification>;
     placementHistories?: ToMany<PlacementHistory>;
     positionCode?: Strings;
-    placementRateCard?: PlacementRateCard;
+    placementRateCardID?: number;
+    placementRateCardStatus?: PlacementRateCardStatusLookup;
     projectCodeList?: Strings;
     quitJob?: boolean;
     recruitingManagerPercentGrossMargin?: number;
