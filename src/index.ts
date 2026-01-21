@@ -3,6 +3,7 @@
 // Utility Classes
 export class EntityTypes {
     static AccountingPeriod: 'AccountingPeriod' = 'AccountingPeriod';
+    static AccountingPeriodSetting: 'AccountingPeriodSetting' = 'AccountingPeriodSetting';
     static ActivityGoal: 'ActivityGoal' = 'ActivityGoal';
     static ActivityGoalConfiguration: 'ActivityGoalConfiguration' = 'ActivityGoalConfiguration';
     static ActivityGoalTarget: 'ActivityGoalTarget' = 'ActivityGoalTarget';
@@ -789,6 +790,19 @@ export interface ToManyRef<T> {
 export interface AccountingPeriod {
     id?: number;
     accountingPeriodDate?: Date;
+}
+
+export interface AccountingPeriodDay {
+    id: number;
+}
+
+export interface AccountingPeriodSetting {
+    id: number;
+    accountingPeriodDay: AccountingPeriodDay;
+    matchingCriteriaGroup: MatchingCriteria | null;
+    rollForwardDay: RollForwardDay;
+    rollForwardTime: string;
+    timeZoneLookup: TimeZoneLookup;
 }
 
 export interface Address {
@@ -9093,6 +9107,9 @@ export interface MassActionTypeLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
+export interface MatchingCriteria {
+    id: number;
+}
 export interface Menu {
     id?: number;
     application?: Application;
@@ -15121,6 +15138,9 @@ export interface ReportingCodeTemplateEditHistoryFieldChange {
     newValue?: Strings;
     oldValue?: Strings;
 }
+export interface RollForwardDay {
+    id: number;
+}
 export interface SalesQuota {
     id?: number;
     attained?: number;
@@ -15924,6 +15944,13 @@ export interface TimesheetEntryApprovalStatusLookup {
     isDeleted?: boolean;
     label?: Strings;
 }
+export interface TimeZoneLookup {
+    id: number;
+    name: string;
+    countryCode: string;
+    utcOffsetStr: string;
+}
+
 export interface TransactionNote {
     id?: number;
     billMasterTransactions?: ToMany<BillMasterTransaction>;
