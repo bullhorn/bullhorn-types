@@ -516,6 +516,7 @@ export class EntityTypes {
     static PayableChargePayableTransaction: 'PayableChargePayableTransaction' = 'PayableChargePayableTransaction';
     static PayableChargeStatusLookup: 'PayableChargeStatusLookup' = 'PayableChargeStatusLookup';
     static PayableChargeSummaryTransaction: 'PayableChargeSummaryTransaction' = 'PayableChargeSummaryTransaction';
+    static PayrollConfigEmployeeType: 'PayrollConfigEmployeeType' = 'PayrollConfigEmployeeType';
     static PayrollEmployeeTypeLookup: 'PayrollEmployeeTypeLookup' = 'PayrollEmployeeTypeLookup';
     static PayrollExportConfig: 'PayrollExportConfig' = 'PayrollExportConfig';
     static PayrollExportTargetLookup: 'PayrollExportTargetLookup' = 'PayrollExportTargetLookup';
