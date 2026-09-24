@@ -442,6 +442,7 @@ export class EntityTypes {
     static Lead: 'Lead' = 'Lead';
     static LeadHistory: 'LeadHistory' = 'LeadHistory';
     static LegalBusinessEntity: 'LegalBusinessEntity' = 'LegalBusinessEntity';
+    static ListExportFile: 'ListExportFile' = 'ListExportFile';
     static LocalTaxForm: 'LocalTaxForm' = 'LocalTaxForm';
     static Location: 'Location' = 'Location';
     static LocationEditHistory: 'LocationEditHistory' = 'LocationEditHistory';
@@ -8882,6 +8883,16 @@ export interface LegalBusinessEntity {
     shortName?: Strings;
     statusLookup?: StatusLookup;
 }
+export interface ListExportFile {
+    id?: number;
+    dateAdded?: Date;
+    dateExpires?: Date;
+    dateLastModified?: Date;
+    externalKey?: Strings;
+    format?: Strings;
+    isDeleted?: boolean;
+    massActionBatch?: MassActionBatch;
+}
 export interface LocalTaxForm {
     id?: number;
     candidate?: Candidate;
@@ -9089,6 +9100,7 @@ export interface MassActionBatch {
     dateLastModified?: Date;
     entityName?: Strings;
     expectedCount?: number;
+    failureCount?: number;
     filter?: Strings;
     massActionType?: MassActionTypeLookup;
     owner?: CorporateUser;
