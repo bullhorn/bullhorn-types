@@ -44,6 +44,14 @@ npx bullhorn auth login
 npx bullhorn typings generate
 ```
 
+## Contributing
+This repo uses semantic-release, which reads the **type** of each commit to decide the next version. Ensure commits 
+and pull requests are prepended with the proper commit type. 
+```
+<type>(<scope>): <subject>
+```
+Example: `feat(typings): add ListExportFile entity`
+
 ## Deploy
 
 GitHub Actions will build a deploy to NPM when you push to master with appropriate [Semantice Release](https://github.com/semantic-release/semantic-release) messages.
