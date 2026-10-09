@@ -691,7 +691,9 @@ export class EntityTypes {
     static StateTaxForm: 'StateTaxForm' = 'StateTaxForm';
     static StatusLookup: 'StatusLookup' = 'StatusLookup';
     static StopWord: 'StopWord' = 'StopWord';
+    static SubmissionDispositionReasonLookup: 'SubmissionDispositionReasonLookup' = 'SubmissionDispositionReasonLookup';
     static SubmissionTemplate: 'SubmissionTemplate' = 'SubmissionTemplate';
+    static SubmissionTerminalStateLookup: 'SubmissionTerminalStateLookup' = 'SubmissionTerminalStateLookup';
     static Surcharge: 'Surcharge' = 'Surcharge';
     static SurchargeEditHistory: 'SurchargeEditHistory' = 'SurchargeEditHistory';
     static SurchargeEditHistoryFieldChange: 'SurchargeEditHistoryFieldChange' = 'SurchargeEditHistoryFieldChange';
@@ -762,6 +764,11 @@ export class EntityTypes {
     static UserSurvey: 'UserSurvey' = 'UserSurvey';
     static UserSurveyOptions: 'UserSurveyOptions' = 'UserSurveyOptions';
     static UserType: 'UserType' = 'UserType';
+    static WebResponse: 'WebResponse' = 'WebResponse';
+    static WebResponseEditHistory: 'WebResponseEditHistory' = 'WebResponseEditHistory';
+    static WebResponseEditHistoryFieldChange: 'WebResponseEditHistoryFieldChange' = 'WebResponseEditHistoryFieldChange';
+    static WebResponseHistory: 'WebResponseHistory' = 'WebResponseHistory';
+    static WebResponseStatusLookup: 'WebResponseStatusLookup' = 'WebResponseStatusLookup';
     static WorkersCompensation: 'WorkersCompensation' = 'WorkersCompensation';
     static WorkersCompensationRate: 'WorkersCompensationRate' = 'WorkersCompensationRate';
     static ZipCodeGis: 'ZipCodeGis' = 'ZipCodeGis';
@@ -15497,6 +15504,19 @@ export interface SubmissionTemplate {
     owner?: CorporateUser;
     templateType?: Strings;
 }
+export interface SubmissionDispositionReasonLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+    privateLabelID?: number;
+    sortOrder?: number;
+    terminalState?: SubmissionTerminalStateLookup;
+}
+export interface SubmissionTerminalStateLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+}
 export interface Surcharge {
     id?: number;
     addedByUser?: CorporateUser;
@@ -16220,6 +16240,54 @@ export interface UserType {
     isHidden?: boolean;
     menus?: ToMany<Menu>;
     name?: Strings;
+}
+export interface WebResponse {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    dateLastModified?: Date;
+    datePromoted?: Date;
+    dispositionReason?: SubmissionDispositionReasonLookup;
+    isDeleted?: boolean;
+    jobSubmission?: JobSubmission;
+    promotedToSubmission?: boolean;
+    statusLookup?: WebResponseStatusLookup;
+}
+export interface WebResponseEditHistory {
+    id?: number;
+    auditTrail?: Strings;
+    dateAdded?: Date;
+    fieldChanges?: ToMany<WebResponseEditHistoryFieldChange>;
+    migrateGUID?: Strings;
+    modifyingPerson?: Person;
+    targetEntity?: WebResponse;
+    transactionID?: Strings;
+}
+export interface WebResponseEditHistoryFieldChange {
+    id?: number;
+    columnName?: Strings;
+    display?: Strings;
+    editHistory?: WebResponseEditHistory;
+    newValue?: Strings;
+    oldValue?: Strings;
+}
+export interface WebResponseHistory {
+    id?: number;
+    comments?: Strings;
+    dateAdded?: Date;
+    migrateGUID?: Strings;
+    modifyingUser?: Person;
+    statusLookup?: WebResponseStatusLookup;
+    transactionID?: Strings;
+    webResponse?: WebResponse;
+}
+export interface WebResponseStatusLookup {
+    id?: number;
+    isDeleted?: boolean;
+    label?: Strings;
+    privateLabelID?: number;
+    sortOrder?: number;
+    terminalState?: SubmissionTerminalStateLookup;
 }
 export interface WorkersCompensation {
     id?: number;
