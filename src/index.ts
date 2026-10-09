@@ -15912,6 +15912,7 @@ export interface Timesheet {
     timeLaborEvalSheetStatusLookup?: TimeLaborEvalSheetStatusLookup;
     timesheetEntryApprovalStatusLookup?: TimesheetEntryApprovalStatusLookup;
     units?: boolean;
+    isPendingChanges?: boolean;
 }
 export interface TimesheetVersion {
     versionHash?: string;
@@ -15971,6 +15972,7 @@ export interface TimesheetEntry {
     timesheetVersion?: number;
     unitOfMeasure?: UnitOfMeasure;
     voidingTimesheetEntry?: TimesheetEntry;
+    isPendingChanges?: boolean;
 }
 export interface TimesheetEntryApprovalStatusLookup {
     id?: number;
